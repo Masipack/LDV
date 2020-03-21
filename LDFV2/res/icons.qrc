@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/prod.png</file>
+        <file>icons/bt-blank.png</file>
+        <file>icons/bt-blank_pressed.png</file>
+        <file>icons/user-cog-solid.svg</file>
+        <file>icons/settings.png</file>
+        <file>icons/alarmsslogs.png</file>
+        <file>icons/p11.png</file>
+        <file>icons/printer.png</file>
+        <file>icons/usb_pendrive.png</file>
+        <file>icons/info.png</file>
+        <file>icons/user.png</file>
+        <file>icons/user_unlogged.png</file>
+        <file>icons/config_export.png</file>
+        <file>icons/config_import.png</file>
+        <file>icons/recipe_export.png</file>
+        <file>icons/recipe_import.png</file>
+        <file>icons/arrow-3-down_0.png</file>
+        <file>icons/arrow-3-left_0.png</file>
+        <file>icons/arrow-3-right_0.png</file>
+        <file>icons/arrow-3-up_0.png</file>
+        <file>icons/arrow_backward.png</file>
+        <file>icons/arrow-left.png</file>
+        <file>icons/arrow-right.png</file>
+        <file>icons/cancel.png</file>
+        <file>icons/ok.png</file>
+        <file>icons/camera.png</file>
+        <file>icons/zoom_fit.png</file>
+        <file>icons/zoom_fit_all.png</file>
+        <file>icons/zoom_in.png</file>
+        <file>icons/zoom_lock.png</file>
+        <file>icons/zoom_out.png</file>
+        <file>icons/mv_barcode.png</file>
+        <file>icons/mv_dmtx.png</file>
+        <file>icons/mv_fiducial.png</file>
+        <file>icons/mv_ocr.png</file>
+        <file>icons/MD-disc-3-5.png</file>
+        <file>icons/visible.png</file>
+        <file>icons/angle.png</file>
+        <file>icons/arrow-left_inverted.png</file>
+        <file>icons/arrow-up.png</file>
+        <file>icons/database-reload-alt-2.png</file>
+    </qresource>
+</RCC>

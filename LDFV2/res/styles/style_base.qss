@@ -1,0 +1,130 @@
+QWidget {
+    background-color: rgb(246, 246, 246);
+}
+
+QScrollBar:vertical
+{
+    width: 24px;
+    margin: 24px 0px 24px 0px;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical
+{
+    background-color: rgb(205, 205, 207);
+    min-height: 5px;
+    border-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical
+{
+    border-image: url(:/icons/arrow-3-up_0.png);
+    height: 24px;
+    width: 24px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical
+{
+    border-image: url(:/icons/arrow-3-down_0.png);
+    height: 24px;
+    width: 24px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,QScrollBar::sub-line:vertical:on
+{
+
+    border-image: url(:/icons/arrow-3-up_0.png);
+    height: 24px;
+    width: 24px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+
+QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on
+{
+    border-image: url(:/icons/arrow-3-down_0.png);
+    height: 24px;
+    width: 24px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
+{
+    background: none;
+}
+
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+    background: none;
+}
+
+QScrollBar:horizontal
+{
+    height: 24px;
+    margin: 0px 24px 0px 24px;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal
+{
+    background-color: rgb(205, 205, 207);
+    min-width: 5px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:horizontal
+{
+    border-image: url(:/icons/arrow-3-right_0.png);
+    width: 24px;
+    height: 24px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal
+{
+    border-image: url(:/icons/arrow-3-left_0.png);
+    height: 24px;
+    width: 24px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal:hover,QScrollBar::add-line:horizontal:on
+{
+    border-image: url(:/icons/arrow-3-right_0.png);
+    height: 24px;
+    width: 24px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+
+QScrollBar::sub-line:horizontal:hover, QScrollBar::sub-line:horizontal:on
+{
+    border-image: url(:/icons/arrow-3-left_0.png);
+    height: 24px;
+    width: 24px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+{
+    background: none;
+}
+
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+    background: none;
+}

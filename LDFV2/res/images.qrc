@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/bg.png</file>
+        <file>images/square_alarm.png</file>
+        <file>images/square_logo.png</file>
+        <file>images/logo.png</file>
+        <file>images/splitter_icon.png</file>
+    </qresource>
+</RCC>
