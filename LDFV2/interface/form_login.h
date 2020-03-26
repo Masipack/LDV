@@ -2,6 +2,7 @@
 #define FORM_LOGIN_H
 
 #include <QWidget>
+#include <QMap>
 
 namespace Ui {
 class FormLogin;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::FormLogin *ui;
+    QMap<QString, int> error_count;
 
 protected:
     void showEvent(QShowEvent * event);

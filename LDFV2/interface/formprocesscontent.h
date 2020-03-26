@@ -45,7 +45,6 @@ private:
 
     FormStatistics*    frmStatistics ;
 
-    bool            use_DATABASE;
 
     QString         camName;
     int             camNum;

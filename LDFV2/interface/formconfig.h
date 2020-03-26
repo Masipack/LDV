@@ -47,6 +47,8 @@ private slots:
 
     void on_btn_users_clicked();
 
+    void on_btn_database_clicked();
+
 private:
 #ifdef _DISPLAY_HORIZONTAL_
     Ui::FormConfigH *ui;

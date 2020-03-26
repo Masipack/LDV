@@ -40,6 +40,30 @@ void MvAbstractTool::ReconfigPosition()
 /// ===========================================================================
 ///
 /// ===========================================================================
+void MvAbstractTool::SetTableDataBase(QMap<QString, QString> _table)
+{
+    table = _table;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void MvAbstractTool::SetAttributeDataBase(const QString &value)
+{
+     attribute=value;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+QString MvAbstractTool::GetAttributeDataBase() const
+{
+    return attribute;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void MvAbstractTool::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     MvTool::mouseMoveEvent( event );

@@ -1,9 +1,9 @@
 # {05D8C294-F295-4dfb-9D01-096BD04049F4}
-# GenApi persistence file (version 3.1.0)
+# GenApi persistence file (version 3.0.1)
 # Device = Basler::GigECamera -- Basler generic GigEVision camera interface -- Device version = 3.8.0 -- Product GUID = 1F3C6A72-7842-4edd-9130-E2E90A2058BA -- Product version GUID = 58DE9B3A-2AF6-4903-AF1B-B50F99099DDF
 GainAuto	Off
 GainSelector	All
-GainRaw	36
+GainRaw	0
 GainSelector	All
 BlackLevelSelector	All
 BlackLevelRaw	0
@@ -11,7 +11,7 @@ BlackLevelSelector	All
 GammaEnable	0
 GammaSelector	User
 Gamma	1
-DigitalShift	0
+DigitalShift	4
 PixelFormat	Mono8
 ReverseX	1
 ReverseY	1
@@ -50,7 +50,7 @@ TriggerDelayAbs	0
 TriggerSelector	FrameStart
 ExposureMode	Timed
 ExposureAuto	Off
-ExposureTimeRaw	2500
+ExposureTimeRaw	500
 ShutterMode	Global
 AcquisitionFrameRateEnable	1
 AcquisitionFrameRateAbs	30.0003

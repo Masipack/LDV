@@ -1,0 +1,64 @@
+14:33:52.959|I|| --------- Sistema Inicializando --------- 
+14:33:52.960|E||Porta serial ttyUSB0 indisponivel para uso
+14:33:52.964|E||Formato não encontrado
+14:33:52.964bool InitDatabase() 173  
+DB LOAD:
+  ""  ""  ""  ""  ""  ""  "" 
+14:33:52.964bool InitDatabase() 174 true
+14:33:52.964bool InitDatabase() 176 ""
+14:33:52.964bool InitDatabase() 177 ""
+14:33:52.964bool InitDatabase() 178 ""
+14:33:52.964bool InitDatabase() 179 ""
+14:33:52.964bool InitDatabase() 180 ""
+14:33:52.971libpng warning: iCCP: known incorrect sRGB profile
+14:33:53.052libpng warning: iCCP: known incorrect sRGB profile
+14:33:59.502libpng warning: iCCP: known incorrect sRGB profile
+14:34:11.952"Erro lendo formato"
+14:34:59.831|I|| --------- Sistema Inicializando --------- 
+14:34:59.831|E||Porta serial ttyUSB0 indisponivel para uso
+14:34:59.832|E||Formato não encontrado
+14:34:59.832bool InitDatabase() 173  
+DB LOAD:
+  ""  ""  ""  ""  ""  ""  "" 
+14:34:59.833bool InitDatabase() 174 false
+14:34:59.833bool InitDatabase() 176 ""
+14:34:59.833bool InitDatabase() 177 ""
+14:34:59.833bool InitDatabase() 178 ""
+14:34:59.833bool InitDatabase() 179 ""
+14:34:59.833bool InitDatabase() 180 ""
+14:34:59.837libpng warning: iCCP: known incorrect sRGB profile
+14:34:59.912libpng warning: iCCP: known incorrect sRGB profile
+14:35:09.815|I|2| --------- Sistema Desligando --------- 
+14:35:40.500|I|| --------- Sistema Inicializando --------- 
+14:35:40.501|E||Porta serial ttyUSB0 indisponivel para uso
+14:35:40.502|E||Formato não encontrado
+14:35:40.502bool InitDatabase() 173  
+DB LOAD:
+  ""  ""  ""  ""  ""  ""  "" 
+14:35:40.502bool InitDatabase() 174 false
+14:35:40.502bool InitDatabase() 176 ""
+14:35:40.503bool InitDatabase() 177 ""
+14:35:40.503bool InitDatabase() 178 ""
+14:35:40.503bool InitDatabase() 179 ""
+14:35:40.503bool InitDatabase() 180 ""
+14:35:40.509libpng warning: iCCP: known incorrect sRGB profile
+14:35:40.586libpng warning: iCCP: known incorrect sRGB profile
+14:36:01.001libpng warning: iCCP: known incorrect sRGB profile
+14:38:57.351|I|2| --------- Sistema Desligando --------- 
+14:39:29.454|I|| --------- Sistema Inicializando --------- 
+14:39:29.454|E||Porta serial ttyUSB0 indisponivel para uso
+14:39:29.455|E||Formato não encontrado
+14:39:29.455bool InitDatabase() 173  
+DB LOAD:
+  ""  ""  ""  ""  ""  ""  "" 
+14:39:29.455bool InitDatabase() 174 false
+14:39:29.456bool InitDatabase() 176 ""
+14:39:29.456bool InitDatabase() 177 ""
+14:39:29.456bool InitDatabase() 178 ""
+14:39:29.456bool InitDatabase() 179 ""
+14:39:29.456bool InitDatabase() 180 ""
+14:39:29.461libpng warning: iCCP: known incorrect sRGB profile
+14:39:29.546libpng warning: iCCP: known incorrect sRGB profile
+14:39:55.503libpng warning: iCCP: known incorrect sRGB profile
+14:41:06.241TOOL  0 --------------------------- 1
+14:45:15.575|I|2| --------- Sistema Desligando --------- 

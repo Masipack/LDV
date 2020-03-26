@@ -23,6 +23,9 @@ public:
     bool GetTO(ProductTO &_TO);
     void SetOutput(const int& number_value) { number_output = number_value;}
 
+    void SetAttributesDataBase(QMap<QString, QString> _table);
+    void SetSincronizeAttributesDataBase(QMap<QString, QString> _table);
+
 signals:
     void InspectionResult(bool bVal);
 
@@ -56,6 +59,8 @@ private:
     quint32                 proc_id;
 
     int                     number_output;
+
+    QMap<QString, QString> table;
 
 
 };

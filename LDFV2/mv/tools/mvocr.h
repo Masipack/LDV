@@ -30,6 +30,10 @@ public:
 
 public slots:
     void ExecResult(const QImage& img, const QString& text, quint32 prid);
+    void NewAttribute(const QString value);
+
+signals:
+    void NewResultAttributes(const QString &value);
 
 protected:
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
@@ -42,6 +46,8 @@ protected:
     int white_filter;
     bool b_approved;
     bool b_Busy;
+
+
 };
 
 #endif // MVOCR_H

@@ -5,11 +5,10 @@
 #include <QPainter>
 #include <QGraphicsView>
 #include "global_defines.h"
+#include "util/fileutil.h"
+#include "util/systemsettings.h"
 
 using namespace cv;
-
-
-
 
 
 
@@ -26,6 +25,13 @@ MvOCR::MvOCR(const QRectF& rect, MvTool *parent) : MvAbstractTool(rect, parent)
     white_filter    = 0;
 
     connect(&PO, SIGNAL(ExecResult(QImage,QString,quint32)), this, SLOT(ExecResult(QImage,QString,quint32)), Qt::QueuedConnection );
+
+    if(qApp->property("USE_DATABASE").toBool())
+    {
+      connect(form, SIGNAL(NewAttribute(QString)), this, SLOT(NewAttribute(QString)), Qt::QueuedConnection );
+      connect(this, SIGNAL(NewResultAttributes(QString)), form, SLOT(NewResultAttributes(QString)), Qt::QueuedConnection );
+    }
+
 
     mv_type = MV_OCR;
 }
@@ -96,6 +102,17 @@ void MvOCR::ExecResult(const QImage &img, const QString &text, quint32 prid)
 /// ===========================================================================
 ///
 /// ===========================================================================
+void MvOCR::NewAttribute(const QString value)
+{
+    expectedText = table.value(value);
+    attribute = value;
+    form->SetExpectedText(expectedText.contains(" ")? expectedText.remove(" "): expectedText);
+    PO.SetExpectedText(expectedText);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void MvOCR::Clear()
 {
     extractedText.clear();
@@ -125,6 +142,9 @@ bool MvOCR::ShowDialog(bool bEnable)
     }
     pLayout->addWidget( form );
     form->showNormal();
+
+    if(qApp->property("USE_DATABASE").toBool()){form->SetTableDataBase(table.keys());}
+
     if( bEnable ) SetLock( false );
     this->update();
     return true;
@@ -137,6 +157,12 @@ void MvOCR::SetExpectedText(const QString &s)
 {
     PO.SetExpectedText( s );
     expectedText = s;
+
+    if(qApp->property("USE_DATABASE").toBool())
+    {
+         emit(NewResultAttributes(s));
+    }
+
 }
 
 /// ===========================================================================
@@ -147,6 +173,7 @@ void MvOCR::SetWhiteFilterSize(int n)
     white_filter = n;
     PO.SetWhiteFilterSize( n );
 }
+
 
 /// ===========================================================================
 ///

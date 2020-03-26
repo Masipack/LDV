@@ -21,7 +21,7 @@ FormProcess::FormProcess(QWidget *parent) : QWidget(parent), ui(new Ui::FormProc
     dlg.SetMessage(DlgInfo::IT_WARNING, " Aguarde, carregando inspeção..... !");
     dlg.SetVisible(false);
 
-    GetConfig(use_PRINTER, "SYSTEM/USE_PRINTER",false);
+    ui->btn_printer->setVisible(qApp->property("USE_PRINTER").toBool());
 
 }
 
@@ -141,6 +141,15 @@ void FormProcess::on_btn_next_clicked()
 void FormProcess::on_btn_return_clicked()
 {
     DeInit();
+    DlgInfo dlg;
+    dlg.SetMessage(DlgInfo::IT_QUESTION, tr("Deseja interromper a inspeção ?"), true, true );
+    dlg.exec();
+    if( dlg.result() == QDialog::Rejected ) return;
+
+    if( P11(tr("Inspeção interrompida:") + Name, true) == false ) return;
+
+    qApp->setProperty("BATCH", "");
+
     WindowManager::instance()->ShowScreen("Products");
 
 }
@@ -176,10 +185,21 @@ void FormProcess::WriteConfig(const QString &name)
 
     if( dlg.result() == QDialog::Rejected ) return;
 
+
+    if( P11(tr("Atributos de inspeção alterados:") + Name, true) == false ) return;
+
     QString err;
     if( WriteTO(MultiTO, name + ".fmt", err, true) == false )
     {
         return;
     }
 
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormProcess::on_btn_printer_clicked()
+{
+     WindowManager::instance()->ShowScreen("Printer");
 }

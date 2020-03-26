@@ -258,6 +258,9 @@ void FormPart11::on_btn_filter_clicked()
 }
 
 
+/// ===========================================================================
+///
+/// ===========================================================================
 void FormPart11::on_btn_export_pdf_clicked()
 {
 //    QProcess p;
@@ -309,6 +312,9 @@ void FormPart11::on_btn_export_pdf_clicked()
     pdf.PrintPART11(usbPath + "/", QString("PART11") + QDate::currentDate().toString("_dd_MM_yyyy"), GetQuery() );
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
 void FormPart11::on_btn_clean_clicked()
 {
     ui->le_batch->setText("");

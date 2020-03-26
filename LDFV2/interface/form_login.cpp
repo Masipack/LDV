@@ -5,6 +5,9 @@
 #include "interface/windowmanager.h"
 #include "util/sys_log.h"
 #include "util/dlgkeyboard.h"
+#include "util/dlginfo.h"
+#include "util/fileutil.h"
+#include "util/systemsettings.h"
 
 /// ===========================================================================
 ///
@@ -116,10 +119,42 @@ void FormLogin::on_btn_login_clicked()
             P11(tr("Login de usuario:") + query.value(2).toString());
             WindowManager::instance()->SetCurrentUser(query.value(2).toString(), query.value(1).toInt());
             WindowManager::instance()->ShowLastScreen();
+            error_count[ui->le_user->text()] = 0;
             return;
         }
     }
-    ui->lbl_info->setText(tr("Usuário ou senha inválido"));
+
+    int nmax;
+    GetConfig(nmax, "SYSTEM/MAX_PASSWORD_ERRORS", 3);
+
+    error_count[ui->le_user->text()]++;
+
+    ui->lbl_info->setText(tr("Usuário ou senha inválido (%1)").arg( error_count.contains(ui->le_user->text()) ? nmax-error_count[ui->le_user->text()] : 3  ));
+
+
+    P11(tr("Login de usuario INVALIDO:") + ui->le_user->text());
+
+    ui->le_password->clear();
+
+
+    if( error_count[ui->le_user->text()] == nmax )
+    {
+        QSqlQuery query( QString() , QSqlDatabase::database("SYSTEM") );
+        if( query.exec( QString("UPDATE users SET active = 0 where login = '%1'").arg(ui->le_user->text()) ) == true )
+        {
+            P11(tr("Login de usuario DESATIVADO:") + ui->le_user->text());
+
+            error_count[ui->le_user->text()] = 0;
+
+            DlgInfo dlg;
+            dlg.SetMessage(DlgInfo::IT_WARNING, tr("Usuário %1 desativado por excesso de tentativas de login (%2)").arg(ui->le_user->text()).arg(nmax), false, false );
+            dlg.exec();
+
+            WindowManager::instance()->ShowLastScreen();
+
+            return;
+        }
+    }
 }
 
 /// ===========================================================================

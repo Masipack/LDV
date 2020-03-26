@@ -15,6 +15,8 @@ FormNewProduct::FormNewProduct(QWidget *parent) : QWidget(parent),
     ui->setupUi(this);
     current_form = 0;
 
+    ui->btn_printer->setVisible(qApp->property("USE_PRINTER").toBool());
+
 
 }
 
@@ -39,6 +41,8 @@ void FormNewProduct::Init()
     {
         FormNewProductContent* p = new FormNewProductContent();
         p->SetCamera( camList.at(i), i );
+        p->StartTableDataBase();
+        p->StartKeepAlive();
         forms.push_back( p );
 
         if( i == 0 )
@@ -196,4 +200,12 @@ void FormNewProduct::on_btn_return_clicked()
 {
     DeInit();
     WindowManager::instance()->ShowScreen("Products");
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormNewProduct::on_btn_printer_clicked()
+{
+    WindowManager::instance()->ShowScreen("Printer");
 }

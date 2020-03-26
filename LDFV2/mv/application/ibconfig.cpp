@@ -13,6 +13,7 @@
 #include "TO/ocrto.h"
 #include "TO/barcodeto.h"
 #include "TO/datamatrixto.h"
+#include "util/serialcontrol.h"
 
 using namespace cv;
 
@@ -22,6 +23,8 @@ using namespace cv;
 IBConfig::IBConfig(QObject *parent) : InspectionBuffer(parent)
 {
     this->SetRunMode(Interactive);
+
+    connect(&timerKeepAlive, SIGNAL(timeout()), this, SLOT(SendKeepAlive()) );
 }
 
 /// ===========================================================================
@@ -65,6 +68,13 @@ void IBConfig::NewImage(const QImage &source)
     this->update();
 }
 
+/// ===========================================================================
+///
+/// =========================================================================
+void IBConfig::SendKeepAlive()
+{
+    SerialControl::instance()->KeepAlive();
+}
 
 /// ===========================================================================
 ///
@@ -108,6 +118,8 @@ MvAbstractTool *IBConfig::InsertTool(MV_TYPE type, const QString &name)
         pItemTool->SetExecOnMove( true );
         pItemTool->SetResizeOnCenter( false );
         pItemTool->SetLockAngle( true );
+        pItemTool->SetTableDataBase(table);
+
     }
 
     if( type == MV_DATAMATRIX )
@@ -246,6 +258,7 @@ bool IBConfig::GetTO(ProductTO &_TO)
             to.BASE.ROI                     = pTool->boundingRect();
             to.WHITE_FILTER                 = pTool->GetWhiteFilterSize();
             to.BASE.VISIBLE                 = pTool->isVisible();
+            to.TABLE_ATTRIBUTE              = pTool->GetAttributeDataBase();
             to.BASE.TYPE                    = (quint32)pTool->GetType();
             _TO.LIST_OCR.push_back( to );
 //            qDebug() << to;
@@ -288,4 +301,48 @@ bool IBConfig::GetTO(ProductTO &_TO)
     }
 
     return true;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void IBConfig::SetAttributesDataBase(QMap<QString, QString> _table)
+{
+    table = _table;
+}
+
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void IBConfig::SetSincronizeAttributesDataBase(QMap<QString, QString> _table)
+{
+    foreach (MvAbstractTool* tool, tools)
+    {
+        if(_table.contains(tool->GetAttributeDataBase()))
+        {
+            if(tool->GetType() == MV_OCR){
+                MvOCR* pTool = (MvOCR*)tool;
+                QString s =_table.value(tool->GetAttributeDataBase());
+                pTool->SetExpectedText(s.remove(" "));
+            }
+
+            if(tool->GetType() == MV_DATAMATRIX){
+                MvDataMatrix* pTool = (MvDataMatrix*)tool;
+
+                QString s =_table.value(tool->GetAttributeDataBase());
+                pTool->SetExpectedText(s.remove(" "));
+            }
+
+        }
+
+    }
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void IBConfig::StartKeepAlive()
+{
+    timerKeepAlive.start(500);
 }

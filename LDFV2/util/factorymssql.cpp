@@ -42,6 +42,7 @@ void FactoryMSSQL::Close()
 /// ===========================================================================
 bool FactoryMSSQL::IsOpen()
 {
+   if(!db_local.isValid()) return false;
    return db_local.isOpen();
 }
 

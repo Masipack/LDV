@@ -36,9 +36,7 @@ FormProcessContent::FormProcessContent(QWidget *parent) : QWidget(parent),
 
     ui->imagedevice->setScene(&ib);
 
-    GetConfig(use_DATABASE, "SYSTEM/USE_DATABASE",false);
-
-    ui->btn_sincrinizeDataBase->setVisible(use_DATABASE);
+    ui->btn_sincrinizeDataBase->setVisible(qApp->property("USE_DATABASE").toBool());
 }
 
 /// ===========================================================================
@@ -365,6 +363,8 @@ bool FormProcessContent::ChangesTOOLS(ProductTO& other)
 void FormProcessContent::on_btn_sincrinizeDataBase_clicked()
 {
 
+    if( P11(tr("Alterando atributes na receita"), true ) == false ) return;
+
     DlgDataBase  dlg;
 
     dlg.exec();
@@ -373,8 +373,24 @@ void FormProcessContent::on_btn_sincrinizeDataBase_clicked()
 
     MSQLSingleton::instance()->GetFactorySQL()->setAttribute("lote");
 
-    Debug(MSQLSingleton::instance()->GetFactorySQL()->GetAll())
-    Debug(MSQLSingleton::instance()->GetFactorySQL()->GetByID(dlg.GetLote()))
+    QMap<QString,QString> table;
 
+    if(MSQLSingleton::instance()->GetFactorySQL()->IsOpen()==false) return;
+    if(qApp->property("USE_DATABASE").toBool())
+        table= MSQLSingleton::instance()->GetFactorySQL()->GetByID(dlg.GetLote());
+
+    DlgInfo dlgInfo;
+
+    if (table.isEmpty())  dlgInfo.SetMessage(DlgInfo::IT_WARNING, " Falha na alteração de dados");
+
+    dlgInfo.SetMessage(DlgInfo::IT_WARNING, " Dados alterados com sucesso");
+
+    dlgInfo.SetVisible(false);
+
+    dlg.show();
+
+    ib.SetSincronizeAttributesDataBase(table);
+
+    dlg.close();
 
 }

@@ -10,6 +10,7 @@ class OcrTO
 public:
     AbstractToolTO  BASE;
     quint32         WHITE_FILTER;
+    QString         TABLE_ATTRIBUTE;
 
     //NOT SERIALIZABLE:
 
@@ -20,10 +21,12 @@ public:
         (    WHITE_FILTER         != other.WHITE_FILTER        )) ;
 
     }
+
     friend QDataStream &operator >>(QDataStream &s, OcrTO& v)
     {
         s >> v.BASE;
         s >> v.WHITE_FILTER;
+        s >> v.TABLE_ATTRIBUTE;
         return s;
     }
 
@@ -31,6 +34,7 @@ public:
     {
         s << v.BASE;
         s << v.WHITE_FILTER;
+        s << v.TABLE_ATTRIBUTE;
         return s;
     }
 
@@ -39,6 +43,7 @@ public:
         dbg.space() << "\nOcrTO:\n";
         dbg.space() << v.BASE;
         dbg.space() << v.WHITE_FILTER;
+        dbg.space() << v.TABLE_ATTRIBUTE;
         return dbg.space();
     }
 };

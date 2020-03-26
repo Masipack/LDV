@@ -53,8 +53,8 @@ void MvTool::setIncrementSizeX(QRectF rect)
 {
     this->prepareGeometryChange();
     qreal delta = rect.width() - boundingRect().width();
-    bounding_rect.adjust(0, 0, delta, 0);
-    this->moveBy(delta * -0.5 , 0 );
+    bounding_rect.adjust(0, 0, delta, delta/2);
+    this->moveBy(delta * -0.5 , (delta/2)*-0.5);
     emit( GeometryChanged( this->mapRectToScene( this->boundingRect() )) );
     this->Exec();
 }

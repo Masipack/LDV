@@ -152,6 +152,7 @@ void FormProducts::on_btn_load_clicked()
 
     if( ui->listWidget->currentRow() == -1 ) return;
 
+    if( P11(tr("Receita carregada:") + ui->listWidget->currentItem()->text(), true ) == false ) return;
 
     FormProcess* p = (FormProcess*)WindowManager::instance()->GetScreen( "Process" );
     if( p == 0 ) return;

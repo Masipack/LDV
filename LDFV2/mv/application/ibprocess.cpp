@@ -99,10 +99,10 @@ void IBProcess::NewImage(const QImage &source)
     }
     qApp->processEvents();
 
-//    QString fname = "./data/image/";
-//    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
-//    fname += ".jpg";
-//    imwrite( fname.toLatin1().data(), mat);
+    QString fname = "./data/image/";
+    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
+    fname += ".jpg";
+    imwrite( fname.toLatin1().data(), mat);
 
 
 }
@@ -332,12 +332,15 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->SetConfigPos(_TO.LIST_OCR[i].BASE.CONFIG_POS);
         pItemTool->SetExpectedText(_TO.LIST_OCR[i].BASE.EXPECTED_TEXT);
         pItemTool->SetWhiteFilterSize(_TO.LIST_OCR[i].WHITE_FILTER);
+        pItemTool->SetAttributeDataBase(_TO.LIST_OCR[i].TABLE_ATTRIBUTE);
+        pItemTool->SetTableDataBase(table);
 
         if(_TO.LIST_OCR[i].BASE.FIXED_ANGLE == false)
         {
-          pItemTool->setTransformOriginPoint(rc.width()/2,rc.height()/2);
-          pItemTool->setRotation( _TO.LIST_OCR[i].BASE.ANGLE );
-          pItemTool->setPos(rc.bottomLeft());
+              pItemTool->setTransformOriginPoint(rc.width()/2,rc.height()/2);
+              pItemTool->setRotation( _TO.LIST_OCR[i].BASE.ANGLE );
+              pItemTool->setPos(rc.bottomLeft());
+
          }
 
 
@@ -345,12 +348,8 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->GetPO()->moveToThread( threads[ tools.size() % threads.size() ]  );
 
 
-
-
         this->addItem( pItemTool );
-
         tools.push_back( pItemTool );
-
 
         //qDebug() << "O:" << _TO.LIST_FIDUCIAL[i].BASE.NAME << rc << _TO.LIST_OCR[i];
         connect(pItemTool, SIGNAL(NewResult(bool,QString,quint32)), this, SLOT(NewResult(bool,QString,quint32)), Qt::QueuedConnection);
@@ -462,6 +461,7 @@ bool IBProcess::GetTO(ProductTO &_TO)
             to.WHITE_FILTER                 = pTool->GetWhiteFilterSize();
             to.BASE.VISIBLE                 = pTool->isVisible();
             to.BASE.TYPE                    = (quint32)pTool->GetType();
+            to.TABLE_ATTRIBUTE              = pTool->GetAttributeDataBase();
             _TO.LIST_OCR.push_back( to );
            // Debug(to);
         }
@@ -503,4 +503,39 @@ bool IBProcess::GetTO(ProductTO &_TO)
     }
 
     return true;
+}
+
+///// ===========================================================================
+/////
+///// ===========================================================================
+void IBProcess::SetAttributesDataBase(QMap<QString, QString> _table)
+{
+    this->table = _table;
+}
+
+///// ===========================================================================
+/////
+///// ===========================================================================
+void IBProcess::SetSincronizeAttributesDataBase(QMap<QString, QString> _table)
+{
+
+    foreach (MvAbstractTool* tool, tools)
+    {
+        if(_table.contains(tool->GetAttributeDataBase()))
+        {
+            if(tool->GetType() == MV_OCR){
+                MvOCR* pTool = (MvOCR*)tool;
+                QString s =_table.value(tool->GetAttributeDataBase());
+                pTool->SetExpectedText(s.remove(" "));
+            }
+
+            if(tool->GetType() == MV_DATAMATRIX){
+                MvDataMatrix* pTool = (MvDataMatrix*)tool;
+                QString s =_table.value(tool->GetAttributeDataBase());
+                pTool->SetExpectedText(s.remove(" "));
+            }
+
+        }
+
+    }
 }
