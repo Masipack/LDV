@@ -8,6 +8,7 @@
 #include "util/fileutil.h"
 #include "util/systemsettings.h"
 
+
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -24,6 +25,7 @@ FormProcess::FormProcess(QWidget *parent) : QWidget(parent), ui(new Ui::FormProc
     ui->btn_printer->setVisible(qApp->property("USE_PRINTER").toBool());
 
 }
+
 
 /// ===========================================================================
 ///
@@ -43,8 +45,8 @@ bool FormProcess::Init(const QString &file_name)
 
     Name = file_name;
 
-
     QString err;
+    
     if( ReadTO(to, file_name + ".fmt", err) == false )
     {
         qDebug() << err;
@@ -62,9 +64,11 @@ bool FormProcess::Init(const QString &file_name)
     }
 
     int number_output = 0;
+    
     for(int i = 0; i < to.TO.size(); i++ )
     {
         FormProcessContent* p = new FormProcessContent();
+        
         p->SetCamera( to.TO[i].CAM_NAME, i );
         p->SetTO( to.TO[i] );
         p->SetFileName(file_name);
@@ -78,11 +82,15 @@ bool FormProcess::Init(const QString &file_name)
         {
             ui->widget_content->layout()->addWidget( p );
         }
+        
+                
     }
 
+    
     current_form = 0;
+
     ui->btn_btn_prev->setEnabled(current_form > 0);
-    ui->btn_next->setEnabled(  current_form < forms.size() - 1 );
+    ui->btn_next->setEnabled(current_form < forms.size() - 1 );
 
     dlg.close();
 
@@ -140,7 +148,6 @@ void FormProcess::on_btn_next_clicked()
 /// ===========================================================================
 void FormProcess::on_btn_return_clicked()
 {
-    DeInit();
     DlgInfo dlg;
     dlg.SetMessage(DlgInfo::IT_QUESTION, tr("Deseja interromper a inspeção ?"), true, true );
     dlg.exec();
@@ -150,7 +157,10 @@ void FormProcess::on_btn_return_clicked()
 
     qApp->setProperty("BATCH", "");
 
+    DeInit();
+
     WindowManager::instance()->ShowScreen("Products");
+
 
 }
 

@@ -53,7 +53,7 @@ FormProcessContent::~FormProcessContent()
 /// ===========================================================================
 void FormProcessContent::showEvent(QShowEvent *event)
 {
-    WindowManager::instance()->SetInfoTop(tr("Inspeção (Câmera ") + QString("%1)").arg(camNum+1) );
+    WindowManager::instance()->SetInfoTop(tr("Inspeção (Câmera ") + QString("%1)").arg(camNum+1)+QString(": %1").arg(configFilename) );
 }
 
 /// ===========================================================================

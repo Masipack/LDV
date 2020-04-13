@@ -1,0 +1,27 @@
+14:00:58.616|I|| --------- Sistema Inicializando --------- 
+14:00:58.616|W||WARNING: configuration SYSTEM/USE_KEEP_ALIVE_SQ not found
+14:00:58.616QIODevice::write (QSerialPort): device not open
+14:00:58.616|E||Porta serial ttyUSB0 indisponivel para uso
+14:00:58.641libpng warning: iCCP: known incorrect sRGB profile
+14:00:58.724libpng warning: iCCP: known incorrect sRGB profile
+14:01:22.760|I|2| --------- Sistema Desligando --------- 
+14:01:58.442|I|| --------- Sistema Inicializando --------- 
+14:01:58.448libpng warning: iCCP: known incorrect sRGB profile
+14:01:58.524libpng warning: iCCP: known incorrect sRGB profile
+14:02:39.912libpng warning: iCCP: known incorrect sRGB profile
+14:02:49.199|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:02:49.199|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:02:56.203libpng warning: iCCP: known incorrect sRGB profile
+14:03:37.669|I|2| --------- Sistema Desligando --------- 
+14:12:19.426|I|| --------- Sistema Inicializando --------- 
+14:12:19.437libpng warning: iCCP: known incorrect sRGB profile
+14:12:19.510libpng warning: iCCP: known incorrect sRGB profile
+14:12:52.182|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:12:52.185|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:13:00.554|I|2| --------- Sistema Desligando --------- 
+14:13:24.393|I|| --------- Sistema Inicializando --------- 
+14:13:24.405libpng warning: iCCP: known incorrect sRGB profile
+14:13:24.486libpng warning: iCCP: known incorrect sRGB profile
+14:13:49.681|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:13:49.684|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:13:56.327|I|2| --------- Sistema Desligando --------- 
