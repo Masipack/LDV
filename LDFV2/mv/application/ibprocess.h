@@ -52,6 +52,9 @@ private:
     quint32                 ok_response_count;
     quint32                 response_count;
     int                     IO_REJECT_TIME;
+
+    bool                    RESIZE_ONE_DIRECTION;
+
     QImage                  img_inspection_result;
 
     QVector<QThread*>       threads;

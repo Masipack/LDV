@@ -22,6 +22,7 @@ MvTool::MvTool(const QRectF& rect, QGraphicsItem *parent) :
     drag_type                       = DRAG_NONE;
     cfg_handle_size                 = 16.0;
     b_resize_on_center              = true;
+    b_resize_one_direct             = true;
     elapsed_value                   = 0;
 
     QFont f("FreeMono");
@@ -53,8 +54,11 @@ void MvTool::setIncrementSizeX(QRectF rect)
 {
     this->prepareGeometryChange();
     qreal delta = rect.width() - boundingRect().width();
-    bounding_rect.adjust(0, 0, delta, delta/2);
-    this->moveBy(delta * -0.5 , (delta/2)*-0.5);
+
+    bounding_rect.adjust(0, 0, b_resize_one_direct ? delta:0, b_resize_one_direct ? delta/2:delta);
+
+    this->moveBy(b_resize_one_direct ? delta * -0.5: 0 , b_resize_one_direct ? (delta/2)*-0.5:(delta)*-0.5);
+
     emit( GeometryChanged( this->mapRectToScene( this->boundingRect() )) );
     this->Exec();
 }

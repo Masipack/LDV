@@ -475,7 +475,7 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 
             }
 
-           Debug(QChar(static_cast<int>(predicted)));
+          // Debug(QChar(static_cast<int>(predicted)));
            extractedText.append((predicted >= 0x20 && predicted <= 0x7E) ? QChar(static_cast<int>(predicted)): QChar('?'));
 
 

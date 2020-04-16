@@ -32,6 +32,8 @@ IBProcess::IBProcess(QObject *parent) : InspectionBuffer(parent)
     int idealThreadCount = QThread::idealThreadCount();
     if( idealThreadCount == -1 ) idealThreadCount = 1;
 
+    RESIZE_ONE_DIRECTION = false;
+
     for(int i = 0; i < idealThreadCount -1; i++ )
     {
         QThread* p = new QThread();
@@ -99,11 +101,10 @@ void IBProcess::NewImage(const QImage &source)
     }
     qApp->processEvents();
 
-    QString fname = "./data/image/";
-    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
-    fname += ".jpg";
-    imwrite( fname.toLatin1().data(), mat);
-
+//    QString fname = "./data/image/";
+//    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
+//    fname += ".jpg";
+//    imwrite( fname.toLatin1().data(), mat);
 
 }
 
@@ -292,6 +293,7 @@ bool IBProcess::SetTO(const ProductTO &_TO)
 
     SerialControl::instance()->SetOutput(0);
     GetConfig(IO_REJECT_TIME        , "SYSTEM/IO_REJECT_TIME"       , 50);
+    GetConfig(RESIZE_ONE_DIRECTION  , "SYSTEM/RESIZE_ONE_DIRECTION" , false);
 
     for(int i = 0; i < _TO.LIST_FIDUCIAL.size(); i++)
     {
@@ -307,6 +309,8 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->SetConfigPos(_TO.LIST_FIDUCIAL[i].BASE.CONFIG_POS);
         pItemTool->SetImageTemplate(_TO.LIST_FIDUCIAL[i].IMG_TEMPLATE, _TO.LIST_FIDUCIAL[i].IMG_TEMPLATE_SZ);
         if(_TO.LIST_FIDUCIAL[i].BASE.FIXED_ANGLE == false)  pItemTool->setRotation( _TO.LIST_FIDUCIAL[i].BASE.ANGLE );
+
+        if(_TO.CAM_NAME=="CAMERA_1" && RESIZE_ONE_DIRECTION ) pItemTool->SetResizeOneDirect(false);
 
         pItemTool->SetToolName( _TO.LIST_FIDUCIAL[i].BASE.NAME );
         this->addItem( pItemTool );
