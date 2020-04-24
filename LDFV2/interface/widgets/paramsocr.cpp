@@ -214,3 +214,15 @@ void ParamsOCR::on_cb_database_currentTextChanged(const QString &value)
     if(qApp->property("USE_DATABASE").toBool()==false) return;
     emit(NewAttribute(value));
 }
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsOCR::on_btn_black_white_clicked(bool checked)
+{
+    if(pTool)
+    {
+        pTool->SetBlackAndWhite(checked ? 1: 0);
+        pTool->Exec(0);
+    }
+}

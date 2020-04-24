@@ -43,6 +43,8 @@ private slots:
 
     void on_cb_database_currentTextChanged(const QString &value);
     
+    void on_btn_black_white_clicked(bool checked);
+
 protected:
     bool eventFilter(QObject *object, QEvent *event);
     void showEvent(QShowEvent * event);

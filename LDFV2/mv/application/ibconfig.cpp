@@ -259,6 +259,7 @@ bool IBConfig::GetTO(ProductTO &_TO)
             to.WHITE_FILTER                 = pTool->GetWhiteFilterSize();
             to.BASE.VISIBLE                 = pTool->isVisible();
             to.TABLE_ATTRIBUTE              = pTool->GetAttributeDataBase();
+            to.BLACK_WHITE                  = pTool->GetBlackAndWhite();
             to.BASE.TYPE                    = (quint32)pTool->GetType();
             _TO.LIST_OCR.push_back( to );
 //            qDebug() << to;

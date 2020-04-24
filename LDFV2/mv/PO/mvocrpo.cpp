@@ -201,6 +201,8 @@ MvOCRPO::MvOCRPO(QObject *parent) : QObject(parent),use_DARK(false)
 
     white_filter = 0;
 
+    b_black_And_white = 0;
+
     GetConfig(use_DARK , "SYSTEM/USE_DARK",false);
 }
 
@@ -263,6 +265,14 @@ QImage MvOCRPO::GetThresholdedImage()
 /// ===========================================================================
 ///
 /// ===========================================================================
+void MvOCRPO::SetBlackAndWhite(const int n)
+{
+      b_black_And_white = n;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 {
 
@@ -274,7 +284,7 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 
     GaussianBlur(roi_local, roi_local, Size(3,3),0,0);
 
-    threshold(roi_local, roi_local_th, 0, 255, use_DARK ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
+    threshold(roi_local, roi_local_th, 0, 255, b_black_And_white ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
 
     Mat kern = (Mat_<char>(5, 5) <<  0, 0, 1, 0, 0,
                                      0, 0, 1, 0, 0,

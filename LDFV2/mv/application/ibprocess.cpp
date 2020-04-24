@@ -336,6 +336,7 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->SetConfigPos(_TO.LIST_OCR[i].BASE.CONFIG_POS);
         pItemTool->SetExpectedText(_TO.LIST_OCR[i].BASE.EXPECTED_TEXT);
         pItemTool->SetWhiteFilterSize(_TO.LIST_OCR[i].WHITE_FILTER);
+        pItemTool->SetBlackAndWhite(_TO.LIST_OCR[i].BLACK_WHITE);
         pItemTool->SetAttributeDataBase(_TO.LIST_OCR[i].TABLE_ATTRIBUTE);
         pItemTool->SetTableDataBase(table);
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>708</width>
-    <height>591</height>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -239,6 +239,55 @@ color: rgb(255, 255, 255);</string>
         <bool>true</bool>
        </property>
        <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="bgIcon">
+        <iconset resource="../../res/icons.qrc">
+         <normaloff>:/icons/bt-blank.png</normaloff>
+         <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+       </property>
+       <property name="bgIconSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="ButtonBeR" name="btn_black_white">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>120</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Petro/Branco</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
         <bool>false</bool>
        </property>
        <property name="bgIcon">

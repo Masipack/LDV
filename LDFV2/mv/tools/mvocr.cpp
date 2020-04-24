@@ -24,6 +24,8 @@ MvOCR::MvOCR(const QRectF& rect, MvTool *parent) : MvAbstractTool(rect, parent)
 
     white_filter    = 0;
 
+    b_black_And_white = false;
+
     connect(&PO, SIGNAL(ExecResult(QImage,QString,quint32)), this, SLOT(ExecResult(QImage,QString,quint32)), Qt::QueuedConnection );
 
     if(qApp->property("USE_DATABASE").toBool())
@@ -64,6 +66,8 @@ bool MvOCR::Exec(quint32 proc_id)
         return false;
     }
     b_Busy = true;
+
+
 
     if( ExtractRoi() == false )             return false;
 
@@ -172,6 +176,26 @@ void MvOCR::SetWhiteFilterSize(int n)
 {
     white_filter = n;
     PO.SetWhiteFilterSize( n );
+}
+
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void MvOCR::SetBlackAndWhite(const int n)
+{
+   b_black_And_white = n;
+   PO.SetBlackAndWhite(n);
+
+}
+
+/// ===========================================================================
+///
+/// ==========================================================================
+int MvOCR::GetBlackAndWhite()
+{
+    return b_black_And_white;
+
 }
 
 
