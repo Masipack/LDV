@@ -34,6 +34,8 @@ private slots:
 
     void on_btn_return_clicked();
 
+    void on_btn_printer_clicked();
+
 private:
     Ui::FormNewProduct *ui;
 

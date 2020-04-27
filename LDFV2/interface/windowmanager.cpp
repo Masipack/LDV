@@ -23,6 +23,7 @@
 #include "interface/formnewproductfinish.h"
 #include "interface/formprocess.h"
 #include "interface/formimagelog.h"
+#include "interface/configdatabase.h"
 
 //#include "interface/formimagelog.h"
 //#include "interface/new_product/formconfigtype.h"
@@ -193,6 +194,8 @@ bool WindowManager::LoadScreens()
     a = new FormProcess(mainWidget);
     if( a ) v_screens.insert( "Process"                   , a );
 
+    a = new ConfigDataBase(mainWidget);
+    if( a ) v_screens.insert( "ConfigDataBase"            , a );
 
     a = new FormImageLog(mainWidget);
     if( a ) v_screens.insert( "ImageLog"                  , a );

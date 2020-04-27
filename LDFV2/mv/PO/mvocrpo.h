@@ -22,6 +22,7 @@ public:
 
     void SetWhiteFilterSize(int n);
     QImage GetThresholdedImage();
+    void SetBlackAndWhite(const int n);
 
 signals:
     void ExecResult(const QImage& img, const QString& text, quint32 prid);
@@ -33,6 +34,7 @@ private:
     int white_filter;
     QList<int> filterSizes;
 
+    int  b_black_And_white;
     bool use_DARK;
 
 

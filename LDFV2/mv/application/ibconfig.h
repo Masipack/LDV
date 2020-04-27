@@ -25,10 +25,15 @@ public:
 
     bool GetTO(ProductTO &_TO);
 
+    void SetAttributesDataBase(QMap<QString, QString> _table);
+    void SetSincronizeAttributesDataBase(QMap<QString, QString> _table);
+    void StartKeepAlive();
+
 signals:
 
 public slots:
     void NewImage(const QImage &source);
+    void SendKeepAlive();
 
 private:
     QList<MvAbstractTool*>  tools;
@@ -37,6 +42,9 @@ private:
     {
         return s1->GetExecutionOrder() < s2->GetExecutionOrder();
     }
+
+    QMap<QString, QString> table;
+    QTimer                 timerKeepAlive;
 };
 
 #endif // IBCONFIG_H

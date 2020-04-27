@@ -21,6 +21,8 @@ public:
     void SetCamera(const QString& name, int n);
     void StopCamera();
     bool GetTO(ProductTO &_TO);
+    void StartTableDataBase();
+    void StartKeepAlive();
 
 public slots:
     void TimerColor();
@@ -40,6 +42,8 @@ private slots:
 
     void on_splitter_splitterMoved(int pos, int index);
 
+    void on_btn_SincronizeDataBase_clicked();
+
 private:
     Ui::FormNewProductContent *ui;
 
@@ -52,7 +56,6 @@ private:
 
     QString         camName;
     int             camNum;
-
 
 
 #ifdef _USE_DISK_

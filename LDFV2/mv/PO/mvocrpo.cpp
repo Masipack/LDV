@@ -201,6 +201,8 @@ MvOCRPO::MvOCRPO(QObject *parent) : QObject(parent),use_DARK(false)
 
     white_filter = 0;
 
+    b_black_And_white = 0;
+
     GetConfig(use_DARK , "SYSTEM/USE_DARK",false);
 }
 
@@ -263,6 +265,14 @@ QImage MvOCRPO::GetThresholdedImage()
 /// ===========================================================================
 ///
 /// ===========================================================================
+void MvOCRPO::SetBlackAndWhite(const int n)
+{
+      b_black_And_white = n;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 {
 
@@ -272,11 +282,24 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     Mat roi_local = roi.clone();
     Mat roi_local_th = roi.clone();
 
-   // medianBlur(roi, roi_local, 7);
-
     GaussianBlur(roi_local, roi_local, Size(3,3),0,0);
 
-    threshold(roi_local, roi_local_th, 0, 255, use_DARK ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
+    threshold(roi_local, roi_local_th, 0, 255, b_black_And_white ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
+
+    Mat kern = (Mat_<char>(5, 5) <<  0, 0, 1, 0, 0,
+                                     0, 0, 1, 0, 0,
+                                     0, 0, 1, 0, 0,
+                                     0, 0, 1, 0, 0,
+                                     0, 0, 1, 0, 0);
+
+    if(use_DARK){
+
+        filter2D(roi_local_th, roi_local_th, roi_local_th.depth(), kern);
+    }
+
+
+//    namedWindow("Thresold", WINDOW_NORMAL );
+//    imshow("Thresold", roi_local_th);
 
     int erode_sizeA  = 0; // white
     int dilate_sizeA = 0; // black
@@ -364,7 +387,7 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
             if(br.width   < 4)                       continue;
             if(br.width   > 40)                      continue;
             if(br.height  < 20)                      continue;
-            if(br.height  > 60)                      continue;
+            if(br.height  > 80)                      continue;
         }else{
 
             if( br.height  < qFloor(min_y)  || br.height  > qCeil(max_y)  ) continue;
@@ -440,6 +463,7 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     {
         if(i >= mask.size() ) break;
 
+
         DESCRIPTOR& current = char_descriptors[i];
 
         int predicted = -1;
@@ -461,11 +485,13 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 
             }
 
+          // Debug(QChar(static_cast<int>(predicted)));
            extractedText.append((predicted >= 0x20 && predicted <= 0x7E) ? QChar(static_cast<int>(predicted)): QChar('?'));
 
 
         } catch (cv::Exception ex) {
             extractedText.clear();
+
         }
 
         lastY = current.rect.y();

@@ -126,18 +126,25 @@ bool InitComPort()
 bool InitDatabase()
 {
 
-    bool p11 = false;
+    bool user_p11 = false;
     bool user_database = false;
+    bool user_printer= false;
+
     QString drive;
 
-    GetConfig(p11, "SYSTEM/USE_PART11", false);
+    GetConfig(user_p11, "SYSTEM/USE_PART11", false);
 
     GetConfig(user_database, "SYSTEM/USE_DATABASE", false);
     GetConfig(drive, "SYSTEM/DRIVE", QString("ODBC Driver 17 for SQL Server"));
 
-    qApp->setProperty("USE_PART11", p11);
+    GetConfig(user_printer, "SYSTEM/USE_PRINTER", false);
 
-    if( p11 )
+    qApp->setProperty("USE_DATABASE",user_database);
+    qApp->setProperty("USE_PART11", user_p11);
+    qApp->setProperty("USE_PRINTER", user_printer);
+
+
+    if( user_p11 )
     {
         QSqlDatabase::addDatabase("QSQLITE", "PART11");
         QSqlDatabase::database("PART11").setDatabaseName("Audit.db");
@@ -164,16 +171,18 @@ bool InitDatabase()
 
     QString error;
 
-    if(!ReadGenericTO(databaseto,"./data/database/database.BIN",error)) {
+    if(!ReadGenericTO(databaseto,"./data/database/ldfbd.bin",error)) {
         LOG(LOG_ERROR_TYPE, QObject::tr("%1").arg(error));
     }
 
     ConvertDATABASETO_To_DATABASE(database,databaseto);
 
+
     if (user_database)
     {
         if(database.IsEmpty() || database.IsNull()) return false ;
-        MSQLSingleton::instance()->Init(database,drive);
+
+        Debug(MSQLSingleton::instance()->Init(database,drive));
     }
 
     return true;

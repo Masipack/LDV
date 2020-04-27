@@ -125,6 +125,7 @@ void FormConfig::on_btn_apply_date_clicked()
 
     QString atual = QDate::currentDate().toString("dd/MM/yyyy");
     QString nova  = QString("%3//%2//%1 ").arg(vy, 4, 10, QChar('0')).arg(vm, 2, 10, QChar('0')).arg(vd, 2, 10, QChar('0'));
+
     if( P11(tr("Data do sistema alterado de ") + atual + tr(" para ") + nova, true ) == false ) return;
 
     QString cmd;
@@ -273,4 +274,13 @@ void FormConfig::on_btn_plus_d_clicked()
 void FormConfig::on_btn_users_clicked()
 {
     WindowManager::instance()->ShowScreen("Users");
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormConfig::on_btn_database_clicked()
+{
+   if(P11(tr("Alterando configurações  do banco de dados"), true ) == false ) return;
+   WindowManager::instance()->ShowScreen("ConfigDataBase");
 }

@@ -141,9 +141,19 @@
               <height>50</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(85, 85, 85);
 color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -303,8 +313,8 @@ color: rgb(255, 255, 255);</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../res/icons.qrc"/>
   <include location="../res/images.qrc"/>
+  <include location="../res/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

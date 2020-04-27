@@ -3,6 +3,7 @@
 
 #include <QtCore>
 #include "TO/abstracttoolto.h"
+#include "global_defines.h"
 
 class FiducialTO
 {
@@ -15,7 +16,7 @@ public:
     //NOT SERIALIZABLE:
     bool hasChanges(const FiducialTO& other)
     {
-       return ( MIN_CORRELATION   != other.MIN_CORRELATION  );
+       return (( MIN_CORRELATION   != other.MIN_CORRELATION ) ||( BASE.ROI !=other.BASE.ROI));
     }
 
     friend QDataStream &operator >>(QDataStream &s, FiducialTO& v)

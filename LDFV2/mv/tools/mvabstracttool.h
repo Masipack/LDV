@@ -36,6 +36,11 @@ public:
 
     void SetConfigPos(QPointF p )   { configPos = p; }
 
+    void SetTableDataBase(QMap<QString,QString>  _table);
+
+    void SetAttributeDataBase(const QString &value);
+    QString  GetAttributeDataBase() const;
+
 signals:
     void NameChanged(const QString& name);
     void NewResult(bool approved, const QString& value, quint32 proc_id);
@@ -44,6 +49,7 @@ protected:
     virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
 
 protected:
+
     QLayout*        pLayout;
 
     MV_TYPE         mv_type;
@@ -61,6 +67,10 @@ protected:
     QImage          result_image;
 
     QElapsedTimer   tm_exec;
+
+    QString         attribute;
+
+    QMap<QString,QString>  table;
 };
 
 #endif // MVABSTRACTTOOL_H

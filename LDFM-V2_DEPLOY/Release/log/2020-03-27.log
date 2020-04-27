@@ -1,0 +1,22 @@
+13:35:48.966|I|| --------- Sistema Inicializando --------- 
+13:35:48.966|E||Porta serial ttyUSB0 indisponivel para uso
+13:35:48.998bool InitDatabase() 185 true
+13:35:49.004libpng warning: iCCP: known incorrect sRGB profile
+13:35:49.077libpng warning: iCCP: known incorrect sRGB profile
+13:36:25.201|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:36:25.209|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:36:42.067|I|2| --------- Sistema Desligando --------- 
+13:37:15.977|I|| --------- Sistema Inicializando --------- 
+13:37:15.978|E||Porta serial ttyUSB0 indisponivel para uso
+13:37:15.985libpng warning: iCCP: known incorrect sRGB profile
+13:37:16.080libpng warning: iCCP: known incorrect sRGB profile
+13:37:48.277|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:37:48.278|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:37:54.005|I|2| --------- Sistema Desligando --------- 
+13:43:27.125|I|| --------- Sistema Inicializando --------- 
+13:43:27.125|E||Porta serial ttyUSB0 indisponivel para uso
+13:43:27.131libpng warning: iCCP: known incorrect sRGB profile
+13:43:27.208libpng warning: iCCP: known incorrect sRGB profile
+13:43:58.774|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:43:58.780|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:44:00.298|I|2| --------- Sistema Desligando --------- 

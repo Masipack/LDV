@@ -1,7 +1,12 @@
 #include "formstatistics.h"
 #include "ui_formstatistics.h"
 #include "QDebug"
+#include "util/sys_log.h"
 
+
+/// ===========================================================================
+///
+/// ===========================================================================
 FormStatistics::FormStatistics(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::FormStatistics)
@@ -9,11 +14,17 @@ FormStatistics::FormStatistics(QWidget *parent) :
     ui->setupUi(this);
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
 FormStatistics::~FormStatistics()
 {
     delete ui;
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
 void FormStatistics::NewInsp(bool v)
 {
     int n = ui->lbl_insp->text().toInt();
@@ -35,8 +46,13 @@ void FormStatistics::NewInsp(bool v)
 
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
 void FormStatistics::on_btn_reset_clicked()
 {
+    if( P11(tr("Apagando estatistica"), true ) == false ) return;
+
     ui->lbl_insp->setText("0");
     ui->lbl_nok->setText("0");
     ui->lbl_ok->setText("0");

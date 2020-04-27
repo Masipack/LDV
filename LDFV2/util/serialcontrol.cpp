@@ -3,6 +3,8 @@
 #include <QDebug>
 #include <QtCore>
 #include "util/alarmmanager.h"
+#include "util/fileutil.h"
+#include "util/systemsettings.h"
 
 Q_GLOBAL_STATIC(SerialControl, serialControl)
 
@@ -35,6 +37,10 @@ bool SerialControl::init(const QString& port, quint32 baud, bool bOldFirmware)
         serial.close();
     }
 
+    bool  user_KEEPALIVE_SQ;
+
+    GetConfig(user_KEEPALIVE_SQ, "SYSTEM/USE_KEEPALIVE_SQ", false);
+
     serial.setPortName( port );
     serial.setBaudRate( baud );
     serial.setDataBits( QSerialPort::Data8 );
@@ -52,6 +58,13 @@ bool SerialControl::init(const QString& port, quint32 baud, bool bOldFirmware)
         if( serial.write( cmd.toLatin1().data() ) == -1 ) return false;
         serial.flush();
     }
+
+
+    QString cmd = user_KEEPALIVE_SQ ? QString("#BIX"): QString("#BOX") ;
+
+    if( serial.write( cmd.toLatin1().data() ) == -1 ) return false;
+        serial.flush();
+
 
     connect(&serial, SIGNAL(readyRead()), this, SLOT(NewData()), Qt::UniqueConnection );
 

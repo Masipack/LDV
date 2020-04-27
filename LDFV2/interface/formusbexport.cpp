@@ -252,7 +252,16 @@ void FormUsbExport::on_btn_config_to_usb_clicked()
 
     QStringList dest_files;
     dest_files = GetFileList("./data/", "dat", false);
-    dest_files << "front.pfs" << "back.pfs";
+
+    Debug(dest_files)
+
+    QStringList  file_list = GetFileList("./data/", "pfs",false);
+
+    foreach (QString s, file_list) {
+        dest_files.append(s);
+    }
+
+    Debug(dest_files)
 
     if( P11(tr("Exportação USB de configurações"), true) == false ) return;
 

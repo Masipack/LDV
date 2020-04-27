@@ -305,6 +305,50 @@
           </spacer>
          </item>
          <item>
+          <widget class="ButtonBeR" name="btn_SincronizeDataBase">
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/database-reload-alt-2.png</normaloff>:/icons/database-reload-alt-2.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="bgIcon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/bt-blank.png</normaloff>
+             <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+           </property>
+           <property name="bgIconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="ButtonBeR" name="btn_camera_snap">
            <property name="minimumSize">
             <size>

@@ -23,6 +23,9 @@ public:
     bool GetTO(ProductTO &_TO);
     void SetOutput(const int& number_value) { number_output = number_value;}
 
+    void SetAttributesDataBase(QMap<QString, QString> _table);
+    void SetSincronizeAttributesDataBase(QMap<QString, QString> _table);
+
 signals:
     void InspectionResult(bool bVal);
 
@@ -49,6 +52,9 @@ private:
     quint32                 ok_response_count;
     quint32                 response_count;
     int                     IO_REJECT_TIME;
+
+    bool                    RESIZE_ONE_DIRECTION;
+
     QImage                  img_inspection_result;
 
     QVector<QThread*>       threads;
@@ -56,6 +62,8 @@ private:
     quint32                 proc_id;
 
     int                     number_output;
+
+    QMap<QString, QString> table;
 
 
 };

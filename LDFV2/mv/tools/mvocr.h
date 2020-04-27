@@ -25,11 +25,16 @@ public:
 
     void SetWhiteFilterSize(int n);
     int  GetWhiteFilterSize()       { return white_filter; }
-
+    void SetBlackAndWhite(const int n);
+    int GetBlackAndWhite();
     QObject* GetPO() { return (QObject*)&PO; }
 
 public slots:
     void ExecResult(const QImage& img, const QString& text, quint32 prid);
+    void NewAttribute(const QString value);
+
+signals:
+    void NewResultAttributes(const QString &value);
 
 protected:
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
@@ -39,9 +44,12 @@ protected:
     ParamsOCR*      form;
     MvOCRPO         PO;
 
-    int white_filter;
+    int  white_filter;
     bool b_approved;
     bool b_Busy;
+    int  b_black_And_white;
+
+
 };
 
 #endif // MVOCR_H

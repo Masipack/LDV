@@ -3,6 +3,7 @@
 
 #include "mv/tools/mvocr.h"
 #include "util/dlgkeyboard.h"
+#include "util/systemsettings.h"
 
 /// ===========================================================================
 ///
@@ -16,6 +17,9 @@ ParamsOCR::ParamsOCR(MvOCR *p, QWidget *parent) :  QWidget(parent),
     ui->le_expected->installEventFilter( this );
 
     white_filter = 0;
+
+    ui->lbl_database->setVisible(qApp->property("USE_DATABASE").toBool());
+    ui->cb_database->setVisible(qApp->property("USE_DATABASE").toBool());
 }
 
 /// ===========================================================================
@@ -29,12 +33,37 @@ ParamsOCR::~ParamsOCR()
 /// ===========================================================================
 ///
 /// ===========================================================================
+void ParamsOCR:: SetTableDataBase(const QList<QString> attributes)
+{
+    ui->cb_database->addItems(attributes);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsOCR::SetExpectedText(const QString text)
+{
+    ui->le_expected->setPlainText(text);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void ParamsOCR::NewResult(bool approved, const QString &value, quint32 proc_id)
 {
     if( pTool )
     {
         ui->le_extracted->setPlainText( pTool->GetExtractedText() );
     }
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsOCR::NewResultAttributes(const QString &value)
+{
+    ui->cb_database->setCurrentText(value);
+    ui->le_expected->setPlainText(value);
 }
 
 /// ===========================================================================
@@ -182,5 +211,18 @@ void ParamsOCR::on_pushButton_clicked()
 /// ===========================================================================
 void ParamsOCR::on_cb_database_currentTextChanged(const QString &value)
 {
+    if(qApp->property("USE_DATABASE").toBool()==false) return;
     emit(NewAttribute(value));
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsOCR::on_btn_black_white_clicked(bool checked)
+{
+    if(pTool)
+    {
+        pTool->SetBlackAndWhite(checked ? 1: 0);
+        pTool->Exec(0);
+    }
 }

@@ -36,6 +36,7 @@ public:
     void SetLockAngle( bool v )             { b_lock_angle = v;         }
     void SetResizeOnCenter( bool v )        { b_resize_on_center = v;   }
     void SetExecOnMove( bool v )            { b_exec_on_move = v;       }
+    void SetResizeOneDirect(bool v)         { b_resize_one_direct = v;  }
 
     QString GetToolName()                   { return toolName->text(); }
 
@@ -82,6 +83,7 @@ protected:
     bool                b_resize_on_center;
     bool                b_lock_angle;
     bool                b_locked;
+    bool                b_resize_one_direct;
 
     QGraphicsSimpleTextItem*    toolName;
 

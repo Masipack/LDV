@@ -8,6 +8,9 @@
 #include "util/fileutil.h"
 #include "mv/camera/cameramanager.h"
 #include "util/serialcontrol.h"
+#include "util/msqlsingleton.h"
+#include "util/dlgDataBase.h"
+#include "util/dlginfo.h"
 
 /// ===========================================================================
 ///
@@ -27,6 +30,9 @@ FormNewProductContent::FormNewProductContent(QWidget *parent) : QWidget(parent),
     ui->splitter->setSizes(list);
 
     ui->imagedevice->setScene(&ib);
+
+    ui->btn_SincronizeDataBase->setVisible(qApp->property("USE_DATABASE").toBool());
+
 }
 
 /// ===========================================================================
@@ -52,6 +58,8 @@ void FormNewProductContent::SetCamera(const QString &name, int n)
         pCamera->start(camName);
         connect(pCamera, SIGNAL(NewImage(QImage)), &ib, SLOT(NewImage(QImage)), Qt::QueuedConnection );
     }
+
+
 }
 
 /// ===========================================================================
@@ -75,6 +83,25 @@ bool FormNewProductContent::GetTO(ProductTO &_TO)
 {
     _TO.CAM_NAME = camName;
     return ib.GetTO(_TO);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormNewProductContent::StartTableDataBase()
+{
+
+    if(qApp->property("USE_DATABASE").toBool()==false) return;
+    if(MSQLSingleton::instance()->GetFactorySQL()->IsOpen()==false) return;
+    ib.SetAttributesDataBase( MSQLSingleton::instance()->GetFactorySQL()->GetAll());
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormNewProductContent::StartKeepAlive()
+{
+    ib.StartKeepAlive();
 }
 
 /// ===========================================================================
@@ -354,4 +381,39 @@ void FormNewProductContent::on_splitter_splitterMoved(int pos, int index)
         ui->splitter->setStyleSheet("QSplitter::handle {\nbackground-color: transparent;\n    image: url(\":/images/splitter_icon.png\");\n}");
         if( tmColor.isActive() == true ) tmColor.stop();
     }
+}
+
+/// ===========================================================================
+///
+/// ==========================================================================
+void FormNewProductContent::on_btn_SincronizeDataBase_clicked()
+{
+    DlgDataBase  dlg;
+
+    dlg.exec();
+
+    if(dlg.result()== QDialog::Rejected) return ;
+
+    MSQLSingleton::instance()->GetFactorySQL()->setAttribute("lote");
+
+    QMap<QString,QString> table;
+
+    if(MSQLSingleton::instance()->GetFactorySQL()->IsOpen()==false) return;
+    if(qApp->property("USE_DATABASE").toBool())
+        table= MSQLSingleton::instance()->GetFactorySQL()->GetByID(dlg.GetLote());
+
+    DlgInfo dlgInfo;
+
+    if(table.isEmpty())  dlgInfo.SetMessage(DlgInfo::IT_WARNING, " Falha na alteração de dados");
+
+    dlgInfo.SetMessage(DlgInfo::IT_WARNING, " Dados alterados com sucesso");
+
+    dlgInfo.SetVisible(false);
+
+    dlg.show();
+
+    ib.SetSincronizeAttributesDataBase(table);
+
+    dlg.close();
+
 }

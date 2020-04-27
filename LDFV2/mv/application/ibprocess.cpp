@@ -32,6 +32,8 @@ IBProcess::IBProcess(QObject *parent) : InspectionBuffer(parent)
     int idealThreadCount = QThread::idealThreadCount();
     if( idealThreadCount == -1 ) idealThreadCount = 1;
 
+    RESIZE_ONE_DIRECTION = false;
+
     for(int i = 0; i < idealThreadCount -1; i++ )
     {
         QThread* p = new QThread();
@@ -103,7 +105,6 @@ void IBProcess::NewImage(const QImage &source)
 //    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
 //    fname += ".jpg";
 //    imwrite( fname.toLatin1().data(), mat);
-
 
 }
 
@@ -292,6 +293,7 @@ bool IBProcess::SetTO(const ProductTO &_TO)
 
     SerialControl::instance()->SetOutput(0);
     GetConfig(IO_REJECT_TIME        , "SYSTEM/IO_REJECT_TIME"       , 50);
+    GetConfig(RESIZE_ONE_DIRECTION  , "SYSTEM/RESIZE_ONE_DIRECTION" , false);
 
     for(int i = 0; i < _TO.LIST_FIDUCIAL.size(); i++)
     {
@@ -307,6 +309,8 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->SetConfigPos(_TO.LIST_FIDUCIAL[i].BASE.CONFIG_POS);
         pItemTool->SetImageTemplate(_TO.LIST_FIDUCIAL[i].IMG_TEMPLATE, _TO.LIST_FIDUCIAL[i].IMG_TEMPLATE_SZ);
         if(_TO.LIST_FIDUCIAL[i].BASE.FIXED_ANGLE == false)  pItemTool->setRotation( _TO.LIST_FIDUCIAL[i].BASE.ANGLE );
+
+        if(_TO.CAM_NAME=="CAMERA_1" && RESIZE_ONE_DIRECTION ) pItemTool->SetResizeOneDirect(false);
 
         pItemTool->SetToolName( _TO.LIST_FIDUCIAL[i].BASE.NAME );
         this->addItem( pItemTool );
@@ -332,12 +336,16 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->SetConfigPos(_TO.LIST_OCR[i].BASE.CONFIG_POS);
         pItemTool->SetExpectedText(_TO.LIST_OCR[i].BASE.EXPECTED_TEXT);
         pItemTool->SetWhiteFilterSize(_TO.LIST_OCR[i].WHITE_FILTER);
+        pItemTool->SetBlackAndWhite(_TO.LIST_OCR[i].BLACK_WHITE);
+        pItemTool->SetAttributeDataBase(_TO.LIST_OCR[i].TABLE_ATTRIBUTE);
+        pItemTool->SetTableDataBase(table);
 
         if(_TO.LIST_OCR[i].BASE.FIXED_ANGLE == false)
         {
-          pItemTool->setTransformOriginPoint(rc.width()/2,rc.height()/2);
-          pItemTool->setRotation( _TO.LIST_OCR[i].BASE.ANGLE );
-          pItemTool->setPos(rc.bottomLeft());
+              pItemTool->setTransformOriginPoint(rc.width()/2,rc.height()/2);
+              pItemTool->setRotation( _TO.LIST_OCR[i].BASE.ANGLE );
+              pItemTool->setPos(rc.bottomLeft());
+
          }
 
 
@@ -345,12 +353,8 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->GetPO()->moveToThread( threads[ tools.size() % threads.size() ]  );
 
 
-
-
         this->addItem( pItemTool );
-
         tools.push_back( pItemTool );
-
 
         //qDebug() << "O:" << _TO.LIST_FIDUCIAL[i].BASE.NAME << rc << _TO.LIST_OCR[i];
         connect(pItemTool, SIGNAL(NewResult(bool,QString,quint32)), this, SLOT(NewResult(bool,QString,quint32)), Qt::QueuedConnection);
@@ -462,6 +466,7 @@ bool IBProcess::GetTO(ProductTO &_TO)
             to.WHITE_FILTER                 = pTool->GetWhiteFilterSize();
             to.BASE.VISIBLE                 = pTool->isVisible();
             to.BASE.TYPE                    = (quint32)pTool->GetType();
+            to.TABLE_ATTRIBUTE              = pTool->GetAttributeDataBase();
             _TO.LIST_OCR.push_back( to );
            // Debug(to);
         }
@@ -503,4 +508,39 @@ bool IBProcess::GetTO(ProductTO &_TO)
     }
 
     return true;
+}
+
+///// ===========================================================================
+/////
+///// ===========================================================================
+void IBProcess::SetAttributesDataBase(QMap<QString, QString> _table)
+{
+    this->table = _table;
+}
+
+///// ===========================================================================
+/////
+///// ===========================================================================
+void IBProcess::SetSincronizeAttributesDataBase(QMap<QString, QString> _table)
+{
+
+    foreach (MvAbstractTool* tool, tools)
+    {
+        if(_table.contains(tool->GetAttributeDataBase()))
+        {
+            if(tool->GetType() == MV_OCR){
+                MvOCR* pTool = (MvOCR*)tool;
+                QString s =_table.value(tool->GetAttributeDataBase());
+                pTool->SetExpectedText(s.remove(" "));
+            }
+
+            if(tool->GetType() == MV_DATAMATRIX){
+                MvDataMatrix* pTool = (MvDataMatrix*)tool;
+                QString s =_table.value(tool->GetAttributeDataBase());
+                pTool->SetExpectedText(s.remove(" "));
+            }
+
+        }
+
+    }
 }

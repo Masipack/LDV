@@ -28,6 +28,8 @@ private slots:
     void on_btn_next_clicked();
 
     void on_btn_return_clicked();
+    void on_btn_printer_clicked();
+
 protected:
     void showEvent(QShowEvent * event);
 

@@ -21,6 +21,7 @@ public:
 
 protected:
     void showEvent(QShowEvent * event);
+    bool eventFilter(QObject* object, QEvent* event);
 
 private slots:
     void on_btn_ok_clicked();
