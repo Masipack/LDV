@@ -34,7 +34,6 @@ IO_REJECT_TIME=50
 KEEPAPLIVE_OUT_NUM=11
 USB_DRIVE=D:/
 PRINTER_URL="https://colorlib.com/polygon/gentelella/index3.html"
-<<<<<<< HEAD
 USE_PART11=true
 LOGOFF_MINUTES=10
 IMAGE_SIZE=@Rect(0 0 2448 2048)
@@ -45,42 +44,22 @@ USE_PRINTER=true
 USE_KEEPALIVE_SQ=false
 DRIVE="ODBC Driver 17 for SQL Server"
 RESIZE_ONE_DIRECTION=true
-
+ROTATE_ANG=0
 
 [DISK]
 BASE_PATH=/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image/
 #BASE_PATH = /home/gemirson/Pictures/geolab/
 DEST_FORMAT=GRAY
-FILE_EXT=png
-=======
-USE_PART11=false
-LOGOFF_MINUTES=10
-IMAGE_SIZE=@Rect(0 0 2448 2048)
-LICENSE=eaKybnCW4SPXK8y1XVO6jCC+6yreM836EdvYiN9ZGIQ=
-USE_DATABASE=true
-USE_DARK=false
-USE_PRINTER=true
-DRIVE="ODBC Driver 17 for SQL Server"
-
-
-[DISK]
-BASE_PATH=/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM-V2_DEPLOY/Release/data/image/
-#BASE_PATH = /home/gemirson/Pictures/geolab/
-DEST_FORMAT=GRAY
 FILE_EXT=jpg
->>>>>>> master
-ROTATE_ANG=0
+
+
 
 
 [FABRIMA]
-<<<<<<< HEAD
 PEDIDO=126398
-=======
-PEDIDO=0000000
->>>>>>> master
-VERSAO=2.1
+VERSAO=2.0
 MODELO=LDF
-FIRMWARE=2019 V1
+FIRMWARE=2020 V1
 CAMERA=BASLER aca2440_20gm
 
 [TOOLS]
