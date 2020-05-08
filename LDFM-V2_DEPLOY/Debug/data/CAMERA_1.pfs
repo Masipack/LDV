@@ -3,7 +3,11 @@
 # Device = Basler::GigECamera -- Basler generic GigEVision camera interface -- Device version = 3.8.0 -- Product GUID = 1F3C6A72-7842-4edd-9130-E2E90A2058BA -- Product version GUID = 58DE9B3A-2AF6-4903-AF1B-B50F99099DDF
 GainAuto	Off
 GainSelector	All
+<<<<<<< HEAD
+GainRaw	50
+=======
 GainRaw	0
+>>>>>>> master
 GainSelector	All
 BlackLevelSelector	All
 BlackLevelRaw	0
@@ -17,10 +21,17 @@ ReverseX	1
 ReverseY	1
 TestImageSelector	Off
 PgiMode	Off
+<<<<<<< HEAD
+Width	2448
+Height	2048
+OffsetX	8
+OffsetY	4
+=======
 Width	1908
 Height	1048
 OffsetX	264
 OffsetY	470
+>>>>>>> master
 CenterX	0
 CenterY	0
 BinningModeHorizontal	Summing
@@ -50,7 +61,11 @@ TriggerDelayAbs	0
 TriggerSelector	FrameStart
 ExposureMode	Timed
 ExposureAuto	Off
+<<<<<<< HEAD
+ExposureTimeRaw	800
+=======
 ExposureTimeRaw	2000
+>>>>>>> master
 ShutterMode	Global
 AcquisitionFrameRateEnable	1
 AcquisitionFrameRateAbs	30.0003

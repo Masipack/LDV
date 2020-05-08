@@ -27,6 +27,9 @@ public:
 
     bool GetImageTemplate(QByteArray& dest, QSize &sz_dest);
     bool SetImageTemplate(const QByteArray &src, QSize sz);
+    void ResetMove();
+signals:
+    void TemplateImage(const QPixmap& img);
 
 
 protected:

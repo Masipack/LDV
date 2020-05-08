@@ -150,6 +150,7 @@ void FormLogin::on_btn_login_clicked()
             dlg.SetMessage(DlgInfo::IT_WARNING, tr("Usuário %1 desativado por excesso de tentativas de login (%2)").arg(ui->le_user->text()).arg(nmax), false, false );
             dlg.exec();
 
+            if(P11(tr("Usuário %1 desativado por excesso de tentativas de login (%2)").arg(ui->le_user->text()).arg(nmax), true) == false ) return;
             WindowManager::instance()->ShowLastScreen();
 
             return;

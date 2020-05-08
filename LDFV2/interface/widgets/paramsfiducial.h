@@ -32,9 +32,16 @@ private slots:
 
     void on_btn_minus_region_clicked();
 
+    void on_btn_edit_toggled(bool checked);
+
+public slots:
+    void TemplateImage(const QPixmap& image);
+
+
 protected:
     bool eventFilter(QObject *object, QEvent *event);
     void showEvent(QShowEvent * event);
+
 
 private:
     Ui::ParamsFiducial *ui;

@@ -4,7 +4,7 @@
 #include <QGraphicsView>
 #include "mv/inspectionbuffer.h"
 #include "util/systemsettings.h"
-
+#include "global_defines.h"
 
 using namespace cv;
 
@@ -115,9 +115,11 @@ void MvTool::mousePressEvent(QGraphicsSceneMouseEvent *event)
         if( bounding_rect.width() > r * 4 && bounding_rect.height() > r * 4   )
         {
             rc = QRectF( bounding_rect.right()-d, bounding_rect.center().y()-r, d, d );
+
             if( rc.contains( event->pos() ) )  drag_type = DRAG_RIGHT_ANG;
 
             rc = QRectF( bounding_rect.center().x()-r, bounding_rect.bottom()-d, d, d );
+
             if( rc.contains( event->pos() ) )  drag_type = DRAG_BOTTOM_ANG;
         }
     }
@@ -211,6 +213,7 @@ void MvTool::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
             this->moveBy(0, dy);
             bounding_rect.adjust(0.0, 0.0, 0.0, -dy * 2.0);
         }
+
         this->setRotation( angle );
 
         emit( GeometryChanged( this->mapRectToScene( this->boundingRect() )) );

@@ -204,6 +204,38 @@ int MvOCR::GetBlackAndWhite()
 /// ===========================================================================
 void MvOCR::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+
+    if((b_exec_on_move == true) &&(b_lock_angle == false))
+    {
+        QPen pn(QColor(253,233,10), 3);
+        pn.setCosmetic( true );
+        pn.setWidth( 3 );
+        painter->setPen( pn );
+
+        QPointF pointer_= this->boundingRect().topRight() - QPointF(4,-2);
+
+        float end_y , start_y, end_x ,start_x;
+
+        end_x = pointer_.rx() - 20 ;
+        end_y = pointer_.ry() + 20;
+        start_x= pointer_.rx() ;
+        start_y= pointer_.ry();
+
+        double angle = atan2 (end_y - start_y, end_x - start_x) + M_PI;
+        double x1,x2,y1,y2;
+        double arrow_lenght_ = -5;
+        double arrow_degrees_= 60;
+
+        x1 = end_x + arrow_lenght_ * cos(angle - arrow_degrees_);
+        y1 = end_y + arrow_lenght_ * sin(angle - arrow_degrees_);
+        x2 = end_x + arrow_lenght_ * cos(angle + arrow_degrees_);
+        y2 = end_y + arrow_lenght_ * sin(angle + arrow_degrees_);
+
+        painter->drawLine(this->boundingRect().topLeft() - QPointF(-4,-2), this->boundingRect().topRight() - QPointF(4,-2));
+        painter->drawLine(pointer_,QPointF(x1,y1));
+
+    }
+
     if( bShowThreshold )
     {
         painter->drawImage(this->boundingRect(), result_image);
@@ -246,3 +278,6 @@ double MvOCR::correlation(cv::Mat& image_1, cv::Mat& image_2)
 
     return correl;
 }
+
+
+

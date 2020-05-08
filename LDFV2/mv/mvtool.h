@@ -90,7 +90,7 @@ protected:
     qreal               cfg_handle_size;
 
 private:
-    enum DRAG_TYPE { DRAG_NONE, DRAG_MOVE, DRAG_RESIZE, DRAG_RIGHT_ANG, DRAG_BOTTOM_ANG, DRAG_CENTER_ANG };
+    enum DRAG_TYPE { DRAG_NONE, DRAG_MOVE, DRAG_RESIZE, DRAG_RIGHT_ANG, DRAG_BOTTOM_ANG, DRAG_CENTER_ANG ,DRAG_TOP_LEFT};
 
     QRectF              bounding_rect;
     DRAG_TYPE           drag_type;

@@ -2,9 +2,9 @@
 #---------------------------------------------------------------------------------------------------------------------
 QT += core gui widgets opengl serialport sql webengine webenginewidgets printsupport
 
-#DEFINES += _TESTE_
+DEFINES += _TESTE_
 DEFINES += _DISPLAY_HORIZONTAL_
-#DEFINES += _USE_DISK_
+DEFINES += _USE_DISK_
 
 TRANSLATIONS = res/translations/lang.ts
 
@@ -132,7 +132,9 @@ SOURCES += \
     util/msqlsingleton.cpp \
     util/factorymssql.cpp \
     util/dlgDataBase.cpp \
-    interface/configdatabase.cpp
+    interface/configdatabase.cpp \
+    interface/formsaidas.cpp \
+    interface/widgets/widgetoutput.cpp
 
 HEADERS += \
         maindialog.h \
@@ -202,7 +204,9 @@ HEADERS += \
     util/factorymssql.h \
     TO/databaseto.h \
     util/dlgDataBase.h \
-    interface/configdatabase.h
+    interface/configdatabase.h \
+    interface/formsaidas.h \
+    interface/widgets/widgetoutput.h
 
 FORMS += \
         maindialog.ui \
@@ -239,7 +243,9 @@ FORMS += \
     interface/formimagelog.ui \
     util/dlginfoprocess.ui \
     util/dlgDataBase.ui \
-    interface/configdatabase.ui
+    interface/configdatabase.ui \
+    interface/formsaidas.ui \
+    interface/widgets/widgetoutput.ui
 
 #---------------------------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------------------

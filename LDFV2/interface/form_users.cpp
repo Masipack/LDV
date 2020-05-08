@@ -102,6 +102,8 @@ void FormUsers::on_btn_new_clicked()
     {
         f->SetNewUserMode();
     }
+
+    if( P11(tr("Usuário: Criando um novo usuário"), true) == false ) return;
     WindowManager::instance()->ShowScreen("NewUser");
 }
 
@@ -132,6 +134,7 @@ void FormUsers::on_btn_edit_clicked()
     if( f )
     {
         f->SetDialogData(model, mi);
+        if( P11(tr("Usuário: Alterando usuário"), true) == false ) return;
         WindowManager::instance()->ShowScreen( "NewUser" );
     }
 }
@@ -153,6 +156,8 @@ void FormUsers::on_btn_delete_clicked()
 
     QString u_name  = model.data( mi.sibling(mi.row(),1) ).toString();
     QString u_login = model.data( mi.sibling(mi.row(),0) ).toString();
+
+    if( P11(tr("Usuário: Apagando usuário"), true) == false ) return;
 
     DlgInfo dlg;
     dlg.SetMessage(DlgInfo::IT_QUESTION, tr("Deseja excluir usuário %1 ( %2 ) ?").arg( u_name ).arg( u_login), true, true );

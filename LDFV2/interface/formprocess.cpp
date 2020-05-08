@@ -49,7 +49,7 @@ bool FormProcess::Init(const QString &file_name)
     
     if( ReadTO(to, file_name + ".fmt", err) == false )
     {
-        qDebug() << err;
+        LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL: %1").arg(err));
         return false;
     }
 
@@ -85,7 +85,6 @@ bool FormProcess::Init(const QString &file_name)
         
                 
     }
-
     
     current_form = 0;
 
@@ -93,6 +92,8 @@ bool FormProcess::Init(const QString &file_name)
     ui->btn_next->setEnabled(current_form < forms.size() - 1 );
 
     dlg.close();
+
+    return true;
 
 }
 
@@ -199,8 +200,10 @@ void FormProcess::WriteConfig(const QString &name)
     if( P11(tr("Atributos de inspeção alterados:") + Name, true) == false ) return;
 
     QString err;
+
     if( WriteTO(MultiTO, name + ".fmt", err, true) == false )
     {
+        LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL: %1").arg(err));
         return;
     }
 

@@ -156,8 +156,7 @@ void FormProducts::on_btn_load_clicked()
 
     FormProcess* p = (FormProcess*)WindowManager::instance()->GetScreen( "Process" );
     if( p == 0 ) return;
-   // p->StartProcess();
-    p->Init( ui->listWidget->currentItem()->text() );
+    if( p->Init( ui->listWidget->currentItem()->text() )==false) return ;
     WindowManager::instance()->ShowScreen("Process");
 
 

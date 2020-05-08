@@ -4,6 +4,8 @@
 #include "interface/windowmanager.h"
 #include "util/systemsettings.h"
 #include "util/fileutil.h"
+#include "util/sys_log.h"
+#include "util/dlginfo.h"
 #include "TO/multicamto.h"
 
 /// ===========================================================================
@@ -103,15 +105,27 @@ void FormNewProduct::WriteConfig(const QString &name)
 
     //qDebug() << MultiTO;
 
-//    WriteTO( MultiTO, "./data/formats/" + name + ".fmt",  )
+//  WriteTO( MultiTO, "./data/formats/" + name + ".fmt",  )
 
     QString err;
+
     if( WriteTO(MultiTO, name + ".fmt", err, true) == false )
     {
-        return;
-    }
+        DlgInfo dlg;
+        dlg.SetMessage(DlgInfo::IT_QUESTION, tr("Erro ao  processar arquivo "), false, true );
+        dlg.exec();
 
-    DeInit();
+        LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL: FALHA AO CRIAR ARQUIVO DE RECEITA"));
+
+
+        QFile::remove( QString("./data/formats/" + name + ".fmt") );
+
+        DeInit();
+
+        if( dlg.result() == QDialog::Accepted ) return;
+     }
+
+     DeInit();
 }
 
 /// ===========================================================================

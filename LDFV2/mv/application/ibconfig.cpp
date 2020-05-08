@@ -106,7 +106,8 @@ MvAbstractTool *IBConfig::InsertTool(MV_TYPE type, const QString &name)
 
     if( type == MV_FIDUCIAL )
     {
-        pItemTool = new MvFiducial( temp_rect, nullptr );
+
+        pItemTool = new MvFiducial(temp_rect, nullptr );
         pItemTool->SetExecOnMove( true );
         pItemTool->SetResizeOnCenter( true );
         pItemTool->SetLockAngle(true);

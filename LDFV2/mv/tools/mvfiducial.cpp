@@ -8,6 +8,26 @@
 
 using namespace cv;
 
+static QPixmap convert16uc3(const cv::Mat& source)
+{
+  quint8* pSource = (quint8*) source.data;
+  int pixelCounts = source.cols * source.rows;
+
+  QImage dest(source.cols, source.rows, QImage::Format_RGB32);
+
+  char* pDest = (char*) dest.bits();
+
+  for (int i = 0; i < pixelCounts; i++)
+  {
+    *(pDest++) = *(pSource+2);    // B
+    *(pDest++) = *(pSource+1);    // G
+    *(pDest++) = *(pSource+0);    // R
+    *(pDest++) = 0;               // Alpha
+    pSource+=3;
+  }
+
+  return QPixmap::fromImage(dest.rgbSwapped());
+}
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -24,6 +44,7 @@ MvFiducial::MvFiducial(const QRectF& rect, MvTool *parent) : MvAbstractTool(rect
 {
     form = new ParamsFiducial(this);
     b_approved = false;
+
 
     correlation_val     = 0.0;
     min_correlation     = 0.60;
@@ -52,13 +73,22 @@ void MvFiducial::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     MvAbstractTool::mouseMoveEvent(event);
 
-    samplingRect.setWidth(   this->boundingRect().width()  / 6 );
-    samplingRect.setHeight(  this->boundingRect().height() / 2 );
-    samplingRect.moveCenter( this->boundingRect().center() );
+    samplingRect.setWidth(   this->boundingRect().width()/6) ;
+    samplingRect.setHeight(  this->boundingRect().height()/2);
+    samplingRect.moveCenter( this->boundingRect().center());
 
-    if( ExtractRoi(samplingRect) == false )     return;
+
+    if( ExtractRoi(samplingRect) == false )  return;
+
+    Mat m;
+    roi.copyTo(m);
     if( roi.channels() != 1 ) cvtColor(roi, roi, COLOR_RGB2GRAY );
     roi.copyTo( img_template );
+
+    // Necessário á conversão para não quebrar o formato da imagem
+    cvtColor(m, m,COLOR_GRAY2RGB);
+
+    emit(TemplateImage(convert16uc3(m)));
 
     bMove = true;
 }
@@ -74,14 +104,14 @@ bool MvFiducial::Exec(quint32 proc_id)
 
     if( ExtractRoi() == false )             return false;
 
+    Mat result;
+
     if( roi.channels() != 1 ) cvtColor(roi, roi, COLOR_RGB2GRAY );
     if( ExtractRoiGray() == false )         return false;
     if( img_template.data == nullptr)       return false;
     if( roi.cols < img_template.cols)       return false;
     if( roi.rows < img_template.rows)       return false;
     if( roi.type() != img_template.type() ) return false;
-
-    Mat result;
 
     /// Create the result matrix
     int result_cols = roi.cols;
@@ -99,10 +129,10 @@ bool MvFiducial::Exec(quint32 proc_id)
 
     Mat found_rect = roi( Rect(maxLoc.x, maxLoc.y, img_template.cols, img_template.rows) );
 
-//        namedWindow("FOUND", WINDOW_NORMAL);
-//        imshow("FOUND", found_rect);
-//        namedWindow("TEMPLATE", WINDOW_NORMAL);
-//        imshow("TEMPLATE", img_template);
+        namedWindow("FOUND", WINDOW_NORMAL);
+        imshow("FOUND", found_rect);
+        namedWindow("TEMPLATE", WINDOW_NORMAL);
+        imshow("TEMPLATE", img_template);
 
     correlation_val = correlation( found_rect, img_template );
 
@@ -122,6 +152,7 @@ bool MvFiducial::Exec(quint32 proc_id)
     this->update();
 
     emit( NewResult(true, s, proc_id) );
+
 
     return true;
 }
@@ -197,7 +228,23 @@ bool MvFiducial::SetImageTemplate(const QByteArray &src, QSize sz)
 {
     img_template = cv::Mat( cv::Size(sz.width(), sz.height()) , CV_8UC1, (void*)src.data() ).clone();
 
-//    imshow("A",img_template);
+    Mat m;
+    // Necessário á conversão para não quebrar o formato da imagem
+    // Necessário á conversão para não quebrar o formato da imagem
+    cvtColor(img_template, m,COLOR_GRAY2RGB);
+
+    emit(TemplateImage(convert16uc3(m)));
+
+   Debug("")
+    //    imshow("A",img_template);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void MvFiducial::ResetMove()
+{
+    bMove = false;
 }
 
 /// ===========================================================================

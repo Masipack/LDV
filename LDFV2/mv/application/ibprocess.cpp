@@ -99,12 +99,17 @@ void IBProcess::NewImage(const QImage &source)
             }
         }
     }
+
     qApp->processEvents();
 
-//    QString fname = "./data/image/";
-//    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
-//    fname += ".jpg";
-//    imwrite( fname.toLatin1().data(), mat);
+
+/*  QString fname = "./data/image/";
+    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
+    fname += ".jpg";
+    imwrite( fname.toLatin1().data(), mat);
+
+*/
+
 
 }
 

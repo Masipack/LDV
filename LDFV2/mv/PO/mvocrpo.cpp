@@ -359,11 +359,15 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     std::vector< std::vector<cv::Point> >  contours;
     std::vector< Vec4i >                   hierarchy;
 
+    Debug(min_x)
+    Debug(max_x)
+    Debug(min_y)
+    Debug(max_y)
 
     findContours(roi_local_th, contours, hierarchy,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE );
 
-//    Mat blobs = roi.clone();
-//    blobs.setTo( Scalar(0) );
+    Mat blobs = roi.clone();
+    blobs.setTo( Scalar(0) );
 
     Rect CARACTER_SIZE = cv::boundingRect(contours[0]);
 
@@ -390,18 +394,19 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
             if(br.height  > 80)                      continue;
         }else{
 
-            if( br.height  < qFloor(min_y)  || br.height  > qCeil(max_y)  ) continue;
-            if( br.width   < qFloor(min_x)  || br.width   > qCeil(max_x)  ) continue;
+        if( br.height  < qFloor(min_y)  || br.height  > qCeil(max_y)  ) continue;
+        if( br.width   < qFloor(min_x)  || br.width   > qCeil(max_x)  ) continue;
+
 
         }
 
 
-//       drawContours( blobs, contours, i, Scalar(255), -1);
+       drawContours( blobs, contours, i, Scalar(255), -1);
 
        int k = hierarchy[i][2];
         while( k != -1  )
         {
-//            drawContours( blobs, contours, k, Scalar(0), -1);
+         drawContours( blobs, contours, k, Scalar(0), -1);
             k = hierarchy[k][0];
         }
 
@@ -443,8 +448,8 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     }
 
 
-//    namedWindow("blob", WINDOW_NORMAL );
-//    imshow("blob", blobs);
+    namedWindow("blob", WINDOW_NORMAL );
+    imshow("blob", blobs);
 
     qSort(char_descriptors.begin(), char_descriptors.end(), DescriptorThanX); // TODO: ver a rotacao da tela
 

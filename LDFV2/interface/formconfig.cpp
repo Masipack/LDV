@@ -284,3 +284,12 @@ void FormConfig::on_btn_database_clicked()
    if(P11(tr("Alterando configurações  do banco de dados"), true ) == false ) return;
    WindowManager::instance()->ShowScreen("ConfigDataBase");
 }
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormConfig::on_btn_maneger_output_clicked()
+{
+    if(P11(tr("Testando configurações  do saídas"), true ) == false ) return;
+    WindowManager::instance()->ShowScreen("Saidas");
+}

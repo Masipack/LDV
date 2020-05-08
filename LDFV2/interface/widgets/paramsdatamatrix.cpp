@@ -39,8 +39,7 @@ void ParamsDataMatrix::NewResult(bool approved, const QString &value, quint32 pr
 {
     if( pTool )
     {
-        Debug("tt")
-       ui->le_extracted->setPlainText( pTool->GetExtractedText() );
+      ui->le_extracted->setPlainText( pTool->GetExtractedText() );
     }
 }
 

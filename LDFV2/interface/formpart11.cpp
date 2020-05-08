@@ -92,26 +92,26 @@ bool FormPart11::eventFilter(QObject* object, QEvent* event)
 
     if(object == ui->le_dt_start && event->type() == QEvent::MouseButtonRelease )
     {
-        ui->le_dt_start->setText( "" );
+       // ui->le_dt_start->setText( "" );
+
         DlgDateTime dlg;
         if( dlg.exec() == QDialog::Accepted )
         {
-            ui->le_dt_start->setText( dlg.getText() );
+            ui->le_dt_start->setText(dlg.getText().isNull() || dlg.getText().isEmpty() ? "01/01/2000 00:00:00": dlg.getText() );
         }
         return false;
     }
 
     if(object == ui->le_dt_end && event->type() == QEvent::MouseButtonRelease )
     {
-        ui->le_dt_end->setText( "" );
+       // ui->le_dt_end->setText( "" );
         DlgDateTime dlg;
         if( dlg.exec() == QDialog::Accepted )
         {
-            ui->le_dt_end->setText( dlg.getText() );
+            ui->le_dt_end->setText( dlg.getText().isNull() || dlg.getText().isEmpty() ? "01/01/2000 00:00:00" : dlg.getText() );
         }
         return false;
     }
-
 
     return false;
 
@@ -279,6 +279,7 @@ void FormPart11::on_btn_export_pdf_clicked()
 
     QString usbPath;
     QList<QStorageInfo> info = QStorageInfo::mountedVolumes();
+
     for( int i = 0; i < info.size(); i++ )
     {
         if( info.at(i).rootPath().contains("/media/") )

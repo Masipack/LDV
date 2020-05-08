@@ -24,6 +24,7 @@
 #include "interface/formprocess.h"
 #include "interface/formimagelog.h"
 #include "interface/configdatabase.h"
+#include "interface/formsaidas.h"
 
 //#include "interface/formimagelog.h"
 //#include "interface/new_product/formconfigtype.h"
@@ -199,6 +200,11 @@ bool WindowManager::LoadScreens()
 
     a = new FormImageLog(mainWidget);
     if( a ) v_screens.insert( "ImageLog"                  , a );
+
+
+    a = new FormSaidas(mainWidget);
+    if( a ) v_screens.insert( "Saidas"                   , a );
+
 
     QWidget* p = v_screens.value("MainMenu");
     if( p == NULL ) return false;

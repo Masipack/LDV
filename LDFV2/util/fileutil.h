@@ -6,6 +6,7 @@
 #include "global_defines.h"
 #include "TO/databaseto.h"
 
+
 static QStringList GetFileList(const QString& basePath, const QString& suffix, bool bRemoveSuffix=true)
 {
     QDir dir(basePath);
@@ -45,13 +46,14 @@ bool WriteTO( T& src, const QString& FileName, QString& err_result, bool overwri
 
     if( s.status() != QDataStream::Ok )
     {
-        err_result = QObject::tr("Erro gravando formato");
+        err_result = QObject::tr("ERRO GRAVANDO FORMATO");
         return false;
     }
 
     err_result.clear();
     return true;
 }
+
 template <class T>
 bool WriteGenericTO( T& src, const QString& Path_File, QString& err_result, bool overwrite = false )
 {
