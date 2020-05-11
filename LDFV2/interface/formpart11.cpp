@@ -310,7 +310,21 @@ void FormPart11::on_btn_export_pdf_clicked()
     }
 
     PdfMaker pdf;
-    pdf.PrintPART11(usbPath + "/", QString("PART11") + QDate::currentDate().toString("_dd_MM_yyyy"), GetQuery() );
+
+    if(!pdf.PrintPART11(usbPath + "/", QString("PART11") + QDate::currentDate().toString("_dd_MM_yyyy"), GetQuery() ))
+    {
+        DlgInfo dlg;
+        dlg.SetMessage(DlgInfo::IT_ERROR, tr("Falha copiando o arquivo ") + QString("PART11") + QDate::currentDate().toString("_dd_MM_yyyy"), false, false );
+        dlg.exec();
+        return;
+
+    }
+
+    DlgInfo dlg;
+    QString pedido;
+    GetConfig(pedido, "FABRIMA/PEDIDO", QString("0000") );
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso !\n\nPasta USB:  ") + "SVF_" + pedido, false,false);
+    dlg.exec();
 }
 
 /// ===========================================================================

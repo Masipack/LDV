@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "interface/formprocesscontent.h"
 #include "util/dlginfo.h"
+#include "TO/multicamto.h"
 
 namespace Ui {
 class FormProcess;
@@ -47,6 +48,8 @@ private:
 
 
     bool            use_PRINTER;
+    bool            b_save_without_msg;
+    MultiCamTO     to;
 
 
 };

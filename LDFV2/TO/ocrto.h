@@ -20,7 +20,8 @@ public:
     bool hasChanges(const OcrTO& other)
     {
          return (( BASE.EXPECTED_TEXT   != other.BASE.EXPECTED_TEXT  ) ||
-        (    WHITE_FILTER         != other.WHITE_FILTER        ) || ( BLACK_WHITE!= other.BLACK_WHITE ) ) ;
+        (    WHITE_FILTER         != other.WHITE_FILTER        ) || ( BLACK_WHITE!= other.BLACK_WHITE )||
+                 ( BASE.CONFIG_POS!= other.BASE.CONFIG_POS )) ;
 
     }
 

@@ -255,40 +255,6 @@
           </widget>
          </item>
          <item>
-          <widget class="ButtonBeR" name="buttonBeR">
-           <property name="minimumSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-           <property name="icon">
-            <iconset resource="../res/icons.qrc">
-             <normaloff>:/icons/zoom_lock.png</normaloff>:/icons/zoom_lock.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="bgIcon">
-            <iconset resource="../res/icons.qrc">
-             <normaloff>:/icons/bt-blank.png</normaloff>
-             <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
-           </property>
-           <property name="bgIconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item>
           <spacer name="horizontalSpacer_3">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
@@ -758,12 +724,14 @@
    <extends>QGraphicsView</extends>
    <header>mv/imagedevice.h</header>
    <slots>
-    <slot>zoomFit()</slot>
     <slot>zoomIn()</slot>
     <slot>zoomOut()</slot>
+    <slot>zoomFit()</slot>
     <slot>zoomFitItems()</slot>
     <slot>lockParent(bool)</slot>
     <slot>snap()</slot>
+    <slot>Show()</slot>
+    <slot>Hide()</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -832,22 +800,6 @@
     <hint type="destinationlabel">
      <x>193</x>
      <y>86</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBeR</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>imagedevice</receiver>
-   <slot>lockParent(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>243</x>
-     <y>25</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>244</x>
-     <y>96</y>
     </hint>
    </hints>
   </connection>

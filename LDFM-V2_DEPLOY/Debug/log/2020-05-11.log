@@ -1,0 +1,645 @@
+10:19:30.998|I|| --------- Sistema Inicializando --------- 
+10:19:31.007libpng warning: iCCP: known incorrect sRGB profile
+10:19:31.090libpng warning: iCCP: known incorrect sRGB profile
+10:19:57.712|I|2| --------- Sistema Desligando --------- 
+13:13:38.745|I|| --------- Sistema Inicializando --------- 
+13:13:38.755libpng warning: iCCP: known incorrect sRGB profile
+13:13:38.832libpng warning: iCCP: known incorrect sRGB profile
+13:14:11.562|I|2| --------- Sistema Desligando --------- 
+13:15:55.450|I|| --------- Sistema Inicializando --------- 
+13:15:55.461libpng warning: iCCP: known incorrect sRGB profile
+13:15:55.539libpng warning: iCCP: known incorrect sRGB profile
+13:16:38.527|I|2| --------- Sistema Desligando --------- 
+13:16:58.568|I|| --------- Sistema Inicializando --------- 
+13:16:58.578libpng warning: iCCP: known incorrect sRGB profile
+13:16:58.653libpng warning: iCCP: known incorrect sRGB profile
+13:18:38.593void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:18:38.593bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+13:18:38.846|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:18:39.276|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:20:53.638|I|2| --------- Sistema Desligando --------- 
+13:37:37.767|I|| --------- Sistema Inicializando --------- 
+13:37:37.778libpng warning: iCCP: known incorrect sRGB profile
+13:37:37.877libpng warning: iCCP: known incorrect sRGB profile
+13:38:08.130void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:38:08.131bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+13:38:08.387|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:38:08.827|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:38:10.884|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:38:11.060|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:38:11.060void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+13:38:11.192void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+13:38:11.192void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+13:38:11.192void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+13:38:11.192void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+13:38:11.254|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:38:11.254void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+13:38:11.392void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+13:38:11.392void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+13:38:11.392void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+13:38:11.392void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+13:39:06.879void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:06.894void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:06.974void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:07.030void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.031void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.046void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.054void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.062void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.078void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.566void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.582void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.607void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.614void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.630void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:08.646void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.055void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.654void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.662void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.670void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.702void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.719void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.782void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.862void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.871void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.902void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.926void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:09.974void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.006void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.014void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.038void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.055void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.070void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.110void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.199void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.214void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.222void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.238void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:10.262void ParamsFiducial::TemplateImage(const QPixmap&) 185 
+13:39:35.338TOOL  0 --------------------------- 1
+13:39:35.338TOOL  1 --------------------------- 2
+13:39:35.338TOOL  0 --------------------------- 1
+13:39:35.338TOOL  1 --------------------------- 2
+13:40:14.725|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:40:14.733|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:40:16.633|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:40:16.777|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:40:44.106libpng warning: iCCP: known incorrect sRGB profile
+13:40:45.811|I|2| --------- Sistema Desligando --------- 
+13:48:48.890|I|| --------- Sistema Inicializando --------- 
+13:48:48.902libpng warning: iCCP: known incorrect sRGB profile
+13:48:48.980libpng warning: iCCP: known incorrect sRGB profile
+13:48:50.619|I|2| --------- Sistema Desligando --------- 
+13:51:21.440|I|| --------- Sistema Inicializando --------- 
+13:51:21.450libpng warning: iCCP: known incorrect sRGB profile
+13:51:21.536libpng warning: iCCP: known incorrect sRGB profile
+13:51:53.153void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+13:51:53.153bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+13:51:53.407|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:51:53.832|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:51:55.517|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:51:55.701|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:51:55.701void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+13:51:55.828void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+13:51:55.828void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+13:51:55.828void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+13:51:55.828void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+13:52:06.606libpng warning: iCCP: known incorrect sRGB profile
+13:52:15.251|I|2|Editando a posição da ferramenta
+13:52:30.731|I|2|Editando a posição da ferramenta
+13:52:35.629libpng warning: iCCP: known incorrect sRGB profile
+13:52:59.147|I|2|Editando a posição da ferramenta
+13:53:08.105libpng warning: iCCP: known incorrect sRGB profile
+13:53:10.709|I|2| --------- Sistema Desligando --------- 
+13:57:53.685|I|| --------- Sistema Inicializando --------- 
+13:57:53.694libpng warning: iCCP: known incorrect sRGB profile
+13:57:53.778libpng warning: iCCP: known incorrect sRGB profile
+13:58:19.146void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+13:58:19.146bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+13:58:19.399|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:58:19.823|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+13:58:21.247|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:58:21.415|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+13:58:21.415void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+13:58:21.549void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+13:58:21.549void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+13:58:21.549void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+13:58:21.549void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+13:58:32.606libpng warning: iCCP: known incorrect sRGB profile
+13:58:45.541|I|2|Editando a posição da ferramenta
+13:59:04.528|I|2| --------- Sistema Desligando --------- 
+14:00:34.839|I|| --------- Sistema Inicializando --------- 
+14:00:34.851libpng warning: iCCP: known incorrect sRGB profile
+14:00:34.946libpng warning: iCCP: known incorrect sRGB profile
+14:01:05.682void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+14:01:05.682bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+14:01:05.937|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:01:06.358|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:01:07.972|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:01:08.124|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:01:08.124void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+14:01:08.249void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:01:08.249void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:01:08.250void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:01:08.250void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:01:08.309|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:01:08.309void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+14:01:08.445void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:01:08.445void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:01:08.445void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:01:08.445void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:01:08.979|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:01:08.979void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955493589.jpg"
+14:01:09.087void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:01:09.087void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:01:09.087void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:01:09.087void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:01:09.139|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:01:09.139void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955500630.jpg"
+14:01:09.237void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:01:09.237void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:01:09.237void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:01:09.237void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:01:09.283|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:01:09.283void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955637222.jpg"
+14:01:09.399void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:01:09.399void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:01:09.399void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:01:09.399void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:01:20.607libpng warning: iCCP: known incorrect sRGB profile
+14:01:24.531|I|2|Editando a posição da ferramenta
+14:01:57.606libpng warning: iCCP: known incorrect sRGB profile
+14:01:58.368|I|2| --------- Sistema Desligando --------- 
+14:03:35.672|I|| --------- Sistema Inicializando --------- 
+14:03:35.683libpng warning: iCCP: known incorrect sRGB profile
+14:03:35.759libpng warning: iCCP: known incorrect sRGB profile
+14:04:03.000void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+14:04:03.000bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+14:04:03.254|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:04:03.678|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:04:05.395|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:04:05.538|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:04:05.538void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+14:04:05.665void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:04:05.665void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:04:05.665void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:04:05.665void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:04:05.709|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:04:05.709void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+14:04:05.834void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:04:05.834void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:04:05.834void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:04:05.834void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:04:10.106libpng warning: iCCP: known incorrect sRGB profile
+14:04:14.371|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:04:14.371void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955493589.jpg"
+14:04:14.479void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:04:14.479void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:04:14.480void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:04:14.480void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:04:14.546|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:04:14.546void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955500630.jpg"
+14:04:14.645void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.32
+14:04:14.645void MvOCRPO::Exec(const cv::Mat&, quint32) 363 61.92
+14:04:14.645void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.4
+14:04:14.645void MvOCRPO::Exec(const cv::Mat&, quint32) 365 122.4
+14:04:18.418|I|2|Editando a posição da ferramenta
+14:04:32.607libpng warning: iCCP: known incorrect sRGB profile
+14:04:54.588|I|2| --------- Sistema Desligando --------- 
+14:06:17.213|I|| --------- Sistema Inicializando --------- 
+14:06:17.225libpng warning: iCCP: known incorrect sRGB profile
+14:06:17.299libpng warning: iCCP: known incorrect sRGB profile
+14:06:29.010|I|2| --------- Sistema Desligando --------- 
+14:57:33.217|I|| --------- Sistema Inicializando --------- 
+14:57:33.228libpng warning: iCCP: known incorrect sRGB profile
+14:57:33.307libpng warning: iCCP: known incorrect sRGB profile
+14:58:18.143void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+14:58:18.144bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+14:58:18.396|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:58:19.997|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+14:58:22.919|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:58:23.080|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:58:23.080void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+14:58:23.202void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+14:58:23.204void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:23.259|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:58:23.259void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:23.389void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:23.390void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+14:58:23.390void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+14:58:23.390void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+14:58:23.390void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+14:58:23.390void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+14:58:23.390void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+14:58:23.390void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+14:58:24.119|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:58:24.120void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955493589.jpg"
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+14:58:24.230void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+14:58:24.231void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+14:58:24.231void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.231void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+14:58:24.231void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+14:58:24.231void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:24.231void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+14:58:24.231void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+14:58:24.295|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:58:24.295void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955500630.jpg"
+14:58:24.402void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+14:58:24.402void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+14:58:24.403void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+14:58:24.403void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+14:58:24.403void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+14:58:24.403void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+14:58:24.403void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+14:58:24.403void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+14:58:24.403void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+14:58:24.404void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+14:58:24.404void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+14:58:24.404void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+14:58:24.404void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.404void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:24.404void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.404void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:24.500|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:58:24.500void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955637222.jpg"
+14:58:24.606void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+14:58:24.606void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.607void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:24.608void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.608void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:24.623|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+14:58:24.623void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955638932.jpg"
+14:58:24.727void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+14:58:24.727void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+14:58:24.727void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+14:58:24.727void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+14:58:24.727void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:24.728void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+14:58:34.622libpng warning: iCCP: known incorrect sRGB profile
+14:58:44.118|I|2|Editando a posição da ferramenta
+14:58:57.106libpng warning: iCCP: known incorrect sRGB profile
+14:58:57.521|I|2| --------- Sistema Desligando --------- 
+14:59:40.738|I|| --------- Sistema Inicializando --------- 
+14:59:40.749libpng warning: iCCP: known incorrect sRGB profile
+14:59:40.824libpng warning: iCCP: known incorrect sRGB profile
+15:00:07.978void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+15:00:07.978bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+15:00:08.231|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:00:09.833|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:00:11.366|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:00:11.509|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:00:11.509void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+15:00:11.637void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:00:11.637void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:00:11.637void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:00:11.637void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:00:11.638void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:00:11.639void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:00:11.696|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:00:11.696void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+15:00:11.833void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:00:11.833void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:00:11.833void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:00:11.833void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:00:11.833void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:00:11.833void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:00:11.833void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:00:11.836void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:00:15.669|I|2|Editando a posição da ferramenta
+15:00:22.607libpng warning: iCCP: known incorrect sRGB profile
+15:00:23.788|I|2| --------- Sistema Desligando --------- 
+15:18:14.101|I|| --------- Sistema Inicializando --------- 
+15:18:14.111libpng warning: iCCP: known incorrect sRGB profile
+15:18:14.195libpng warning: iCCP: known incorrect sRGB profile
+15:18:53.531void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+15:18:53.531bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+15:18:53.785|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:18:55.378|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:19:15.061|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:19:15.373|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:19:15.374void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+15:19:15.501void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:19:15.501void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:19:15.501void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:19:15.501void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:19:15.501void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:19:15.502void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:19:15.502void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:15.502void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:19:15.502void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:15.502void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:19:15.502void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:15.502void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:15.503void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:19:15.503void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:19:15.503void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:19:15.503void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:19:16.493|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:19:16.494void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:19:16.612void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:19:16.612void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:19:16.611void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:16.612void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:16.612void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:19:16.612void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:19:16.612void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:16.612void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:16.644|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:19:16.645void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955493589.jpg"
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:19:16.756void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:19:16.756void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:19:16.756void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:19:16.756void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:19:16.755void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:16.756void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:16.773|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:19:16.773void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955500630.jpg"
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:19:16.871void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:19:16.871void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:19:16.871void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:16.871void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:16.870void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:19:16.872void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:19:16.872void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:16.872void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:16.963|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:19:16.963void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955637222.jpg"
+15:19:17.066void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:19:17.066void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:19:17.066void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:17.066void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:17.066void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:19:17.067void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:19:17.067void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:19:17.067void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:19:17.067void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:19:17.067void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:19:17.067void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:19:17.067void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:19:17.066void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:19:17.068void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:19:17.068void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:19:17.068void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:19:20.989|I|2|Editando a posição da ferramenta
+15:19:28.557|I|2|Editando a posição da ferramenta
+15:19:52.383|I|2| --------- Sistema Desligando --------- 
+15:25:10.159|I|| --------- Sistema Inicializando --------- 
+15:25:10.169libpng warning: iCCP: known incorrect sRGB profile
+15:25:10.253libpng warning: iCCP: known incorrect sRGB profile
+15:25:33.883void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+15:25:33.883bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+15:25:34.137|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:25:35.735|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:25:37.307|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:25:37.596|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:25:37.596void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:25:37.725void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:25:37.727void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:25:37.727void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:25:37.727void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:25:37.727void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:25:37.727void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:37.727void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:25:37.727void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:38.019|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:25:38.019void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+15:25:38.132void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:25:38.132void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:25:38.132void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:25:38.132void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:38.133void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:38.748|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:25:38.748void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955493589.jpg"
+15:25:38.857void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:25:38.857void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:25:38.857void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:25:38.858void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:25:38.857void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:25:38.857void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:25:38.858void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:25:38.858void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:25:38.858void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:38.858void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:38.858void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:38.858void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:38.859void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:25:38.859void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:25:38.859void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:25:38.859void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:25:39.708|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:25:39.708void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955500630.jpg"
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:39.808void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:25:39.809void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:25:39.809void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:25:39.809void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:25:39.809void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:25:39.809void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:25:39.809void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:25:39.809void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:25:40.699|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:25:40.699void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955637222.jpg"
+15:25:40.813void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:25:40.813void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:25:40.814void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:25:40.815void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:25:50.810|I|2|Editando a posição da ferramenta
+15:25:56.315|I|2|Editando a posição da ferramenta
+15:26:16.556|I|2| --------- Sistema Desligando --------- 
+15:26:32.634|I|| --------- Sistema Inicializando --------- 
+15:26:32.741libpng warning: iCCP: known incorrect sRGB profile
+15:26:32.816libpng warning: iCCP: known incorrect sRGB profile
+15:26:55.865void ParamsFiducial::TemplateImage(const QPixmap&) 189 
+15:26:55.865bool MvFiducial::SetImageTemplate(const QByteArray&, QSize) 238 
+15:26:56.226|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:26:57.518|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:26:59.371|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:26:59.571|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:26:59.571void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955482047.jpg"
+15:26:59.704void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:26:59.704void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:26:59.704void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:26:59.704void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:26:59.705void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:27:00.643|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:27:00.643void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955487699.jpg"
+15:27:00.758void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:27:00.758void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:27:00.758void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:27:00.759void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:27:00.759void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:27:00.759void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:27:00.759void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:27:00.760void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:27:00.818|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+15:27:00.818void FormProcessContent::on_btn_camera_snap_clicked() 218 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Debug/data/image/1588955493589.jpg"
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 362 9.82222
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 362 11.2667
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 363 67.6
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.4
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 365 110.4
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 363 58.9333
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10.44
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 363 62.64
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 364 18.8
+15:27:00.928void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:27:00.928void MvOCRPO::Exec(const cv::Mat&, quint32) 365 112.8
+15:27:00.928void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:27:00.927void MvOCRPO::Exec(const cv::Mat&, quint32) 362 10
+15:27:00.928void MvOCRPO::Exec(const cv::Mat&, quint32) 363 60
+15:27:00.928void MvOCRPO::Exec(const cv::Mat&, quint32) 364 20.6
+15:27:00.928void MvOCRPO::Exec(const cv::Mat&, quint32) 365 123.6
+15:27:04.666|I|2|Editando a posição da ferramenta
+15:27:10.110|I|2|Editando a posição da ferramenta

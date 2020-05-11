@@ -3,6 +3,8 @@
 
 #include "mv/tools/mvfiducial.h"
 #include "util/dlgkeyboard.h"
+#include "util/alarmmanager.h"
+#include "util/sys_log.h"
 
 /// ===========================================================================
 ///
@@ -168,6 +170,8 @@ void ParamsFiducial::on_btn_edit_toggled(bool checked)
         if(checked==false) pTool->ResetMove();
         pTool->SetLock(checked ? false:true);
         pTool->update();
+        LOG(LOG_INFO_TYPE, "Editando a posição da ferramenta" );
+        AlarmManager::instance()->SetAlarm(ALM_EDIT_POSITION);
 
     }
 }

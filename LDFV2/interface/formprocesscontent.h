@@ -25,6 +25,7 @@ public:
     void StopCamera();
     bool GetTO(ProductTO &_TO);
     void SetOutput(const int& value){ ib.SetOutput(value);}
+    bool ChangesTOOLS(ProductTO &other);
 
 
 signals:
@@ -68,7 +69,6 @@ private slots:
     void on_splitter_splitterMoved(int pos, int index);
     void on_btn_Statistics_toggled(bool checked);
     void on_btn_ImageLog_clicked();
-    bool ChangesTOOLS(ProductTO &other);
     void on_btn_sincrinizeDataBase_clicked();
 };
 

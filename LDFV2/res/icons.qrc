@@ -41,5 +41,7 @@
         <file>icons/arrow-left_inverted.png</file>
         <file>icons/arrow-up.png</file>
         <file>icons/database-reload-alt-2.png</file>
+        <file>icons/idea.png</file>
+        <file>icons/idea-alt.png</file>
     </qresource>
 </RCC>

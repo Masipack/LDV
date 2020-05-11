@@ -29,6 +29,8 @@ public:
     int GetBlackAndWhite();
     QObject* GetPO() { return (QObject*)&PO; }
 
+    void ResetMove();
+
 public slots:
     void ExecResult(const QImage& img, const QString& text, quint32 prid);
     void NewAttribute(const QString value);

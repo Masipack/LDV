@@ -76,6 +76,10 @@
          <height>40</height>
         </size>
        </property>
+       <property name="icon">
+        <iconset resource="../../res/icons.qrc">
+         <normaloff>:/icons/idea-alt.png</normaloff>:/icons/idea-alt.png</iconset>
+       </property>
        <property name="checkable">
         <bool>true</bool>
        </property>

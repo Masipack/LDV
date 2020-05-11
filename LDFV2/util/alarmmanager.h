@@ -6,11 +6,14 @@
 #include <QMap>
 #include <QSet>
 
-#define ALM_INIT                    0
-#define ALM_CAMERA_NOT_FOUND        1
-#define ALM_SERIAL_PORT             2
-#define ALM_CAMERA_ERROR            3
-#define ALM_ERROR_CALIBRATION       4
+#define ALM_INIT                     0
+#define ALM_CAMERA_NOT_FOUND         1
+#define ALM_SERIAL_PORT              2
+#define ALM_CAMERA_ERROR             3
+#define ALM_ERROR_CALIBRATION        4
+#define ALM_ERROR_INTER              5
+#define ALM_ERROR_DATABASE_NOT_FOUND 6
+#define ALM_EDIT_POSITION            7
 
 class AlarmManager : public QObject
 {

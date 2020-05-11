@@ -16,6 +16,7 @@ FormProcess::FormProcess(QWidget *parent) : QWidget(parent), ui(new Ui::FormProc
 {
     ui->setupUi(this);
 
+    b_save_without_msg = false;
 
    // connect(this, SIGNAL(Close()), &dlg, SLOT(Close()), Qt::QueuedConnection);
 
@@ -41,7 +42,7 @@ FormProcess::~FormProcess()
 bool FormProcess::Init(const QString &file_name)
 {
 
-    MultiCamTO to;
+
 
     Name = file_name;
 
@@ -149,6 +150,23 @@ void FormProcess::on_btn_next_clicked()
 /// ===========================================================================
 void FormProcess::on_btn_return_clicked()
 {
+
+    for(int i = 0; i < forms.size(); i++)
+    {
+       ProductTO _TO;
+
+       if(forms[i])
+       {
+           forms[i]->GetTO(_TO);
+           if(forms[i]->ChangesTOOLS(_TO))
+           {
+               b_save_without_msg = true;
+               WriteConfig(Name);
+               break;
+           }
+       }
+    }
+
     DlgInfo dlg;
     dlg.SetMessage(DlgInfo::IT_QUESTION, tr("Deseja interromper a inspeção ?"), true, true );
     dlg.exec();
@@ -160,8 +178,8 @@ void FormProcess::on_btn_return_clicked()
 
     DeInit();
 
+    b_save_without_msg= false;
     WindowManager::instance()->ShowScreen("Products");
-
 
 }
 
@@ -197,7 +215,7 @@ void FormProcess::WriteConfig(const QString &name)
     if( dlg.result() == QDialog::Rejected ) return;
 
 
-    if( P11(tr("Atributos de inspeção alterados:") + Name, true) == false ) return;
+    if( P11(tr("Atributos de inspeção alterados:") + Name, !b_save_without_msg?true:false) == false ) return;
 
     QString err;
 

@@ -4,6 +4,8 @@
 #include "mv/tools/mvocr.h"
 #include "util/dlgkeyboard.h"
 #include "util/systemsettings.h"
+#include "util/alarmmanager.h"
+#include "util/sys_log.h"
 
 /// ===========================================================================
 ///
@@ -224,5 +226,24 @@ void ParamsOCR::on_btn_black_white_clicked(bool checked)
     {
         pTool->SetBlackAndWhite(checked ? 1: 0);
         pTool->Exec(0);
+    }
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsOCR::on_btn_edit_position_toggled(bool checked)
+{
+    if( pTool ){
+
+        pTool->SetExecOnMove(checked ? false:true);
+        if(checked==false) pTool->ResetMove();
+        pTool->SetLock(checked ? false:true);
+        pTool->ReconfigPosition();
+        pTool->update();
+
+        LOG(LOG_INFO_TYPE, "Editando a posição da ferramenta" );
+        AlarmManager::instance()->SetAlarm(ALM_EDIT_POSITION);
+
     }
 }
