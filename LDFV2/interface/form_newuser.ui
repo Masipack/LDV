@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>992</width>
-    <height>734</height>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -367,7 +367,7 @@ color: rgb(255, 255, 255);</string>
                <string/>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../res/icons.qrc">
                 <normaloff>:/icons/zoom_out.png</normaloff>:/icons/zoom_out.png</iconset>
               </property>
               <property name="iconSize">
@@ -447,7 +447,7 @@ color: rgb(255, 255, 255);</string>
                <string/>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../res/icons.qrc">
                 <normaloff>:/icons/zoom_in.png</normaloff>:/icons/zoom_in.png</iconset>
               </property>
               <property name="iconSize">

@@ -16,7 +16,11 @@ public:
     //NOT SERIALIZABLE:
     bool hasChanges(const FiducialTO& other)
     {
-       return (( MIN_CORRELATION   != other.MIN_CORRELATION ) ||( BASE.ROI !=other.BASE.ROI));
+       return (( MIN_CORRELATION   != other.MIN_CORRELATION ) ||
+               ( BASE.ROI !=other.BASE.ROI) ||
+               ( IMG_TEMPLATE      != other.IMG_TEMPLATE ) ||
+               ( IMG_TEMPLATE_SZ  != other.IMG_TEMPLATE_SZ )
+               );
     }
 
     friend QDataStream &operator >>(QDataStream &s, FiducialTO& v)

@@ -17,6 +17,9 @@
 #include "util/serialcontrol.h"
 
 #include "opencv2/highgui.hpp"
+#include "util/systemsettings.h"
+
+
 
 using namespace cv;
 
@@ -34,12 +37,16 @@ IBProcess::IBProcess(QObject *parent) : InspectionBuffer(parent)
 
     RESIZE_ONE_DIRECTION = false;
 
+    SAVE_IMAGE = false;
+
     for(int i = 0; i < idealThreadCount -1; i++ )
     {
         QThread* p = new QThread();
          threads.push_back( p );
          p->start();
     }
+
+    GetConfig(SAVE_IMAGE, "SYSTEM/SAVE_IMAGE", false);
 
     proc_id = 0;
 }
@@ -69,6 +76,7 @@ void IBProcess::NewImage(const QImage &source)
 {
     ok_response_count = 0;
     response_count    = 0;
+    result_summary.clear();
 
     InspectionBuffer::NewImage(source);
 
@@ -85,6 +93,8 @@ void IBProcess::NewImage(const QImage &source)
             if( p->Exec(proc_id) == false )
             {
                 emit(InspectionResult(false));
+
+                qApp->processEvents();
                 ImageLog();
                 return;
             }
@@ -102,14 +112,16 @@ void IBProcess::NewImage(const QImage &source)
 
     qApp->processEvents();
 
+     ///SAVE_IMAGE
+     ///
 
-/*  QString fname = "./data/image/";
-    fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
-    fname += ".jpg";
-    imwrite( fname.toLatin1().data(), mat);
-
-*/
-
+    if(SAVE_IMAGE)
+    {
+        QString fname = "./data/image/";
+        fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
+        fname += ".jpg";
+        imwrite( fname.toLatin1().data(), mat);
+    }
 
 }
 
@@ -121,7 +133,16 @@ void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
     MvTool* p = (MvTool*)sender();
 
     response_count++;
-    if( approved && this->proc_id == proc_id ) ok_response_count++;
+
+    if( approved && this->proc_id == proc_id )
+    {
+        ok_response_count++;
+    }else
+    {
+
+        result_summary+= value +"\n\r";
+    }
+
 
     if( response_count == tools.size() )
     {
@@ -138,6 +159,9 @@ void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
         }
 
     }
+
+
+
 }
 
 /// ===========================================================================
@@ -262,7 +286,8 @@ void IBProcess::ImageLog()
 
     InspectionBuffer::render(&painter,currentImage.rect(), currentImage.rect(),
                               Qt::KeepAspectRatio  );
-    ImageQueue::instance()->NewImage(img_inspection_result, "Reprovado");
+
+    ImageQueue::instance()->NewImage(img_inspection_result, result_summary);
 
 }
 

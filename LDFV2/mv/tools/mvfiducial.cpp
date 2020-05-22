@@ -8,6 +8,10 @@
 
 using namespace cv;
 
+
+/// ===========================================================================
+///
+/// ===========================================================================
 static QPixmap convert16uc3(const cv::Mat& source)
 {
   quint8* pSource = (quint8*) source.data;
@@ -28,6 +32,8 @@ static QPixmap convert16uc3(const cv::Mat& source)
 
   return QPixmap::fromImage(dest.rgbSwapped());
 }
+
+
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -52,6 +58,7 @@ MvFiducial::MvFiducial(const QRectF& rect, MvTool *parent) : MvAbstractTool(rect
     mv_type             = MV_FIDUCIAL;
 
     bMove               = false;
+
 }
 
 /// ===========================================================================
@@ -129,10 +136,10 @@ bool MvFiducial::Exec(quint32 proc_id)
 
     Mat found_rect = roi( Rect(maxLoc.x, maxLoc.y, img_template.cols, img_template.rows) );
 
-        namedWindow("FOUND", WINDOW_NORMAL);
-        imshow("FOUND", found_rect);
-        namedWindow("TEMPLATE", WINDOW_NORMAL);
-        imshow("TEMPLATE", img_template);
+//        namedWindow("FOUND", WINDOW_NORMAL);
+//        imshow("FOUND", found_rect);
+//        namedWindow("TEMPLATE", WINDOW_NORMAL);
+//        imshow("TEMPLATE", img_template);
 
     correlation_val = correlation( found_rect, img_template );
 
@@ -235,9 +242,8 @@ bool MvFiducial::SetImageTemplate(const QByteArray &src, QSize sz)
 
     emit(TemplateImage(convert16uc3(m)));
 
-   Debug("")
-    //    imshow("A",img_template);
 }
+
 
 /// ===========================================================================
 ///
@@ -296,7 +302,7 @@ void MvFiducial::paint(QPainter *painter, const QStyleOptionGraphicsItem *option
     samplingRect.setHeight(  this->boundingRect().height() / 2 );
     samplingRect.moveCenter( this->boundingRect().center() );
 
-    if( bMove == true )
+    if( (bMove == true ) && (!b_locked))
     {
         QPen pn(QColor(255,0,0), 3);
         pn.setCosmetic( true );

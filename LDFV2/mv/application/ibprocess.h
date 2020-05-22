@@ -64,6 +64,9 @@ private:
     int                     number_output;
 
     QMap<QString, QString> table;
+    QString                result_summary;
+
+    bool                   SAVE_IMAGE;
 
 
 };

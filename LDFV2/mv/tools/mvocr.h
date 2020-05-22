@@ -26,8 +26,10 @@ public:
     void SetWhiteFilterSize(int n);
     int  GetWhiteFilterSize()       { return white_filter; }
     void SetBlackAndWhite(const int n);
-    int GetBlackAndWhite();
+    int  GetBlackAndWhite();
     QObject* GetPO() { return (QObject*)&PO; }
+
+    void SetRotationStateTool(const bool& v);
 
     void ResetMove();
 

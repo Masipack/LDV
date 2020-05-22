@@ -43,6 +43,7 @@ protected:
     void showEvent(QShowEvent * event);
 
 
+
 private:
     Ui::ParamsFiducial *ui;
 

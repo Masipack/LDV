@@ -25,7 +25,7 @@ private:
 
     Ui::FormSaidas *ui;
 
-     QVector<widgetOutPut*>  widget_output;
+    QVector<widgetOutPut*>  widget_output;
 };
 
 #endif // FORMSAIDAS_H

@@ -32,6 +32,7 @@ private slots:
     void on_btn_edit_clicked();
     void on_btn_delete_clicked();
     void on_btn_show_inactive_clicked();
+    void on_btn_configure_user_clicked();
 };
 
 #endif // FORM_USERS_H

@@ -13,7 +13,7 @@ public:
 
     bool hasChanges(const DatamatrixTO& other)
     {
-        return ( BASE.EXPECTED_TEXT   != other.BASE.EXPECTED_TEXT  );
+        return (( BASE.EXPECTED_TEXT  != other.BASE.EXPECTED_TEXT  ) ||  ( BASE.CONFIG_POS!= other.BASE.CONFIG_POS ));
     }
 
     friend QDataStream &operator >>(QDataStream &s, DatamatrixTO& v)

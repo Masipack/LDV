@@ -2,7 +2,8 @@
 #include "ui_paramsdatamatrix.h"
 #include "mv/tools/mvdatamatrix.h"
 #include "util/dlgkeyboard.h"
-
+#include "util/sys_log.h"
+#include "util/alarmmanager.h"
 
 /// ===========================================================================
 ///
@@ -10,9 +11,13 @@
 ParamsDataMatrix::ParamsDataMatrix(MvDataMatrix *p, QWidget *parent) :
     QWidget(parent), ui(new Ui::ParamsDataMatrix), pTool(p)
 {
+
     ui->setupUi(this);
     ui->le_name->installEventFilter( this );
     ui->le_expected->installEventFilter( this );
+
+
+
 }
 
 /// ===========================================================================
@@ -42,6 +47,7 @@ void ParamsDataMatrix::NewResult(bool approved, const QString &value, quint32 pr
       ui->le_extracted->setPlainText( pTool->GetExtractedText() );
     }
 }
+
 
 /// ===========================================================================
 ///
@@ -133,5 +139,23 @@ void ParamsDataMatrix::on_pushButton_clicked()
     {
         pTool->SetExpectedText( ui->le_extracted->toPlainText() );
         pTool->Exec(0);
+    }
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsDataMatrix::on_btn_position_toggled(bool checked)
+{
+    if( pTool )
+    {
+        pTool->SetExecOnMove(checked ? false:true);
+        pTool->SetLock(checked ? false:true);
+        pTool->ReconfigPosition();
+        pTool->update();
+
+        LOG(LOG_INFO_TYPE, "Editando a posição da ferramenta" );
+        AlarmManager::instance()->SetAlarm(ALM_EDIT_POSITION);
+
     }
 }

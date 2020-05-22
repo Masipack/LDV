@@ -51,6 +51,22 @@ void ParamsOCR::SetExpectedText(const QString text)
 /// ===========================================================================
 ///
 /// ===========================================================================
+void ParamsOCR::SetBackgroundStateTool(const int &v)
+{
+    ui->btn_black_white->setChecked( v == 1 ? true:false );
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsOCR::SetRotationStateTool(const bool &v)
+{
+    ui->btn_angle->setChecked(v);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void ParamsOCR::NewResult(bool approved, const QString &value, quint32 proc_id)
 {
     if( pTool )
@@ -83,6 +99,7 @@ void ParamsOCR::showEvent(QShowEvent * event)
         ui->le_expected->setPlainText( pTool->GetExpectedText() );
         ui->le_extracted->setPlainText( pTool->GetExtractedText() );
         white_filter=pTool->GetWhiteFilterSize();
+        ui->btn_edit_position->setChecked(false);
 
         connect(pTool, SIGNAL(NewResult(bool,QString,quint32)), this, SLOT(NewResult(bool,QString,quint32)), Qt::UniqueConnection );
     }

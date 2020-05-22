@@ -5,6 +5,7 @@
 #include "global_defines.h"
 #include "util/systemsettings.h"
 #include "util/fileutil.h"
+#include "util/systemsettings.h"
 
 //#include "AVLConverters/AVL_OpenCV.h"
 //#include <AVL_Lite.h>
@@ -282,19 +283,29 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     Mat roi_local = roi.clone();
     Mat roi_local_th = roi.clone();
 
-    GaussianBlur(roi_local, roi_local, Size(3,3),0,0);
 
-    threshold(roi_local, roi_local_th, 0, 255, b_black_And_white ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
+    try
+    {
 
-    Mat kern = (Mat_<char>(5, 5) <<  0, 0, 1, 0, 0,
-                                     0, 0, 1, 0, 0,
-                                     0, 0, 1, 0, 0,
-                                     0, 0, 1, 0, 0,
-                                     0, 0, 1, 0, 0);
+        GaussianBlur(roi_local, roi_local, Size(3,3),0,0);
 
-    if(use_DARK){
+        threshold(roi_local, roi_local_th, 0, 255, b_black_And_white == 1 ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
 
-        filter2D(roi_local_th, roi_local_th, roi_local_th.depth(), kern);
+        Mat kern = (Mat_<char>(5, 5) <<  0, 0, 1, 0, 0,
+                                         0, 0, 1, 0, 0,
+                                         0, 0, 1, 0, 0,
+                                         0, 0, 1, 0, 0,
+                                         0, 0, 1, 0, 0);
+
+        if(use_DARK){
+
+            filter2D(roi_local_th, roi_local_th, roi_local_th.depth(), kern);
+        }
+
+
+    } catch (cv::Exception ex) {
+
+           LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL: FALHA NA EXTRAÇÃO DE CONTORNOS %1 ").arg(QString::fromStdString(ex.err)));
     }
 
 
@@ -346,23 +357,20 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 
     if( expectedText.size() == 0 )
     {
-         emit( ExecResult(th_roi, extractedText, proc_id) );
+        emit( ExecResult(th_roi, extractedText, proc_id) );
         return;
     }
 
-    qreal min_x = ((qreal)roi.cols / (qreal)expectedText.size()) * 0.2;
-    qreal max_x = ((qreal)roi.cols / (qreal)expectedText.size()) * 1.2;
+    qreal min_width = ((qreal)roi.cols / (qreal)expectedText.size()) * 0.1;
 
-    qreal min_y = (qreal)roi.rows * 0.2;
-    qreal max_y = (qreal)roi.rows * 1.2;
+    qreal max_width= ((qreal)roi.cols / (qreal)expectedText.size()) * 1.2;
+
+    qreal min_height = (qreal)roi.rows * 0.2;
+    qreal max_height = (qreal)roi.rows * 1.4;
 
     std::vector< std::vector<cv::Point> >  contours;
     std::vector< Vec4i >                   hierarchy;
 
-    Debug(min_x)
-    Debug(max_x)
-    Debug(min_y)
-    Debug(max_y)
 
     findContours(roi_local_th, contours, hierarchy,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE );
 
@@ -394,8 +402,22 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
             if(br.height  > 80)                      continue;
         }else{
 
-        if( br.height  < qFloor(min_y)  || br.height  > qCeil(max_y)  ) continue;
-        if( br.width   < qFloor(min_x)  || br.width   > qCeil(max_x)  ) continue;
+
+        //    5.33846
+        //    64.0615
+        //    30.4
+        //    212.8
+
+        if( br.width   < qFloor(min_width)  ) continue;
+        if( br.width   > qCeil(max_width)   ) continue;
+        if( br.height  < qFloor(min_height) - 10) continue;
+        if( br.height  > qCeil(max_height*0.5)  ) continue;
+
+//        Debug(min_width)
+//        Debug(max_width)
+//        Debug(min_height)
+//        Debug(max_height)
+
 
 
         }
@@ -448,8 +470,8 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     }
 
 
-    namedWindow("blob", WINDOW_NORMAL );
-    imshow("blob", blobs);
+//    namedWindow("blob", WINDOW_NORMAL );
+//    imshow("blob", blobs);
 
     qSort(char_descriptors.begin(), char_descriptors.end(), DescriptorThanX); // TODO: ver a rotacao da tela
 
@@ -476,13 +498,19 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
         try
         {
             if(true == mask.at(i).isNumber() )
-            predicted = static_cast<int>(svm_NUMBER->predict(current.mat.clone()));
+            {
+                predicted = static_cast<int>(svm_NUMBER->predict(current.mat.clone()));
+            }
 
             if(true == mask.at(i).isLetter() && mask.at(i).isUpper() )
-            predicted = static_cast<int>(svm_ALPHA_UCASE->predict(current.mat.clone()));
+            {
+                predicted = static_cast<int>(svm_ALPHA_UCASE->predict(current.mat.clone()));
+            }
 
             if(true == mask.at(i).isLetter() && mask.at(i).isLower() )
-            predicted = static_cast<int>(svm_ALPHA_LCASE->predict(current.mat.clone()));
+            {
+                predicted = static_cast<int>(svm_ALPHA_LCASE->predict(current.mat.clone()));
+            }
 
             if(true == mask.at(i).isPunct() )
             {
@@ -490,12 +518,13 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 
             }
 
-          // Debug(QChar(static_cast<int>(predicted)));
+
            extractedText.append((predicted >= 0x20 && predicted <= 0x7E) ? QChar(static_cast<int>(predicted)): QChar('?'));
 
 
         } catch (cv::Exception ex) {
             extractedText.clear();
+            LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL: FALHA NA EXTRAÇÃO DO CARACTERE %1 ").arg(QString::fromStdString(ex.err)));
 
         }
 

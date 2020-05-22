@@ -16,7 +16,6 @@ public:
     //NOT SERIALIZABLE:
 
 
-
     bool hasChanges(const OcrTO& other)
     {
          return (( BASE.EXPECTED_TEXT   != other.BASE.EXPECTED_TEXT  ) ||

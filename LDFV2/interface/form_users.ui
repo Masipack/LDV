@@ -87,12 +87,12 @@
          <height>80</height>
         </size>
        </property>
-       <property name="bgIcon" stdset="0">
-        <iconset resource="../../res/icons.qrc">
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
          <normaloff>:/icons/bt-blank.png</normaloff>
          <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
        </property>
-       <property name="bgIconSize" stdset="0">
+       <property name="bgIconSize">
         <size>
          <width>80</width>
          <height>80</height>
@@ -131,12 +131,12 @@
          <height>80</height>
         </size>
        </property>
-       <property name="bgIcon" stdset="0">
-        <iconset resource="../../res/icons.qrc">
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
          <normaloff>:/icons/bt-blank.png</normaloff>
          <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
        </property>
-       <property name="bgIconSize" stdset="0">
+       <property name="bgIconSize">
         <size>
          <width>80</width>
          <height>80</height>
@@ -175,12 +175,12 @@
          <height>80</height>
         </size>
        </property>
-       <property name="bgIcon" stdset="0">
-        <iconset resource="../../res/icons.qrc">
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
          <normaloff>:/icons/bt-blank.png</normaloff>
          <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
        </property>
-       <property name="bgIconSize" stdset="0">
+       <property name="bgIconSize">
         <size>
          <width>80</width>
          <height>80</height>
@@ -219,12 +219,12 @@
          <height>80</height>
         </size>
        </property>
-       <property name="bgIcon" stdset="0">
-        <iconset resource="../../res/icons.qrc">
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
          <normaloff>:/icons/bt-blank.png</normaloff>
          <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
        </property>
-       <property name="bgIconSize" stdset="0">
+       <property name="bgIconSize">
         <size>
          <width>80</width>
          <height>80</height>
@@ -267,12 +267,46 @@ Inativos</string>
        <property name="checkable">
         <bool>true</bool>
        </property>
-       <property name="bgIcon" stdset="0">
-        <iconset resource="../../res/icons.qrc">
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
          <normaloff>:/icons/bt-blank.png</normaloff>
          <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
        </property>
-       <property name="bgIconSize" stdset="0">
+       <property name="bgIconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="ButtonBeR" name="btn_configure_user">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>130</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>130</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Configure</string>
+       </property>
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/bt-blank.png</normaloff>:/icons/bt-blank.png</iconset>
+       </property>
+       <property name="bgIconSize">
         <size>
          <width>80</width>
          <height>80</height>
@@ -292,7 +326,7 @@ Inativos</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../../res/icons.qrc"/>
+  <include location="../res/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

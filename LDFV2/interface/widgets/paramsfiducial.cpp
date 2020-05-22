@@ -43,9 +43,9 @@ void ParamsFiducial::showEvent(QShowEvent * event)
         ui->btn_angle->setChecked( pTool->GetLockAngle() );
         ui->btn_visible->setChecked( pTool->isVisible() );
         ui->le_name->setText( pTool->GetToolName() );
+        ui->btn_edit->setChecked(false);
     }
 }
-
 
 /// ===========================================================================
 ///
@@ -186,7 +186,6 @@ void ParamsFiducial::TemplateImage(const QPixmap &image)
      int radius_bl=10;
      int radius_br=10;
 
-     Debug("")
      QRegion region(0, 0, ui->lbl_Template->width(),ui->lbl_Template->height(), QRegion::Rectangle);
 
          //-----------------------------  top left ------------------------------------//

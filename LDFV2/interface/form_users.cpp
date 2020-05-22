@@ -41,6 +41,8 @@ FormUsers::FormUsers(QWidget *parent) :
     ui->btn_edit->setProperty("DEST"            , "User_Edit");
     ui->btn_delete->setProperty("DEST"          , "User_Delete");
     ui->btn_show_inactive->setProperty("DEST"   , "User_ShowInactive");
+    ui->btn_configure_user->setProperty("DEST"  , "User_Config");
+
 }
 
 /// ===========================================================================
@@ -63,7 +65,6 @@ void FormUsers::UpdateTable()
     }
     ui->tableView->setModel(&model);
 }
-
 
 /// ===========================================================================
 ///
@@ -181,4 +182,12 @@ void FormUsers::on_btn_delete_clicked()
 void FormUsers::on_btn_show_inactive_clicked()
 {
     UpdateTable();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormUsers::on_btn_configure_user_clicked()
+{
+    WindowManager::instance()->ShowScreen( "ConfigUser" );
 }

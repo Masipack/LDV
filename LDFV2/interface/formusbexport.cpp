@@ -31,6 +31,7 @@ FormUsbExport::~FormUsbExport()
 void FormUsbExport::UpdateDeviceName()
 {
     QList<QStorageInfo> info = QStorageInfo::mountedVolumes();
+
     for( int i = 0; i < info.size(); i++ )
     {
         if( info.at(i).rootPath().contains("/media/") )

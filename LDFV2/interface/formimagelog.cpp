@@ -13,6 +13,7 @@ FormImageLog::FormImageLog(QWidget *parent) :
     ui(new Ui::FormImageLog)
 {
     ui->setupUi(this);
+    ui->imagedevice->setScene( &IBImagelog );
 }
 
 
@@ -38,13 +39,19 @@ void FormImageLog::showEvent(QShowEvent * event)
     ui->btn_next->setEnabled(WindowManager::instance()->GetCurrentUserLevel() != (-1));
     ui->btn_prev->setEnabled(WindowManager::instance()->GetCurrentUserLevel() != (-1));
 
-
     int pos = 0;
     QImage im;
     QString s;
+
     if( ImageQueue::instance()->GetAt(pos, im, s) == false ) return;
-    ui->lbl_image->setPixmap(QPixmap::fromImage(im));
+
     ui->lbl_pos->setText( QString::number( pos) );
+
+    ui->btn_next->setEnabled(true);
+
+    IBImagelog.NewImage( im.rgbSwapped() );
+
+    ui->textEdit->setText( s );
 
 
 }
@@ -59,8 +66,10 @@ void FormImageLog::on_btn_prev_clicked()
     QImage im;
     QString s;
     if( ImageQueue::instance()->GetAt(pos, im, s) == false ) return;
-    ui->lbl_image->setPixmap(QPixmap::fromImage(im));
+
+    IBImagelog.NewImage( im.rgbSwapped() );
     ui->lbl_pos->setText( QString::number( pos) );
+    ui->textEdit->setText( s );
 }
 
 
@@ -75,9 +84,9 @@ void FormImageLog::on_btn_next_clicked()
     QImage im;
     QString s;
     if( ImageQueue::instance()->GetAt(pos, im, s) == false ) return;
-
-    ui->lbl_image->setPixmap(QPixmap::fromImage(im));
+    IBImagelog.NewImage( im.rgbSwapped() );
     ui->lbl_pos->setText( QString::number( pos) );
+    ui->textEdit->setText( s );
 }
 
 

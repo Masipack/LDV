@@ -26,6 +26,7 @@ public:
     bool GetTO(ProductTO &_TO);
     void SetOutput(const int& value){ ib.SetOutput(value);}
     bool ChangesTOOLS(ProductTO &other);
+    void SetStatistic(const bool& v);
 
 
 signals:

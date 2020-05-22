@@ -117,7 +117,6 @@ void FormNewProduct::WriteConfig(const QString &name)
 
         LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL: FALHA AO CRIAR ARQUIVO DE RECEITA"));
 
-
         QFile::remove( QString("./data/formats/" + name + ".fmt") );
 
         DeInit();
@@ -221,5 +220,6 @@ void FormNewProduct::on_btn_return_clicked()
 /// ===========================================================================
 void FormNewProduct::on_btn_printer_clicked()
 {
+    if( P11(tr("Aceeso a impressora"), true ) == false ) return;
     WindowManager::instance()->ShowScreen("Printer");
 }

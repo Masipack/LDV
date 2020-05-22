@@ -16,9 +16,7 @@ FormProcess::FormProcess(QWidget *parent) : QWidget(parent), ui(new Ui::FormProc
 {
     ui->setupUi(this);
 
-    b_save_without_msg = false;
-
-   // connect(this, SIGNAL(Close()), &dlg, SLOT(Close()), Qt::QueuedConnection);
+   //connect(this, SIGNAL(Close()), &dlg, SLOT(Close()), Qt::QueuedConnection);
 
     dlg.SetMessage(DlgInfo::IT_WARNING, " Aguarde, carregando inspeção..... !");
     dlg.SetVisible(false);
@@ -26,7 +24,6 @@ FormProcess::FormProcess(QWidget *parent) : QWidget(parent), ui(new Ui::FormProc
     ui->btn_printer->setVisible(qApp->property("USE_PRINTER").toBool());
 
 }
-
 
 /// ===========================================================================
 ///
@@ -74,6 +71,7 @@ bool FormProcess::Init(const QString &file_name)
         p->SetTO( to.TO[i] );
         p->SetFileName(file_name);
         p->SetOutput(number_output++);
+        p->SetStatistic(true);
 
         connect(p, SIGNAL(WriteConfig(QString)), this, SLOT(WriteConfig(QString)),Qt::UniqueConnection);
 
@@ -160,7 +158,6 @@ void FormProcess::on_btn_return_clicked()
            forms[i]->GetTO(_TO);
            if(forms[i]->ChangesTOOLS(_TO))
            {
-               b_save_without_msg = true;
                WriteConfig(Name);
                break;
            }
@@ -178,7 +175,6 @@ void FormProcess::on_btn_return_clicked()
 
     DeInit();
 
-    b_save_without_msg= false;
     WindowManager::instance()->ShowScreen("Products");
 
 }
@@ -215,7 +211,7 @@ void FormProcess::WriteConfig(const QString &name)
     if( dlg.result() == QDialog::Rejected ) return;
 
 
-    if( P11(tr("Atributos de inspeção alterados:") + Name, !b_save_without_msg?true:false) == false ) return;
+    if( P11(tr("Atributos de inspeção alterados:") + Name,true) == false ) return;
 
     QString err;
 
@@ -232,5 +228,6 @@ void FormProcess::WriteConfig(const QString &name)
 /// ===========================================================================
 void FormProcess::on_btn_printer_clicked()
 {
+     if( P11(tr("Aceeso a impressora"), true ) == false ) return;
      WindowManager::instance()->ShowScreen("Printer");
 }

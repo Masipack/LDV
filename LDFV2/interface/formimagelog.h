@@ -4,7 +4,7 @@
 #include <QWidget>
 #include "util/imagequeue.h"
 #include "interface/windowmanager.h"
-
+#include "mv/application/ibimagelog.h"
 
 namespace Ui {
 class FormImageLog;
@@ -31,6 +31,7 @@ private:
 protected:
     void showEvent(QShowEvent * event);
 
+    IBImageLog      IBImagelog;
 };
 
 #endif // FORMIMAGELOG_H

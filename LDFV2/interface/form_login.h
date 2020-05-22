@@ -26,10 +26,13 @@ private slots:
 private:
     Ui::FormLogin *ui;
     QMap<QString, int> error_count;
+    int                EXPIRATE_DATA;
 
 protected:
     void showEvent(QShowEvent * event);
     bool eventFilter(QObject* object, QEvent* event);
+
+
 };
 
 #endif // FORM_LOGIN_H

@@ -13,7 +13,7 @@
 #include "util/fileutil.h"
 #include "TO/databaseto.h"
 
-//#include <AVL.h>
+#include <AVL.h>
 #include "opencv2/core.hpp"
 
 /// ===========================================================================
@@ -248,7 +248,8 @@ int main(int argc, char *argv[])
     Pylon::PylonAutoInitTerm    autoInitTerm;
     // First initialize AVL's inner state.
 
-    //avl::InitLibrary();
+
+    avl::InitLibrary();
 
     bool bInitError = false;
 

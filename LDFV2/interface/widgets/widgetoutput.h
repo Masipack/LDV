@@ -16,6 +16,8 @@ public:
     ~widgetOutPut();
 
      void SetNumberOut(const int n);
+     void SetChecked(const bool n);
+
 private slots:
      void on_btn_exec_toggled(bool checked);
 

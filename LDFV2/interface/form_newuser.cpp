@@ -5,6 +5,9 @@
 #include "util/sys_log.h"
 #include "util/dlginfo.h"
 #include "util/dlgkeyboard.h"
+#include "util/fileutil.h"
+
+#include "global_defines.h"
 
 /// ===========================================================================
 ///
@@ -104,6 +107,7 @@ void FormNewUser::showEvent(QShowEvent * event)
     }
 
     if( bEditMode == false ) ClearScreen();
+
 }
 
 /// ===========================================================================
@@ -177,13 +181,7 @@ void FormNewUser::on_btn_new_clicked()
         return;
     }
 
-    if( ui->le_password->text().size() < 4 )
-    {
-        DlgInfo dlg;
-        dlg.SetMessage(DlgInfo::IT_ERROR, tr("Senha inválida !\nA senha deve ter 4 ou mais caracteres"), false, false );
-        dlg.exec();
-        return;
-    }
+
 
     if( ui->le_password->text() !=  ui->le_password_confirm->text() )
     {
@@ -223,11 +221,52 @@ void FormNewUser::on_btn_new_clicked()
         }
     }
 
-    query.clear();
+    //-------------------------------------------------- Check password -----------------------------------------------//
+
+
+    if(!CheckPassword(ui->le_password->text()))
+    {
+        DlgInfo dlg;
+        dlg.SetMessage(DlgInfo::IT_ERROR, tr("Senha inválida :\nA senha deve ter conter  6 ou mais caracteres, maiuscula, minuscula e caracteres especial"), false, false );
+        dlg.exec();
+        return;
+    }
+
+
+    if(bEditMode)
+    {
+        QString str_query_p = QString("select password, level, login from users where login = '%1' and active = 1").arg(ui->le_login->text());
+
+        query.exec( str_query_p );
+
+        if(query.next() )
+        {
+            QString hash_num = QByteArray( ui->le_password->text().toLatin1() ).toBase64();
+
+            QString h = query.value(0).toString();
+
+            if( h == hash_num )
+            {
+                DlgInfo dlg;
+                dlg.SetMessage(DlgInfo::IT_INFO , tr("A nova senha não pode ser igual à anterior"), false, false );
+                dlg.exec();
+                return;
+            }
+        }
+    }
+
+    //------------------------------------------------------------------------------------------------------------------//
+
+
+
+//    dd.MM.yyyy
+//    ddd MMMM d yy
+//    hh:mm:ss.zzz
+
     if( bEditMode )
-        query.prepare( QString("UPDATE users SET login = :login, password = :password, name = :name, level = :level, active = :active where login = '%1'").arg(ui->le_login->text()));
+        query.prepare( QString("UPDATE users SET login = :login, password = :password, name = :name, level = :level, active = :active ,first_access =:first_access,expiration_date =:expiration_date where login = '%1'").arg(ui->le_login->text()));
     else
-        query.prepare("INSERT INTO users (login, password, name, level, active) VALUES (:login, :password, :name, :level, :active)");
+        query.prepare("INSERT INTO users (login, password, name, level, active, first_access,expiration_date) VALUES (:login, :password, :name, :level, :active,:first_access,:expiration_date)");
 
     QString hash_num = QByteArray( ui->le_password->text().toLatin1() ).toBase64(); //QString::number( hash ).toLatin1().data() ).toBase64();
 
@@ -236,8 +275,16 @@ void FormNewUser::on_btn_new_clicked()
     query.bindValue(":name"             , ui->le_name->text() );
     query.bindValue(":level"            , current_user_level);
     query.bindValue(":active"           , ui->btn_active->isChecked() ? 1 : 0 );
+    query.bindValue(":first_access"     , 1);
+    query.bindValue(":expiration_date"    , QDateTime::currentDateTime().toString("yyy-MM-dd hh:mm:ss"));
 
     bool result = query.exec(); // TODO: tratar o retorno de inserir novo usuario
+
+    Debug(result)
+
+    DlgInfo dlg;
+    dlg.SetMessage(result ? DlgInfo::IT_INFO : DlgInfo::IT_ERROR, tr(result ? "Cadrastro realizado com sucesso" :"Não foi possível realizar cadastro"), false, false );
+    dlg.exec();
 
     if( bEditMode == true )
     {

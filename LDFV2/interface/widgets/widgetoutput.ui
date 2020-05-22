@@ -98,6 +98,15 @@
      </item>
      <item>
       <widget class="QLabel" name="lbl_Status">
+       <property name="font">
+        <font>
+         <family>Courier 10 Pitch</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 11, 139);</string>
+       </property>
        <property name="text">
         <string/>
        </property>

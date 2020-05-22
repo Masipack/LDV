@@ -44,6 +44,7 @@ private:
 protected:
     void showEvent(QShowEvent * event);
     bool eventFilter(QObject* object, QEvent* event);
+
 };
 
 #endif // FORM_NEWUSER_H

@@ -1,0 +1,456 @@
+09:43:36.079|I|| --------- Sistema Inicializando --------- 
+09:43:36.080QIODevice::write (QSerialPort): device not open
+09:43:36.080|E||Porta serial ttyUSB0 indisponivel para uso
+09:43:36.086libpng warning: iCCP: known incorrect sRGB profile
+09:43:36.164libpng warning: iCCP: known incorrect sRGB profile
+09:43:50.659QIODevice::write (QSerialPort): device not open
+09:43:50.665|I|2|INFO       : Registration OK
+ %2
+09:43:50.687QIODevice::write (QSerialPort): device not open
+09:43:50.919|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:43:50.938|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:43:51.146QIODevice::write (QSerialPort): device not open
+09:43:51.163QIODevice::write (QSerialPort): device not open
+09:43:51.621QIODevice::write (QSerialPort): device not open
+09:43:51.638QIODevice::write (QSerialPort): device not open
+09:43:52.095QIODevice::write (QSerialPort): device not open
+09:43:52.112QIODevice::write (QSerialPort): device not open
+09:43:52.571QIODevice::write (QSerialPort): device not open
+09:43:52.588QIODevice::write (QSerialPort): device not open
+09:43:53.046QIODevice::write (QSerialPort): device not open
+09:43:53.063QIODevice::write (QSerialPort): device not open
+09:43:53.521QIODevice::write (QSerialPort): device not open
+09:43:53.538QIODevice::write (QSerialPort): device not open
+09:43:53.996QIODevice::write (QSerialPort): device not open
+09:43:54.013QIODevice::write (QSerialPort): device not open
+09:43:54.471QIODevice::write (QSerialPort): device not open
+09:43:54.487QIODevice::write (QSerialPort): device not open
+09:43:54.946QIODevice::write (QSerialPort): device not open
+09:43:54.962QIODevice::write (QSerialPort): device not open
+09:43:55.440QIODevice::write (QSerialPort): device not open
+09:43:55.441QIODevice::write (QSerialPort): device not open
+09:43:55.941QIODevice::write (QSerialPort): device not open
+09:43:55.941QIODevice::write (QSerialPort): device not open
+09:43:56.440QIODevice::write (QSerialPort): device not open
+09:43:56.441QIODevice::write (QSerialPort): device not open
+09:43:56.940QIODevice::write (QSerialPort): device not open
+09:43:56.941QIODevice::write (QSerialPort): device not open
+09:43:57.129TOOL  0 --------------------------- 4
+09:43:57.442QIODevice::write (QSerialPort): device not open
+09:43:57.442QIODevice::write (QSerialPort): device not open
+09:43:57.941QIODevice::write (QSerialPort): device not open
+09:43:57.942QIODevice::write (QSerialPort): device not open
+09:43:58.440QIODevice::write (QSerialPort): device not open
+09:43:58.440QIODevice::write (QSerialPort): device not open
+09:43:58.942QIODevice::write (QSerialPort): device not open
+09:43:58.942QIODevice::write (QSerialPort): device not open
+09:43:59.442QIODevice::write (QSerialPort): device not open
+09:43:59.442QIODevice::write (QSerialPort): device not open
+09:43:59.623TOOL  0 --------------------------- 4
+09:43:59.941QIODevice::write (QSerialPort): device not open
+09:43:59.941QIODevice::write (QSerialPort): device not open
+09:44:00.441QIODevice::write (QSerialPort): device not open
+09:44:00.442QIODevice::write (QSerialPort): device not open
+09:44:00.941QIODevice::write (QSerialPort): device not open
+09:44:00.941QIODevice::write (QSerialPort): device not open
+09:44:01.442QIODevice::write (QSerialPort): device not open
+09:44:01.442QIODevice::write (QSerialPort): device not open
+09:44:01.864TOOL  0 --------------------------- 4
+09:44:01.941QIODevice::write (QSerialPort): device not open
+09:44:01.942QIODevice::write (QSerialPort): device not open
+09:44:02.442QIODevice::write (QSerialPort): device not open
+09:44:02.443QIODevice::write (QSerialPort): device not open
+09:44:02.942QIODevice::write (QSerialPort): device not open
+09:44:02.943QIODevice::write (QSerialPort): device not open
+09:44:03.442QIODevice::write (QSerialPort): device not open
+09:44:03.442QIODevice::write (QSerialPort): device not open
+09:44:03.942QIODevice::write (QSerialPort): device not open
+09:44:03.942QIODevice::write (QSerialPort): device not open
+09:44:04.419TOOL  0 --------------------------- 4
+09:44:04.442QIODevice::write (QSerialPort): device not open
+09:44:04.442QIODevice::write (QSerialPort): device not open
+09:44:04.943QIODevice::write (QSerialPort): device not open
+09:44:04.943QIODevice::write (QSerialPort): device not open
+09:44:05.442QIODevice::write (QSerialPort): device not open
+09:44:05.443QIODevice::write (QSerialPort): device not open
+09:44:05.941QIODevice::write (QSerialPort): device not open
+09:44:05.941QIODevice::write (QSerialPort): device not open
+09:44:06.442QIODevice::write (QSerialPort): device not open
+09:44:06.443QIODevice::write (QSerialPort): device not open
+09:44:06.521TOOL  0 --------------------------- 4
+09:44:06.942QIODevice::write (QSerialPort): device not open
+09:44:06.942QIODevice::write (QSerialPort): device not open
+09:44:07.442QIODevice::write (QSerialPort): device not open
+09:44:07.442QIODevice::write (QSerialPort): device not open
+09:44:07.941QIODevice::write (QSerialPort): device not open
+09:44:07.941QIODevice::write (QSerialPort): device not open
+09:44:08.442QIODevice::write (QSerialPort): device not open
+09:44:08.443QIODevice::write (QSerialPort): device not open
+09:44:08.941QIODevice::write (QSerialPort): device not open
+09:44:08.941QIODevice::write (QSerialPort): device not open
+09:44:09.442QIODevice::write (QSerialPort): device not open
+09:44:09.442QIODevice::write (QSerialPort): device not open
+09:44:09.942QIODevice::write (QSerialPort): device not open
+09:44:09.942QIODevice::write (QSerialPort): device not open
+09:44:10.442QIODevice::write (QSerialPort): device not open
+09:44:10.443QIODevice::write (QSerialPort): device not open
+09:44:10.942QIODevice::write (QSerialPort): device not open
+09:44:10.942QIODevice::write (QSerialPort): device not open
+09:44:11.441QIODevice::write (QSerialPort): device not open
+09:44:11.442QIODevice::write (QSerialPort): device not open
+09:44:11.941QIODevice::write (QSerialPort): device not open
+09:44:11.942QIODevice::write (QSerialPort): device not open
+09:44:12.114TOOL  0 --------------------------- 4
+09:44:12.442QIODevice::write (QSerialPort): device not open
+09:44:12.442QIODevice::write (QSerialPort): device not open
+09:44:12.450|I|2| --------- Sistema Desligando --------- 
+09:45:58.784|I|| --------- Sistema Inicializando --------- 
+09:45:58.785QIODevice::write (QSerialPort): device not open
+09:45:58.785|E||Porta serial ttyUSB0 indisponivel para uso
+09:45:58.792libpng warning: iCCP: known incorrect sRGB profile
+09:45:58.875libpng warning: iCCP: known incorrect sRGB profile
+09:46:11.681QIODevice::write (QSerialPort): device not open
+09:46:11.689|I|2|INFO       : Registration OK
+ %2
+09:46:11.712QIODevice::write (QSerialPort): device not open
+09:46:11.943|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:46:11.962|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:46:12.220QIODevice::write (QSerialPort): device not open
+09:46:12.239QIODevice::write (QSerialPort): device not open
+09:46:12.745QIODevice::write (QSerialPort): device not open
+09:46:12.763QIODevice::write (QSerialPort): device not open
+09:46:13.269QIODevice::write (QSerialPort): device not open
+09:46:13.288QIODevice::write (QSerialPort): device not open
+09:46:13.796QIODevice::write (QSerialPort): device not open
+09:46:13.813QIODevice::write (QSerialPort): device not open
+09:46:14.320QIODevice::write (QSerialPort): device not open
+09:46:14.338QIODevice::write (QSerialPort): device not open
+09:46:14.845QIODevice::write (QSerialPort): device not open
+09:46:14.863QIODevice::write (QSerialPort): device not open
+09:46:15.370QIODevice::write (QSerialPort): device not open
+09:46:15.388QIODevice::write (QSerialPort): device not open
+09:46:15.894QIODevice::write (QSerialPort): device not open
+09:46:15.913QIODevice::write (QSerialPort): device not open
+09:46:16.420QIODevice::write (QSerialPort): device not open
+09:46:16.438QIODevice::write (QSerialPort): device not open
+09:46:16.636TOOL  0 --------------------------- 4
+09:46:16.940QIODevice::write (QSerialPort): device not open
+09:46:16.941QIODevice::write (QSerialPort): device not open
+09:46:17.440QIODevice::write (QSerialPort): device not open
+09:46:17.441QIODevice::write (QSerialPort): device not open
+09:46:17.940QIODevice::write (QSerialPort): device not open
+09:46:17.940QIODevice::write (QSerialPort): device not open
+09:46:18.440QIODevice::write (QSerialPort): device not open
+09:46:18.440QIODevice::write (QSerialPort): device not open
+09:46:18.825TOOL  0 --------------------------- 4
+09:46:18.940QIODevice::write (QSerialPort): device not open
+09:46:18.940QIODevice::write (QSerialPort): device not open
+09:46:19.440QIODevice::write (QSerialPort): device not open
+09:46:19.440QIODevice::write (QSerialPort): device not open
+09:46:19.941QIODevice::write (QSerialPort): device not open
+09:46:19.941QIODevice::write (QSerialPort): device not open
+09:46:20.440QIODevice::write (QSerialPort): device not open
+09:46:20.440QIODevice::write (QSerialPort): device not open
+09:46:20.940QIODevice::write (QSerialPort): device not open
+09:46:20.940QIODevice::write (QSerialPort): device not open
+09:46:21.025TOOL  0 --------------------------- 4
+09:46:21.440QIODevice::write (QSerialPort): device not open
+09:46:21.440QIODevice::write (QSerialPort): device not open
+09:46:21.940QIODevice::write (QSerialPort): device not open
+09:46:21.940QIODevice::write (QSerialPort): device not open
+09:46:22.439QIODevice::write (QSerialPort): device not open
+09:46:22.440QIODevice::write (QSerialPort): device not open
+09:46:22.941QIODevice::write (QSerialPort): device not open
+09:46:22.942QIODevice::write (QSerialPort): device not open
+09:46:23.145TOOL  0 --------------------------- 4
+09:46:23.440QIODevice::write (QSerialPort): device not open
+09:46:23.440QIODevice::write (QSerialPort): device not open
+09:46:23.940QIODevice::write (QSerialPort): device not open
+09:46:23.940QIODevice::write (QSerialPort): device not open
+09:46:24.440QIODevice::write (QSerialPort): device not open
+09:46:24.440QIODevice::write (QSerialPort): device not open
+09:46:24.940QIODevice::write (QSerialPort): device not open
+09:46:24.940QIODevice::write (QSerialPort): device not open
+09:46:25.184TOOL  0 --------------------------- 4
+09:46:25.440QIODevice::write (QSerialPort): device not open
+09:46:25.441QIODevice::write (QSerialPort): device not open
+09:46:25.940QIODevice::write (QSerialPort): device not open
+09:46:25.940QIODevice::write (QSerialPort): device not open
+09:46:26.440QIODevice::write (QSerialPort): device not open
+09:46:26.440QIODevice::write (QSerialPort): device not open
+09:46:26.940QIODevice::write (QSerialPort): device not open
+09:46:26.941QIODevice::write (QSerialPort): device not open
+09:46:27.441QIODevice::write (QSerialPort): device not open
+09:46:27.441QIODevice::write (QSerialPort): device not open
+09:46:27.940QIODevice::write (QSerialPort): device not open
+09:46:27.941QIODevice::write (QSerialPort): device not open
+09:46:28.289TOOL  0 --------------------------- 4
+09:46:28.439QIODevice::write (QSerialPort): device not open
+09:46:28.440QIODevice::write (QSerialPort): device not open
+09:46:28.940QIODevice::write (QSerialPort): device not open
+09:46:28.941QIODevice::write (QSerialPort): device not open
+09:46:29.440QIODevice::write (QSerialPort): device not open
+09:46:29.440QIODevice::write (QSerialPort): device not open
+09:46:29.940QIODevice::write (QSerialPort): device not open
+09:46:29.941QIODevice::write (QSerialPort): device not open
+09:46:30.440QIODevice::write (QSerialPort): device not open
+09:46:30.440QIODevice::write (QSerialPort): device not open
+09:46:30.940QIODevice::write (QSerialPort): device not open
+09:46:30.941QIODevice::write (QSerialPort): device not open
+09:46:31.440QIODevice::write (QSerialPort): device not open
+09:46:31.441QIODevice::write (QSerialPort): device not open
+09:46:31.940QIODevice::write (QSerialPort): device not open
+09:46:31.940QIODevice::write (QSerialPort): device not open
+09:46:32.441QIODevice::write (QSerialPort): device not open
+09:46:32.441QIODevice::write (QSerialPort): device not open
+09:46:32.941QIODevice::write (QSerialPort): device not open
+09:46:32.941QIODevice::write (QSerialPort): device not open
+09:46:33.440QIODevice::write (QSerialPort): device not open
+09:46:33.441QIODevice::write (QSerialPort): device not open
+09:46:33.940QIODevice::write (QSerialPort): device not open
+09:46:33.940QIODevice::write (QSerialPort): device not open
+09:46:34.441QIODevice::write (QSerialPort): device not open
+09:46:34.441QIODevice::write (QSerialPort): device not open
+09:46:34.940QIODevice::write (QSerialPort): device not open
+09:46:34.940QIODevice::write (QSerialPort): device not open
+09:46:35.441QIODevice::write (QSerialPort): device not open
+09:46:35.441QIODevice::write (QSerialPort): device not open
+09:46:35.940QIODevice::write (QSerialPort): device not open
+09:46:35.940QIODevice::write (QSerialPort): device not open
+09:46:36.440QIODevice::write (QSerialPort): device not open
+09:46:36.440QIODevice::write (QSerialPort): device not open
+09:46:36.565TOOL  0 --------------------------- 4
+09:46:36.940QIODevice::write (QSerialPort): device not open
+09:46:36.940QIODevice::write (QSerialPort): device not open
+09:46:37.439QIODevice::write (QSerialPort): device not open
+09:46:37.440QIODevice::write (QSerialPort): device not open
+09:46:37.940QIODevice::write (QSerialPort): device not open
+09:46:37.940QIODevice::write (QSerialPort): device not open
+09:46:37.949TOOL  0 --------------------------- 4
+09:46:38.440QIODevice::write (QSerialPort): device not open
+09:46:38.441QIODevice::write (QSerialPort): device not open
+09:46:38.940QIODevice::write (QSerialPort): device not open
+09:46:38.940QIODevice::write (QSerialPort): device not open
+09:46:39.440QIODevice::write (QSerialPort): device not open
+09:46:39.441QIODevice::write (QSerialPort): device not open
+09:46:39.528TOOL  0 --------------------------- 4
+09:46:39.941QIODevice::write (QSerialPort): device not open
+09:46:39.941QIODevice::write (QSerialPort): device not open
+09:46:40.440QIODevice::write (QSerialPort): device not open
+09:46:40.440QIODevice::write (QSerialPort): device not open
+09:46:40.804|I|2| --------- Sistema Desligando --------- 
+09:54:06.084|I|| --------- Sistema Inicializando --------- 
+09:54:06.085QIODevice::write (QSerialPort): device not open
+09:54:06.085|E||Porta serial ttyUSB0 indisponivel para uso
+09:54:06.090libpng warning: iCCP: known incorrect sRGB profile
+09:54:06.179libpng warning: iCCP: known incorrect sRGB profile
+09:54:18.943QIODevice::write (QSerialPort): device not open
+09:54:18.949|I|2|INFO       : Registration OK
+ %2
+09:54:18.972QIODevice::write (QSerialPort): device not open
+09:54:19.200|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:54:19.222|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:54:19.440QIODevice::write (QSerialPort): device not open
+09:54:19.446QIODevice::write (QSerialPort): device not open
+09:54:19.941QIODevice::write (QSerialPort): device not open
+09:54:19.943QIODevice::write (QSerialPort): device not open
+09:54:20.440QIODevice::write (QSerialPort): device not open
+09:54:20.440QIODevice::write (QSerialPort): device not open
+09:54:20.939QIODevice::write (QSerialPort): device not open
+09:54:20.941QIODevice::write (QSerialPort): device not open
+09:54:21.440QIODevice::write (QSerialPort): device not open
+09:54:21.442QIODevice::write (QSerialPort): device not open
+09:54:21.939QIODevice::write (QSerialPort): device not open
+09:54:21.940QIODevice::write (QSerialPort): device not open
+09:54:22.439QIODevice::write (QSerialPort): device not open
+09:54:22.441QIODevice::write (QSerialPort): device not open
+09:54:22.940QIODevice::write (QSerialPort): device not open
+09:54:22.941QIODevice::write (QSerialPort): device not open
+09:54:23.440QIODevice::write (QSerialPort): device not open
+09:54:23.441QIODevice::write (QSerialPort): device not open
+09:54:23.940QIODevice::write (QSerialPort): device not open
+09:54:23.942QIODevice::write (QSerialPort): device not open
+09:54:24.440QIODevice::write (QSerialPort): device not open
+09:54:24.442QIODevice::write (QSerialPort): device not open
+09:54:24.940QIODevice::write (QSerialPort): device not open
+09:54:24.942QIODevice::write (QSerialPort): device not open
+09:54:25.439QIODevice::write (QSerialPort): device not open
+09:54:25.440QIODevice::write (QSerialPort): device not open
+09:54:25.940QIODevice::write (QSerialPort): device not open
+09:54:25.941QIODevice::write (QSerialPort): device not open
+09:54:26.441QIODevice::write (QSerialPort): device not open
+09:54:26.443QIODevice::write (QSerialPort): device not open
+09:54:26.760TOOL  0 --------------------------- 4
+09:54:26.939QIODevice::write (QSerialPort): device not open
+09:54:26.940QIODevice::write (QSerialPort): device not open
+09:54:27.441QIODevice::write (QSerialPort): device not open
+09:54:27.443QIODevice::write (QSerialPort): device not open
+09:54:27.940QIODevice::write (QSerialPort): device not open
+09:54:27.941QIODevice::write (QSerialPort): device not open
+09:54:28.439QIODevice::write (QSerialPort): device not open
+09:54:28.440QIODevice::write (QSerialPort): device not open
+09:54:28.879TOOL  0 --------------------------- 4
+09:54:28.939QIODevice::write (QSerialPort): device not open
+09:54:28.940QIODevice::write (QSerialPort): device not open
+09:54:29.439QIODevice::write (QSerialPort): device not open
+09:54:29.441QIODevice::write (QSerialPort): device not open
+09:54:29.940QIODevice::write (QSerialPort): device not open
+09:54:29.941QIODevice::write (QSerialPort): device not open
+09:54:30.440QIODevice::write (QSerialPort): device not open
+09:54:30.441QIODevice::write (QSerialPort): device not open
+09:54:30.940QIODevice::write (QSerialPort): device not open
+09:54:30.942QIODevice::write (QSerialPort): device not open
+09:54:31.451QIODevice::write (QSerialPort): device not open
+09:54:31.452QIODevice::write (QSerialPort): device not open
+09:54:31.940QIODevice::write (QSerialPort): device not open
+09:54:31.941QIODevice::write (QSerialPort): device not open
+09:54:32.440QIODevice::write (QSerialPort): device not open
+09:54:32.441QIODevice::write (QSerialPort): device not open
+09:54:32.939QIODevice::write (QSerialPort): device not open
+09:54:32.940QIODevice::write (QSerialPort): device not open
+09:54:33.439QIODevice::write (QSerialPort): device not open
+09:54:33.440QIODevice::write (QSerialPort): device not open
+09:54:33.939QIODevice::write (QSerialPort): device not open
+09:54:33.940QIODevice::write (QSerialPort): device not open
+09:54:34.439QIODevice::write (QSerialPort): device not open
+09:54:34.440QIODevice::write (QSerialPort): device not open
+09:54:34.940QIODevice::write (QSerialPort): device not open
+09:54:34.941QIODevice::write (QSerialPort): device not open
+09:54:35.439QIODevice::write (QSerialPort): device not open
+09:54:35.440QIODevice::write (QSerialPort): device not open
+09:54:35.940QIODevice::write (QSerialPort): device not open
+09:54:35.942QIODevice::write (QSerialPort): device not open
+09:54:36.440QIODevice::write (QSerialPort): device not open
+09:54:36.441QIODevice::write (QSerialPort): device not open
+09:54:36.939QIODevice::write (QSerialPort): device not open
+09:54:36.940QIODevice::write (QSerialPort): device not open
+09:54:37.119TOOL  0 --------------------------- 4
+09:54:37.440QIODevice::write (QSerialPort): device not open
+09:54:37.442QIODevice::write (QSerialPort): device not open
+09:54:37.940QIODevice::write (QSerialPort): device not open
+09:54:37.941QIODevice::write (QSerialPort): device not open
+09:54:38.439QIODevice::write (QSerialPort): device not open
+09:54:38.440QIODevice::write (QSerialPort): device not open
+09:54:38.737TOOL  0 --------------------------- 4
+09:54:38.940QIODevice::write (QSerialPort): device not open
+09:54:38.942QIODevice::write (QSerialPort): device not open
+09:54:39.440QIODevice::write (QSerialPort): device not open
+09:54:39.441QIODevice::write (QSerialPort): device not open
+09:54:39.940QIODevice::write (QSerialPort): device not open
+09:54:39.941QIODevice::write (QSerialPort): device not open
+09:54:40.253TOOL  0 --------------------------- 4
+09:54:40.440QIODevice::write (QSerialPort): device not open
+09:54:40.442QIODevice::write (QSerialPort): device not open
+09:54:40.940QIODevice::write (QSerialPort): device not open
+09:54:40.942QIODevice::write (QSerialPort): device not open
+09:54:41.440QIODevice::write (QSerialPort): device not open
+09:54:41.442QIODevice::write (QSerialPort): device not open
+09:54:41.697TOOL  0 --------------------------- 4
+09:54:41.940QIODevice::write (QSerialPort): device not open
+09:54:41.941QIODevice::write (QSerialPort): device not open
+09:54:42.440QIODevice::write (QSerialPort): device not open
+09:54:42.442QIODevice::write (QSerialPort): device not open
+09:54:42.685|I|2| --------- Sistema Desligando --------- 
+16:30:24.364|I|| --------- Sistema Inicializando --------- 
+16:30:24.371libpng warning: iCCP: known incorrect sRGB profile
+16:30:24.445libpng warning: iCCP: known incorrect sRGB profile
+16:30:37.913|I|2| --------- Sistema Desligando --------- 
+16:55:39.823|I|| --------- Sistema Inicializando --------- 
+16:55:39.831libpng warning: iCCP: known incorrect sRGB profile
+16:55:39.909libpng warning: iCCP: known incorrect sRGB profile
+16:55:54.810|I|2|INFO       : Registration OK
+ %2
+16:55:54.823TOOL  0 --------------------------- 4
+16:55:55.062|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+16:55:57.100|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:57.251|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:57.652|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:57.811|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:57.963|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:58.123|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:58.283|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:58.427|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:58.579|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:58.739|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:58.891|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:59.508|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:59.659|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:59.819|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:55:59.980|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:00.131|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:00.283|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:00.435|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:00.595|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:00.755|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:00.907|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:01.299|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:01.500|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:01.651|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:01.811|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:01.979|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:02.139|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:02.300|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:56:02.657|I|2| --------- Sistema Desligando --------- 
+16:57:13.529|I|| --------- Sistema Inicializando --------- 
+16:57:13.541libpng warning: iCCP: known incorrect sRGB profile
+16:57:13.621libpng warning: iCCP: known incorrect sRGB profile
+16:57:26.406|I|2|INFO       : Registration OK
+ %2
+16:57:26.421TOOL  0 --------------------------- 4
+16:57:26.657|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+16:57:28.162|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:28.690|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:28.690void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:28.799virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:28.803virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:28.803virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:28.803virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 3 ms"
+16:57:29.090|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:29.090void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:29.200virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:29.202virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:29.202virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:29.202virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 2 ms"
+16:57:29.690|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:29.690void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:29.789virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:29.790virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:29.790virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:29.790virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 1 ms"
+16:57:30.123|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:30.123void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:30.222virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:30.224virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:30.224virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:30.224virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 1 ms"
+16:57:30.482|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:30.482void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:30.586virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:30.588virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:30.588virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:30.588virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 2 ms"
+16:57:30.722|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:30.723void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:30.831virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:30.833virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:30.833virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:30.833virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 2 ms"
+16:57:30.898|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:30.898void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:30.995virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:30.996virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:30.996virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:30.996virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 1 ms"
+16:57:31.050|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:31.050void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:31.148virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:31.149virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:31.149virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:31.149virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 2 ms"
+16:57:31.202|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+16:57:31.202void FormProcessContent::on_btn_camera_snap_clicked() 219 "/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V2_DEPLOY/Release/data/image//1.jpg"
+16:57:31.303virtual bool MvDataMatrix::Exec(quint32) 145 0
+16:57:31.304virtual bool MvDataMatrix::Exec(quint32) 149 -1
+16:57:31.304virtual bool MvDataMatrix::Exec(quint32) 187 0
+16:57:31.304virtual bool MvDataMatrix::Exec(quint32) 194 "Leitura:  em 1 ms"
+16:57:32.057|I|2| --------- Sistema Desligando --------- 

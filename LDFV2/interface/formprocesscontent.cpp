@@ -54,6 +54,7 @@ FormProcessContent::~FormProcessContent()
 void FormProcessContent::showEvent(QShowEvent *event)
 {
     WindowManager::instance()->SetInfoTop(tr("Inspeção (Câmera ") + QString("%1)").arg(camNum+1)+QString(": %1").arg(configFilename) );
+    ui->btn_Statistics->setChecked(true);
 }
 
 /// ===========================================================================
@@ -298,6 +299,7 @@ void FormProcessContent::on_btn_Statistics_toggled(bool checked)
     /// ===========================================================================
     if(checked)
     {
+
        ui->scrollArea->setUpdatesEnabled( false );
 
        ui->lst_tools->setCurrentRow(-1);
@@ -355,6 +357,14 @@ bool FormProcessContent::ChangesTOOLS(ProductTO& other)
     }
 
     return false;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormProcessContent::SetStatistic(const bool &v)
+{
+    ui->btn_Statistics->setChecked(v);
 }
 
 /// ===========================================================================

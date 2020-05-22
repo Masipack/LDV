@@ -26,10 +26,8 @@ FormSaidas::~FormSaidas()
 /// ===========================================================================
 void FormSaidas::on_btn_return_clicked()
 {
-    for (int current_index = 0; current_index < 15; ++current_index) {
-
-         SerialControl::instance()->ToggleBitOFF(current_index);
-
+    for (int current_index = 0; current_index < widget_output.size(); ++current_index) {
+         widget_output[current_index]->SetChecked(false);
     }
 
     WindowManager::instance()->ShowLastScreen();

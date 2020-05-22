@@ -45,7 +45,7 @@ INCLUDEPATH += $$THIRDY_PARTY/qzxing-master/src
 INCLUDEPATH += $$THIRDY_PARTY/libdmtx
 INCLUDEPATH += $$THIRDY_PARTY/ZBar/include
 INCLUDEPATH += $$THIRDY_PARTY/cognex/include
-#INCLUDEPATH += $$THIRDY_PARTY/AVL/include
+INCLUDEPATH += $$THIRDY_PARTY/AVL/include
 #INCLUDEPATH += $$THIRDY_PARTY/avlibrary_lite/include
 INCLUDEPATH += $$PWD
 
@@ -134,7 +134,11 @@ SOURCES += \
     util/dlgDataBase.cpp \
     interface/configdatabase.cpp \
     interface/formsaidas.cpp \
-    interface/widgets/widgetoutput.cpp
+    interface/widgets/widgetoutput.cpp \
+    mv/application/ibimagelog.cpp \
+    interface/formfirstaccess.cpp \
+    interface/widgets/widgetuser.cpp \
+    interface/formconfiguser.cpp
 
 HEADERS += \
         maindialog.h \
@@ -206,7 +210,11 @@ HEADERS += \
     util/dlgDataBase.h \
     interface/configdatabase.h \
     interface/formsaidas.h \
-    interface/widgets/widgetoutput.h
+    interface/widgets/widgetoutput.h \
+    mv/application/ibimagelog.h \
+    interface/formfirstaccess.h \
+    interface/widgets/widgetuser.h \
+    interface/formconfiguser.h
 
 FORMS += \
         maindialog.ui \
@@ -245,7 +253,10 @@ FORMS += \
     util/dlgDataBase.ui \
     interface/configdatabase.ui \
     interface/formsaidas.ui \
-    interface/widgets/widgetoutput.ui
+    interface/widgets/widgetoutput.ui \
+    interface/formfirstaccess.ui \
+    interface/widgets/widgetuser.ui \
+    interface/formconfiguser.ui
 
 #---------------------------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------------------
@@ -284,7 +295,8 @@ LIBS += -L$$THIRDY_PARTY/"ZBar/libs"               -lzbar
 
 LIBS += -L$$THIRDY_PARTY/"cognex/lib"              -lBarcodeScanner
 
-#LIBS += -L$$THIRDY_PARTY/"AVL/lib"                 -lAVL
+#LIBS += -L$$THIRDY_PARTY/"cognex/lib"              -lDataManSDK
+LIBS += -L$$THIRDY_PARTY/"AVL/lib"                 -lAVL
 
 #LIBS += -L$$THIRDY_PARTY/"avlibrary_lite/lib"      -lAVL_Lite
 

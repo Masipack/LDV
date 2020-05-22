@@ -20,6 +20,9 @@ public:
 
     void SetTableDataBase(const QList<QString> attributes);
     void SetExpectedText(const QString  text);
+    void SetBackgroundStateTool(const int& v);
+    void SetRotationStateTool(const bool& v);
+
      
 public slots:
     void NewResult(bool approved, const QString &value, quint32 proc_id);

@@ -48,7 +48,7 @@ static bool P11(const QString& desc, bool bDialog = false, QString comment = "")
     query.bindValue(":TimeStamp"        , QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") );
     query.bindValue(":Lote"             , qApp->property("BATCH").toString() );
     query.bindValue(":UserID"           , user);
-    query.bindValue(":ObjectID"         , "SVF System");
+    query.bindValue(":ObjectID"         , "LDF System");
     query.bindValue(":Description"      , desc);
     query.bindValue(":Comment"          , comment);
 

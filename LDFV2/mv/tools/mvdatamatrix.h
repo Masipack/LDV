@@ -28,6 +28,7 @@ public:
       QVector <cv::Point> location;
     } decodedObject;
 
+
 protected:
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 

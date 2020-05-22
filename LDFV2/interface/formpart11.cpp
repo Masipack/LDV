@@ -9,6 +9,8 @@
 #include <QtSql>
 #include "util/systemsettings.h"
 #include "util/dlginfo.h"
+#include "util/fileutil.h"
+#include "global_defines.h"
 
 /// ===========================================================================
 ///
@@ -23,6 +25,10 @@ FormPart11::FormPart11(QWidget *parent) :  QWidget(parent),  ui(new Ui::FormPart
     ui->le_equipment->installEventFilter(this);
     ui->le_dt_start->installEventFilter(this);
     ui->le_dt_end->installEventFilter(this);
+
+     PATH_FILE.clear();;
+
+     GetConfig(PATH_FILE, "SYSTEM/PATH_FILE", QString());
 }
 
 /// ===========================================================================
@@ -39,10 +45,30 @@ FormPart11::~FormPart11()
 void FormPart11::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
+
     WindowManager::instance()->SetInfoTop( "CFR Part11" );
     ui->tableWidget->clearContents();
     ui->tableWidget->setRowCount(0);
     GetConfig(strPedido, "FABRIMA/PEDIDO", QString("0000") );
+
+    QList<QStorageInfo> info_disk = QStorageInfo::mountedVolumes();
+
+    for( int i = 0; i < info_disk.size(); i++ )
+    {
+        if( info_disk.at(i).rootPath().contains(PATH_FILE))
+        {
+           QFileInfo  info("./Audit.db");
+
+           QString disk = file_size_human(info_disk.at(i).bytesFree());
+           QString database = file_size_human(info.size());
+
+           ui->lbl_info_backup->setText( tr("Armazenamento em disk: %1").arg(disk)+
+                                         tr("   Armazenamento Banco de Dados CRF21: %1").arg(database)
+
+                                         );
+        }
+    }
+
 }
 
 /// ===========================================================================
@@ -263,19 +289,8 @@ void FormPart11::on_btn_filter_clicked()
 /// ===========================================================================
 void FormPart11::on_btn_export_pdf_clicked()
 {
-//    QProcess p;
-//    QString usr = getenv("USER"); ///for MAc or Linux
-//    p.start("df -h");
-//    p.waitForFinished();
 
-//    QString usb;
-//    while(p.canReadLine())
-//    {
-//        QString s = p.readLine();
-//        if( s.contains( "/media/" + usr + "/") ) usb = s.split(' ').last();
-//    }
-
-//    usb.remove(QRegExp("[\\n\\t\\r]"));
+    if( P11(tr("Exportando dados CRF21 via USB"), true ) == false ) return;
 
     QString usbPath;
     QList<QStorageInfo> info = QStorageInfo::mountedVolumes();
@@ -338,4 +353,67 @@ void FormPart11::on_btn_clean_clicked()
     ui->le_dt_start->setText("01/01/2000 00:00:00");
     ui->le_dt_end->setText("31/12/2100 23:59:59");
     on_btn_filter_clicked();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormPart11::on_btn_backupCRF21_clicked()
+{
+
+    QString usbPath;
+    QList<QStorageInfo> info = QStorageInfo::mountedVolumes();
+
+    for( int i = 0; i < info.size(); i++ )
+    {
+        if( info.at(i).rootPath().contains("/media/") )
+        {
+            if( usbPath != (info.at(i).rootPath() + "/SVF_" + strPedido) )
+            {
+                usbPath = info.at(i).rootPath() + "/SVF_" + strPedido;
+            }
+            break;
+        }
+    }
+
+    if( usbPath.isEmpty() )
+    {
+        DlgInfo dlg;
+        dlg.SetMessage(DlgInfo::IT_INFO, tr("Insira Drive USB !"), false, false );
+        dlg.exec();
+        return;
+    }
+
+    if( !QDir(usbPath).exists() )
+    {
+        if( QDir().mkdir(usbPath) == false )
+        {
+            LOG(LOG_ERROR_TYPE, tr("Falha criando pasta em drive usb"));
+            return;
+        }
+    }
+
+   QString src = "./Audit.db";
+
+   if( P11(tr("Exportando backup CRF21 via USB"), true ) == false ) return;
+
+   DlgInfo dlg;
+
+   dlg.SetMessage(DlgInfo::IT_INFO, tr("Aguarde transferindo Banco de dados CRF21 para o drive USB!"), false, false );
+   dlg.show();
+
+   for (int var = 0; var < 100; ++var) {
+       qApp->processEvents(QEventLoop::ProcessEventsFlag::AllEvents);
+       QThread::msleep(1);
+   }
+
+    if( QFile::copy(src, usbPath+ "./Audit.db") == false )
+    {
+        LOG(LOG_ERROR_TYPE, tr("Falha copiando arquivo para drive USB"));
+    }
+
+
+    LOG(LOG_INFO_TYPE, tr("Arquivo copiado SISTEMA->USB:") + src + " " + usbPath);
+
+    dlg.close();
 }

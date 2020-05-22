@@ -25,37 +25,202 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
+  <layout class="QHBoxLayout" name="horizontalLayout_4">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1">
      <item>
-      <widget class="QLabel" name="lbl_image">
-       <property name="minimumSize">
-        <size>
-         <width>1280</width>
-         <height>500</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>500</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(177, 177, 177);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout">
        <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <family>Noto Sans</family>
+             <pointsize>14</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Posiçao
+na fila:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pos">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>FreeSans</family>
+             <pointsize>28</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 85, 85);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="ButtonBeR" name="btn_prev">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>FreeSans</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons.qrc">
+               <normaloff>:/icons/arrow-left.png</normaloff>:/icons/arrow-left.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="bgIcon">
+              <iconset resource="../res/icons.qrc">
+               <normaloff>:/icons/bt-blank.png</normaloff>
+               <normalon>:/icons_br/bt-blank2.png</normalon>:/icons/bt-blank.png</iconset>
+             </property>
+             <property name="bgIconSize">
+              <size>
+               <width>60</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="ButtonBeR" name="btn_next">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>FreeSans</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string notr="true"/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons.qrc">
+               <normaloff>:/icons/arrow-right.png</normaloff>:/icons/arrow-right.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="bgIcon">
+              <iconset resource="../res/icons.qrc">
+               <normaloff>:/icons/bt-blank.png</normaloff>
+               <normalon>:/icons_br/bt-blank2.png</normalon>:/icons/bt-blank.png</iconset>
+             </property>
+             <property name="bgIconSize">
+              <size>
+               <width>60</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item alignment="Qt::AlignHCenter">
         <widget class="ButtonBeR" name="btn_menu">
          <property name="minimumSize">
           <size>
@@ -103,158 +268,213 @@
          </property>
         </widget>
        </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <spacer name="horizontalSpacer_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="ButtonBeR" name="btn_prev">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>FreeSans</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Anterior</string>
-         </property>
-         <property name="icon">
-          <iconset resource="../res/icons.qrc">
-           <normaloff>:/icons/arrow-left.png</normaloff>:/icons/arrow-left.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="bgIcon">
-          <iconset resource="../res/icons.qrc">
-           <normaloff>:/icons/bt-blank.png</normaloff>
-           <normalon>:/icons_br/bt-blank2.png</normalon>:/icons/bt-blank.png</iconset>
-         </property>
-         <property name="bgIconSize">
-          <size>
-           <width>80</width>
-           <height>80</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QLabel" name="label">
-           <property name="font">
-            <font>
-             <family>FreeSans</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
+          <widget class="ButtonBeR" name="btn_zoom_in">
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>Posiçao
-na fila:</string>
+            <string/>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+           <property name="icon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/zoom_in.png</normaloff>:/icons/zoom_in.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="autoRepeat">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeatDelay">
+            <number>600</number>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>250</number>
+           </property>
+           <property name="bgIcon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/bt-blank.png</normaloff>
+             <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+           </property>
+           <property name="bgIconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="lbl_pos">
-           <property name="font">
-            <font>
-             <family>FreeSans</family>
-             <pointsize>28</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
+          <widget class="ButtonBeR" name="btn_zoom_out">
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>0</string>
+            <string/>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+           <property name="icon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/zoom_out.png</normaloff>:/icons/zoom_out.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="autoRepeat">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeatDelay">
+            <number>600</number>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>250</number>
+           </property>
+           <property name="bgIcon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/bt-blank.png</normaloff>
+             <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+           </property>
+           <property name="bgIconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
            </property>
           </widget>
+         </item>
+         <item>
+          <widget class="ButtonBeR" name="btn_zoom_fit">
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/zoom_fit.png</normaloff>:/icons/zoom_fit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="autoRepeat">
+            <bool>true</bool>
+           </property>
+           <property name="autoRepeatDelay">
+            <number>600</number>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>250</number>
+           </property>
+           <property name="bgIcon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/bt-blank.png</normaloff>
+             <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+           </property>
+           <property name="bgIconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </item>
        <item>
-        <widget class="ButtonBeR" name="btn_next">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>100</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>FreeSans</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string notr="true">Proximo</string>
-         </property>
-         <property name="icon">
-          <iconset resource="../res/icons.qrc">
-           <normaloff>:/icons/arrow-right.png</normaloff>:/icons/arrow-right.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="bgIcon">
-          <iconset resource="../res/icons.qrc">
-           <normaloff>:/icons/bt-blank.png</normaloff>
-           <normalon>:/icons_br/bt-blank2.png</normalon>:/icons/bt-blank.png</iconset>
-         </property>
-         <property name="bgIconSize">
-          <size>
-           <width>80</width>
-           <height>80</height>
-          </size>
-         </property>
-        </widget>
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0">
+         <item>
+          <widget class="ImageDevice" name="imagedevice"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Lista defeitos</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="textEdit"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
@@ -268,9 +488,73 @@ na fila:</string>
    <extends>QPushButton</extends>
    <header>buttonber.h</header>
   </customwidget>
+  <customwidget>
+   <class>ImageDevice</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">mv/imagedevice.h</header>
+   <slots>
+    <slot>zoomFit()</slot>
+    <slot>zoomIn()</slot>
+    <slot>zoomOut()</slot>
+    <slot>zoomFitItems()</slot>
+    <slot>lockParent(bool)</slot>
+    <slot>snap()</slot>
+    <slot>Show()</slot>
+    <slot>Hide()</slot>
+   </slots>
+  </customwidget>
  </customwidgets>
  <resources>
   <include location="../res/icons.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btn_zoom_in</sender>
+   <signal>clicked()</signal>
+   <receiver>imagedevice</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_zoom_out</sender>
+   <signal>clicked()</signal>
+   <receiver>imagedevice</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>283</x>
+     <y>79</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_zoom_fit</sender>
+   <signal>clicked()</signal>
+   <receiver>imagedevice</receiver>
+   <slot>zoomFitItems()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>342</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

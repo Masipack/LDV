@@ -8,11 +8,10 @@
 #include "util/sys_log.h"
 #include "util/systemsettings.h"
 
-
-//#include "AVLConverters/AVL_OpenCV.h"
-//#include <AVL.h>
-//#include <AVLConverters/AVL_QT.h>
-//#include <ThirdPartySdk.h>
+#include "AVLConverters/AVL_OpenCV.h"
+#include <AVL.h>
+#include <AVLConverters/AVL_QT.h>
+#include <ThirdPartySdk.h>
 
 #define USE_MWPARSER    false
 /* Parser */
@@ -40,7 +39,51 @@
 #include "dmtx.h"
 
 using namespace cv;
-//using namespace avl;
+using namespace avl;
+
+
+/// ===========================================================================
+///
+/// ===========================================================================
+static QImage convert16uc3(const cv::Mat& source)
+{
+  quint8* pSource = (quint8*) source.data;
+  int pixelCounts = source.cols * source.rows;
+
+  QImage dest(source.cols, source.rows, QImage::Format_RGB32);
+
+  char* pDest = (char*) dest.bits();
+
+  for (int i = 0; i < pixelCounts; i++)
+  {
+    *(pDest++) = *(pSource+2);    // B
+    *(pDest++) = *(pSource+1);    // G
+    *(pDest++) = *(pSource+0);    // R
+    *(pDest++) = 0;               // Alpha
+    pSource+=3;
+  }
+
+  return dest.rgbSwapped();
+}
+
+static QImage convertToGrayScale(const QImage &srcImage) {
+     // Convert to 32bit pixel format
+     QImage dstImage = srcImage.convertToFormat(srcImage.hasAlphaChannel() ?
+              QImage::Format_ARGB32 : QImage::Format_RGB32);
+
+     unsigned int *data = (unsigned int*)dstImage.bits();
+     int pixelCount = dstImage.width() * dstImage.height();
+
+     // Convert each pixel to grayscale
+     for(int i = 0; i < pixelCount; ++i) {
+        int val = qGray(*data);
+        *data = qRgba(val, val, val, qAlpha(*data));
+        ++data;
+     }
+
+     return dstImage;
+  }
+
 
 /// ===========================================================================
 ///
@@ -81,101 +124,119 @@ bool MvDataMatrix::Exec(quint32 proc_id)
 
     if( ExtractRoiGray() == false ) return false;
 
+///---------------------------------------------------Cognex ---------------------------------------------------///
+
+//    Init();
+
+//    uint8_t * p_data = NULL;
+
+//    int resultval = MWB_scanGrayscaleImage(roi.data, roi.rows, roi.cols, &p_data);
+
+//    Debug(resultval)
+
+//    if (resultval > 0)
+//    {
+//              MWResults *mwResults = new MWResults(p_data);
+//              free(p_data);
+//              MWResult *mwResult = NULL;
+
+//              if (mwResults != NULL)
+//              {
+//                  mwResult =  mwResults->getResults().back();
+//                  if (mwResult)
+//                  {
+
+//                      if (mwResult->locationPoints)
+//                      {
+//                           decodedObject obj;
+
+//                           obj.type = QString(mwResult->getTypeName().c_str());
+//                           obj.data = QString(mwResult->text.c_str());
+
+//                           obj.location.append( cv::Point( mwResult->locationPoints->p1->x, mwResult->locationPoints->p1->y));
+//                           obj.location.append( cv::Point( mwResult->locationPoints->p2->x, mwResult->locationPoints->p2->y));
+//                           obj.location.append( cv::Point( mwResult->locationPoints->p3->x, mwResult->locationPoints->p3->y));
+//                           obj.location.append( cv::Point( mwResult->locationPoints->p4->x, mwResult->locationPoints->p4->y));
+
+//                           decodedObjects.push_back(obj);
+
+//                      }
+//                  }
+//              }
+
+//        delete mwResults;
+//      }
+
+//    if(decodedObjects.data()!= 0)
+//    {
+//        if(decodedObjects.size() > 0 ) extractedText   = decodedObjects[0].data;
+//        QString s = "Leitura: " +  extractedText + " em " + QString::number(tm_exec.elapsed()) + " ms";
+//        this->update();
+//        emit(NewResult((expectedText == extractedText), s, proc_id) );
+//    }
+//    else{
+//        emit( NewResult(false, tr("Não detectado! em ") + QString::number(tm_exec.elapsed()) + " ms", proc_id) );
+//    }
+
+    ///---------------------------------------------------Cognex ---------------------------------------------------///
+
     Mat im = roi.clone();
 
-    uint8_t * p_data = NULL;
 
-    int resultval = MWB_scanGrayscaleImage(roi.data, roi.cols, roi.rows, &p_data);
 
-    if (resultval > 0)
+    try
     {
-              MWResults *mwResults = new MWResults(p_data);
-              free(p_data);
-              MWResult *mwResult = NULL;
+            Image output;
 
-              if (mwResults != NULL)
-              {
-                  mwResult =  mwResults->getResults().back();
-                  if (mwResult)
-                  {
+            DataMatrixDetectionParams detectionParams;
+            DataMatrixCodeParams      codeParams;
 
-                      if (mwResult->locationPoints)
-                      {
-                           decodedObject obj;
+            // Use dark polarity, i.e. detect black on white.
+            codeParams.polarity = avl::Polarity::Any;
 
-                           obj.type = QString(mwResult->getTypeName().c_str());
-                           obj.data = QString(mwResult->text.c_str());
+            // Try to detect even with a higher than default slant.
+            codeParams.maxSlant = 50.0f;
 
-                           obj.location.append( cv::Point( mwResult->locationPoints->p1->x, mwResult->locationPoints->p1->y));
-                           obj.location.append( cv::Point( mwResult->locationPoints->p2->x, mwResult->locationPoints->p2->y));
-                           obj.location.append( cv::Point( mwResult->locationPoints->p3->x, mwResult->locationPoints->p3->y));
-                           obj.location.append( cv::Point( mwResult->locationPoints->p4->x, mwResult->locationPoints->p4->y));
+            // Prepare buffer objects for output parameters.
+            atl::Conditional<avl::DataCode> code;
+            atl::Array<avl::Path> candidates;
 
-                           decodedObjects.push_back(obj);
+            avl::CVMatToAvlImage(im,output);
 
-                      }
-                  }
-              }
+            ReadSingleDataMatrixCode
+                            (
+                                output,
+                                atl::NIL,
+                                atl::NIL,
+                                codeParams,
+                                detectionParams,
+                                code,
+                                candidates,
+                                atl::NIL
+                            );
 
-        delete mwResults;
-      }
+        // qDebug() << QString::fromUtf16(code.Get().text.CStr16());
 
-    if(decodedObjects.data()!= 0)
+            if( code.HasValue() )
+            {
+                   extractedText = QString::fromUtf16(code.Get().text.CStr16());
+                   QString s = "Leitura: " +  extractedText + " em " + QString::number(tm_exec.elapsed()) + " ms";
+                   this->update();
+                   emit( NewResult((expectedText == extractedText), s, proc_id) );
+               }
+               else
+               {
+                   emit( NewResult(false, tr("Não detectado! em ") + QString::number(tm_exec.elapsed()) + " ms", proc_id) );
+               }
+
+    }
+    catch(Exception ex)
     {
-        if(decodedObjects.size() > 0 ) extractedText   = decodedObjects[0].data;
-        QString s = "Leitura: " +  extractedText + " em " + QString::number(tm_exec.elapsed()) + " ms";
-        this->update();
-        emit(NewResult((expectedText == extractedText), s, proc_id) );
-    }
-    else{
-        emit( NewResult(false, tr("Não detectado! em ") + QString::number(tm_exec.elapsed()) + " ms", proc_id) );
+         LOG(LOG_ERROR_TYPE, QObject::tr("Prodtuo não licenciado") );
+         return false;
     }
 
-
-//    Image output;
-
-//    DataMatrixDetectionParams detectionParams;
-//    DataMatrixCodeParams      codeParams;
-
-//    // Use dark polarity, i.e. detect black on white.
-//    codeParams.polarity = avl::Polarity::Any;
-
-//    // Try to detect even with a higher than default slant.
-//    codeParams.maxSlant = 50.0f;
-
-//    // Prepare buffer objects for output parameters.
-//    atl::Conditional<avl::DataCode> code;
-//    atl::Array<avl::Path> candidates;
-
-//    avl::CVMatToAvlImage(im,output);
-
-//    ReadSingleDataMatrixCode
-//                    (
-//                        output,
-//                        atl::NIL,
-//                        atl::NIL,
-//                        codeParams,
-//                        detectionParams,
-//                        code,
-//                        candidates,
-//                        atl::NIL
-//                    );
-
-//// qDebug() << QString::fromUtf16(code.Get().text.CStr16());
-
-//    if( code.HasValue() )
-//    {
-//           extractedText = QString::fromUtf16(code.Get().text.CStr16());
-//           QString s = "Leitura: " +  extractedText + " em " + QString::number(tm_exec.elapsed()) + " ms";
-//           this->update();
-//           emit( NewResult((expectedText == extractedText), s, proc_id) );
-//       }
-//       else
-//       {
-//           emit( NewResult(false, tr("Não detectado! em ") + QString::number(tm_exec.elapsed()) + " ms", proc_id) );
-//       }
-
-      return true;
+    return true;
 }
 
 

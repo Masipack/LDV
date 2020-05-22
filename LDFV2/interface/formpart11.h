@@ -24,6 +24,8 @@ private slots:
 
     void on_btn_clean_clicked();
 
+    void on_btn_backupCRF21_clicked();
+
 private:
     Ui::FormPart11 *ui;
 
@@ -36,6 +38,7 @@ private:
     QString GetQuery();
 
     QString strPedido;
+    QString PATH_FILE;
 };
 
 #endif // FORMPART11_H

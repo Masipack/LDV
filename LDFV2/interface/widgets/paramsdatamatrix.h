@@ -30,6 +30,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_btn_position_toggled(bool checked);
+
 protected:
     bool eventFilter(QObject *object, QEvent *event);
     void showEvent(QShowEvent * event);

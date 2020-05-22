@@ -69,8 +69,11 @@ bool MvOCR::Exec(quint32 proc_id)
 
 
 
-    if( ExtractRoi() == false )             return false;
-
+    if( ExtractRoi() == false )
+    {
+        b_Busy = false;
+        return false;
+    }
 
     QMetaObject::invokeMethod(&PO, "Exec", Qt::QueuedConnection, Q_ARG(cv::Mat, roi), Q_ARG(quint32, proc_id) );
 
@@ -188,6 +191,7 @@ void MvOCR::SetBlackAndWhite(const int n)
 {
    b_black_And_white = n;
    PO.SetBlackAndWhite(n);
+   form->SetBackgroundStateTool(n);
 
 }
 
@@ -198,6 +202,14 @@ int MvOCR::GetBlackAndWhite()
 {
     return b_black_And_white;
 
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void MvOCR::SetRotationStateTool(const bool &v)
+{
+    form->SetRotationStateTool(v);
 }
 
 /// ===========================================================================

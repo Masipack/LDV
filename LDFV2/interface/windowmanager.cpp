@@ -25,6 +25,8 @@
 #include "interface/formimagelog.h"
 #include "interface/configdatabase.h"
 #include "interface/formsaidas.h"
+#include "interface/formfirstaccess.h"
+#include "interface/formconfiguser.h"
 
 //#include "interface/formimagelog.h"
 //#include "interface/new_product/formconfigtype.h"
@@ -204,6 +206,14 @@ bool WindowManager::LoadScreens()
 
     a = new FormSaidas(mainWidget);
     if( a ) v_screens.insert( "Saidas"                   , a );
+
+    a = new FormFirstAccess(mainWidget);
+    if( a ) v_screens.insert( "FirstAccess"               , a );
+
+    a = new FormConfigUser(mainWidget);
+    if( a ) v_screens.insert( "ConfigUser"               , a );
+
+
 
 
     QWidget* p = v_screens.value("MainMenu");
