@@ -108,6 +108,12 @@ void FormNewUser::showEvent(QShowEvent * event)
 
     if( bEditMode == false ) ClearScreen();
 
+    ui->btn_active->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_dec_level->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_inc_level->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_new->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
 }
 
 /// ===========================================================================
@@ -227,7 +233,7 @@ void FormNewUser::on_btn_new_clicked()
     if(!CheckPassword(ui->le_password->text()))
     {
         DlgInfo dlg;
-        dlg.SetMessage(DlgInfo::IT_ERROR, tr("Senha inválida :\nA senha deve ter conter  6 ou mais caracteres, maiuscula, minuscula e caracteres especial"), false, false );
+        dlg.SetMessage(DlgInfo::IT_ERROR, tr("Senha inválida :\nA senha deve ter conter  6 ou mais caracteres, maiuscula, minuscula e caracter especial"), false, false );
         dlg.exec();
         return;
     }

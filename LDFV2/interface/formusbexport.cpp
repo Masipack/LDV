@@ -78,6 +78,13 @@ void FormUsbExport::showEvent(QShowEvent * event)
     UpdateDeviceName();
 
     timerUpdateName.start(2000);
+
+    ui->btn_config_from_usb->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_config_to_usb->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_from_usb->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_to_usb->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_to_usb_all->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
 }
 
 /// ===========================================================================

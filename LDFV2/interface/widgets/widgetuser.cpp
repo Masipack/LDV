@@ -10,6 +10,7 @@ WidgetUser::WidgetUser(QWidget *parent) :
     ui(new Ui::WidgetUser)
 {
     ui->setupUi(this);
+    KEY_VALUE = 5;
 }
 
 /// ===========================================================================
@@ -33,14 +34,24 @@ void WidgetUser::SetNameKey(const QString &nameKey)
 /// ===========================================================================
 ///
 /// ===========================================================================
+QString WidgetUser::GetNameKey()
+{
+    return NAME_KEY;
+}
+
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void WidgetUser::SetKey(const QString &key)
 {
     KEY = key;
-    int v;
 
-    GetConfig(v, QString("SYSTEM/%1").arg(key), 1);
+    GetConfig(VALUE_OLD, QString("SYSTEM/%1").arg(key), 5);
 
-    ui->lbl_valuekey->setText(QString::number(v));
+    ui->lbl_valuekey->setText(QString::number(VALUE_OLD));
+
+    KEY_VALUE = VALUE_OLD;
 }
 
 /// ===========================================================================
@@ -76,6 +87,14 @@ void WidgetUser::WriteToFile()
     SystemSettings::instance()->writeReal(KEY_VALUE,QString("/SYSTEM/%1").arg(KEY));
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
+bool WidgetUser::hasChange()
+{
+    return VALUE_OLD!=KEY_VALUE;
+}
+
 
 /// ===========================================================================
 ///
@@ -91,6 +110,7 @@ void WidgetUser::on_btn_minus_clicked()
     ui->lbl_valuekey->setText(QString::number(v));
 
     KEY_VALUE = v;
+
 }
 
 
@@ -108,4 +128,5 @@ void WidgetUser::on_btn_plus_clicked()
     ui->lbl_valuekey->setText(QString::number(v));
 
     KEY_VALUE = v;
+
 }

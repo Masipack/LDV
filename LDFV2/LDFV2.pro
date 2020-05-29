@@ -2,9 +2,9 @@
 #---------------------------------------------------------------------------------------------------------------------
 QT += core gui widgets opengl serialport sql webengine webenginewidgets printsupport
 
-DEFINES += _TESTE_
+#DEFINES += _TESTE_
 DEFINES += _DISPLAY_HORIZONTAL_
-DEFINES += _USE_DISK_
+#DEFINES += _USE_DISK_
 
 TRANSLATIONS = res/translations/lang.ts
 
@@ -40,9 +40,6 @@ INCLUDEPATH += $$THIRDY_PARTY/genicam/library/cpp/include
 INCLUDEPATH += $$THIRDY_PARTY/genicam/library/cpp/include
 INCLUDEPATH += $$THIRDY_PARTY/opencv4/include
 INCLUDEPATH += $$THIRDY_PARTY/MasipackControls
-INCLUDEPATH += $$THIRDY_PARTY/qzxing-master/src/zxing
-INCLUDEPATH += $$THIRDY_PARTY/qzxing-master/src
-INCLUDEPATH += $$THIRDY_PARTY/libdmtx
 INCLUDEPATH += $$THIRDY_PARTY/ZBar/include
 INCLUDEPATH += $$THIRDY_PARTY/cognex/include
 INCLUDEPATH += $$THIRDY_PARTY/AVL/include
@@ -138,7 +135,8 @@ SOURCES += \
     mv/application/ibimagelog.cpp \
     interface/formfirstaccess.cpp \
     interface/widgets/widgetuser.cpp \
-    interface/formconfiguser.cpp
+    interface/formconfiguser.cpp \
+    interface/formlanguage.cpp
 
 HEADERS += \
         maindialog.h \
@@ -214,7 +212,8 @@ HEADERS += \
     mv/application/ibimagelog.h \
     interface/formfirstaccess.h \
     interface/widgets/widgetuser.h \
-    interface/formconfiguser.h
+    interface/formconfiguser.h \
+    interface/formlanguage.h
 
 FORMS += \
         maindialog.ui \
@@ -256,7 +255,8 @@ FORMS += \
     interface/widgets/widgetoutput.ui \
     interface/formfirstaccess.ui \
     interface/widgets/widgetuser.ui \
-    interface/formconfiguser.ui
+    interface/formconfiguser.ui \
+    interface/formlanguage.ui
 
 #---------------------------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------------------
@@ -287,24 +287,22 @@ LIBS += -L$$THIRDY_PARTY/"pylon/lib64"              -lGCBase_gcc_v3_0_Basler_pyl
 
 LIBS += -L$$THIRDY_PARTY/"MasipackControls"        -lmasipackcontrolsplugin
 
-LIBS += -L$$THIRDY_PARTY/"qzxing-master/src"       -lQZXing
-
-LIBS += -L$$THIRDY_PARTY/"libdmtx/.libs"           -ldmtx
 
 LIBS += -L$$THIRDY_PARTY/"ZBar/libs"               -lzbar
 
 LIBS += -L$$THIRDY_PARTY/"cognex/lib"              -lBarcodeScanner
 
-#LIBS += -L$$THIRDY_PARTY/"cognex/lib"              -lDataManSDK
+
 LIBS += -L$$THIRDY_PARTY/"AVL/lib"                 -lAVL
 
-#LIBS += -L$$THIRDY_PARTY/"avlibrary_lite/lib"      -lAVL_Lite
+
 
 
 RESOURCES += \
     res/images.qrc \
     res/icons.qrc \
-    res/styles.qrc
+    res/styles.qrc \
+    translate.qrc
 
 DISTFILES += \
     ../LDF_DEPLOY/Debug/data/settings.dat \

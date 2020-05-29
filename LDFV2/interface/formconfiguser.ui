@@ -73,6 +73,16 @@
        <property name="text">
         <string>Voltar</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/arrow_backward.png</normaloff>:/icons/arrow_backward.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
        <property name="bgIcon">
         <iconset resource="../res/icons.qrc">
          <normaloff>:/icons/bt-blank.png</normaloff>

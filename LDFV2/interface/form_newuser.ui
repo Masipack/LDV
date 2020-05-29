@@ -541,10 +541,14 @@ color: rgb(255, 255, 255);</string>
         <string>Criar
 Usuário</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/ok.png</normaloff>:/icons/ok.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -601,10 +605,14 @@ Usuário</string>
        <property name="text">
         <string>Retornar</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/arrow_backward.png</normaloff>:/icons/arrow_backward.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">

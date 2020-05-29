@@ -27,16 +27,7 @@
 #include "interface/formsaidas.h"
 #include "interface/formfirstaccess.h"
 #include "interface/formconfiguser.h"
-
-//#include "interface/formimagelog.h"
-//#include "interface/new_product/formconfigtype.h"
-//#include "interface/new_product/tabletconfig.h"
-//#include "interface/new_product/capsuleconfig.h"
-//#include "interface/process/formtabletprocess.h"
-//#include "interface/process/formcapsuleprocess.h"
-
-//#include "interface/process/formtabletstatistics.h"
-//#include "interface/process/formcapsulestatistics.h"
+#include "interface/formlanguage.h"
 
 
 
@@ -93,12 +84,13 @@ bool WindowManager::init()
 #endif
 
     mainDialog = new MainDialog();
-    mainDialog->setWindowFlags( Qt::FramelessWindowHint | Qt::Window /*| Qt::X11BypassWindowManagerHint*/ | Qt::WindowStaysOnTopHint  ); // TODO: recolocar (ver windows32)
+
 
 #ifndef _TESTE_
     mainDialog->move(screen->geometry().x(), screen->geometry().y());
     mainDialog->resize(screen->geometry().width(), screen->geometry().height());
     mainDialog->showFullScreen();
+    mainDialog->setWindowFlags( Qt::FramelessWindowHint | Qt::Window /*| Qt::X11BypassWindowManagerHint*/ | Qt::WindowStaysOnTopHint  ); // TODO: recolocar (ver windows32)
 #else
     if( screen_orientation == SCREEN_HORIZONTAL )
     {
@@ -114,6 +106,7 @@ bool WindowManager::init()
 #endif
 
     GetConfig(logoff_minute_count, "SYSTEM/LOGOFF_MINUTES", 10);
+
     mainWidget = mainDialog->GetMainWidget();
     qApp->installEventFilter( this );
     connect(&logoff_timer, SIGNAL(timeout()), this, SLOT(LogOff()) );
@@ -140,7 +133,7 @@ bool WindowManager::eventFilter(QObject* object, QEvent* event)
 void WindowManager::LogOff()
 {
     P11(tr("Logoff automático de usuario:") + current_user_login );
-    WindowManager::instance()->SetCurrentUser("SISTEMA", -1);
+    WindowManager::instance()->SetCurrentUser(tr("SISTEMA"), -1);
 
     if( current_screen )
     {
@@ -149,6 +142,11 @@ void WindowManager::LogOff()
         mainWidget->layout()->addWidget( current_screen );
         current_screen->show();
     }
+
+    DlgInfo dlg;
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("LOGOUT automático realize o login !"), false, false );
+    dlg.exec();
+  //  ShowScreen("Login");
 
     logoff_timer.stop();
 }
@@ -214,6 +212,8 @@ bool WindowManager::LoadScreens()
     if( a ) v_screens.insert( "ConfigUser"               , a );
 
 
+    a = new FormLanguage(mainWidget);
+    if( a ) v_screens.insert( "Language"                 , a );
 
 
     QWidget* p = v_screens.value("MainMenu");

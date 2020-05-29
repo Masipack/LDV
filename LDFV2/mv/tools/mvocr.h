@@ -43,8 +43,6 @@ signals:
 protected:
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
-    double correlation(cv::Mat& image_1, cv::Mat& image_2);
-
     ParamsOCR*      form;
     MvOCRPO         PO;
 

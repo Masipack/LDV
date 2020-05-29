@@ -3,6 +3,9 @@
 
 #include <QtCore>
 
+
+static int const EXIT_CODE_REBOOT = -123456789;
+
 enum MV_TYPE
 {
     MV_FIDUCIAL = 0x01, MV_OCR = 0x02, MV_BARCODE = 0x03, MV_DATAMATRIX = 0x04, MV_TYPE_UNDEFINED = 0xFF

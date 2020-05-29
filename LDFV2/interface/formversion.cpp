@@ -53,5 +53,6 @@ void FormVersion::showEvent(QShowEvent * event)
     GetConfig(s, "FABRIMA/CAMERA"            , QString("?"));
     ui->le_camera->setText(s);
 
+    ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 
 }

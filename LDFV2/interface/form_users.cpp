@@ -79,10 +79,17 @@ void FormUsers::showEvent(QShowEvent * event)
         return;
     }
 
-    WindowManager::instance()->SetInfoTop( "Usuários" );
+    WindowManager::instance()->SetInfoTop( tr("Usuários") );
     ui->btn_show_inactive->setChecked( false );
     CheckButtonPermissions(this);
     UpdateTable();
+
+    ui->btn_configure_user->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_delete->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_edit->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_new->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_show_inactive->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 /// ===========================================================================
@@ -189,5 +196,6 @@ void FormUsers::on_btn_show_inactive_clicked()
 /// ===========================================================================
 void FormUsers::on_btn_configure_user_clicked()
 {
+    if( P11(tr("Usuário: Alterando parâmetro de configurações de usuário"), true) == false ) return;
     WindowManager::instance()->ShowScreen( "ConfigUser" );
 }

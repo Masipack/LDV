@@ -1,6 +1,8 @@
 #include "formconfiguser.h"
 #include "ui_formconfiguser.h"
 #include "interface/windowmanager.h"
+#include "util/sys_log.h"
+
 
 /// ===========================================================================
 ///
@@ -38,7 +40,7 @@ void FormConfigUser::showEvent(QShowEvent *event)
 
 
     WidgetUser* MAX_EXPIRATE_DATE = new WidgetUser();
-    MAX_EXPIRATE_DATE->SetNameKey("Senha expira em : ");
+    MAX_EXPIRATE_DATE->SetNameKey(tr("Senha expira em dias: "));
     MAX_EXPIRATE_DATE->SetKey("MAX_EXPIRATE_DATE");
     MAX_EXPIRATE_DATE->SetMin(30);
     MAX_EXPIRATE_DATE->SetMax(180);
@@ -47,7 +49,7 @@ void FormConfigUser::showEvent(QShowEvent *event)
 
 
     WidgetUser* MAX_PASSWORD_ERRORS = new WidgetUser();
-    MAX_PASSWORD_ERRORS->SetNameKey("Número de tentativas erradas :");
+    MAX_PASSWORD_ERRORS->SetNameKey(tr("Número de tentativas erradas :"));
     MAX_PASSWORD_ERRORS->SetKey("MAX_PASSWORD_ERRORS");
     MAX_PASSWORD_ERRORS->SetMin(1);
     MAX_PASSWORD_ERRORS->SetMax(20);
@@ -55,14 +57,15 @@ void FormConfigUser::showEvent(QShowEvent *event)
     widget_configuser.push_back( MAX_PASSWORD_ERRORS);
 
     WidgetUser* LOGOFF_MINUTES = new WidgetUser();
-    LOGOFF_MINUTES->SetNameKey("LOGOFF automático em :");
+    LOGOFF_MINUTES->SetNameKey(tr("LOGOFF automático em minutos:"));
     LOGOFF_MINUTES->SetKey("LOGOFF_MINUTES");
-    LOGOFF_MINUTES->SetMin(5);
+    LOGOFF_MINUTES->SetMin(1);
     LOGOFF_MINUTES->SetMax(60);
     ui->scrollAreaWidgetContents->layout()->addWidget( LOGOFF_MINUTES );
     widget_configuser.push_back( LOGOFF_MINUTES);
 
 
+    ui->btn_return->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 
@@ -72,9 +75,15 @@ void FormConfigUser::showEvent(QShowEvent *event)
 void FormConfigUser::on_btn_return_clicked()
 {
 
-    foreach ( WidgetUser* c, widget_configuser) {
+    foreach ( WidgetUser* c, widget_configuser)
+    {
 
-        c->WriteToFile();
+        if(c->hasChange())
+        {
+            if( P11(tr("Configurando Parâmetros:Alterando parâmetro %1  valor %2 ").arg(c->GetNameKey()).arg(QString::number(c->GetKeyValue())), false) == false ) return;
+            c->WriteToFile();
+
+        }
     }
 
      WindowManager::instance()->ShowLastScreen();

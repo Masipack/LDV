@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="eo">
+<TS version="2.1" language="bs_BA" sourcelanguage="pt_BR">
 <context>
     <name>ConfigDataBase</name>
     <message>
         <location filename="interface/configdatabase.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location filename="interface/configdatabase.ui" line="69"/>
         <source>Url</source>
-        <translation type="unfinished"></translation>
+        <translation>Url</translation>
     </message>
     <message>
         <location filename="interface/configdatabase.ui" line="116"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="interface/configdatabase.cpp" line="96"/>
         <source>Configurando parâmetros de acesso ao banco de dados</source>
-        <translation type="unfinished"></translation>
+        <translation>Konfiguriranje pristupnih parametara baze podataka</translation>
     </message>
 </context>
 <context>
@@ -1571,7 +1571,7 @@ Inativos</source>
     <message>
         <location filename="interface/formversion.cpp" line="38"/>
         <source>Versão de Software</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrsion tgsrev</translation>
     </message>
 </context>
 <context>
@@ -1579,38 +1579,39 @@ Inativos</source>
     <message>
         <location filename="interface/form_versionH.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="interface/form_versionH.ui" line="34"/>
         <source>Menu
 Principal</source>
-        <translation type="unfinished"></translation>
+        <translation>Meni
+Glavni</translation>
     </message>
     <message>
         <location filename="interface/form_versionH.ui" line="113"/>
         <source>Pedido:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naredba:</translation>
     </message>
     <message>
         <location filename="interface/form_versionH.ui" line="173"/>
         <source>Modelo:</source>
-        <translation type="unfinished"></translation>
+        <translation>Model:</translation>
     </message>
     <message>
         <location filename="interface/form_versionH.ui" line="233"/>
         <source>Versão:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzija:</translation>
     </message>
     <message>
         <location filename="interface/form_versionH.ui" line="293"/>
         <source>Firmware:</source>
-        <translation type="unfinished"></translation>
+        <translation>Firmware:</translation>
     </message>
     <message>
         <location filename="interface/form_versionH.ui" line="353"/>
         <source>Câmera:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kamera:</translation>
     </message>
 </context>
 <context>

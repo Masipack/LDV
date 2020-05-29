@@ -145,7 +145,7 @@ bool MvFiducial::Exec(quint32 proc_id)
 
     templatePos = QPointF(maxLoc.x, maxLoc.y) + QPointF((qreal)img_template.cols*0.5, (qreal)img_template.rows*0.5) + this->boundingRect().topLeft();
 
-    QString s = "Leitura: " +   QString("%1%").arg(correlation_val, 2, 'f', 2, QChar('0')) + " em " + QString::number(tm_exec.elapsed()) + " ms";
+    QString s = tr("Leitura: ") +   QString("%1%").arg(correlation_val, 2, 'f', 2, QChar('0')) + tr(" em ") + QString::number(tm_exec.elapsed()) + tr(" ms");
 
 
     if( correlation_val < min_correlation )

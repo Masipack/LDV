@@ -40,6 +40,8 @@ void FormFirstAccess::showEvent(QShowEvent *event)
     ui->le_password_confirm->clear();
     ui->le_password->clear();
 
+    ui->btn_save->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
 }
 
 /// ===========================================================================

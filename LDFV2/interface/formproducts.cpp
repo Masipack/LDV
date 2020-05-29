@@ -69,7 +69,7 @@ bool FormProducts::eventFilter(QObject* object, QEvent* event)
 void FormProducts::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
-    WindowManager::instance()->SetInfoTop("Produtos");
+    WindowManager::instance()->SetInfoTop(tr("Produtos"));
     CheckButtonPermissions(this);
 
     ui->listWidget->clear();
@@ -77,6 +77,10 @@ void FormProducts::showEvent(QShowEvent * event)
 
     ui->frm_batch->setVisible( qApp->property("USE_PART11").toBool() );
     ui->le_batch->clear();
+
+    ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_down->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_up->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 /// ===========================================================================
@@ -107,7 +111,7 @@ void FormProducts::on_btn_delete_clicked()
     if( ui->listWidget->currentRow() == -1 ) return;
 
     DlgInfo dlg;
-    dlg.SetMessage(DlgInfo::IT_QUESTION, "Deseja excluir '" + ui->listWidget->currentItem()->text() + "' ?", true, true );
+    dlg.SetMessage(DlgInfo::IT_QUESTION, tr("Deseja excluir %1 ?").arg(ui->listWidget->currentItem()->text()), true, true );
     dlg.exec();
 
     if( dlg.result() == QDialog::Rejected ) return;
@@ -143,7 +147,7 @@ void FormProducts::on_btn_load_clicked()
     if( ui->frm_batch->isVisible() && ui->le_batch->text().isEmpty() )
     {
         DlgInfo dlg;
-        dlg.SetMessage(DlgInfo::IT_ERROR, "Informe o número do lote !", false, false );
+        dlg.SetMessage(DlgInfo::IT_ERROR, tr("Informe o número do lote !"), false, false );
         dlg.exec();
         return;
     }

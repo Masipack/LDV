@@ -56,4 +56,6 @@ void FormSaidas::showEvent(QShowEvent *event)
         ui->scrollAreaWidgetContents->layout()->addWidget( p );
         widget_output.push_back( p );
     }
+
+    ui->btn_return->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }

@@ -33,7 +33,7 @@ void FormImageLog::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
 
-    WindowManager::instance()->SetInfoTop( "Fila de Imagens" );
+    WindowManager::instance()->SetInfoTop( tr("Fila de Imagens"));
 
     ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() != (-1));
     ui->btn_next->setEnabled(WindowManager::instance()->GetCurrentUserLevel() != (-1));
@@ -54,8 +54,18 @@ void FormImageLog::showEvent(QShowEvent * event)
     ui->textEdit->setText( s );
 
 
+    ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_next->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_prev->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_fit->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_in->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_out->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
 }
 
+///===========================================================================
+///
+/// ===========================================================================
 void FormImageLog::on_btn_prev_clicked()
 {
     int pos = ui->lbl_pos->text().toInt();

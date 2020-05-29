@@ -265,10 +265,14 @@ color: rgb(255, 255, 255);</string>
         <string>Menu
 Principal</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/arrow_backward.png</normaloff>:/icons/arrow_backward.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -310,10 +314,14 @@ Principal</string>
         <string>Carregar
 Inspeção</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/recipe_load.png</normaloff>:/icons/recipe_load.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>24</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -355,10 +363,14 @@ Inspeção</string>
         <string>Nova
 Inspeção</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/recipe_new.png</normaloff>:/icons/recipe_new.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>24</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -400,10 +412,14 @@ Inspeção</string>
         <string>Excluir
 Inspeção</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/recipe_delete.png</normaloff>:/icons/recipe_delete.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>24</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">

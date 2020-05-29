@@ -507,6 +507,16 @@
          <property name="text">
           <string>Estatística</string>
          </property>
+         <property name="icon">
+          <iconset resource="../res/icons.qrc">
+           <normaloff>:/icons/statistics-chart.png</normaloff>:/icons/statistics-chart.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
          <property name="checkable">
           <bool>true</bool>
          </property>
@@ -543,6 +553,16 @@
          <property name="text">
           <string>Imagens</string>
          </property>
+         <property name="icon">
+          <iconset resource="../res/icons.qrc">
+           <normaloff>:/icons/photo.png</normaloff>:/icons/photo.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
          <property name="bgIcon">
           <iconset resource="../res/icons.qrc">
            <normaloff>:/icons/bt-blank.png</normaloff>
@@ -574,11 +594,11 @@
   <customwidget>
    <class>ImageDevice</class>
    <extends>QGraphicsView</extends>
-   <header>mv/imagedevice.h</header>
+   <header location="global">mv/imagedevice.h</header>
    <slots>
+    <slot>zoomFit()</slot>
     <slot>zoomIn()</slot>
     <slot>zoomOut()</slot>
-    <slot>zoomFit()</slot>
     <slot>zoomFitItems()</slot>
     <slot>lockParent(bool)</slot>
     <slot>snap()</slot>

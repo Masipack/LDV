@@ -43,5 +43,21 @@
         <file>icons/database-reload-alt-2.png</file>
         <file>icons/idea.png</file>
         <file>icons/idea-alt.png</file>
+        <file>icons/recipe_delete.png</file>
+        <file>icons/recipe_load.png</file>
+        <file>icons/recipe_new.png</file>
+        <file>icons/user_full_information-128.png</file>
+        <file>icons/user_full_settings-128.png</file>
+        <file>icons/user_half_add-256.png</file>
+        <file>icons/user_half_edit-512.png</file>
+        <file>icons/user_half_remove-128.png</file>
+        <file>icons/database-512.png</file>
+        <file>icons/Inout-512.png</file>
+        <file>icons/photo.png</file>
+        <file>icons/statistics-chart.png</file>
+        <file>icons/language-512.png</file>
+        <file>icons/bosnia.png</file>
+        <file>icons/brasil.png</file>
+        <file>icons/usa.png</file>
     </qresource>
 </RCC>

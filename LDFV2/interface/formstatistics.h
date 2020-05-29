@@ -20,6 +20,8 @@ public slots:
 
 private slots:
     void on_btn_reset_clicked();
+protected:
+    void showEvent(QShowEvent * event);
 
 private:
     Ui::FormStatistics *ui;

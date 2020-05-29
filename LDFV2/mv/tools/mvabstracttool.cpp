@@ -35,6 +35,9 @@ void MvAbstractTool::SetToolName(const QString &name)
 void MvAbstractTool::ReconfigPosition()
 {
     configPos = mapToScene(this->boundingRect().center());
+
+    Debug(configPos)
+    Debug(this->boundingRect().bottomLeft());
 }
 
 /// ===========================================================================

@@ -50,7 +50,7 @@ void FormMainMenu::showEvent(QShowEvent * event)
     ui->frame_login->setVisible( WindowManager::instance()->GetCurrentUserLevel() == (-1) );
     ui->frame->setVisible( WindowManager::instance()->GetCurrentUserLevel()     != (-1) );
 
-    WindowManager::instance()->SetInfoTop( "Menu Principal");
+    WindowManager::instance()->SetInfoTop( tr("Menu Principal"));
     CheckButtonPermissions(this);
 
     //ui->btn_part11->setVisible( qApp->property("USE_PART11").toBool() );

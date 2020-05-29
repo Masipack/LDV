@@ -36,7 +36,7 @@
 
 #include "util/MWResult.h"
 
-#include "dmtx.h"
+
 
 using namespace cv;
 using namespace avl;

@@ -16,12 +16,13 @@ public:
     ~WidgetUser();
 
     void SetNameKey(const QString &nameKey);
+    QString GetNameKey();
     void SetKey(const QString& key);
     int  GetKeyValue();
     void SetMax(const int& v);
     void SetMin(const int& v);
     void WriteToFile();
-
+    bool hasChange();
 
 
 private slots:
@@ -37,6 +38,8 @@ private:
     int           KEY_VALUE;
     int           MIN_VALUE;
     int           MAX_VALUE;
+    int           VALUE_OLD;
+    int           VALUE_NEW;
 };
 
 #endif // WIDGETUSER_H

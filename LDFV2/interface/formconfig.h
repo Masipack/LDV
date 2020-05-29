@@ -2,7 +2,7 @@
 #define FORMCONFIG_H
 
 #include <QWidget>
-
+#include "QProcess"
 namespace Ui {
 class FormConfigH;
 class FormConfigV;
@@ -51,12 +51,18 @@ private slots:
 
     void on_btn_maneger_output_clicked();
 
+    void on_btn_restart_clicked();
+
+    void on_btn_language_clicked();
+
 private:
 #ifdef _DISPLAY_HORIZONTAL_
     Ui::FormConfigH *ui;
 #else
     Ui::FormConfigV *ui;
 #endif
+
+     QProcess proc;
 
 protected:
     void showEvent(QShowEvent * event);

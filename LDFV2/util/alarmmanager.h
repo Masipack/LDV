@@ -37,6 +37,9 @@ signals:
 
 public slots:
 
+protected:
+
+    void Init();
 
 private:
     QMap<int, QString>      identification;

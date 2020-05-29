@@ -18,7 +18,7 @@ FormProcess::FormProcess(QWidget *parent) : QWidget(parent), ui(new Ui::FormProc
 
    //connect(this, SIGNAL(Close()), &dlg, SLOT(Close()), Qt::QueuedConnection);
 
-    dlg.SetMessage(DlgInfo::IT_WARNING, " Aguarde, carregando inspeção..... !");
+    dlg.SetMessage(DlgInfo::IT_WARNING, tr(" Aguarde, carregando inspeção..... !"));
     dlg.SetVisible(false);
 
     ui->btn_printer->setVisible(qApp->property("USE_PRINTER").toBool());
@@ -185,7 +185,10 @@ void FormProcess::on_btn_return_clicked()
 /// ===========================================================================
 void FormProcess::showEvent(QShowEvent *event)
 {
-
+    ui->btn_return->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_printer->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_btn_prev->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_next->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 /// ===========================================================================

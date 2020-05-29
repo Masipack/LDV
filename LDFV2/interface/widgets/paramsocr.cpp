@@ -158,6 +158,7 @@ void ParamsOCR::on_btn_angle_toggled(bool checked)
     {
         if( checked ) pTool->setRotation(0);
         pTool->SetLockAngle( checked );
+      //  pTool->ReconfigPosition();
         pTool->Exec(0);
         pTool->update();
     }
@@ -253,11 +254,16 @@ void ParamsOCR::on_btn_edit_position_toggled(bool checked)
 {
     if( pTool ){
 
+        Debug(pTool->GetConfigPos())
+
         pTool->SetExecOnMove(checked ? false:true);
         if(checked==false) pTool->ResetMove();
         pTool->SetLock(checked ? false:true);
+        Debug(pTool->GetConfigPos())
         pTool->ReconfigPosition();
-        pTool->update();
+        pTool->Exec(0);
+        Debug(pTool->GetConfigPos())
+
 
         LOG(LOG_INFO_TYPE, "Editando a posição da ferramenta" );
         AlarmManager::instance()->SetAlarm(ALM_EDIT_POSITION);

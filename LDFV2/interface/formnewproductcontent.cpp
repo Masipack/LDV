@@ -112,6 +112,17 @@ void FormNewProductContent::StartKeepAlive()
 void FormNewProductContent::showEvent(QShowEvent *event)
 {
     WindowManager::instance()->SetInfoTop(tr("Nova Inspeção (Câmera ") + QString("%1)").arg(camNum+1) );
+
+
+    ui->btn_add->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_remove->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_down->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_up->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_camera_snap->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_area->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_fit->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_in->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_out->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 /// ===========================================================================
@@ -406,9 +417,9 @@ void FormNewProductContent::on_btn_SincronizeDataBase_clicked()
 
     DlgInfo dlgInfo;
 
-    if(table.isEmpty())  dlgInfo.SetMessage(DlgInfo::IT_WARNING, " Falha na alteração de dados");
+    if(table.isEmpty())  dlgInfo.SetMessage(DlgInfo::IT_WARNING, tr("Falha na alteração de dados"));
 
-    dlgInfo.SetMessage(DlgInfo::IT_WARNING, " Dados alterados com sucesso");
+    dlgInfo.SetMessage(DlgInfo::IT_WARNING,tr( "Dados alterados com sucesso"));
 
     dlgInfo.SetVisible(false);
 

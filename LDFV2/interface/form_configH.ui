@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_8">
    <item>
     <spacer name="verticalSpacer_2">
@@ -1091,6 +1094,35 @@
     </layout>
    </item>
    <item>
+    <widget class="ButtonBeR" name="btn_restart">
+     <property name="minimumSize">
+      <size>
+       <width>130</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Reiniciar</string>
+     </property>
+     <property name="bgIcon">
+      <iconset resource="../res/icons.qrc">
+       <normaloff>:/icons/bt-blank.png</normaloff>
+       <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+     </property>
+     <property name="bgIconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -1128,7 +1160,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>17</pointsize>
         </font>
        </property>
        <property name="autoFillBackground">
@@ -1138,10 +1170,14 @@
         <string>Menu
 Principal</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/arrow_backward.png</normaloff>:/icons/arrow_backward.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>100</width>
-         <height>100</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -1151,8 +1187,8 @@ Principal</string>
        </property>
        <property name="bgIconSize">
         <size>
-         <width>100</width>
-         <height>100</height>
+         <width>95</width>
+         <height>95</height>
         </size>
        </property>
       </widget>
@@ -1180,7 +1216,7 @@ Principal</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>17</pointsize>
         </font>
        </property>
        <property name="autoFillBackground">
@@ -1190,10 +1226,14 @@ Principal</string>
         <string>Gerenciamento
 de Usuários</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/user-cog-solid.svg</normaloff>:/icons/user-cog-solid.svg</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>100</width>
-         <height>100</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -1203,8 +1243,8 @@ de Usuários</string>
        </property>
        <property name="bgIconSize">
         <size>
-         <width>100</width>
-         <height>100</height>
+         <width>95</width>
+         <height>95</height>
         </size>
        </property>
       </widget>
@@ -1232,12 +1272,22 @@ de Usuários</string>
        </property>
        <property name="font">
         <font>
-         <pointsize>16</pointsize>
+         <pointsize>17</pointsize>
         </font>
        </property>
        <property name="text">
         <string>Gerenciamento
 Banco de Dados</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/database-512.png</normaloff>:/icons/database-512.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
        </property>
        <property name="bgIcon">
         <iconset resource="../res/icons.qrc">
@@ -1246,8 +1296,8 @@ Banco de Dados</string>
        </property>
        <property name="bgIconSize">
         <size>
-         <width>100</width>
-         <height>100</height>
+         <width>95</width>
+         <height>95</height>
         </size>
        </property>
       </widget>
@@ -1282,6 +1332,16 @@ Banco de Dados</string>
         <string>Gerenciamento 
 Saídas</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/Inout-512.png</normaloff>:/icons/Inout-512.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
        <property name="bgIcon">
         <iconset resource="../res/icons.qrc">
          <normaloff>:/icons/bt-blank.png</normaloff>
@@ -1289,14 +1349,66 @@ Saídas</string>
        </property>
        <property name="bgIconSize">
         <size>
-         <width>100</width>
-         <height>100</height>
+         <width>95</width>
+         <height>95</height>
         </size>
        </property>
       </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer_11">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="ButtonBeR" name="btn_language">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>150</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>17</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Idioma</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/language-512.png</normaloff>:/icons/language-512.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/bt-blank.png</normaloff>
+         <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+       </property>
+       <property name="bgIconSize">
+        <size>
+         <width>95</width>
+         <height>95</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_13">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>

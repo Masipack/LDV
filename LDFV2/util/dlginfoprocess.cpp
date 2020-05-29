@@ -56,5 +56,5 @@ void dlgInfoProcess::Close()
 /// ===========================================================================
 void dlgInfoProcess::showEvent(QShowEvent *event)
 {
-   SetMessage(dlgInfoProcess::IT_WARNING, " Aguarde carregando base de dados..... !");
+   SetMessage(dlgInfoProcess::IT_WARNING, tr(" Aguarde carregando base de dados..... !"));
 }

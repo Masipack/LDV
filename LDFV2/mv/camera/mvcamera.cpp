@@ -187,7 +187,7 @@ void MvCamera::run()
 
     if( list.size() == 0 )
     {
-        LOG(LOG_ERROR_TYPE, "Erro ao inicializar cameras: Lista de cameras vazia" );
+        LOG(LOG_ERROR_TYPE, tr("Erro ao inicializar cameras: Lista de cameras vazia") );
         AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
         return;
     }
@@ -204,7 +204,7 @@ void MvCamera::run()
 
     if( cam_index == -1 )
     {
-        LOG(LOG_ERROR_TYPE, QString("Camera %1 nao encontrada").arg(camName) );
+        LOG(LOG_ERROR_TYPE, tr("Camera %1 nao encontrada").arg(camName) );
         AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
         return;
     }
@@ -217,7 +217,7 @@ void MvCamera::run()
     }
     catch( const GenericException &e )
     {
-        LOG(LOG_ERROR_TYPE, QString("Erro na captura de imagens [%1]: %2").arg(camName).arg(e.GetDescription()) );
+        LOG(LOG_ERROR_TYPE, tr("Erro na captura de imagens [%1]: %2").arg(camName).arg(e.GetDescription()) );
         AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
         return;
     }
@@ -226,7 +226,7 @@ void MvCamera::run()
 
     if( LoadConfigs( &camera, bBacklight ) == false )
     {
-        LOG(LOG_ERROR_TYPE, QString("Erro carregando parametros da camera %1").arg(camName) );
+        LOG(LOG_ERROR_TYPE, tr("Erro carregando parametros da camera %1").arg(camName) );
         AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
         return;
     }
@@ -251,7 +251,7 @@ void MvCamera::run()
         }
         catch( const GenericException &e )
         {
-            LOG(LOG_ERROR_TYPE, QString("Erro na captura de imagens [%1]: %2").arg(camName).arg(e.GetDescription()) );
+            LOG(LOG_ERROR_TYPE, tr("Erro na captura de imagens [%1]: %2").arg(camName).arg(e.GetDescription()) );
             AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
             break;
         }
@@ -337,7 +337,7 @@ void MvCamera::run()
         }
         else
         {
-            LOG(LOG_ERROR_TYPE, QString("Erro no resultado da captura de imagens") );
+            LOG(LOG_ERROR_TYPE, tr("Erro no resultado da captura de imagens") );
             AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
             break;
         }

@@ -95,6 +95,11 @@ void ConfigDataBase::showEvent(QShowEvent *event)
 {
     WindowManager::instance()->SetInfoTop(tr("Configurando parâmetros de acesso ao banco de dados"));
     Clear();
+
+    ui->btn_cancel->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_save->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
+
 }
 
 /// ===========================================================================

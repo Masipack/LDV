@@ -89,7 +89,7 @@ void MvOCR::ExecResult(const QImage &img, const QString &text, quint32 prid)
     b_Busy = false;
 
     extractedText = text;
-    QString s = "Leitura: " +  extractedText + " em " + QString::number(tm_exec.elapsed()) + " ms";
+    QString s = tr("Leitura: ") +  extractedText + (" em ") + QString::number(tm_exec.elapsed()) + " ms";
 
     b_approved = expectedText == text;
 
@@ -227,7 +227,7 @@ void MvOCR::ResetMove()
 void MvOCR::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
 
-    if((b_exec_on_move == true) &&(b_lock_angle == false))
+    if((b_exec_on_move == true) &&(b_lock_angle == false) && b_locked == false)
     {
         QPen pn(QColor(253,233,10), 3);
         pn.setCosmetic( true );
@@ -276,30 +276,6 @@ void MvOCR::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     MvTool::paint(painter, option, widget);
 }
 
-/// ===========================================================================
-///
-/// ===========================================================================
-double MvOCR::correlation(cv::Mat& image_1, cv::Mat& image_2)
-{
-    // convert data-type to "float"
-    cv::Mat im_float_1;
-    image_1.convertTo(im_float_1, CV_32F);
-    cv::Mat im_float_2;
-    image_2.convertTo(im_float_2, CV_32F);
-
-    int n_pixels = im_float_1.rows * im_float_1.cols;
-
-    // Compute mean and standard deviation of both images
-    cv::Scalar im1_Mean, im1_Std, im2_Mean, im2_Std;
-    meanStdDev(im_float_1, im1_Mean, im1_Std);
-    meanStdDev(im_float_2, im2_Mean, im2_Std);
-
-    // Compute covariance and correlation coefficient
-    double covar = (im_float_1 - im1_Mean).dot(im_float_2 - im2_Mean) / n_pixels;
-    double correl = covar / (im1_Std[0] * im2_Std[0]);
-
-    return correl;
-}
 
 
 

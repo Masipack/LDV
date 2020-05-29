@@ -81,10 +81,14 @@
        <property name="text">
         <string>Menu</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/arrow_backward.png</normaloff>:/icons/arrow_backward.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -125,10 +129,14 @@
        <property name="text">
         <string>Novo</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/user_half_add-256.png</normaloff>:/icons/user_half_add-256.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -169,10 +177,14 @@
        <property name="text">
         <string>Editar</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/user_half_edit-512.png</normaloff>:/icons/user_half_edit-512.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -213,10 +225,14 @@
        <property name="text">
         <string>Excluir</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/user_half_remove-128.png</normaloff>:/icons/user_half_remove-128.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="bgIcon">
@@ -258,10 +274,14 @@
         <string>Exibir
 Inativos</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/user_full_information-128.png</normaloff>:/icons/user_full_information-128.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
-         <width>80</width>
-         <height>80</height>
+         <width>32</width>
+         <height>32</height>
         </size>
        </property>
        <property name="checkable">
@@ -300,7 +320,18 @@ Inativos</string>
         </font>
        </property>
        <property name="text">
-        <string>Configure</string>
+        <string>Configure 
+Parâmetros</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/user_full_settings-128.png</normaloff>:/icons/user_full_settings-128.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
        </property>
        <property name="bgIcon">
         <iconset resource="../res/icons.qrc">

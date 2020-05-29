@@ -35,7 +35,7 @@ bool Cam_acA1300_60gc::SetGamma(bool bVal)
     }
     catch( const GenericException &e )
     {
-        LOG(LOG_ERROR_TYPE, QString("Erro SetBlackLevel [%1]: %2").arg(camName).arg(e.GetDescription()) );
+        LOG(LOG_ERROR_TYPE, tr("Erro SetBlackLevel [%1]: %2").arg(camName).arg(e.GetDescription()) );
         return false;
     }
     return true;
@@ -55,7 +55,7 @@ bool Cam_acA1300_60gc::SetBlackLevel(int v)
     }
     catch( const GenericException &e )
     {
-        LOG(LOG_ERROR_TYPE, QString("Erro SetBlackLevel [%1]: %2").arg(camName).arg(e.GetDescription()) );
+        LOG(LOG_ERROR_TYPE, tr("Erro SetBlackLevel [%1]: %2").arg(camName).arg(e.GetDescription()) );
         return false;
     }
     return true;
@@ -74,7 +74,7 @@ bool Cam_acA1300_60gc::SetExposure(int v)
     }
     catch( const GenericException &e )
     {
-        LOG(LOG_ERROR_TYPE, QString("Erro SetExposure [%1]: %2").arg(camName).arg(e.GetDescription()) );
+        LOG(LOG_ERROR_TYPE, tr("Erro SetExposure [%1]: %2").arg(camName).arg(e.GetDescription()) );
         return false;
     }
     return true;

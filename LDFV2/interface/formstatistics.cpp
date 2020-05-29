@@ -2,7 +2,7 @@
 #include "ui_formstatistics.h"
 #include "QDebug"
 #include "util/sys_log.h"
-
+#include "interface/windowmanager.h"
 
 /// ===========================================================================
 ///
@@ -56,4 +56,14 @@ void FormStatistics::on_btn_reset_clicked()
     ui->lbl_insp->setText("0");
     ui->lbl_nok->setText("0");
     ui->lbl_ok->setText("0");
+
+
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormStatistics::showEvent(QShowEvent *event)
+{
+    ui->btn_reset->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }

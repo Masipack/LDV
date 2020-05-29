@@ -754,6 +754,10 @@ color: rgb(255, 255, 255);</string>
        <property name="text">
         <string>Aceitar</string>
        </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/ok.png</normaloff>:/icons/ok.png</iconset>
+       </property>
        <property name="iconSize">
         <size>
          <width>16</width>

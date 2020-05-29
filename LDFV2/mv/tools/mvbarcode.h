@@ -4,7 +4,7 @@
 #include <QObject>
 #include "mvabstracttool.h"
 #include "interface/widgets/paramsbarcode.h"
-#include "zxing/MultiFormatReader.h"
+
 
 class MvBarcode : public MvAbstractTool
 {
@@ -36,8 +36,6 @@ protected:
             void decode(cv::Mat &im, QVector<decodedObject> &decodedObjects);
 
     ParamsBarcode* form;
-
-    zxing::MultiFormatReader *decoder;
 
     bool b_pharmacode;
     bool b_pharmacode_inv;

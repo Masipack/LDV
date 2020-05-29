@@ -96,9 +96,6 @@
      </item>
      <item>
       <widget class="QLineEdit" name="le_user">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
        <property name="minimumSize">
         <size>
          <width>300</width>
@@ -107,24 +104,21 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>14</pointsize>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(85, 85, 85);
 color: rgb(255, 255, 255);</string>
        </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="maxLength">
-        <number>16</number>
-       </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
        <property name="readOnly">
         <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string extracomment="Usuario"/>
        </property>
       </widget>
      </item>
@@ -214,6 +208,7 @@ color: rgb(255, 255, 255);</string>
        <property name="font">
         <font>
          <pointsize>15</pointsize>
+         <stylestrategy>PreferAntialias</stylestrategy>
         </font>
        </property>
        <property name="styleSheet">
@@ -233,7 +228,7 @@ color: rgb(255, 255, 255);</string>
         <set>Qt::AlignCenter</set>
        </property>
        <property name="readOnly">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>

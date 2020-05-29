@@ -10,11 +10,14 @@
     <x>0</x>
     <y>0</y>
     <width>650</width>
-    <height>300</height>
+    <height>324</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(253, 250, 250);</string>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -236,7 +239,7 @@
           <property name="minimumSize">
            <size>
             <width>64</width>
-            <height>75</height>
+            <height>80</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -244,6 +247,13 @@
             <width>64</width>
             <height>75</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
           </property>
           <property name="text">
            <string>OK</string>
@@ -292,7 +302,7 @@
           <property name="minimumSize">
            <size>
             <width>64</width>
-            <height>75</height>
+            <height>80</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -300,6 +310,13 @@
             <width>64</width>
             <height>75</height>
            </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
           </property>
           <property name="text">
            <string>Cancelar</string>
@@ -355,8 +372,8 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../res/icons.qrc"/>
   <include location="../res/images.qrc"/>
+  <include location="../res/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

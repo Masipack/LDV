@@ -20,7 +20,9 @@ FormLogin::FormLogin(QWidget *parent) : QWidget(parent), ui(new Ui::FormLogin)
     ui->le_user->installEventFilter(this);
     ui->le_password->installEventFilter(this);
 
-     GetConfig(EXPIRATE_DATA, "SYSTEM/MAX_EXPIRATE_DATE", 90);
+    setMouseTracking(true);
+
+    GetConfig(EXPIRATE_DATA, "SYSTEM/MAX_EXPIRATE_DATE", 90);
 }
 
 /// ===========================================================================
@@ -34,18 +36,26 @@ FormLogin::~FormLogin()
 /// ===========================================================================
 ///
 /// ===========================================================================
+void FormLogin::Clear()
+{
+    ui->le_user->clear();
+    ui->le_password->clear();
+    ui->lbl_info->clear();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void FormLogin::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
-    WindowManager::instance()->SetInfoTop( "Login de Usuário" );
 
-    ui->le_user->clear();
-    ui->le_password->clear();
+    WindowManager::instance()->SetInfoTop(tr("Login de Usuário"));
 
-    if( WindowManager::instance()->GetCurrentUserLevel() == -1 )
-        ui->btn_logoff->setEnabled(false);
-    else
-        ui->btn_logoff->setEnabled(true);
+    ui->btn_return->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_logoff->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
+
 }
 
 /// ===========================================================================
@@ -53,14 +63,20 @@ void FormLogin::showEvent(QShowEvent * event)
 /// ===========================================================================
 bool FormLogin::eventFilter(QObject* object, QEvent* event)
 {
+
+
     if(object == ui->le_user && event->type() == QEvent::MouseButtonRelease )
     {
+
         ui->lbl_info->setText( "" );
         DlgKeyboard dlg;
         if( dlg.exec() == QDialog::Accepted )
-        {
+        {          
             ui->le_user->setText( dlg.getText() );
+            ui->le_user->update();
+
         }
+
         return false;
     }
 
@@ -73,10 +89,11 @@ bool FormLogin::eventFilter(QObject* object, QEvent* event)
         {
             ui->le_password->setText( dlg.getText() );
         }
+
         return false;
     }
 
-    return false;
+    return QObject::eventFilter(object, event);
 
 }
 
@@ -148,8 +165,9 @@ void FormLogin::on_btn_login_clicked()
 
                 P11(tr("Gerenciar Senha:Login de usuário primeiro acesso ") + query.value(2).toString());
 
-                WindowManager::instance()->SetInfoTop( "Gerenciar Senha:Primeiro acesso usuário" );
+                WindowManager::instance()->SetInfoTop(tr("Gerenciar Senha:Primeiro acesso usuário"));
                 WindowManager::instance()->ShowScreen("FirstAccess");
+                Clear();
 
                 return;
 
@@ -163,9 +181,10 @@ void FormLogin::on_btn_login_clicked()
 
                     P11(tr("Gerenciar Senha:Senha usuário expirada") + query.value(2).toString());
 
-                    WindowManager::instance()->SetInfoTop( "Gerenciar Senha:Senha expirada" );
+                    WindowManager::instance()->SetInfoTop( tr("Gerenciar Senha:Senha expirada") );
                     WindowManager::instance()->ShowScreen("FirstAccess");
 
+                    Clear();
                     return;
 
                 }
@@ -176,6 +195,7 @@ void FormLogin::on_btn_login_clicked()
 
                 WindowManager::instance()->ShowLastScreen();
                 error_count[ui->le_user->text()] = 0;
+                Clear();
                 return;
             }
 
@@ -214,6 +234,7 @@ void FormLogin::on_btn_login_clicked()
 
             WindowManager::instance()->ShowLastScreen();
 
+            Clear();
             return;
         }
     }

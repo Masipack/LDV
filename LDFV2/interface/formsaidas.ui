@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>734</height>
+    <height>738</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -104,6 +104,10 @@
          </property>
          <property name="text">
           <string>Voltar</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../res/icons.qrc">
+           <normaloff>:/icons/arrow_backward.png</normaloff>:/icons/arrow_backward.png</iconset>
          </property>
          <property name="bgIcon">
           <iconset resource="../res/icons.qrc">

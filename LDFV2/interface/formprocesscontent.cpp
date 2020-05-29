@@ -55,6 +55,15 @@ void FormProcessContent::showEvent(QShowEvent *event)
 {
     WindowManager::instance()->SetInfoTop(tr("Inspeção (Câmera ") + QString("%1)").arg(camNum+1)+QString(": %1").arg(configFilename) );
     ui->btn_Statistics->setChecked(true);
+
+    ui->btn_ImageLog->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_Statistics->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_camera_snap->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_area->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_fit->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_in->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_zoom_out->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
 }
 
 /// ===========================================================================

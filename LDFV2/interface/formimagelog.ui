@@ -246,8 +246,8 @@ color: rgb(255, 255, 255);</string>
           <string>Voltar</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>:/icons/arrow-1-backward_0.png</normaloff>:/icons/arrow-1-backward_0.png</iconset>
+          <iconset resource="../res/icons.qrc">
+           <normaloff>:/icons/arrow_backward.png</normaloff>:/icons/arrow_backward.png</iconset>
          </property>
          <property name="iconSize">
           <size>

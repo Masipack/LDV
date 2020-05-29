@@ -12,9 +12,13 @@
 #include "util/msqlsingleton.h"
 #include "util/fileutil.h"
 #include "TO/databaseto.h"
-
+#include "util/systemsettings.h"
 #include <AVL.h>
 #include "opencv2/core.hpp"
+
+Q_DECLARE_METATYPE(cv::Mat)
+
+
 
 /// ===========================================================================
 ///
@@ -182,7 +186,7 @@ bool InitDatabase()
     {
         if(database.IsEmpty() || database.IsNull()) return false ;
 
-        Debug(MSQLSingleton::instance()->Init(database,drive));
+        MSQLSingleton::instance()->Init(database,drive);
     }
 
     return true;
@@ -191,24 +195,25 @@ bool InitDatabase()
 /// ===========================================================================
 ///
 /// ===========================================================================
-bool SetTranslation(QApplication& a)
+bool GetTranslation(QTranslator& translate)
 {
+
     QString s_lang, s_locale;
+
     GetConfig(s_lang    , "SYSTEM/LANGUAGE"     , QString("pt-br") );
     GetConfig(s_locale  , "SYSTEM/LOCALE"       , QString("br") );
+    Debug(s_lang)
 
-    if( s_lang != "pt-br" )
+    if(s_lang=="bs")
     {
-        QTranslator t;
-        t.load("./languages/" + s_lang + ".qm");
-        a.installTranslator(&t);
+        return translate.load(":/bosnian.qm");
     }
 
-    if( s_locale != "br" )
+    if(s_lang=="en-US")
     {
-        QLocale locale = QLocale(s_locale);
-        QLocale::setDefault(locale);
+        return translate.load(":/englesh_en.qm");
     }
+
 
     return true;
 }
@@ -228,35 +233,51 @@ bool InitCameras()
     return true;
 }
 
-Q_DECLARE_METATYPE(cv::Mat)
-
-/// ===========================================================================
 /// ===========================================================================
 ///
-/// ===========================================================================
+///
 /// ===========================================================================
 int main(int argc, char *argv[])
 {
+
+    //---------------------------- Registers Types --------------------------//
+
     qRegisterMetaType<cv::Mat>("cv::Mat");
 
+
+
+    int currentExitCode = 0;
+    bool bInitError = false;
+
+
     QApplication a(argc, argv);
+
+    //----------------------------- Init Settings ---------------------------//
+
+    if( InitSettings() == false                             ) bInitError = true;
+
+    //----------------------------- Pylon ------------------------------------//
+
+    Pylon::PylonAutoInitTerm    autoInitTerm;
+
+    //------------- First initialize AVL's inner state------------------------//
+
+    avl::InitLibrary();
+
+
+    QTranslator translate;
+
+    if(GetTranslation(translate)==false) bInitError = true;
+
+     a.installTranslator(&translate);
+
 
 #ifndef _TESTE_
     InitLog();
 #endif
 
-    Pylon::PylonAutoInitTerm    autoInitTerm;
-    // First initialize AVL's inner state.
-
-
-    avl::InitLibrary();
-
-    bool bInitError = false;
-
-    if( InitSettings() == false                             ) bInitError = true;
     if( InitComPort() == false                              ) bInitError = true;
     if( InitDatabase() == false                             ) bInitError = true;
-    if( SetTranslation(a) == false                          ) bInitError = true;
     if( setStyle(":/styles/style_base.qss", &a) == false    ) bInitError = true;
     if( WindowManager::instance()->init() == false          ) bInitError = true;
     if( InitCameras() == false                              ) bInitError = true;
@@ -265,11 +286,14 @@ int main(int argc, char *argv[])
 
     P11(QObject::tr("Inicializando Sistema"));
 
-    int ret = a.exec();
+    currentExitCode = a.exec();
+
 
     CameraManager::instance()->ShutDown();
 
     LOG(LOG_INFO_TYPE, QObject::tr(" --------- Sistema Desligando --------- ") );
 
-    return ret;
+    return currentExitCode;
+
+
 }

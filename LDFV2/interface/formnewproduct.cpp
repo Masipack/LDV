@@ -132,7 +132,10 @@ void FormNewProduct::WriteConfig(const QString &name)
 /// ===========================================================================
 void FormNewProduct::showEvent(QShowEvent *event)
 {
-
+   ui->btn_btn_prev->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+   ui->btn_next->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+   ui->btn_printer->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+   ui->btn_return->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 
 }
 

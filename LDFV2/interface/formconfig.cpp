@@ -4,6 +4,7 @@
 
 #include "interface/windowmanager.h"
 #include "util/sys_log.h"
+#include "global_defines.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -43,6 +44,17 @@ void FormConfig::showEvent(QShowEvent * event)
     ui->lbl_y->setText(QString("%1").arg(QDate::currentDate().year(), 4, 10, QChar('0')));
     ui->lbl_m->setText(QString("%1").arg(QDate::currentDate().month(), 2, 10, QChar('0')));
     ui->lbl_d->setText(QString("%1").arg(QDate::currentDate().day(), 2, 10, QChar('0')));
+
+    ui->btn_apply_date->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_apply_time->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_database->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_maneger_output->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_minus_d->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_minus_hour->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_minus_m->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_minus_min->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_minus_y->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 /// ===========================================================================
@@ -292,4 +304,22 @@ void FormConfig::on_btn_maneger_output_clicked()
 {
     if(P11(tr("Testando configurações  do saídas"), true ) == false ) return;
     WindowManager::instance()->ShowScreen("Saidas");
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormConfig::on_btn_restart_clicked()
+{
+    qApp->quit();
+    QProcess::startDetached(qApp->arguments()[0], qApp->arguments()); //application restart
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormConfig::on_btn_language_clicked()
+{
+    if(P11(tr("Alterando Idioma"), true ) == false ) return;
+    WindowManager::instance()->ShowScreen("Language");
 }

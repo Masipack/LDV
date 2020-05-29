@@ -6,13 +6,10 @@
 #include <QGraphicsView>
 #include "global_defines.h"
 
-#include "zxing/DecodeHints.h"
-#include "zxing/MultiFormatReader.h"
-#include "zxing/common/GreyscaleLuminanceSource.h"
-#include "zxing/common/GlobalHistogramBinarizer.h"
+
 #include "zbar.h"
 
-using namespace zxing;
+
 using namespace cv;
 using namespace zbar;
 using namespace std;
@@ -24,7 +21,6 @@ MvBarcode::MvBarcode(const QRectF& rect, MvTool *parent) : MvAbstractTool(rect, 
 {
     form = new  ParamsBarcode(this);
 
-    decoder = new MultiFormatReader();
 
     b_pharmacode     = false;
     b_pharmacode_inv = false;
@@ -43,11 +39,7 @@ MvBarcode::~MvBarcode()
         form = nullptr;
     }
 
-    if(decoder)
-    {
-        delete decoder;
-        decoder = nullptr;
-    }
+
 }
 
 /// ===========================================================================

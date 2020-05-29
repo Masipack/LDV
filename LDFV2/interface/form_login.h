@@ -16,6 +16,8 @@ public:
     explicit FormLogin(QWidget *parent = 0);
     ~FormLogin();
 
+    void Clear();
+
 private slots:
     void on_btn_return_clicked();
 

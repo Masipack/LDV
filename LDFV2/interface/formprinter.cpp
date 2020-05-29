@@ -30,12 +30,13 @@ FormPrinter::~FormPrinter()
 void FormPrinter::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
-    WindowManager::instance()->SetInfoTop( "Impressora");
+    WindowManager::instance()->SetInfoTop(tr("Impressora"));
 
     QString url;
     GetConfig(url, "SYSTEM/PRINTER_URL", QString("") );
     ui->widget->setUrl(QUrl(url));
     ui->widget->update();
+    ui->btn_menu->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 /// ===========================================================================

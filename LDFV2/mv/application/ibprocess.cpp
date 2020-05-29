@@ -102,6 +102,8 @@ void IBProcess::NewImage(const QImage &source)
         }
         else
         {
+            Debug(p->GetConfigPos())
+
             p->MoveTool( p->GetConfigPos() + dist);
             if( p->Exec(proc_id) == false )
             {

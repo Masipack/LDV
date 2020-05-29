@@ -37,6 +37,8 @@ QString FormNewProductFinish::GetName()
 void FormNewProductFinish::showEvent(QShowEvent *event)
 {
     WindowManager::instance()->SetInfoTop(tr("Nova Inspeção (Finalizar Receita)") );
+    ui->btn_finish->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
 
 }
 
