@@ -73,7 +73,7 @@ void IBConfig::NewImage(const QImage &source)
 /// =========================================================================
 void IBConfig::SendKeepAlive()
 {
-    SerialControl::instance()->KeepAlive();
+   SerialControl::instance()->KeepAlive();
 }
 
 /// ===========================================================================

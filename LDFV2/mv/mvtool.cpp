@@ -69,7 +69,7 @@ void MvTool::setIncrementSizeX(QRectF rect)
 void MvTool::MoveTool(QPointF p)
 {
     this->setPos(p - boundingRect().center());
-    Debug(this->boundingRect().center());
+   // Debug(this->boundingRect().center());
     emit( GeometryChanged( this->mapRectToScene( this->boundingRect() )) );
 }
 

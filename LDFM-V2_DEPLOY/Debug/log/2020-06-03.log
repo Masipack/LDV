@@ -1,0 +1,11 @@
+05:47:53.433|I|| --------- Sistema Inicializando --------- 
+05:47:53.437libpng warning: iCCP: known incorrect sRGB profile
+05:48:06.613|I|| --------- Sistema Inicializando --------- 
+05:48:06.679libpng warning: iCCP: known incorrect sRGB profile
+08:17:49.633|I|| --------- Sistema Inicializando --------- 
+08:17:49.634QIODevice::write (QSerialPort): device not open
+08:17:49.634|E||Porta serial ttyUSB0 indisponivel para uso
+08:17:49.662libpng warning: iCCP: known incorrect sRGB profile
+08:17:49.784libpng warning: iCCP: known incorrect sRGB profile
+08:17:49.793|W|SISTEMA|WARNING: configuration SYSTEM/PATH_FILE not found
+08:18:07.452|I|SISTEMA| --------- Sistema Desligando --------- 

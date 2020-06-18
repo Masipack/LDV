@@ -287,9 +287,14 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     try
     {
 
-        GaussianBlur(roi_local, roi_local, Size(3,3),0,0);
+        GaussianBlur(roi_local, roi_local, Size(9,9),0,0);
 
-        threshold(roi_local, roi_local_th, 0, 255, b_black_And_white == 1 ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
+     //   adaptiveThreshold(roi_local, roi_local_th, 255, ADAPTIVE_THRESH_GAUSSIAN_C, b_black_And_white == 1 ? THRESH_BINARY:THRESH_BINARY_INV, 29, -3);
+       //  GaussianBlur(roi_local, roi_local, Size(5,5),2,2);
+
+       threshold(roi_local, roi_local_th, 0, 255, b_black_And_white == 1 ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
+
+      //  GaussianBlur(roi_local, roi_local_th, Size(5,5),2,2);
 
         Mat kern = (Mat_<char>(5, 5) <<  0, 0, 1, 0, 0,
                                          0, 0, 1, 0, 0,
@@ -408,6 +413,7 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
         //    30.4
         //    212.8
 
+        if( br.height  < 30)                  continue;
         if( br.width   < qFloor(min_width)  ) continue;
         if( br.width   > qCeil(max_width)   ) continue;
         if( br.height  < qFloor(min_height) - 10) continue;

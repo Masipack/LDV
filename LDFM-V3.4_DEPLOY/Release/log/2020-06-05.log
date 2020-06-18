@@ -1,0 +1,22 @@
+06:31:36.757|I|| --------- System Booting --------- 
+06:31:36.757QIODevice::write (QSerialPort): device not open
+06:31:36.757|E||Serial port ttyUSB0unavailable for use
+06:31:36.781libpng warning: iCCP: known incorrect sRGB profile
+06:31:36.943libpng warning: iCCP: known incorrect sRGB profile
+06:31:40.718|I|SISTEMA| --------- System Shutting Down --------- 
+06:32:02.178|I|| --------- Sistema Inicializando --------- 
+06:32:02.178QIODevice::write (QSerialPort): device not open
+06:32:02.178|E||Porta serial ttyUSB0 indisponivel para uso
+06:32:02.185libpng warning: iCCP: known incorrect sRGB profile
+06:32:02.280|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+06:32:02.292libpng warning: iCCP: known incorrect sRGB profile
+06:32:06.001|I|SISTEMA| --------- Sistema Desligando --------- 
+06:40:41.228|I|| --------- Sistema Inicializando --------- 
+06:40:41.228QIODevice::write (QSerialPort): device not open
+06:40:41.228|E||Porta serial ttyUSB0 indisponivel para uso
+06:40:41.235libpng warning: iCCP: known incorrect sRGB profile
+06:40:41.354|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+06:40:41.371libpng warning: iCCP: known incorrect sRGB profile
+06:40:54.222void FormLogin::on_btn_login_clicked() 137 false
+06:41:06.862|W|2|WARNING: configuration PERMISSIONS/User_Config not found
+06:41:20.481|I|2| --------- Sistema Desligando --------- 

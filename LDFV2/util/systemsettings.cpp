@@ -25,6 +25,14 @@ SystemSettings::~SystemSettings()
 bool SystemSettings::init(const QString& filename)
 {
     if( m_settingsDB ) delete m_settingsDB;
-    m_settingsDB = new QSettings(filename, QSettings::IniFormat);
+
+    try {
+         m_settingsDB = new QSettings(filename, QSettings::IniFormat);
+
+    } catch (QException &ex) {
+
+        LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL:%1").arg(QString::fromLocal8Bit(ex.what())));
+    }
+
     return true;
 }

@@ -282,7 +282,7 @@ color: rgb(255, 255, 255);</string>
         </size>
        </property>
        <property name="text">
-        <string>Petro/Branco</string>
+        <string>Fundo Claro</string>
        </property>
        <property name="checkable">
         <bool>true</bool>

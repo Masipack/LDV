@@ -62,7 +62,7 @@ bool WindowManager::init()
 
     current_screen      = 0;
     current_user_level  = -1;
-    current_user_login  = "2";
+    current_user_login  = "SISTEMA";
 
     qApp->setProperty("CURRENT_USER", current_user_login);
 
@@ -84,18 +84,19 @@ bool WindowManager::init()
 #endif
 
     mainDialog = new MainDialog();
-
+    mainDialog->setWindowFlags( Qt::FramelessWindowHint | Qt::Window /*| Qt::X11BypassWindowManagerHint*/ | Qt::WindowStaysOnTopHint  ); // TODO: recolocar (ver windows32)
 
 #ifndef _TESTE_
     mainDialog->move(screen->geometry().x(), screen->geometry().y());
     mainDialog->resize(screen->geometry().width(), screen->geometry().height());
     mainDialog->showFullScreen();
-    mainDialog->setWindowFlags( Qt::FramelessWindowHint | Qt::Window /*| Qt::X11BypassWindowManagerHint*/ | Qt::WindowStaysOnTopHint  ); // TODO: recolocar (ver windows32)
 #else
     if( screen_orientation == SCREEN_HORIZONTAL )
     {
         mainDialog->move(0,0);
-        mainDialog->resize(1280,800);
+        mainDialog->resize(1024,768);
+        mainDialog->setMinimumSize(1024,768);
+        mainDialog->setMaximumSize(1024,768);
     }
     else
     {
@@ -106,7 +107,6 @@ bool WindowManager::init()
 #endif
 
     GetConfig(logoff_minute_count, "SYSTEM/LOGOFF_MINUTES", 10);
-
     mainWidget = mainDialog->GetMainWidget();
     qApp->installEventFilter( this );
     connect(&logoff_timer, SIGNAL(timeout()), this, SLOT(LogOff()) );
@@ -142,6 +142,11 @@ void WindowManager::LogOff()
         mainWidget->layout()->addWidget( current_screen );
         current_screen->show();
     }
+
+    QWidget* p = v_screens.value("MainMenu");
+
+    if( p == NULL ) return ;
+    if( current_screen->objectName() == p->objectName() ) return;
 
     DlgInfo dlg;
     dlg.SetMessage(DlgInfo::IT_INFO, tr("LOGOUT automático realize o login !"), false, false );

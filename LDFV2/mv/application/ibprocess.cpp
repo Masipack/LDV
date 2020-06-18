@@ -310,7 +310,7 @@ void IBProcess::ClearSelection()
 /// ===========================================================================
 void IBProcess::SendKeepAlive()
 {
-    SerialControl::instance()->KeepAlive();
+  SerialControl::instance()->KeepAlive();
 }
 
 /// ===========================================================================
@@ -368,6 +368,9 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         pItemTool->SetConfigPos(_TO.LIST_OCR[i].BASE.CONFIG_POS);
         pItemTool->SetExpectedText(_TO.LIST_OCR[i].BASE.EXPECTED_TEXT);
         pItemTool->SetWhiteFilterSize(_TO.LIST_OCR[i].WHITE_FILTER);
+
+     //   Debug(_TO.LIST_OCR[i].BLACK_WHITE)
+
         pItemTool->SetBlackAndWhite(_TO.LIST_OCR[i].BLACK_WHITE);
         pItemTool->SetAttributeDataBase(_TO.LIST_OCR[i].TABLE_ATTRIBUTE);
         pItemTool->SetTableDataBase(table);
@@ -496,6 +499,7 @@ bool IBProcess::GetTO(ProductTO &_TO)
             to.BASE.NAME                    = pTool->GetToolName();
             to.BASE.ROI                     = pTool->boundingRect();
             to.WHITE_FILTER                 = pTool->GetWhiteFilterSize();
+            to.BLACK_WHITE                  = pTool->GetBlackAndWhite();
             to.BASE.VISIBLE                 = pTool->isVisible();
             to.BASE.TYPE                    = (quint32)pTool->GetType();
             to.TABLE_ATTRIBUTE              = pTool->GetAttributeDataBase();

@@ -53,7 +53,7 @@ void ParamsOCR::SetExpectedText(const QString text)
 /// ===========================================================================
 void ParamsOCR::SetBackgroundStateTool(const int &v)
 {
-    ui->btn_black_white->setChecked( v == 1 ? true:false );
+  //  ui->btn_black_white->setChecked( v == 1 ? true:false );
 }
 
 /// ===========================================================================
@@ -100,11 +100,13 @@ void ParamsOCR::showEvent(QShowEvent * event)
         ui->le_extracted->setPlainText( pTool->GetExtractedText() );
         white_filter=pTool->GetWhiteFilterSize();
         ui->btn_edit_position->setChecked(false);
-
+        ui->btn_black_white->setChecked(pTool->GetBlackAndWhite()== 1 ? true:false);
         connect(pTool, SIGNAL(NewResult(bool,QString,quint32)), this, SLOT(NewResult(bool,QString,quint32)), Qt::UniqueConnection );
     }
 
     ui->lbl_white->setText( QString::number( white_filter ) );
+
+
 }
 
 /// ===========================================================================
@@ -161,6 +163,8 @@ void ParamsOCR::on_btn_angle_toggled(bool checked)
       //  pTool->ReconfigPosition();
         pTool->Exec(0);
         pTool->update();
+
+        ui->btn_angle->setText(checked? "Ângulo Fixo":"Ângulo Variável");
     }
 }
 
@@ -242,7 +246,7 @@ void ParamsOCR::on_btn_black_white_clicked(bool checked)
 {
     if(pTool)
     {
-        pTool->SetBlackAndWhite(checked ? 1: 0);
+        pTool->SetBlackAndWhite(checked ? 1: -1);
         pTool->Exec(0);
     }
 }
@@ -269,4 +273,12 @@ void ParamsOCR::on_btn_edit_position_toggled(bool checked)
         AlarmManager::instance()->SetAlarm(ALM_EDIT_POSITION);
 
     }
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ParamsOCR::on_btn_black_white_toggled(bool checked)
+{
+   ui->btn_black_white->setText(checked ? "Fundo escuro": "Fundo claro");
 }

@@ -96,6 +96,8 @@ void ParamsFiducial::on_btn_angle_toggled(bool checked)
         pTool->Clear();
         pTool->update();
 
+        ui->btn_angle->setText(checked? "Ângulo Fixo":"Ângulo Variável");
+
     }
 }
 

@@ -99,8 +99,8 @@ void FormFirstAccess::on_btn_save_clicked()
     if( query.next() )
     {
         _name   = query.value(0).toString();
-        _level  = query.value(1).toInt();
-        _active = query.value(2).toInt();
+        _level  = query.value(2).toInt();
+        _active = query.value(3).toInt();
 
     }
 

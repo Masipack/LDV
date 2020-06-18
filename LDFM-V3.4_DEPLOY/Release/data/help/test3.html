@@ -1,0 +1,44 @@
+<div style="text-align:center">
+  <button onclick="playPause()">Play/Pause</button>
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <button onclick="replay()">Replay</button>
+
+  <br><br>
+  <video id="video1" width="360" controls>
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<script>
+var myVideo = document.getElementById("video1");
+
+function replay() {
+    myVideo.currentTime = 0;
+}
+function playPause() {
+  if (myVideo.paused)
+    myVideo.play();
+  else
+    myVideo.pause();
+}
+
+function makeBig() {
+    myVideo.width = 720;
+}
+
+function makeSmall() {
+    myVideo.width = 360;
+}
+
+function makeNormal() {
+    myVideo.width = 420;
+}
+</script>
+
+<p>Video courtesy of <a href="https://www.google.com/">Big Buck Bunny</a>.</p>
+
+</body>
+</html>

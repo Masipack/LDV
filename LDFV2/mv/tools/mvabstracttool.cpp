@@ -36,8 +36,8 @@ void MvAbstractTool::ReconfigPosition()
 {
     configPos = mapToScene(this->boundingRect().center());
 
-    Debug(configPos)
-    Debug(this->boundingRect().bottomLeft());
+   // Debug(configPos)
+    //Debug(this->boundingRect().bottomLeft());
 }
 
 /// ===========================================================================

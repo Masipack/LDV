@@ -48,7 +48,7 @@ INCLUDEPATH += $$PWD
 
 #---------------------------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------------------
-TARGET      = LDFM-V2
+TARGET      = LDFM-V3.4
 TEMPLATE    = app
 
 #QMAKE_LFLAGS += -no-pie
@@ -274,7 +274,7 @@ LIBS += -L$$THIRDY_PARTY/"opencv4/lib"      -lopencv_core \
                                             -lopencv_imgcodecs\
                                             -lopencv_ml \
                                             -lopencv_objdetect \
-                                            -lopencv_features2d
+
 
 LIBS += -L$$THIRDY_PARTY/"pylon/lib64"              -lGCBase_gcc_v3_0_Basler_pylon_v5_0 \
                                                     -lGenApi_gcc_v3_0_Basler_pylon_v5_0 \

@@ -191,6 +191,7 @@ void MvOCR::SetBlackAndWhite(const int n)
 {
    b_black_And_white = n;
    PO.SetBlackAndWhite(n);
+  // Debug(n);
    form->SetBackgroundStateTool(n);
 
 }

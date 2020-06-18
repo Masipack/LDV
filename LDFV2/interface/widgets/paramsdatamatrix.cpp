@@ -18,6 +18,8 @@ ParamsDataMatrix::ParamsDataMatrix(MvDataMatrix *p, QWidget *parent) :
 
 
 
+
+
 }
 
 /// ===========================================================================
@@ -122,6 +124,7 @@ void ParamsDataMatrix::on_btn_angle_toggled(bool checked)
         pTool->SetLockAngle( checked );
         pTool->Clear();
         pTool->update();
+         ui->btn_angle->setText(checked? "Ângulo Fixo":"Ângulo Variável");
 
     }
 }

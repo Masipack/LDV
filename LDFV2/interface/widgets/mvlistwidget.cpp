@@ -36,6 +36,7 @@ MVListWidget::MVListWidget(QString name, MV_TYPE type, QWidget *parent) : QWidge
     my_type = type;
     pTool   = nullptr;
 
+
     setFocusPolicy(Qt::NoFocus);
 }
 

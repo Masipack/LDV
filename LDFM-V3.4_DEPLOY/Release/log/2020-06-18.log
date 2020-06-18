@@ -1,0 +1,6 @@
+13:41:12.436|I|| --------- Sistema Inicializando --------- 
+13:41:12.437|W||WARNING: configuration SYSTEM/USE_RESTART not found
+13:41:12.444libpng warning: iCCP: known incorrect sRGB profile
+13:41:12.532|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+13:41:12.541libpng warning: iCCP: known incorrect sRGB profile
+13:41:17.101|I|SISTEMA| --------- Sistema Desligando --------- 

@@ -240,7 +240,7 @@ static bool CheckPassword(const QString v)
         if(mask.at(current_c).isPunct())  specialChar = true;
     }
 
-    return hasLower && hasUpper && hasDigit && specialChar && (mask.size() > 6);
+    return hasLower && hasUpper && hasDigit && specialChar && (mask.size() >= 8);
 }
 
 

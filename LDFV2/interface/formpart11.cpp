@@ -51,21 +51,23 @@ void FormPart11::showEvent(QShowEvent * event)
     ui->tableWidget->setRowCount(0);
     GetConfig(strPedido, "FABRIMA/PEDIDO", QString("0000") );
 
+
+    QFileInfo  info("./Audit.db");
+    QString database = file_size_human(info.size());
+
+    ui->lbl_info_backup->setText(tr(" Armazenamento Banco de Dados CRF21: %1").arg(database) );
+
     QList<QStorageInfo> info_disk = QStorageInfo::mountedVolumes();
 
     for( int i = 0; i < info_disk.size(); i++ )
     {
         if( info_disk.at(i).rootPath().contains(PATH_FILE))
         {
-           QFileInfo  info("./Audit.db");
 
            QString disk = file_size_human(info_disk.at(i).bytesFree());
-           QString database = file_size_human(info.size());
 
-           ui->lbl_info_backup->setText( tr("Armazenamento em disk: %1").arg(disk)+
-                                         tr("   Armazenamento Banco de Dados CRF21: %1").arg(database)
 
-                                         );
+           ui->lbl_info_backup->setText( tr("Armazenamento em disk: %1    | ").arg(disk)+ ui->lbl_info_backup->text());
         }
     }
 

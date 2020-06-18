@@ -109,6 +109,7 @@ void ParamsBarcode::on_btn_angle_toggled(bool checked)
     {
         if( checked ) pTool->setRotation(0);
         pTool->SetLockAngle( checked );
+        ui->btn_angle->setText(checked? "Ângulo Fixo":"Ângulo Variável");
         pTool->Clear();
         pTool->update();
     }

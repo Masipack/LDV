@@ -22,6 +22,10 @@ FormConfig::FormConfig(QWidget *parent) :  QWidget(parent)
     ui = new Ui::FormConfigV;
 #endif
     ui->setupUi(this);
+
+     ui->btn_database->setVisible( qApp->property("USE_DATABASE").toBool() );
+     ui->btn_language->setVisible( qApp->property("USE_LANGUAGE").toBool() );
+     ui->btn_restart->setVisible( qApp->property("USE_RESTART").toBool() );
 }
 
 /// ===========================================================================

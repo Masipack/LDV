@@ -11,7 +11,7 @@ public:
     AbstractToolTO  BASE;
     quint32         WHITE_FILTER;
     QString         TABLE_ATTRIBUTE;
-    int             BLACK_WHITE;
+    quint32         BLACK_WHITE;
 
     //NOT SERIALIZABLE:
 

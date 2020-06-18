@@ -50,6 +50,8 @@ private slots:
 
     void on_btn_edit_position_toggled(bool checked);
 
+    void on_btn_black_white_toggled(bool checked);
+
 protected:
     bool eventFilter(QObject *object, QEvent *event);
     void showEvent(QShowEvent * event);

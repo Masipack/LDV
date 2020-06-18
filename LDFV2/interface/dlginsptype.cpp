@@ -2,6 +2,7 @@
 #include "ui_dlginsptype.h"
 
 #include "util/dlgkeyboard.h"
+#include "util/systemsettings.h"
 
 /// ===========================================================================
 ///
@@ -12,6 +13,10 @@ DlgInspType::DlgInspType(QWidget *parent) : QDialog(parent),  ui(new Ui::DlgInsp
     setWindowFlags( Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Dialog | Qt::WindowStaysOnTopHint );
 
     ui->le_name->installEventFilter(this);
+
+    bool user_DATAMATRIX;
+    GetConfig(user_DATAMATRIX, "SYSTEM/USE_DATAMATRIX", false);
+    ui->btn_dmtx->setVisible(user_DATAMATRIX);
 }
 
 /// ===========================================================================
