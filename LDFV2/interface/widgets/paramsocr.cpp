@@ -244,11 +244,7 @@ void ParamsOCR::on_cb_database_currentTextChanged(const QString &value)
 /// ===========================================================================
 void ParamsOCR::on_btn_black_white_clicked(bool checked)
 {
-    if(pTool)
-    {
-        pTool->SetBlackAndWhite(checked ? 1: -1);
-        pTool->Exec(0);
-    }
+
 }
 
 /// ===========================================================================
@@ -258,15 +254,16 @@ void ParamsOCR::on_btn_edit_position_toggled(bool checked)
 {
     if( pTool ){
 
-        Debug(pTool->GetConfigPos())
+       // Debug(pTool->GetConfigPos())
 
         pTool->SetExecOnMove(checked ? false:true);
+        pTool->SetResizeOnCenter(false);
         if(checked==false) pTool->ResetMove();
         pTool->SetLock(checked ? false:true);
-        Debug(pTool->GetConfigPos())
+       // Debug(pTool->GetConfigPos())
         pTool->ReconfigPosition();
         pTool->Exec(0);
-        Debug(pTool->GetConfigPos())
+      //  Debug(pTool->GetConfigPos())
 
 
         LOG(LOG_INFO_TYPE, "Editando a posição da ferramenta" );
@@ -280,5 +277,11 @@ void ParamsOCR::on_btn_edit_position_toggled(bool checked)
 /// ===========================================================================
 void ParamsOCR::on_btn_black_white_toggled(bool checked)
 {
-   ui->btn_black_white->setText(checked ? "Fundo escuro": "Fundo claro");
+    if(pTool)
+    {
+        pTool->SetBlackAndWhite(checked ? 1: -1);
+        pTool->Exec(0);
+        ui->btn_black_white->setText(checked ? "Fundo escuro": "Fundo claro");
+    }
+
 }

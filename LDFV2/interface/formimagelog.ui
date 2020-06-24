@@ -205,7 +205,51 @@ color: rgb(255, 255, 255);</string>
            </item>
           </layout>
          </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
+       </item>
+       <item>
+        <widget class="ButtonBeR" name="btn_clear">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Limpar</string>
+         </property>
+         <property name="bgIcon">
+          <iconset resource="../res/icons.qrc">
+           <normaloff>:/icons/bt-blank.png</normaloff>
+           <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+         </property>
+         <property name="bgIconSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="verticalSpacer_3">
@@ -491,11 +535,11 @@ color: rgb(255, 255, 255);</string>
   <customwidget>
    <class>ImageDevice</class>
    <extends>QGraphicsView</extends>
-   <header location="global">mv/imagedevice.h</header>
+   <header>mv/imagedevice.h</header>
    <slots>
-    <slot>zoomFit()</slot>
     <slot>zoomIn()</slot>
     <slot>zoomOut()</slot>
+    <slot>zoomFit()</slot>
     <slot>zoomFitItems()</slot>
     <slot>lockParent(bool)</slot>
     <slot>snap()</slot>

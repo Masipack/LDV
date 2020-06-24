@@ -136,7 +136,11 @@ SOURCES += \
     interface/formfirstaccess.cpp \
     interface/widgets/widgetuser.cpp \
     interface/formconfiguser.cpp \
-    interface/formlanguage.cpp
+    interface/formlanguage.cpp \
+    util/manegerlibrary.cpp \
+    mv/tools/mvocrconfig.cpp \
+    mv/application/ibconfigocr.cpp \
+    interface/formtrainner.cpp
 
 HEADERS += \
         maindialog.h \
@@ -213,7 +217,13 @@ HEADERS += \
     interface/formfirstaccess.h \
     interface/widgets/widgetuser.h \
     interface/formconfiguser.h \
-    interface/formlanguage.h
+    interface/formlanguage.h \
+    util/manegerlibrary.h \
+    util/manegerlibraryUtils.h \
+    mv/tools/mvocrconfig.h \
+    mv/application/ibconfigocr.h \
+    TO/libraryto.h \
+    interface/formtrainner.h
 
 FORMS += \
         maindialog.ui \
@@ -256,7 +266,8 @@ FORMS += \
     interface/formfirstaccess.ui \
     interface/widgets/widgetuser.ui \
     interface/formconfiguser.ui \
-    interface/formlanguage.ui
+    interface/formlanguage.ui \
+    interface/formtrainner.ui
 
 #---------------------------------------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------------------------

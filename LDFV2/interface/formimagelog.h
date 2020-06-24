@@ -25,6 +25,8 @@ private slots:
 
     void on_btn_menu_clicked();
 
+    void on_btn_clear_clicked();
+
 private:
     Ui::FormImageLog *ui;
 

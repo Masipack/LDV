@@ -6,6 +6,7 @@
 #include "util/fileutil.h"
 #include "util/dlginfo.h"
 #include "util/systemsettings.h"
+#include "util/permission_check.h"
 
 /// ===========================================================================
 ///
@@ -15,6 +16,13 @@ FormUsbExport::FormUsbExport(QWidget *parent) : QWidget(parent),
 {
     ui->setupUi(this);
     connect(&timerUpdateName, SIGNAL(timeout()), this, SLOT(UpdateDeviceName()));
+
+    ui->btn_config_from_usb->setProperty("DEST", "EXPORT");
+    ui->btn_config_to_usb->setProperty("DEST", "EXPORT");
+    ui->btn_from_usb->setProperty("DEST", "EXPORT");
+    ui->btn_to_usb->setProperty("DEST", "EXPORT");
+    ui->btn_to_usb_all->setProperty("DEST", "EXPORT");
+
 }
 
 /// ===========================================================================
@@ -61,6 +69,8 @@ void FormUsbExport::UpdateDeviceName()
 void FormUsbExport::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
+
+    CheckButtonPermissions(this);
 
     if(WindowManager::instance()->GetCurrentUserLevel() == -1 )
     {

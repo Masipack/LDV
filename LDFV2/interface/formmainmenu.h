@@ -34,6 +34,8 @@ private slots:
 
     void on_btn_version_clicked();
 
+    void on_btn_learning_clicked();
+
 private:
 #ifdef _DISPLAY_HORIZONTAL_
     Ui::FormMainMenuH *ui;

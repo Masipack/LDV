@@ -84,6 +84,8 @@ void IBProcess::NewImage(const QImage &source)
 
     this->update();
 
+    ImageQueue::instance()->NewImageTrainner(source);
+
     QPointF dist(0,0);
     proc_id++;
     for( MvAbstractTool* p : tools )
@@ -132,7 +134,6 @@ void IBProcess::NewImage(const QImage &source)
 /// ===========================================================================
 void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
 {
-    MvTool* p = (MvTool*)sender();
 
     response_count++;
 
@@ -153,6 +154,7 @@ void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
             SerialControl::instance()->ToggleBitON(number_output);
             QTimer::singleShot(IO_REJECT_TIME, this, SLOT(ClearIO()));
             emit(InspectionResult(true));
+            ImageQueue::instance()->RemoveLast();
         }
         else
         {

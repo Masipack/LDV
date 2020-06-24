@@ -16,9 +16,16 @@ public:
 
     void SetMaxCount(int n) { max_count = n; }
 
-    bool GetAt(int n, QImage &dest, QString& dest_data);
+    bool GetAt(int n, QImage &dest);
 
-    int GetQueueSize() { return queue.size(); }
+    int  GetQueueSize() { return queue.size(); }
+
+    bool GetAt(int n, QImage &dest, QString &dest_data);
+
+    void RemoveLast();
+
+    void Clear();
+
 
 //    void NewImage(const QImage& image, );
 
@@ -26,6 +33,7 @@ signals:
 
 public slots:
     void NewImage(const QImage& image, const QString &data);
+    void NewImageTrainner(const QImage& image);
 
 private:
 
@@ -36,6 +44,8 @@ private:
     };
 
     QQueue< QUEUE_DATA >    queue;
+    QQueue<QImage>          queue_trainner;
+
     int                     max_count;
 };
 

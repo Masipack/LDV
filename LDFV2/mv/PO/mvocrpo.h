@@ -24,6 +24,15 @@ public:
     QImage GetThresholdedImage();
     void SetBlackAndWhite(const int n);
 
+    struct DESCRIPTOR
+    {
+        QRectF          rect;
+        cv::Mat         mat;
+        QChar           character;
+        QImage          image;
+        QVector<float>  descriptors;
+    };
+
 signals:
     void ExecResult(const QImage& img, const QString& text, quint32 prid);
 
@@ -36,6 +45,7 @@ private:
 
     int  b_black_And_white;
     bool use_DARK;
+    bool use_LASER;
 
 
 protected:
@@ -52,14 +62,7 @@ protected:
 
     QImage                  th_roi;
 
-    struct DESCRIPTOR
-    {
-        QRectF          rect;
-        cv::Mat         mat;
-        QChar           character;
-        QImage          image;
-        QVector<float>  descriptors;
-    };
+
 
     QVector<DESCRIPTOR> char_descriptors;
 

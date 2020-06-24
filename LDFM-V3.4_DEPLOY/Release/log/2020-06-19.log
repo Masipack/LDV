@@ -1,0 +1,17 @@
+08:39:51.281|I|| --------- Sistema Inicializando --------- 
+08:39:51.282|W||WARNING: configuration SYSTEM/USE_RESTART not found
+08:39:51.321libpng warning: iCCP: known incorrect sRGB profile
+08:39:51.404|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+08:39:51.415libpng warning: iCCP: known incorrect sRGB profile
+08:40:00.569void FormLogin::on_btn_login_clicked() 137 false
+08:40:04.582|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+08:40:05.947TOOL  0 --------------------------- 1
+08:40:05.947TOOL  1 --------------------------- 2
+08:40:05.947TOOL  2 --------------------------- 2
+08:40:09.662|I|2| --------- Sistema Desligando --------- 
+16:46:38.433|I|| --------- Sistema Inicializando --------- 
+16:46:38.434|W||WARNING: configuration SYSTEM/USE_RESTART not found
+16:46:38.442libpng warning: iCCP: known incorrect sRGB profile
+16:46:38.532|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+16:46:38.547libpng warning: iCCP: known incorrect sRGB profile
+16:46:41.298|I|SISTEMA| --------- Sistema Desligando --------- 

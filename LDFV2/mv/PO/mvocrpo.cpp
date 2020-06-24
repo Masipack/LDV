@@ -204,7 +204,9 @@ MvOCRPO::MvOCRPO(QObject *parent) : QObject(parent),use_DARK(false)
 
     b_black_And_white = 0;
 
-    GetConfig(use_DARK , "SYSTEM/USE_DARK",false);
+    GetConfig(use_DARK  , "SYSTEM/USE_DARK",false);
+    GetConfig(use_LASER , "SYSTEM/USE_LASER",false);
+
 }
 
 /// ===========================================================================
@@ -287,25 +289,27 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     try
     {
 
-        GaussianBlur(roi_local, roi_local, Size(9,9),0,0);
+        GaussianBlur(roi_local, roi_local, Size(7,7),0,0);
+
+        Mat kern = (Mat_<char>(5, 5) <<  0, 0, 0, 0, 0,
+                                         0, 1, 1, 1, 0,
+                                         0, 0, 1, 0, 0,
+                                         0, 0, 0, 0, 0,
+                                         0, 0, 0, 0, 0);
+
+        filter2D(roi_local_th, roi_local_th, roi_local_th.depth(), kern);
 
      //   adaptiveThreshold(roi_local, roi_local_th, 255, ADAPTIVE_THRESH_GAUSSIAN_C, b_black_And_white == 1 ? THRESH_BINARY:THRESH_BINARY_INV, 29, -3);
        //  GaussianBlur(roi_local, roi_local, Size(5,5),2,2);
 
-       threshold(roi_local, roi_local_th, 0, 255, b_black_And_white == 1 ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
+       threshold(roi_local, roi_local_th, 120, 255, b_black_And_white == 1 ? THRESH_BINARY|THRESH_OTSU: THRESH_BINARY_INV|THRESH_OTSU);
 
       //  GaussianBlur(roi_local, roi_local_th, Size(5,5),2,2);
-
-        Mat kern = (Mat_<char>(5, 5) <<  0, 0, 1, 0, 0,
-                                         0, 0, 1, 0, 0,
-                                         0, 0, 1, 0, 0,
-                                         0, 0, 1, 0, 0,
-                                         0, 0, 1, 0, 0);
-
-        if(use_DARK){
-
-            filter2D(roi_local_th, roi_local_th, roi_local_th.depth(), kern);
-        }
+//        Mat kern = (Mat_<char>(5, 5) <<  0, 0, 1, 0, 0,
+//                                         0, 0, 1, 0, 0,
+//                                         0, 0, 1, 0, 0,
+//                                         0, 0, 1, 0, 0,
+//                                         0, 0, 1, 0, 0);
 
 
     } catch (cv::Exception ex) {
@@ -330,30 +334,44 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
         dilate_sizeA = erode_sizeA * 2 - 1;
     }
 
-    if( dilate_sizeA )
+    if(use_LASER)
     {
-        element2 = getStructuringElement( MORPH_ELLIPSE, Size(erode_sizeA,erode_sizeA) );
-        erode(roi_local_th, roi_local_th,element2 );
+
+        if( dilate_sizeA )
+        {
+            element2 = getStructuringElement( MORPH_ELLIPSE, Size(erode_sizeA,erode_sizeA) );
+            erode(roi_local_th, roi_local_th,element2 );
+        }
+
+
+        if( erode_sizeA )
+        {
+            element2 = getStructuringElement( MORPH_ELLIPSE, Size(dilate_sizeA,dilate_sizeA) );
+            dilate(roi_local_th,roi_local_th,element2);
+        }
+
+
+
+        if( erode_sizeA )
+        {
+            element2 = getStructuringElement( MORPH_ELLIPSE, Size(erode_sizeA,erode_sizeA) );
+            erode(roi_local_th,roi_local_th,element2);
+        }
     }
+    else{
 
+        if( erode_sizeA )
+        {
+            element2 = getStructuringElement( MORPH_ELLIPSE, Size(dilate_sizeA,dilate_sizeA) );
+            dilate(roi_local_th,roi_local_th,element2);
+        }
+  }
 
-    if( erode_sizeA )
-    {
-        element2 = getStructuringElement( MORPH_ELLIPSE, Size(dilate_sizeA,dilate_sizeA) );
-        dilate(roi_local_th,roi_local_th,element2);
-    }
-
-
-
-    if( erode_sizeA )
-    {
-        element2 = getStructuringElement( MORPH_ELLIPSE, Size(erode_sizeA,erode_sizeA) );
-        erode(roi_local_th,roi_local_th,element2);
-    }
 
 
 
     th_roi = QImage( roi_local_th.cols, roi_local_th.rows, QImage::Format_Grayscale8 );
+
 
     for( int i = 0; i < roi_local_th.rows; i++)
     {

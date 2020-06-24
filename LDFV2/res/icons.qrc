@@ -59,5 +59,6 @@
         <file>icons/bosnia.png</file>
         <file>icons/brasil.png</file>
         <file>icons/usa.png</file>
+        <file>icons/book-alt-2.png</file>
     </qresource>
 </RCC>

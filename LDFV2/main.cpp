@@ -135,26 +135,24 @@ bool InitDatabase()
     bool user_printer= false;
     bool user_LANGUAGE=false;
     bool user_RESTART=false;
+    bool user_Statistic =false;
 
     QString drive;
 
     GetConfig(user_p11, "SYSTEM/USE_PART11", false);
-
     GetConfig(user_LANGUAGE, "SYSTEM/USE_LANGUAGE", false);
-
     GetConfig(user_database, "SYSTEM/USE_DATABASE", false);
     GetConfig(drive, "SYSTEM/DRIVE", QString("ODBC Driver 17 for SQL Server"));
-
     GetConfig(user_printer, "SYSTEM/USE_PRINTER", false);
-
     GetConfig(user_RESTART, "SYSTEM/USE_RESTART", false);
+    GetConfig(user_RESTART, "SYSTEM/USE_STATISTIC", false);
 
-    qApp->setProperty("USE_DATABASE", user_database);
-    qApp->setProperty("USE_PART11",   user_p11);
-    qApp->setProperty("USE_PRINTER",  user_printer);
-    qApp->setProperty("USE_LANGUAGE", user_LANGUAGE);
-    qApp->setProperty("USE_RESTART",  user_RESTART);
-
+    qApp->setProperty("USE_DATABASE",  user_database);
+    qApp->setProperty("USE_PART11",    user_p11);
+    qApp->setProperty("USE_PRINTER",   user_printer);
+    qApp->setProperty("USE_LANGUAGE",  user_LANGUAGE);
+    qApp->setProperty("USE_RESTART",   user_RESTART);
+    qApp->setProperty("USE_STATISTIC", user_Statistic);
 
     if( user_p11 )
     {
@@ -208,7 +206,7 @@ bool GetTranslation(QTranslator& translate)
 
     QString s_lang, s_locale;
 
-    GetConfig(s_lang    , "SYSTEM/LANGUAGE"     , QString("pt-br") );
+    GetConfig(s_lang    , "SYSTEM/USE_LANGUAGE"     , QString("pt-br") );
     GetConfig(s_locale  , "SYSTEM/LOCALE"       , QString("br") );
 
 

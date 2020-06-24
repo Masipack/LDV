@@ -1,0 +1,1588 @@
+09:13:49.754|I|| --------- Sistema Inicializando --------- 
+09:13:49.755QIODevice::write (QSerialPort): device not open
+09:13:49.755|E||Porta serial ttyUSB0 indisponivel para uso
+09:13:49.755|W||WARNING: configuration SYSTEM/USE_RESTART not found
+09:13:49.783libpng warning: iCCP: known incorrect sRGB profile
+09:13:49.877|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+09:13:49.886libpng warning: iCCP: known incorrect sRGB profile
+09:13:59.482void FormLogin::on_btn_login_clicked() 137 false
+09:14:09.190|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:14:16.658|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:14:16.834|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:16:27.464|W|2|All elements are equal each other
+09:16:45.242QIODevice::write (QSerialPort): device not open
+09:16:45.495|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:16:46.071TOOL  0 --------------------------- 1
+09:16:46.071TOOL  1 --------------------------- 2
+09:16:46.587QIODevice::write (QSerialPort): device not open
+09:16:47.111QIODevice::write (QSerialPort): device not open
+09:16:47.637QIODevice::write (QSerialPort): device not open
+09:16:48.161QIODevice::write (QSerialPort): device not open
+09:16:48.687QIODevice::write (QSerialPort): device not open
+09:16:49.073|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:16:49.211QIODevice::write (QSerialPort): device not open
+09:16:49.409|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:16:49.409void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994843415.jpg"
+09:16:49.589QIODevice::write (QSerialPort): device not open
+09:16:49.596virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1292.35,628.806)
+09:16:49.609|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:16:49.609void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994843415.jpg"
+09:16:49.775QIODevice::write (QSerialPort): device not open
+09:16:49.780virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1292.35,628.806)
+09:16:49.918QIODevice::write (QSerialPort): device not open
+09:16:50.247QIODevice::write (QSerialPort): device not open
+09:16:50.747QIODevice::write (QSerialPort): device not open
+09:16:51.247QIODevice::write (QSerialPort): device not open
+09:16:51.746QIODevice::write (QSerialPort): device not open
+09:16:52.247QIODevice::write (QSerialPort): device not open
+09:16:52.746QIODevice::write (QSerialPort): device not open
+09:16:53.246QIODevice::write (QSerialPort): device not open
+09:16:53.747QIODevice::write (QSerialPort): device not open
+09:16:54.246QIODevice::write (QSerialPort): device not open
+09:16:54.746QIODevice::write (QSerialPort): device not open
+09:16:55.247QIODevice::write (QSerialPort): device not open
+09:16:55.747QIODevice::write (QSerialPort): device not open
+09:16:56.246QIODevice::write (QSerialPort): device not open
+09:16:56.746QIODevice::write (QSerialPort): device not open
+09:16:57.278QIODevice::write (QSerialPort): device not open
+09:16:57.746QIODevice::write (QSerialPort): device not open
+09:16:58.267QIODevice::write (QSerialPort): device not open
+09:16:58.746QIODevice::write (QSerialPort): device not open
+09:16:59.247QIODevice::write (QSerialPort): device not open
+09:16:59.746QIODevice::write (QSerialPort): device not open
+09:17:00.246QIODevice::write (QSerialPort): device not open
+09:17:00.747QIODevice::write (QSerialPort): device not open
+09:17:01.247QIODevice::write (QSerialPort): device not open
+09:17:01.747QIODevice::write (QSerialPort): device not open
+09:17:02.247QIODevice::write (QSerialPort): device not open
+09:17:02.746QIODevice::write (QSerialPort): device not open
+09:17:03.246QIODevice::write (QSerialPort): device not open
+09:17:03.747QIODevice::write (QSerialPort): device not open
+09:17:04.246QIODevice::write (QSerialPort): device not open
+09:17:04.746QIODevice::write (QSerialPort): device not open
+09:17:05.247QIODevice::write (QSerialPort): device not open
+09:17:05.747QIODevice::write (QSerialPort): device not open
+09:17:06.247QIODevice::write (QSerialPort): device not open
+09:17:06.747QIODevice::write (QSerialPort): device not open
+09:17:07.247QIODevice::write (QSerialPort): device not open
+09:17:07.746QIODevice::write (QSerialPort): device not open
+09:17:08.246QIODevice::write (QSerialPort): device not open
+09:17:08.746QIODevice::write (QSerialPort): device not open
+09:17:09.246QIODevice::write (QSerialPort): device not open
+09:17:09.746QIODevice::write (QSerialPort): device not open
+09:17:10.249QIODevice::write (QSerialPort): device not open
+09:17:10.747QIODevice::write (QSerialPort): device not open
+09:17:11.246QIODevice::write (QSerialPort): device not open
+09:17:11.746QIODevice::write (QSerialPort): device not open
+09:17:12.246QIODevice::write (QSerialPort): device not open
+09:17:12.746QIODevice::write (QSerialPort): device not open
+09:17:13.246QIODevice::write (QSerialPort): device not open
+09:17:13.746QIODevice::write (QSerialPort): device not open
+09:17:14.246QIODevice::write (QSerialPort): device not open
+09:17:14.747QIODevice::write (QSerialPort): device not open
+09:17:15.246QIODevice::write (QSerialPort): device not open
+09:17:15.747QIODevice::write (QSerialPort): device not open
+09:17:16.246QIODevice::write (QSerialPort): device not open
+09:17:16.746QIODevice::write (QSerialPort): device not open
+09:17:17.246QIODevice::write (QSerialPort): device not open
+09:17:17.746QIODevice::write (QSerialPort): device not open
+09:17:18.246QIODevice::write (QSerialPort): device not open
+09:17:18.746QIODevice::write (QSerialPort): device not open
+09:17:19.246QIODevice::write (QSerialPort): device not open
+09:17:19.746QIODevice::write (QSerialPort): device not open
+09:17:20.246QIODevice::write (QSerialPort): device not open
+09:17:20.746QIODevice::write (QSerialPort): device not open
+09:17:21.247QIODevice::write (QSerialPort): device not open
+09:17:21.746QIODevice::write (QSerialPort): device not open
+09:17:22.246QIODevice::write (QSerialPort): device not open
+09:17:22.747QIODevice::write (QSerialPort): device not open
+09:17:23.247QIODevice::write (QSerialPort): device not open
+09:17:23.746QIODevice::write (QSerialPort): device not open
+09:17:24.247QIODevice::write (QSerialPort): device not open
+09:17:24.747QIODevice::write (QSerialPort): device not open
+09:17:25.246QIODevice::write (QSerialPort): device not open
+09:17:25.747QIODevice::write (QSerialPort): device not open
+09:17:26.247QIODevice::write (QSerialPort): device not open
+09:17:26.747QIODevice::write (QSerialPort): device not open
+09:17:27.246QIODevice::write (QSerialPort): device not open
+09:17:27.746QIODevice::write (QSerialPort): device not open
+09:17:28.246QIODevice::write (QSerialPort): device not open
+09:17:28.747QIODevice::write (QSerialPort): device not open
+09:17:29.246QIODevice::write (QSerialPort): device not open
+09:17:29.746QIODevice::write (QSerialPort): device not open
+09:17:30.261QIODevice::write (QSerialPort): device not open
+09:17:30.747QIODevice::write (QSerialPort): device not open
+09:17:31.246QIODevice::write (QSerialPort): device not open
+09:17:31.746QIODevice::write (QSerialPort): device not open
+09:17:32.246QIODevice::write (QSerialPort): device not open
+09:17:32.791QIODevice::write (QSerialPort): device not open
+09:17:33.246QIODevice::write (QSerialPort): device not open
+09:17:33.747QIODevice::write (QSerialPort): device not open
+09:17:34.247QIODevice::write (QSerialPort): device not open
+09:17:34.747QIODevice::write (QSerialPort): device not open
+09:17:35.247QIODevice::write (QSerialPort): device not open
+09:17:35.747QIODevice::write (QSerialPort): device not open
+09:17:36.246QIODevice::write (QSerialPort): device not open
+09:17:36.747QIODevice::write (QSerialPort): device not open
+09:17:37.247QIODevice::write (QSerialPort): device not open
+09:17:37.746QIODevice::write (QSerialPort): device not open
+09:17:38.247QIODevice::write (QSerialPort): device not open
+09:17:38.747QIODevice::write (QSerialPort): device not open
+09:17:39.247QIODevice::write (QSerialPort): device not open
+09:17:39.747QIODevice::write (QSerialPort): device not open
+09:17:40.247QIODevice::write (QSerialPort): device not open
+09:17:40.747QIODevice::write (QSerialPort): device not open
+09:17:41.247QIODevice::write (QSerialPort): device not open
+09:17:41.747QIODevice::write (QSerialPort): device not open
+09:17:42.246QIODevice::write (QSerialPort): device not open
+09:17:42.747QIODevice::write (QSerialPort): device not open
+09:17:43.246QIODevice::write (QSerialPort): device not open
+09:17:43.746QIODevice::write (QSerialPort): device not open
+09:17:44.247QIODevice::write (QSerialPort): device not open
+09:17:44.746QIODevice::write (QSerialPort): device not open
+09:17:45.247QIODevice::write (QSerialPort): device not open
+09:17:45.746QIODevice::write (QSerialPort): device not open
+09:17:46.246QIODevice::write (QSerialPort): device not open
+09:17:46.746QIODevice::write (QSerialPort): device not open
+09:17:47.246QIODevice::write (QSerialPort): device not open
+09:17:47.746QIODevice::write (QSerialPort): device not open
+09:17:48.246QIODevice::write (QSerialPort): device not open
+09:17:48.746QIODevice::write (QSerialPort): device not open
+09:17:49.246QIODevice::write (QSerialPort): device not open
+09:17:49.747QIODevice::write (QSerialPort): device not open
+09:17:50.246QIODevice::write (QSerialPort): device not open
+09:17:50.746QIODevice::write (QSerialPort): device not open
+09:17:51.246QIODevice::write (QSerialPort): device not open
+09:17:51.746QIODevice::write (QSerialPort): device not open
+09:17:52.246QIODevice::write (QSerialPort): device not open
+09:17:52.746QIODevice::write (QSerialPort): device not open
+09:17:53.246QIODevice::write (QSerialPort): device not open
+09:17:53.746QIODevice::write (QSerialPort): device not open
+09:17:54.247QIODevice::write (QSerialPort): device not open
+09:17:54.747QIODevice::write (QSerialPort): device not open
+09:17:55.247QIODevice::write (QSerialPort): device not open
+09:17:55.746QIODevice::write (QSerialPort): device not open
+09:17:56.246QIODevice::write (QSerialPort): device not open
+09:17:56.747QIODevice::write (QSerialPort): device not open
+09:17:57.247QIODevice::write (QSerialPort): device not open
+09:17:57.747QIODevice::write (QSerialPort): device not open
+09:17:58.247QIODevice::write (QSerialPort): device not open
+09:17:58.746QIODevice::write (QSerialPort): device not open
+09:17:59.246QIODevice::write (QSerialPort): device not open
+09:17:59.746QIODevice::write (QSerialPort): device not open
+09:18:00.246QIODevice::write (QSerialPort): device not open
+09:18:00.746QIODevice::write (QSerialPort): device not open
+09:18:01.246QIODevice::write (QSerialPort): device not open
+09:18:01.746QIODevice::write (QSerialPort): device not open
+09:18:02.246QIODevice::write (QSerialPort): device not open
+09:18:02.747QIODevice::write (QSerialPort): device not open
+09:18:03.246QIODevice::write (QSerialPort): device not open
+09:18:03.746QIODevice::write (QSerialPort): device not open
+09:18:04.247QIODevice::write (QSerialPort): device not open
+09:18:04.747QIODevice::write (QSerialPort): device not open
+09:18:05.247QIODevice::write (QSerialPort): device not open
+09:18:05.747QIODevice::write (QSerialPort): device not open
+09:18:06.247QIODevice::write (QSerialPort): device not open
+09:18:06.747QIODevice::write (QSerialPort): device not open
+09:18:07.247QIODevice::write (QSerialPort): device not open
+09:18:07.746QIODevice::write (QSerialPort): device not open
+09:18:08.246QIODevice::write (QSerialPort): device not open
+09:18:08.746QIODevice::write (QSerialPort): device not open
+09:18:09.246QIODevice::write (QSerialPort): device not open
+09:18:09.746QIODevice::write (QSerialPort): device not open
+09:18:10.248QIODevice::write (QSerialPort): device not open
+09:18:10.746QIODevice::write (QSerialPort): device not open
+09:18:11.246QIODevice::write (QSerialPort): device not open
+09:18:11.746QIODevice::write (QSerialPort): device not open
+09:18:12.247QIODevice::write (QSerialPort): device not open
+09:18:12.747QIODevice::write (QSerialPort): device not open
+09:18:13.247QIODevice::write (QSerialPort): device not open
+09:18:13.746QIODevice::write (QSerialPort): device not open
+09:18:14.247QIODevice::write (QSerialPort): device not open
+09:18:14.747QIODevice::write (QSerialPort): device not open
+09:18:15.246QIODevice::write (QSerialPort): device not open
+09:18:15.747QIODevice::write (QSerialPort): device not open
+09:18:16.247QIODevice::write (QSerialPort): device not open
+09:18:16.746QIODevice::write (QSerialPort): device not open
+09:18:17.247QIODevice::write (QSerialPort): device not open
+09:18:17.747QIODevice::write (QSerialPort): device not open
+09:18:18.246QIODevice::write (QSerialPort): device not open
+09:18:18.747QIODevice::write (QSerialPort): device not open
+09:18:19.246QIODevice::write (QSerialPort): device not open
+09:18:19.747QIODevice::write (QSerialPort): device not open
+09:18:20.247QIODevice::write (QSerialPort): device not open
+09:18:20.747QIODevice::write (QSerialPort): device not open
+09:18:21.247QIODevice::write (QSerialPort): device not open
+09:18:21.746QIODevice::write (QSerialPort): device not open
+09:18:21.815TOOL  0 --------------------------- 1
+09:18:21.815TOOL  1 --------------------------- 2
+09:18:22.246QIODevice::write (QSerialPort): device not open
+09:18:22.747QIODevice::write (QSerialPort): device not open
+09:18:23.016TOOL  0 --------------------------- 1
+09:18:23.016TOOL  1 --------------------------- 2
+09:18:23.017libpng warning: iCCP: known incorrect sRGB profile
+09:18:23.246QIODevice::write (QSerialPort): device not open
+09:18:23.746QIODevice::write (QSerialPort): device not open
+09:18:24.247QIODevice::write (QSerialPort): device not open
+09:18:50.618|I|2| --------- Sistema Desligando --------- 
+09:19:14.789|I|| --------- Sistema Inicializando --------- 
+09:19:14.789QIODevice::write (QSerialPort): device not open
+09:19:14.789|E||Porta serial ttyUSB0 indisponivel para uso
+09:19:14.789|W||WARNING: configuration SYSTEM/USE_RESTART not found
+09:19:14.796libpng warning: iCCP: known incorrect sRGB profile
+09:19:14.891|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+09:19:14.908libpng warning: iCCP: known incorrect sRGB profile
+09:19:25.346void FormLogin::on_btn_login_clicked() 137 false
+09:19:30.872void FormLogin::on_btn_login_clicked() 137 false
+09:19:36.017|W|2|WARNING: configuration PERMISSIONS/User_Config not found
+09:20:11.224void FormNewUser::on_btn_new_clicked() 289 true
+09:20:11.224libpng warning: iCCP: known incorrect sRGB profile
+09:20:12.738|W|2|WARNING: configuration PERMISSIONS/User_Config not found
+09:20:31.223void FormLogin::on_btn_login_clicked() 137 true
+09:20:46.585|I|0| --------- Sistema Desligando --------- 
+09:20:57.849|I|| --------- Sistema Inicializando --------- 
+09:20:57.849QIODevice::write (QSerialPort): device not open
+09:20:57.849|E||Porta serial ttyUSB0 indisponivel para uso
+09:20:57.849|W||WARNING: configuration SYSTEM/USE_RESTART not found
+09:20:57.859libpng warning: iCCP: known incorrect sRGB profile
+09:20:57.958|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+09:20:57.968libpng warning: iCCP: known incorrect sRGB profile
+09:21:20.111void FormLogin::on_btn_login_clicked() 137 false
+09:21:34.687void FormLogin::on_btn_login_clicked() 137 true
+09:21:58.431|I|0| --------- Sistema Desligando --------- 
+09:23:26.771|I|| --------- Sistema Inicializando --------- 
+09:23:26.771QIODevice::write (QSerialPort): device not open
+09:23:26.771|E||Porta serial ttyUSB0 indisponivel para uso
+09:23:26.771|W||WARNING: configuration SYSTEM/USE_RESTART not found
+09:23:26.780libpng warning: iCCP: known incorrect sRGB profile
+09:23:26.872|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+09:23:26.882libpng warning: iCCP: known incorrect sRGB profile
+09:23:37.286void FormLogin::on_btn_login_clicked() 137 false
+09:23:45.338QIODevice::write (QSerialPort): device not open
+09:23:45.611|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+09:23:46.127TOOL  0 --------------------------- 1
+09:23:46.127TOOL  1 --------------------------- 2
+09:23:46.642QIODevice::write (QSerialPort): device not open
+09:23:47.167QIODevice::write (QSerialPort): device not open
+09:23:47.692QIODevice::write (QSerialPort): device not open
+09:23:47.997|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:23:48.149|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:23:48.149void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994843415.jpg"
+09:23:48.329QIODevice::write (QSerialPort): device not open
+09:23:48.332virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1292.35,628.806)
+09:23:48.341QIODevice::write (QSerialPort): device not open
+09:23:48.345|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:23:48.345void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994843415.jpg"
+09:23:48.510QIODevice::write (QSerialPort): device not open
+09:23:48.514virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1292.35,628.806)
+09:23:48.742QIODevice::write (QSerialPort): device not open
+09:23:49.246QIODevice::write (QSerialPort): device not open
+09:23:49.746QIODevice::write (QSerialPort): device not open
+09:23:50.246QIODevice::write (QSerialPort): device not open
+09:23:50.746QIODevice::write (QSerialPort): device not open
+09:23:51.246QIODevice::write (QSerialPort): device not open
+09:23:51.746QIODevice::write (QSerialPort): device not open
+09:23:52.246QIODevice::write (QSerialPort): device not open
+09:23:52.746QIODevice::write (QSerialPort): device not open
+09:23:53.246QIODevice::write (QSerialPort): device not open
+09:23:53.746QIODevice::write (QSerialPort): device not open
+09:23:54.061|I|2|Editando a posição da ferramenta
+09:23:54.246QIODevice::write (QSerialPort): device not open
+09:23:54.746QIODevice::write (QSerialPort): device not open
+09:23:55.246QIODevice::write (QSerialPort): device not open
+09:23:55.746QIODevice::write (QSerialPort): device not open
+09:23:56.246QIODevice::write (QSerialPort): device not open
+09:23:56.746QIODevice::write (QSerialPort): device not open
+09:23:57.246QIODevice::write (QSerialPort): device not open
+09:23:57.746QIODevice::write (QSerialPort): device not open
+09:23:58.250QIODevice::write (QSerialPort): device not open
+09:23:58.746QIODevice::write (QSerialPort): device not open
+09:23:59.246QIODevice::write (QSerialPort): device not open
+09:23:59.746QIODevice::write (QSerialPort): device not open
+09:24:00.246QIODevice::write (QSerialPort): device not open
+09:24:00.747QIODevice::write (QSerialPort): device not open
+09:24:01.247QIODevice::write (QSerialPort): device not open
+09:24:01.747QIODevice::write (QSerialPort): device not open
+09:24:02.246QIODevice::write (QSerialPort): device not open
+09:24:02.677|I|2|Editando a posição da ferramenta
+09:24:02.746QIODevice::write (QSerialPort): device not open
+09:24:03.247QIODevice::write (QSerialPort): device not open
+09:24:03.746QIODevice::write (QSerialPort): device not open
+09:24:04.247QIODevice::write (QSerialPort): device not open
+09:24:04.533|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:04.533void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994858414.jpg"
+09:24:04.675QIODevice::write (QSerialPort): device not open
+09:24:04.678virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:04.694QIODevice::write (QSerialPort): device not open
+09:24:04.744QIODevice::write (QSerialPort): device not open
+09:24:04.746QIODevice::write (QSerialPort): device not open
+09:24:05.247QIODevice::write (QSerialPort): device not open
+09:24:05.597|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:05.597void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994859979.jpg"
+09:24:05.736QIODevice::write (QSerialPort): device not open
+09:24:05.739virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:05.749QIODevice::write (QSerialPort): device not open
+09:24:05.755QIODevice::write (QSerialPort): device not open
+09:24:05.806QIODevice::write (QSerialPort): device not open
+09:24:06.246QIODevice::write (QSerialPort): device not open
+09:24:06.746QIODevice::write (QSerialPort): device not open
+09:24:07.246QIODevice::write (QSerialPort): device not open
+09:24:07.772QIODevice::write (QSerialPort): device not open
+09:24:08.246QIODevice::write (QSerialPort): device not open
+09:24:08.746QIODevice::write (QSerialPort): device not open
+09:24:09.246QIODevice::write (QSerialPort): device not open
+09:24:09.389|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:09.389void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:09.540QIODevice::write (QSerialPort): device not open
+09:24:09.542virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:09.558QIODevice::write (QSerialPort): device not open
+09:24:09.608QIODevice::write (QSerialPort): device not open
+09:24:09.746QIODevice::write (QSerialPort): device not open
+09:24:10.149|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:10.149void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994843415.jpg"
+09:24:10.280QIODevice::write (QSerialPort): device not open
+09:24:10.282virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:10.292QIODevice::write (QSerialPort): device not open
+09:24:10.297QIODevice::write (QSerialPort): device not open
+09:24:10.348QIODevice::write (QSerialPort): device not open
+09:24:10.747QIODevice::write (QSerialPort): device not open
+09:24:10.861|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:10.861void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994849845.jpg"
+09:24:11.025QIODevice::write (QSerialPort): device not open
+09:24:11.027virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:11.043QIODevice::write (QSerialPort): device not open
+09:24:11.093QIODevice::write (QSerialPort): device not open
+09:24:11.246QIODevice::write (QSerialPort): device not open
+09:24:11.445|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:11.445void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994858414.jpg"
+09:24:11.584QIODevice::write (QSerialPort): device not open
+09:24:11.586virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:11.603QIODevice::write (QSerialPort): device not open
+09:24:11.654QIODevice::write (QSerialPort): device not open
+09:24:11.746QIODevice::write (QSerialPort): device not open
+09:24:11.861|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:11.861void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994859979.jpg"
+09:24:12.024QIODevice::write (QSerialPort): device not open
+09:24:12.026virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:12.043QIODevice::write (QSerialPort): device not open
+09:24:12.093QIODevice::write (QSerialPort): device not open
+09:24:12.181|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:12.181void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:12.327QIODevice::write (QSerialPort): device not open
+09:24:12.329virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:12.339QIODevice::write (QSerialPort): device not open
+09:24:12.346QIODevice::write (QSerialPort): device not open
+09:24:12.397QIODevice::write (QSerialPort): device not open
+09:24:12.469|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:12.469void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994843415.jpg"
+09:24:12.635QIODevice::write (QSerialPort): device not open
+09:24:12.637virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:12.654QIODevice::write (QSerialPort): device not open
+09:24:12.701|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:12.701void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994849845.jpg"
+09:24:12.852QIODevice::write (QSerialPort): device not open
+09:24:12.854virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:12.864QIODevice::write (QSerialPort): device not open
+09:24:12.864QIODevice::write (QSerialPort): device not open
+09:24:12.874QIODevice::write (QSerialPort): device not open
+09:24:12.909|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:12.909void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994858414.jpg"
+09:24:13.072QIODevice::write (QSerialPort): device not open
+09:24:13.075virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:13.085QIODevice::write (QSerialPort): device not open
+09:24:13.091QIODevice::write (QSerialPort): device not open
+09:24:13.094|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:13.094void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994859979.jpg"
+09:24:13.248QIODevice::write (QSerialPort): device not open
+09:24:13.253virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:13.271QIODevice::write (QSerialPort): device not open
+09:24:13.272QIODevice::write (QSerialPort): device not open
+09:24:13.281|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:13.281void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:13.436QIODevice::write (QSerialPort): device not open
+09:24:13.440virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:13.569|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:13.569void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:13.738QIODevice::write (QSerialPort): device not open
+09:24:13.740virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:13.861|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:13.861void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:14.035QIODevice::write (QSerialPort): device not open
+09:24:14.038virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:14.047QIODevice::write (QSerialPort): device not open
+09:24:14.051|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:14.051void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:14.232QIODevice::write (QSerialPort): device not open
+09:24:14.235virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:14.361|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:14.361void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:14.533QIODevice::write (QSerialPort): device not open
+09:24:14.535virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:14.545QIODevice::write (QSerialPort): device not open
+09:24:14.549|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:14.549void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:14.728QIODevice::write (QSerialPort): device not open
+09:24:14.731virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:14.853|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:14.853void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:15.024QIODevice::write (QSerialPort): device not open
+09:24:15.027virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:15.036QIODevice::write (QSerialPort): device not open
+09:24:15.041|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:15.041void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:15.214QIODevice::write (QSerialPort): device not open
+09:24:15.219virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:15.343|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:15.343void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:15.515QIODevice::write (QSerialPort): device not open
+09:24:15.517virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:15.527QIODevice::write (QSerialPort): device not open
+09:24:15.531|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:15.531void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:15.699QIODevice::write (QSerialPort): device not open
+09:24:15.703virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:15.828|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:15.828void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:15.999QIODevice::write (QSerialPort): device not open
+09:24:16.001virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:16.011QIODevice::write (QSerialPort): device not open
+09:24:16.015|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:16.015void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:16.179QIODevice::write (QSerialPort): device not open
+09:24:16.183virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:16.273|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:16.273void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:16.442QIODevice::write (QSerialPort): device not open
+09:24:16.444virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:16.458QIODevice::write (QSerialPort): device not open
+09:24:16.463|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:16.463void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:16.637QIODevice::write (QSerialPort): device not open
+09:24:16.641virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:16.772|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:16.772void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:16.941QIODevice::write (QSerialPort): device not open
+09:24:16.944virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:16.953QIODevice::write (QSerialPort): device not open
+09:24:16.957|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:16.957void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:17.122QIODevice::write (QSerialPort): device not open
+09:24:17.126virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:17.257|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:17.257void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:17.430QIODevice::write (QSerialPort): device not open
+09:24:17.432virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:17.442QIODevice::write (QSerialPort): device not open
+09:24:17.452|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:17.452void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:17.623QIODevice::write (QSerialPort): device not open
+09:24:17.626virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:17.749|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:17.749void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:17.921QIODevice::write (QSerialPort): device not open
+09:24:17.923virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:17.933QIODevice::write (QSerialPort): device not open
+09:24:17.937|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:17.937void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:18.108QIODevice::write (QSerialPort): device not open
+09:24:18.111virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:18.242|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:18.242void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:18.412QIODevice::write (QSerialPort): device not open
+09:24:18.414virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:18.424QIODevice::write (QSerialPort): device not open
+09:24:18.428|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:18.428void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:18.594QIODevice::write (QSerialPort): device not open
+09:24:18.598virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:18.723|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:18.723void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:18.895QIODevice::write (QSerialPort): device not open
+09:24:18.897virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:18.907QIODevice::write (QSerialPort): device not open
+09:24:18.912|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:18.912void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:19.077QIODevice::write (QSerialPort): device not open
+09:24:19.081virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:19.208|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:19.208void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:19.381QIODevice::write (QSerialPort): device not open
+09:24:19.383virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:19.392QIODevice::write (QSerialPort): device not open
+09:24:19.397|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:19.397void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:19.581QIODevice::write (QSerialPort): device not open
+09:24:19.583virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:19.709|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:19.709void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:19.880QIODevice::write (QSerialPort): device not open
+09:24:19.882virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:19.892QIODevice::write (QSerialPort): device not open
+09:24:19.896|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:19.896void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:20.062QIODevice::write (QSerialPort): device not open
+09:24:20.066virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:20.190|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:20.190void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:20.362QIODevice::write (QSerialPort): device not open
+09:24:20.365virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:20.374QIODevice::write (QSerialPort): device not open
+09:24:20.379|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:20.379void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:20.564QIODevice::write (QSerialPort): device not open
+09:24:20.567virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:20.717|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:20.717void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:20.885QIODevice::write (QSerialPort): device not open
+09:24:20.887virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:20.897QIODevice::write (QSerialPort): device not open
+09:24:20.901|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:20.901void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:21.079QIODevice::write (QSerialPort): device not open
+09:24:21.082virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:21.206|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:21.206void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:21.379QIODevice::write (QSerialPort): device not open
+09:24:21.381virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:21.391QIODevice::write (QSerialPort): device not open
+09:24:21.401|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:21.401void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:21.587QIODevice::write (QSerialPort): device not open
+09:24:21.589virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:21.711|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:21.711void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:21.879QIODevice::write (QSerialPort): device not open
+09:24:21.882virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:21.891QIODevice::write (QSerialPort): device not open
+09:24:21.895|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:21.895void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:22.063QIODevice::write (QSerialPort): device not open
+09:24:22.067virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:22.190|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:22.190void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:22.363QIODevice::write (QSerialPort): device not open
+09:24:22.365virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:22.380QIODevice::write (QSerialPort): device not open
+09:24:22.384|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:22.384void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:22.558QIODevice::write (QSerialPort): device not open
+09:24:22.560virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:22.684|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:22.684void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:22.854QIODevice::write (QSerialPort): device not open
+09:24:22.856virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:22.866QIODevice::write (QSerialPort): device not open
+09:24:22.870|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:22.870void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:23.046QIODevice::write (QSerialPort): device not open
+09:24:23.049virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:23.193|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:23.193void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:23.375QIODevice::write (QSerialPort): device not open
+09:24:23.377virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:23.387QIODevice::write (QSerialPort): device not open
+09:24:23.391|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:23.391void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:23.555QIODevice::write (QSerialPort): device not open
+09:24:23.559virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:23.685|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:23.685void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:23.855QIODevice::write (QSerialPort): device not open
+09:24:23.857virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:23.867QIODevice::write (QSerialPort): device not open
+09:24:23.871|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:23.871void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:24.041QIODevice::write (QSerialPort): device not open
+09:24:24.044virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:24.170|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:24.170void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:24.343QIODevice::write (QSerialPort): device not open
+09:24:24.345virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:24.355QIODevice::write (QSerialPort): device not open
+09:24:24.359|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:24.359void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:24.523QIODevice::write (QSerialPort): device not open
+09:24:24.527virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:24.652|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:24.652void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:24.822QIODevice::write (QSerialPort): device not open
+09:24:24.824virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:24.835QIODevice::write (QSerialPort): device not open
+09:24:24.839|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:24.839void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:25.021QIODevice::write (QSerialPort): device not open
+09:24:25.024virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:25.151|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:25.151void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:25.322QIODevice::write (QSerialPort): device not open
+09:24:25.324virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:25.333QIODevice::write (QSerialPort): device not open
+09:24:25.338|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:25.338void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:25.506QIODevice::write (QSerialPort): device not open
+09:24:25.510virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:25.638|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:25.638void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:25.810QIODevice::write (QSerialPort): device not open
+09:24:25.812virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:25.821QIODevice::write (QSerialPort): device not open
+09:24:25.825|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:25.825void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:25.991QIODevice::write (QSerialPort): device not open
+09:24:25.995virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:26.121|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:26.121void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:26.291QIODevice::write (QSerialPort): device not open
+09:24:26.294virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:26.303QIODevice::write (QSerialPort): device not open
+09:24:26.307|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:26.307void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:26.476QIODevice::write (QSerialPort): device not open
+09:24:26.480virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:26.620|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:26.620void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:26.791QIODevice::write (QSerialPort): device not open
+09:24:26.793virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:26.803QIODevice::write (QSerialPort): device not open
+09:24:26.807|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:26.807void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:26.971QIODevice::write (QSerialPort): device not open
+09:24:26.975virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:27.103|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:27.103void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:27.275QIODevice::write (QSerialPort): device not open
+09:24:27.277virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:27.288QIODevice::write (QSerialPort): device not open
+09:24:27.292|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:27.292void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:27.466QIODevice::write (QSerialPort): device not open
+09:24:27.470virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:27.596|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:27.596void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:27.769QIODevice::write (QSerialPort): device not open
+09:24:27.771virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:27.781QIODevice::write (QSerialPort): device not open
+09:24:27.785|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:27.786void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:27.954QIODevice::write (QSerialPort): device not open
+09:24:27.958virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:28.085|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:28.085void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:28.257QIODevice::write (QSerialPort): device not open
+09:24:28.259virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:28.274QIODevice::write (QSerialPort): device not open
+09:24:28.278|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:28.278void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:28.453QIODevice::write (QSerialPort): device not open
+09:24:28.458virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:28.581|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:28.581void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:28.752QIODevice::write (QSerialPort): device not open
+09:24:28.755virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:28.764QIODevice::write (QSerialPort): device not open
+09:24:28.769|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:28.769void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:28.936QIODevice::write (QSerialPort): device not open
+09:24:28.940virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:29.067|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:29.067void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:29.238QIODevice::write (QSerialPort): device not open
+09:24:29.241virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:29.255|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:29.255void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:29.437QIODevice::write (QSerialPort): device not open
+09:24:29.441virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:29.568QIODevice::write (QSerialPort): device not open
+09:24:29.570|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:29.570void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:29.741QIODevice::write (QSerialPort): device not open
+09:24:29.743virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:29.757|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:29.757void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:29.930QIODevice::write (QSerialPort): device not open
+09:24:29.933virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:30.057QIODevice::write (QSerialPort): device not open
+09:24:30.066|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:30.066void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:30.233QIODevice::write (QSerialPort): device not open
+09:24:30.235virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:30.249|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:30.249void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:30.432QIODevice::write (QSerialPort): device not open
+09:24:30.434virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:30.567QIODevice::write (QSerialPort): device not open
+09:24:30.582|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:30.582void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:30.747QIODevice::write (QSerialPort): device not open
+09:24:30.749virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:30.760QIODevice::write (QSerialPort): device not open
+09:24:30.764|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:30.764void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:30.932QIODevice::write (QSerialPort): device not open
+09:24:30.936virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:31.062|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:31.063void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:31.236QIODevice::write (QSerialPort): device not open
+09:24:31.238virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:31.251|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:31.251void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:31.431QIODevice::write (QSerialPort): device not open
+09:24:31.434virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:31.556QIODevice::write (QSerialPort): device not open
+09:24:31.558|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:31.558void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:31.729QIODevice::write (QSerialPort): device not open
+09:24:31.731virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:31.744|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:31.744void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:31.917QIODevice::write (QSerialPort): device not open
+09:24:31.921virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:32.050QIODevice::write (QSerialPort): device not open
+09:24:32.052|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:32.052void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:32.226QIODevice::write (QSerialPort): device not open
+09:24:32.228virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:32.241|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:32.242void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:32.424QIODevice::write (QSerialPort): device not open
+09:24:32.428virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:32.555QIODevice::write (QSerialPort): device not open
+09:24:32.556|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:32.557void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:32.729QIODevice::write (QSerialPort): device not open
+09:24:32.731virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:32.752|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:32.752void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:32.944QIODevice::write (QSerialPort): device not open
+09:24:32.946virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:33.072QIODevice::write (QSerialPort): device not open
+09:24:33.086|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:33.086void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:33.260QIODevice::write (QSerialPort): device not open
+09:24:33.262virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:33.272QIODevice::write (QSerialPort): device not open
+09:24:33.277|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:33.277void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:33.462QIODevice::write (QSerialPort): device not open
+09:24:33.465virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:33.588|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:33.588void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:33.757QIODevice::write (QSerialPort): device not open
+09:24:33.759virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:33.769QIODevice::write (QSerialPort): device not open
+09:24:33.773|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:33.773void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:33.943QIODevice::write (QSerialPort): device not open
+09:24:33.947virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:34.086|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:34.086void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:34.247QIODevice::write (QSerialPort): device not open
+09:24:34.250virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:34.259QIODevice::write (QSerialPort): device not open
+09:24:34.264|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:34.264void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:34.432QIODevice::write (QSerialPort): device not open
+09:24:34.436virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:34.572|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:34.572void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:34.738QIODevice::write (QSerialPort): device not open
+09:24:34.740virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:34.754|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:34.754void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:34.914QIODevice::write (QSerialPort): device not open
+09:24:34.918virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:35.043QIODevice::write (QSerialPort): device not open
+09:24:35.057|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:35.057void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:35.232QIODevice::write (QSerialPort): device not open
+09:24:35.235virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:35.248|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:35.248void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:35.412QIODevice::write (QSerialPort): device not open
+09:24:35.416virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:35.543QIODevice::write (QSerialPort): device not open
+09:24:35.570|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:35.570void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:35.732QIODevice::write (QSerialPort): device not open
+09:24:35.734virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:35.747|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:35.747void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:35.912QIODevice::write (QSerialPort): device not open
+09:24:35.916virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:36.042QIODevice::write (QSerialPort): device not open
+09:24:36.056|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:36.056void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:36.221QIODevice::write (QSerialPort): device not open
+09:24:36.223virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:36.236|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:36.236void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:36.374QIODevice::write (QSerialPort): device not open
+09:24:36.376virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:36.496QIODevice::write (QSerialPort): device not open
+09:24:36.510|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:36.510void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:36.674QIODevice::write (QSerialPort): device not open
+09:24:36.676virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:36.690|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:36.690void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:36.853QIODevice::write (QSerialPort): device not open
+09:24:36.857virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:36.992QIODevice::write (QSerialPort): device not open
+09:24:37.001|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:37.001void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:37.172QIODevice::write (QSerialPort): device not open
+09:24:37.174virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:37.188|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:37.188void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:37.351QIODevice::write (QSerialPort): device not open
+09:24:37.356virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:37.484QIODevice::write (QSerialPort): device not open
+09:24:37.497|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:37.497void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:37.664QIODevice::write (QSerialPort): device not open
+09:24:37.666virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:37.680|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:37.680void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:37.843QIODevice::write (QSerialPort): device not open
+09:24:37.848virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:37.980QIODevice::write (QSerialPort): device not open
+09:24:37.982|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:37.982void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:38.160QIODevice::write (QSerialPort): device not open
+09:24:38.162virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:38.175|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:38.175void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:38.339QIODevice::write (QSerialPort): device not open
+09:24:38.343virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:38.472QIODevice::write (QSerialPort): device not open
+09:24:38.487|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:38.487void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:38.661QIODevice::write (QSerialPort): device not open
+09:24:38.664virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:38.678|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:38.678void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:38.849QIODevice::write (QSerialPort): device not open
+09:24:38.853virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:38.991QIODevice::write (QSerialPort): device not open
+09:24:39.005|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:39.005void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:39.169QIODevice::write (QSerialPort): device not open
+09:24:39.171virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:39.185|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:39.186void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:39.350QIODevice::write (QSerialPort): device not open
+09:24:39.354virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:39.479QIODevice::write (QSerialPort): device not open
+09:24:39.493|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:39.493void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:39.657QIODevice::write (QSerialPort): device not open
+09:24:39.660virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:39.674|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:39.674void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:39.834QIODevice::write (QSerialPort): device not open
+09:24:39.838virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:39.967QIODevice::write (QSerialPort): device not open
+09:24:39.994|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:39.994void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:40.155QIODevice::write (QSerialPort): device not open
+09:24:40.158virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:40.172|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:40.172void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:40.343QIODevice::write (QSerialPort): device not open
+09:24:40.347virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:40.473QIODevice::write (QSerialPort): device not open
+09:24:40.487|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:40.487void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:40.651QIODevice::write (QSerialPort): device not open
+09:24:40.653virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:40.668|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:40.668void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:40.833QIODevice::write (QSerialPort): device not open
+09:24:40.837virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:40.964QIODevice::write (QSerialPort): device not open
+09:24:40.979|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:40.979void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:41.144QIODevice::write (QSerialPort): device not open
+09:24:41.147virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:41.160|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:41.160void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:41.322QIODevice::write (QSerialPort): device not open
+09:24:41.326virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:41.453QIODevice::write (QSerialPort): device not open
+09:24:41.455|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:41.455void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:41.625QIODevice::write (QSerialPort): device not open
+09:24:41.627virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:41.642|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:41.642void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:41.812QIODevice::write (QSerialPort): device not open
+09:24:41.816virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:41.942QIODevice::write (QSerialPort): device not open
+09:24:41.970|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:41.970void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:42.132QIODevice::write (QSerialPort): device not open
+09:24:42.135virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:42.149|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:42.149void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:42.322QIODevice::write (QSerialPort): device not open
+09:24:42.326virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:42.451QIODevice::write (QSerialPort): device not open
+09:24:42.453|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:42.453void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:42.625QIODevice::write (QSerialPort): device not open
+09:24:42.627virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:42.640|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:42.640void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:42.812QIODevice::write (QSerialPort): device not open
+09:24:42.816virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:42.941QIODevice::write (QSerialPort): device not open
+09:24:42.951|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:42.951void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:43.117QIODevice::write (QSerialPort): device not open
+09:24:43.119virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:43.133|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:43.133void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:43.295QIODevice::write (QSerialPort): device not open
+09:24:43.299virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:43.431QIODevice::write (QSerialPort): device not open
+09:24:43.433|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:43.433void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:43.607QIODevice::write (QSerialPort): device not open
+09:24:43.609virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:43.622|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:43.622void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:43.785QIODevice::write (QSerialPort): device not open
+09:24:43.789virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:43.917QIODevice::write (QSerialPort): device not open
+09:24:43.927|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:43.927void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:44.093QIODevice::write (QSerialPort): device not open
+09:24:44.095virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:44.108|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:44.108void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:44.279QIODevice::write (QSerialPort): device not open
+09:24:44.283virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:44.408QIODevice::write (QSerialPort): device not open
+09:24:44.422|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:44.422void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:44.586QIODevice::write (QSerialPort): device not open
+09:24:44.588virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:44.602|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:44.602void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:44.767QIODevice::write (QSerialPort): device not open
+09:24:44.771virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:44.896QIODevice::write (QSerialPort): device not open
+09:24:44.899|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:44.899void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:45.069QIODevice::write (QSerialPort): device not open
+09:24:45.071virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:45.084|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:45.085void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:45.251QIODevice::write (QSerialPort): device not open
+09:24:45.255virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:45.381QIODevice::write (QSerialPort): device not open
+09:24:45.383|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:45.383void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:45.562QIODevice::write (QSerialPort): device not open
+09:24:45.564virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:45.579|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:45.579void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:45.750QIODevice::write (QSerialPort): device not open
+09:24:45.754virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:45.880QIODevice::write (QSerialPort): device not open
+09:24:45.882|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:45.882void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:46.052QIODevice::write (QSerialPort): device not open
+09:24:46.055virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:46.068|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:46.068void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:46.228QIODevice::write (QSerialPort): device not open
+09:24:46.232virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:46.323|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:46.323void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:46.493QIODevice::write (QSerialPort): device not open
+09:24:46.495virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:46.506QIODevice::write (QSerialPort): device not open
+09:24:46.510|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:46.510void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:46.683QIODevice::write (QSerialPort): device not open
+09:24:46.687virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:46.821|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:46.821void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:46.993QIODevice::write (QSerialPort): device not open
+09:24:46.995virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:47.005QIODevice::write (QSerialPort): device not open
+09:24:47.008|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:47.009void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:47.169QIODevice::write (QSerialPort): device not open
+09:24:47.173virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:47.302|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:47.302void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:47.472QIODevice::write (QSerialPort): device not open
+09:24:47.474virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:47.484QIODevice::write (QSerialPort): device not open
+09:24:47.488|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:47.488void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:47.673QIODevice::write (QSerialPort): device not open
+09:24:47.676virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:47.800|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:47.800void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:47.970QIODevice::write (QSerialPort): device not open
+09:24:47.973virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:47.983QIODevice::write (QSerialPort): device not open
+09:24:47.987|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:47.987void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:48.149QIODevice::write (QSerialPort): device not open
+09:24:48.153virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:48.281|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:48.281void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:48.452QIODevice::write (QSerialPort): device not open
+09:24:48.455virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:48.464QIODevice::write (QSerialPort): device not open
+09:24:48.469|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:48.469void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:48.635QIODevice::write (QSerialPort): device not open
+09:24:48.639virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:48.772|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:48.772void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:48.945QIODevice::write (QSerialPort): device not open
+09:24:48.947virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:48.956QIODevice::write (QSerialPort): device not open
+09:24:48.961|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:48.961void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:49.128QIODevice::write (QSerialPort): device not open
+09:24:49.132virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:49.260|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:49.260void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:49.430QIODevice::write (QSerialPort): device not open
+09:24:49.432virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:49.442QIODevice::write (QSerialPort): device not open
+09:24:49.446|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:49.446void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:49.614QIODevice::write (QSerialPort): device not open
+09:24:49.618virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:49.746|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:49.746void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:49.914QIODevice::write (QSerialPort): device not open
+09:24:49.916virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:49.930QIODevice::write (QSerialPort): device not open
+09:24:49.933|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:49.933void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:50.104QIODevice::write (QSerialPort): device not open
+09:24:50.108virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:50.237|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:50.237void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:50.405QIODevice::write (QSerialPort): device not open
+09:24:50.408virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:50.418QIODevice::write (QSerialPort): device not open
+09:24:50.422|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:50.422void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:50.581QIODevice::write (QSerialPort): device not open
+09:24:50.585virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:50.726|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:50.726void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:50.890QIODevice::write (QSerialPort): device not open
+09:24:50.892virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:50.902QIODevice::write (QSerialPort): device not open
+09:24:50.906|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:50.906void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:51.068QIODevice::write (QSerialPort): device not open
+09:24:51.072virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:51.202|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:51.202void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:51.371QIODevice::write (QSerialPort): device not open
+09:24:51.373virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:51.383QIODevice::write (QSerialPort): device not open
+09:24:51.387|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:51.387void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:51.547QIODevice::write (QSerialPort): device not open
+09:24:51.551virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:51.681|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:51.681void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:51.852QIODevice::write (QSerialPort): device not open
+09:24:51.854virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:51.864QIODevice::write (QSerialPort): device not open
+09:24:51.868|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:51.868void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:52.035QIODevice::write (QSerialPort): device not open
+09:24:52.039virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:52.165|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:52.165void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:52.335QIODevice::write (QSerialPort): device not open
+09:24:52.337virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:52.347QIODevice::write (QSerialPort): device not open
+09:24:52.351|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:52.351void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:52.525QIODevice::write (QSerialPort): device not open
+09:24:52.529virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:52.662|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:52.662void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:52.834QIODevice::write (QSerialPort): device not open
+09:24:52.836virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:52.846QIODevice::write (QSerialPort): device not open
+09:24:52.850|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:52.850void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:53.012QIODevice::write (QSerialPort): device not open
+09:24:53.016virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:53.161|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:53.161void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:53.332QIODevice::write (QSerialPort): device not open
+09:24:53.335virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:53.344QIODevice::write (QSerialPort): device not open
+09:24:53.349|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:53.349void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:53.515QIODevice::write (QSerialPort): device not open
+09:24:53.519virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:53.654|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:53.654void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:53.826QIODevice::write (QSerialPort): device not open
+09:24:53.828virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:53.838QIODevice::write (QSerialPort): device not open
+09:24:53.842|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:53.842void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:54.006QIODevice::write (QSerialPort): device not open
+09:24:54.010virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:54.136|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:54.136void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:54.305QIODevice::write (QSerialPort): device not open
+09:24:54.308virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:54.318QIODevice::write (QSerialPort): device not open
+09:24:54.322|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:54.322void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:54.487QIODevice::write (QSerialPort): device not open
+09:24:54.491virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:54.616|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:54.617void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:54.787QIODevice::write (QSerialPort): device not open
+09:24:54.789virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:54.799QIODevice::write (QSerialPort): device not open
+09:24:54.803|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:54.803void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:54.970QIODevice::write (QSerialPort): device not open
+09:24:54.974virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:55.124|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:55.125void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:55.290QIODevice::write (QSerialPort): device not open
+09:24:55.293virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:55.302QIODevice::write (QSerialPort): device not open
+09:24:55.306|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:55.306void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:55.465QIODevice::write (QSerialPort): device not open
+09:24:55.470virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:55.596|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:55.596void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:55.759QIODevice::write (QSerialPort): device not open
+09:24:55.763virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:55.779QIODevice::write (QSerialPort): device not open
+09:24:55.783|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:55.783void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:55.953QIODevice::write (QSerialPort): device not open
+09:24:55.957virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:56.092|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:56.092void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:56.264QIODevice::write (QSerialPort): device not open
+09:24:56.266virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:56.275QIODevice::write (QSerialPort): device not open
+09:24:56.279|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:56.279void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:56.419QIODevice::write (QSerialPort): device not open
+09:24:56.421virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:56.547|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:56.547void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:56.718QIODevice::write (QSerialPort): device not open
+09:24:56.720virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:56.734|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:56.734void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:56.894QIODevice::write (QSerialPort): device not open
+09:24:56.898virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:57.025QIODevice::write (QSerialPort): device not open
+09:24:57.027|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:57.027void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:57.196QIODevice::write (QSerialPort): device not open
+09:24:57.198virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:57.212|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:57.212void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:57.377QIODevice::write (QSerialPort): device not open
+09:24:57.382virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:57.509QIODevice::write (QSerialPort): device not open
+09:24:57.512|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:57.512void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:57.680QIODevice::write (QSerialPort): device not open
+09:24:57.682virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:57.695|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:57.695void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:57.859QIODevice::write (QSerialPort): device not open
+09:24:57.864virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:57.990QIODevice::write (QSerialPort): device not open
+09:24:57.992|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:57.992void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:58.160QIODevice::write (QSerialPort): device not open
+09:24:58.162virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:58.176|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:58.177void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:58.334QIODevice::write (QSerialPort): device not open
+09:24:58.338virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:58.470QIODevice::write (QSerialPort): device not open
+09:24:58.472|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:58.472void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:58.642QIODevice::write (QSerialPort): device not open
+09:24:58.644virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:58.657|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:58.657void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:58.820QIODevice::write (QSerialPort): device not open
+09:24:58.824virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:58.952QIODevice::write (QSerialPort): device not open
+09:24:58.965|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:58.965void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:59.131QIODevice::write (QSerialPort): device not open
+09:24:59.134virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:59.147|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:59.148void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:59.319QIODevice::write (QSerialPort): device not open
+09:24:59.323virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:59.449QIODevice::write (QSerialPort): device not open
+09:24:59.478|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:59.478void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:59.639QIODevice::write (QSerialPort): device not open
+09:24:59.641virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:59.655|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:59.655void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:24:59.814QIODevice::write (QSerialPort): device not open
+09:24:59.818virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:24:59.945QIODevice::write (QSerialPort): device not open
+09:24:59.959|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:24:59.960void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:00.124QIODevice::write (QSerialPort): device not open
+09:25:00.127virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:00.140|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:00.140void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:00.307QIODevice::write (QSerialPort): device not open
+09:25:00.311virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:00.437QIODevice::write (QSerialPort): device not open
+09:25:00.451|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:00.451void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:00.615QIODevice::write (QSerialPort): device not open
+09:25:00.617virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:00.630|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:00.630void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:00.806QIODevice::write (QSerialPort): device not open
+09:25:00.808virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:00.932QIODevice::write (QSerialPort): device not open
+09:25:00.934|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:00.934void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:01.103QIODevice::write (QSerialPort): device not open
+09:25:01.105virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:01.119|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:01.119void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:01.283QIODevice::write (QSerialPort): device not open
+09:25:01.287virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:01.416QIODevice::write (QSerialPort): device not open
+09:25:01.430|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:01.430void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:01.596QIODevice::write (QSerialPort): device not open
+09:25:01.598virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:01.612|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:01.612void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:01.778QIODevice::write (QSerialPort): device not open
+09:25:01.782virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:01.911QIODevice::write (QSerialPort): device not open
+09:25:01.913|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:01.913void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:02.084QIODevice::write (QSerialPort): device not open
+09:25:02.086virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:02.100|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:02.100void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:02.295QIODevice::write (QSerialPort): device not open
+09:25:02.297virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:02.437QIODevice::write (QSerialPort): device not open
+09:25:02.447|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:02.447void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:02.614QIODevice::write (QSerialPort): device not open
+09:25:02.616virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:02.629|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:02.629void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:02.791QIODevice::write (QSerialPort): device not open
+09:25:02.796virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:02.932QIODevice::write (QSerialPort): device not open
+09:25:02.934|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:02.934void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:03.105QIODevice::write (QSerialPort): device not open
+09:25:03.107virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:03.120|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:03.121void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:03.284QIODevice::write (QSerialPort): device not open
+09:25:03.289virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:03.443QIODevice::write (QSerialPort): device not open
+09:25:03.459|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:03.459void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:03.619QIODevice::write (QSerialPort): device not open
+09:25:03.621virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:03.636|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:03.636void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:03.801QIODevice::write (QSerialPort): device not open
+09:25:03.805virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:03.932QIODevice::write (QSerialPort): device not open
+09:25:03.962|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:03.962void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:04.129QIODevice::write (QSerialPort): device not open
+09:25:04.131virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:04.145|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:04.146void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:04.345QIODevice::write (QSerialPort): device not open
+09:25:04.347virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:04.470QIODevice::write (QSerialPort): device not open
+09:25:04.477|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:04.478void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:04.646QIODevice::write (QSerialPort): device not open
+09:25:04.648virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:04.662|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:04.662void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:04.822QIODevice::write (QSerialPort): device not open
+09:25:04.827virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:04.966QIODevice::write (QSerialPort): device not open
+09:25:04.983|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:04.983void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:05.147QIODevice::write (QSerialPort): device not open
+09:25:05.149virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:05.163|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:05.163void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:05.328QIODevice::write (QSerialPort): device not open
+09:25:05.332virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:05.458QIODevice::write (QSerialPort): device not open
+09:25:05.471|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:05.471void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:05.636QIODevice::write (QSerialPort): device not open
+09:25:05.638virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:05.652|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:05.652void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:05.820QIODevice::write (QSerialPort): device not open
+09:25:05.824virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:05.950QIODevice::write (QSerialPort): device not open
+09:25:05.962|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:05.962void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:06.127QIODevice::write (QSerialPort): device not open
+09:25:06.129virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:06.143|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:06.143void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:06.308QIODevice::write (QSerialPort): device not open
+09:25:06.312virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:06.440QIODevice::write (QSerialPort): device not open
+09:25:06.450|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:06.450void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:06.617QIODevice::write (QSerialPort): device not open
+09:25:06.619virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:06.633|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:06.633void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:06.800QIODevice::write (QSerialPort): device not open
+09:25:06.804virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:06.928QIODevice::write (QSerialPort): device not open
+09:25:06.942|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:06.942void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:07.106QIODevice::write (QSerialPort): device not open
+09:25:07.109virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:07.123|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:07.123void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:07.287QIODevice::write (QSerialPort): device not open
+09:25:07.291virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:07.426QIODevice::write (QSerialPort): device not open
+09:25:07.438|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:07.438void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:07.609QIODevice::write (QSerialPort): device not open
+09:25:07.611virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:07.625|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:07.625void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:07.800QIODevice::write (QSerialPort): device not open
+09:25:07.804virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:07.937QIODevice::write (QSerialPort): device not open
+09:25:07.939|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:07.939void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:08.110QIODevice::write (QSerialPort): device not open
+09:25:08.112virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:08.126|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:08.126void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:08.296QIODevice::write (QSerialPort): device not open
+09:25:08.300virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:08.433QIODevice::write (QSerialPort): device not open
+09:25:08.436|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:08.436void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:08.605QIODevice::write (QSerialPort): device not open
+09:25:08.608virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:08.621|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:08.621void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:08.789QIODevice::write (QSerialPort): device not open
+09:25:08.793virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:08.917QIODevice::write (QSerialPort): device not open
+09:25:08.931|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:08.931void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:09.095QIODevice::write (QSerialPort): device not open
+09:25:09.097virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:09.111|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:09.111void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:09.278QIODevice::write (QSerialPort): device not open
+09:25:09.282virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:09.411QIODevice::write (QSerialPort): device not open
+09:25:09.424|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:09.424void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:09.591QIODevice::write (QSerialPort): device not open
+09:25:09.593virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:09.607|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:09.607void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:09.763QIODevice::write (QSerialPort): device not open
+09:25:09.767virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:09.900QIODevice::write (QSerialPort): device not open
+09:25:09.910|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:09.910void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:10.078QIODevice::write (QSerialPort): device not open
+09:25:10.080virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:10.093|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:10.093void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:10.260QIODevice::write (QSerialPort): device not open
+09:25:10.264virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:10.391QIODevice::write (QSerialPort): device not open
+09:25:10.404|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:10.404void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:10.568QIODevice::write (QSerialPort): device not open
+09:25:10.570virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:10.584|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:10.584void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:10.755QIODevice::write (QSerialPort): device not open
+09:25:10.760virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:10.883QIODevice::write (QSerialPort): device not open
+09:25:10.897|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:10.897void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:11.063QIODevice::write (QSerialPort): device not open
+09:25:11.065virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:11.079|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:11.079void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:11.238QIODevice::write (QSerialPort): device not open
+09:25:11.242virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:11.371|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:11.371void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:11.542QIODevice::write (QSerialPort): device not open
+09:25:11.544virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:11.554QIODevice::write (QSerialPort): device not open
+09:25:11.559|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:11.559void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:11.728QIODevice::write (QSerialPort): device not open
+09:25:11.732virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:11.859|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:11.859void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:12.033QIODevice::write (QSerialPort): device not open
+09:25:12.035virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:12.045QIODevice::write (QSerialPort): device not open
+09:25:12.049|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:12.049void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:12.229QIODevice::write (QSerialPort): device not open
+09:25:12.232virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:12.356|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:12.356void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:12.527QIODevice::write (QSerialPort): device not open
+09:25:12.529virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:12.539QIODevice::write (QSerialPort): device not open
+09:25:12.543|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:12.543void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:12.705QIODevice::write (QSerialPort): device not open
+09:25:12.709virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:12.837|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:12.837void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:13.007QIODevice::write (QSerialPort): device not open
+09:25:13.009virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:13.019QIODevice::write (QSerialPort): device not open
+09:25:13.024|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:13.024void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:13.184QIODevice::write (QSerialPort): device not open
+09:25:13.188virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:13.317|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:13.330void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:13.495QIODevice::write (QSerialPort): device not open
+09:25:13.497virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:13.507QIODevice::write (QSerialPort): device not open
+09:25:13.511|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:13.511void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:13.668QIODevice::write (QSerialPort): device not open
+09:25:13.673virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:13.801|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:13.801void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:13.971QIODevice::write (QSerialPort): device not open
+09:25:13.974virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:13.983QIODevice::write (QSerialPort): device not open
+09:25:13.987|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:13.988void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:14.151QIODevice::write (QSerialPort): device not open
+09:25:14.155virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:14.285|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:14.285void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:14.454QIODevice::write (QSerialPort): device not open
+09:25:14.456virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:14.466QIODevice::write (QSerialPort): device not open
+09:25:14.470|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:14.470void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:14.636QIODevice::write (QSerialPort): device not open
+09:25:14.640virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:14.766|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:14.766void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:14.935QIODevice::write (QSerialPort): device not open
+09:25:14.937virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:14.947QIODevice::write (QSerialPort): device not open
+09:25:14.951|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:14.951void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:15.107QIODevice::write (QSerialPort): device not open
+09:25:15.111virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:15.244|W|2|WARNING: configuration DISK/ROTATE_ANG not found
+09:25:15.244void FormProcessContent::on_btn_camera_snap_clicked() 228 "/home/gemirson/Pictures/image/t/1589994893515.jpg"
+09:25:15.414QIODevice::write (QSerialPort): device not open
+09:25:15.416virtual void IBProcess::NewImage(const QImage&) 107 QPointF(1295.47,627.712)
+09:25:15.426QIODevice::write (QSerialPort): device not open
+09:25:15.454QIODevice::write (QSerialPort): device not open
+09:25:15.455TOOL  0 --------------------------- 1
+09:25:15.455TOOL  1 --------------------------- 2
+09:25:15.455TOOL  0 --------------------------- 1
+09:25:15.455TOOL  1 --------------------------- 2
+09:25:15.455libpng warning: iCCP: known incorrect sRGB profile
+09:25:15.505QIODevice::write (QSerialPort): device not open
+09:25:15.746QIODevice::write (QSerialPort): device not open
+09:25:16.247QIODevice::write (QSerialPort): device not open
+09:25:16.747QIODevice::write (QSerialPort): device not open
+09:25:17.246QIODevice::write (QSerialPort): device not open
+09:25:17.746QIODevice::write (QSerialPort): device not open
+09:25:18.247QIODevice::write (QSerialPort): device not open
+09:25:18.746QIODevice::write (QSerialPort): device not open
+09:25:19.247QIODevice::write (QSerialPort): device not open
+09:25:19.747QIODevice::write (QSerialPort): device not open
+09:25:20.247QIODevice::write (QSerialPort): device not open
+09:25:20.747QIODevice::write (QSerialPort): device not open
+09:25:21.247QIODevice::write (QSerialPort): device not open
+09:25:21.747QIODevice::write (QSerialPort): device not open
+09:25:22.247QIODevice::write (QSerialPort): device not open
+09:25:22.746QIODevice::write (QSerialPort): device not open
+09:25:23.013TOOL  0 --------------------------- 1
+09:25:23.013TOOL  1 --------------------------- 2
+09:25:23.013TOOL  0 --------------------------- 1
+09:25:23.013TOOL  1 --------------------------- 2
+09:25:23.246QIODevice::write (QSerialPort): device not open
+09:25:23.746QIODevice::write (QSerialPort): device not open
+09:25:24.246QIODevice::write (QSerialPort): device not open
+09:25:24.746QIODevice::write (QSerialPort): device not open
+09:25:25.247QIODevice::write (QSerialPort): device not open
+09:25:28.009|I|2| --------- Sistema Desligando --------- 
+11:26:22.297|I|| --------- Sistema Inicializando --------- 
+11:26:22.298QIODevice::write (QSerialPort): device not open
+11:26:22.298|E||Porta serial ttyUSB0 indisponivel para uso
+11:26:22.298|W||WARNING: configuration SYSTEM/USE_RESTART not found
+11:26:22.332libpng warning: iCCP: known incorrect sRGB profile
+11:26:22.426|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+11:26:22.436libpng warning: iCCP: known incorrect sRGB profile
+11:26:35.733void FormLogin::on_btn_login_clicked() 137 false
+11:26:38.382|W|2|WARNING: configuration PERMISSIONS/User_Config not found
+11:27:12.486|W|2|WARNING: configuration PERMISSIONS/User_Config not found
+11:27:30.959|I|2| --------- Sistema Desligando --------- 
+15:05:00.013|I|| --------- Sistema Inicializando --------- 
+15:05:00.014QIODevice::write (QSerialPort): device not open
+15:05:00.014|E||Porta serial ttyUSB0 indisponivel para uso
+15:05:00.014|W||WARNING: configuration SYSTEM/USE_RESTART not found
+15:05:00.039libpng warning: iCCP: known incorrect sRGB profile
+15:05:00.141|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+15:05:00.156libpng warning: iCCP: known incorrect sRGB profile
+15:05:12.924void FormLogin::on_btn_login_clicked() 137 false
+15:05:24.318|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+15:06:46.398|I|2| --------- Sistema Desligando --------- 

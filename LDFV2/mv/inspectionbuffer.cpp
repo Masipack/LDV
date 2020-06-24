@@ -199,4 +199,12 @@ bool InspectionBuffer::ToolImage(const QRectF &roi_rect, cv::Mat& mat_dest, bool
     return true;
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
+QImage InspectionBuffer::ToolImage( const QRectF &roi_rect )
+{
+    if( currentImage.isNull() ) return QImage();
 
+    return currentImage.copy( roi_rect.toRect() );
+}

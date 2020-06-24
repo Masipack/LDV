@@ -66,4 +66,9 @@ void FormStatistics::on_btn_reset_clicked()
 void FormStatistics::showEvent(QShowEvent *event)
 {
     ui->btn_reset->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
+    ui->label_2->setVisible(qApp->property("USE_STATISTIC").toBool());
+    ui->label_3->setVisible(qApp->property("USE_STATISTIC").toBool());
+    ui->lbl_nok->setVisible(qApp->property("USE_STATISTIC").toBool());
+    ui->lbl_ok->setVisible(qApp->property("USE_STATISTIC").toBool());
 }

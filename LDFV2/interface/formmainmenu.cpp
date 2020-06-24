@@ -31,6 +31,7 @@ FormMainMenu::FormMainMenu(QWidget *parent) : QWidget(parent)
     ui->btn_export_data->setProperty(  "DEST", "EXPORT");
     ui->btn_part11->setProperty(       "DEST", "PART11");
     ui->btn_version->setProperty(      "DEST", "VERSION");
+    ui->btn_learning->setProperty(     "DEST", "LEARNING");
 
 
     ui->frame_login->installEventFilter( this );
@@ -123,4 +124,14 @@ void FormMainMenu::on_btn_part11_clicked()
 void FormMainMenu::on_btn_version_clicked()
 {
     WindowManager::instance()->ShowScreen( "Version" );
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormMainMenu::on_btn_learning_clicked()
+{
+
+    if( P11(tr("Aceeso biblioteca"), false ) == false ) return;
+    WindowManager::instance()->ShowScreen( "Trainne" );
 }

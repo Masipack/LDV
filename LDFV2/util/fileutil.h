@@ -36,6 +36,54 @@ static QStringList GetFileList(const QString& basePath, const QString& suffix, b
 }
 
 
+template <class T>
+bool WriteTO( T& src, const QString& FileName,const QString& PathFile,QString& err_result )
+{
+    if( QFile::exists(PathFile +FileName))
+    {
+        err_result = QObject::tr("Formato existente");
+        QFile::remove(PathFile + FileName);
+
+    }
+
+    QFile f(PathFile + FileName);
+    f.open(QIODevice::WriteOnly);
+    QDataStream s(&f);
+    s << src;
+    if( s.status() != QDataStream::Ok )
+    {
+        err_result = QObject::tr("Erro gravando formato");
+        return false;
+    }
+
+    err_result.clear();
+    return true;
+}
+
+template <class T>
+bool ReadTO( T& src, const QString& FileName, const QString& PathFile,QString& err_result)
+{
+
+    if( QFile::exists( PathFile + FileName ) == false )
+    {
+        err_result = QObject::tr("Formato não encontrado");
+        return false;
+    }
+
+
+    QFile f(QString(PathFile + FileName ));
+    f.open(QIODevice::ReadOnly);
+    QDataStream s(&f);
+    s >> src;
+    if( s.status() != QDataStream::Ok )
+    {
+        err_result = QObject::tr("Erro lendo formato");
+        return false;
+    }
+    err_result.clear();
+    return true;
+}
+
 
 /// ===========================================================================
 ///

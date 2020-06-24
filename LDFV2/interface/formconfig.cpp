@@ -5,6 +5,7 @@
 #include "interface/windowmanager.h"
 #include "util/sys_log.h"
 #include "global_defines.h"
+#include "util/permission_check.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -26,6 +27,8 @@ FormConfig::FormConfig(QWidget *parent) :  QWidget(parent)
      ui->btn_database->setVisible( qApp->property("USE_DATABASE").toBool() );
      ui->btn_language->setVisible( qApp->property("USE_LANGUAGE").toBool() );
      ui->btn_restart->setVisible( qApp->property("USE_RESTART").toBool() );
+
+     ui->btn_users->setProperty("DEST", "USERS");
 }
 
 /// ===========================================================================
@@ -34,6 +37,9 @@ FormConfig::FormConfig(QWidget *parent) :  QWidget(parent)
 void FormConfig::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
+
+
+    CheckButtonPermissions(this);
 
     if(WindowManager::instance()->GetCurrentUserLevel() == -1 )
     {
@@ -59,6 +65,11 @@ void FormConfig::showEvent(QShowEvent * event)
     ui->btn_minus_m->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
     ui->btn_minus_min->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
     ui->btn_minus_y->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_plus_d->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_plus_hour_->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_plus_m->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_plus_min->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_plus_y->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 }
 
 /// ===========================================================================

@@ -12,6 +12,18 @@ ImageQueue *ImageQueue::instance()
     return umage_queue();
 }
 
+
+/// ===========================================================================
+///
+/// ===========================================================================
+bool ImageQueue::GetAt(int n, QImage &dest)
+{
+    if( queue_trainner.size() <= n ) return false;
+    const QImage& d = queue_trainner.at( queue_trainner.size() - n - 1  );
+    dest        = d;
+    return true;
+}
+
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -34,11 +46,38 @@ void ImageQueue::NewImage(const QImage& image, const QString& data)
 /// ===========================================================================
 ///
 /// ===========================================================================
-bool ImageQueue::GetAt(int n, QImage& dest, QString &dest_data)
+void ImageQueue::NewImageTrainner(const QImage &image)
+{
+    queue_trainner.enqueue(image);
+    if( queue.size() > max_count ) queue.dequeue();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+bool ImageQueue::GetAt(int n, QImage &dest, QString& dest_data)
 {
     if( queue.size() <= n ) return false;
     const QUEUE_DATA& d = queue.at( queue.size() - n - 1  );
     dest        = d.image;
     dest_data   = d.data;
     return true;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ImageQueue::RemoveLast()
+{
+    queue_trainner.pop_front();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void ImageQueue::Clear()
+{
+    queue.clear();
+    queue_trainner.clear();
+
 }

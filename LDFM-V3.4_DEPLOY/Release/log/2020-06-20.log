@@ -1,0 +1,12 @@
+10:02:49.110|I|| --------- Sistema Inicializando --------- 
+10:02:49.111QIODevice::write (QSerialPort): device not open
+10:02:49.111|E||Porta serial ttyUSB0 indisponivel para uso
+10:02:49.111|W||WARNING: configuration SYSTEM/USE_RESTART not found
+10:02:49.151libpng warning: iCCP: known incorrect sRGB profile
+10:02:49.261|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+10:02:49.271libpng warning: iCCP: known incorrect sRGB profile
+10:02:58.678void FormLogin::on_btn_login_clicked() 137 false
+10:03:01.335|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+10:13:01.250libpng warning: iCCP: known incorrect sRGB profile
+10:13:01.499|E|SISTEMA|Erro ao inicializar cameras: Lista de cameras vazia
+11:14:56.241|I|SISTEMA| --------- Sistema Desligando --------- 

@@ -19,6 +19,7 @@ public:
     virtual void addItem(QGraphicsObject *item);
 
     bool ToolImage(const QRectF &roi_rect , cv::Mat &mat_dest, bool deepCopy = false);
+    QImage ToolImage( const QRectF &roi_rect );
 
     virtual void NewImage(const QImage &source);
 

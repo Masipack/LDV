@@ -28,7 +28,7 @@ FormProcessContent::FormProcessContent(QWidget *parent) : QWidget(parent),
     frmStatistics = new FormStatistics();
 
     connect(&tmColor, SIGNAL(timeout()), this, SLOT(TimerColor()));
-    connect(&ib, SIGNAL(InspectionResult(bool)), frmStatistics, SLOT(NewInsp(bool)),Qt::QueuedConnection);
+    connect(&ib, SIGNAL(InspectionResult(bool)), frmStatistics, SLOT(NewInsp(bool)),Qt::UniqueConnection);
 
     QList<int> list;
     list << 529 << 124;

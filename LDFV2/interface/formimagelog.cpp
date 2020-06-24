@@ -1,6 +1,5 @@
 #include "formimagelog.h"
 #include "ui_formimagelog.h"
-
 #include "util/imagequeue.h"
 #include "interface/windowmanager.h"
 
@@ -15,7 +14,6 @@ FormImageLog::FormImageLog(QWidget *parent) :
     ui->setupUi(this);
     ui->imagedevice->setScene( &IBImagelog );
 }
-
 
 ///===========================================================================
 ///
@@ -60,6 +58,10 @@ void FormImageLog::showEvent(QShowEvent * event)
     ui->btn_zoom_fit->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
     ui->btn_zoom_in->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
     ui->btn_zoom_out->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_clear->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+
+
+
 
 }
 
@@ -99,7 +101,6 @@ void FormImageLog::on_btn_next_clicked()
     ui->textEdit->setText( s );
 }
 
-
 ///===========================================================================
 ///
 /// ===========================================================================
@@ -108,4 +109,11 @@ void FormImageLog::on_btn_menu_clicked()
     WindowManager::instance()->ShowLastScreen();
 }
 
-
+///===========================================================================
+///
+/// ===========================================================================
+void FormImageLog::on_btn_clear_clicked()
+{
+    IBImagelog.Reset();
+    ImageQueue::instance()->Clear();
+}

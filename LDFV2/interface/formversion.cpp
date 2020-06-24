@@ -5,6 +5,7 @@
 #include "interface/windowmanager.h"
 #include "util/sys_log.h"
 #include "util/systemsettings.h"
+#include "util/permission_check.h"
 
 /// ===========================================================================
 ///
@@ -18,6 +19,8 @@ FormVersion::FormVersion(QWidget *parent) : QWidget(parent)
     ui = new Ui::FormVersionV;
 #endif
     ui->setupUi(this);
+
+    ui->btn_menu->setProperty("DEST", "VERSION");
 }
 
 /// ===========================================================================

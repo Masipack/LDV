@@ -28,6 +28,7 @@
 #include "interface/formfirstaccess.h"
 #include "interface/formconfiguser.h"
 #include "interface/formlanguage.h"
+#include "interface/formtrainner.h"
 
 
 
@@ -219,6 +220,9 @@ bool WindowManager::LoadScreens()
 
     a = new FormLanguage(mainWidget);
     if( a ) v_screens.insert( "Language"                 , a );
+
+    a = new FormTrainner(mainWidget);
+    if( a ) v_screens.insert( "Trainne"                 , a );
 
 
     QWidget* p = v_screens.value("MainMenu");
