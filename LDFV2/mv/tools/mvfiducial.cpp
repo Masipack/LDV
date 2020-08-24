@@ -5,8 +5,10 @@
 #include <QPainter>
 #include <QGraphicsView>
 #include "global_defines.h"
+#include "opencv2/core/ocl.hpp"
 
 using namespace cv;
+
 
 
 /// ===========================================================================
@@ -59,6 +61,8 @@ MvFiducial::MvFiducial(const QRectF& rect, MvTool *parent) : MvAbstractTool(rect
 
     bMove               = false;
 
+    ocl::setUseOpenCL(!ocl::useOpenCL());
+
 }
 
 /// ===========================================================================
@@ -109,9 +113,6 @@ bool MvFiducial::Exec(quint32 proc_id)
     this->Clear();
     tm_exec.start();
 
-    if( ExtractRoi() == false )             return false;
-
-    Mat result;
 
     if( roi.channels() != 1 ) cvtColor(roi, roi, COLOR_RGB2GRAY );
     if( ExtractRoiGray() == false )         return false;
@@ -120,30 +121,29 @@ bool MvFiducial::Exec(quint32 proc_id)
     if( roi.rows < img_template.rows)       return false;
     if( roi.type() != img_template.type() ) return false;
 
+
+    Mat result;
     /// Create the result matrix
     int result_cols = roi.cols;
     int result_rows = roi.rows;
     result.create( result_rows, result_cols, CV_32FC1 );
 
+
+
     /// Do the Matching and Normalize
-    matchTemplate( roi, img_template, result, TM_CCOEFF );
+      matchTemplate( roi, img_template,result, TM_SQDIFF);
 
-    double minVal; double maxVal; Point minLoc; Point maxLoc;
+//    double minVal; double maxVal; Point minLoc; Point maxLoc;
 
-    minMaxLoc( result, &minVal, &maxVal, &minLoc, &maxLoc );
-    normalize( result, result, 0, 1, NORM_MINMAX, -1, Mat() );
-    minMaxLoc( result, &minVal, &maxVal, &minLoc, &maxLoc );
+//    minMaxLoc( result, &minVal, &maxVal, &minLoc, &maxLoc );
+//    normalize( result, result, 0, 1, NORM_MINMAX, -1, Mat() );
+//    minMaxLoc( result, &minVal, &maxVal, &minLoc, &maxLoc );
 
-    Mat found_rect = roi( Rect(maxLoc.x, maxLoc.y, img_template.cols, img_template.rows) );
+//    Mat found_rect = roi( Rect(maxLoc.x, maxLoc.y, img_template.cols, img_template.rows) );
 
-//        namedWindow("FOUND", WINDOW_NORMAL);
-//        imshow("FOUND", found_rect);
-//        namedWindow("TEMPLATE", WINDOW_NORMAL);
-//        imshow("TEMPLATE", img_template);
+    correlation_val = correlation( img_template, img_template );
 
-    correlation_val = correlation( found_rect, img_template );
-
-    templatePos = QPointF(maxLoc.x, maxLoc.y) + QPointF((qreal)img_template.cols*0.5, (qreal)img_template.rows*0.5) + this->boundingRect().topLeft();
+//    templatePos = QPointF(maxLoc.x, maxLoc.y) + QPointF((qreal)img_template.cols*0.5, (qreal)img_template.rows*0.5) + this->boundingRect().topLeft();
 
     QString s = tr("Leitura: ") +   QString("%1%").arg(correlation_val, 2, 'f', 2, QChar('0')) + tr(" em ") + QString::number(tm_exec.elapsed()) + tr(" ms");
 
@@ -156,11 +156,11 @@ bool MvFiducial::Exec(quint32 proc_id)
          return false;
      }
 
-    this->update();
+     this->update();
+     emit( NewResult(true, s, proc_id) );
 
-    emit( NewResult(true, s, proc_id) );
-
-
+    roi.release();
+    result.release();
     return true;
 }
 

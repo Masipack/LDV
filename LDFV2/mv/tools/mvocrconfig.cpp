@@ -177,11 +177,11 @@ bool MvOCRConfig::ExtractedCaracterHOG(const vector<vector<Point> > &contours, c
 
         Rect br = cv::boundingRect(contours[i]);
 
-        if( br.width  < 26 )                         continue;
-        if( br.width  > 59  )                        continue;
+//        if( br.width  < 26 )                         continue;
+//        if( br.width  > 59  )                        continue;
 
-        if( br.height < 24   )                       continue;
-        if( br.height > 140  )                       continue;
+//        if( br.height < 24   )                       continue;
+//        if( br.height > 140  )                       continue;
 
         if( br.width  < 26 && br.height < 26  )      continue;
         if( br.width  > 40 && br.height < 40  )      continue;

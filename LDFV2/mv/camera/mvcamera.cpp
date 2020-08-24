@@ -173,8 +173,6 @@ bool MvCamera::SetNode( GenApi::INode* p , float v)
     return true;
 }
 
-
-
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -243,7 +241,7 @@ void MvCamera::run()
     {
         try
         {
-            camera.RetrieveResult( 100, ptrGrabResult, TimeoutHandling_ThrowException );
+            camera.RetrieveResult( 10, ptrGrabResult, TimeoutHandling_ThrowException );
         }
         catch( const TimeoutException &e )
         {

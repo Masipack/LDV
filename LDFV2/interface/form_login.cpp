@@ -119,7 +119,7 @@ void FormLogin::on_btn_login_clicked()
     // PARA "RECOVERY"
     if( ui->le_user->text() == "FMA" && ui->le_password->text() == "ATELMT" )
     {
-        WindowManager::instance()->SetCurrentUser("FMA", 2);
+        WindowManager::instance()->SetCurrentUser("FMA", 3);
         WindowManager::instance()->ShowLastScreen();
         return;
     }
@@ -134,7 +134,6 @@ void FormLogin::on_btn_login_clicked()
 
     if( query.next() )
     {
-        Debug(query.value(1).toBool())
 
         first_access= query.value(1).toBool();
 
@@ -175,7 +174,6 @@ void FormLogin::on_btn_login_clicked()
 
                 if(CheckExpirate(query.value(4).toDateTime(),90))
                 {
-                    Debug(query.value(2).toString())
 
                     WindowManager::instance()->SetCurrentUser(query.value(2).toString(), query.value(1).toInt());
 

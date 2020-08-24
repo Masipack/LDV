@@ -36,11 +36,16 @@ ImageQueue::~ImageQueue()
 /// ===========================================================================
 void ImageQueue::NewImage(const QImage& image, const QString& data)
 {
-    QUEUE_DATA d;
-    d.image = image;
-    d.data  = data;
-    queue.enqueue(d);
-    if( queue.size() > max_count ) queue.dequeue();
+//    QUEUE_DATA d;
+//    d.image = image;
+//    d.data  = data;
+//    queue.enqueue(d);
+//    if( queue.size() > max_count ){
+
+//        QUEUE_DATA c = queue.dequeue();
+
+//    }
+
 }
 
 /// ===========================================================================
@@ -48,8 +53,12 @@ void ImageQueue::NewImage(const QImage& image, const QString& data)
 /// ===========================================================================
 void ImageQueue::NewImageTrainner(const QImage &image)
 {
-    queue_trainner.enqueue(image);
-    if( queue.size() > max_count ) queue.dequeue();
+//    queue_trainner.enqueue(image);
+
+//    if(  queue_trainner.size() > 3 ){
+
+//         QImage c =  queue_trainner.dequeue();
+//    }
 }
 
 /// ===========================================================================

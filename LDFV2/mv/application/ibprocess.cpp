@@ -82,9 +82,9 @@ void IBProcess::NewImage(const QImage &source)
 
     SerialControl::instance()->SetOutput(0);
 
-    this->update();
+  //  this->update();
 
-    ImageQueue::instance()->NewImageTrainner(source);
+   // ImageQueue::instance()->NewImageTrainner(source);
 
     QPointF dist(0,0);
     proc_id++;
@@ -96,15 +96,14 @@ void IBProcess::NewImage(const QImage &source)
             {
                 emit(InspectionResult(false));
 
-                qApp->processEvents();
-                ImageLog();
+               // qApp->processEvents();
+               // ImageLog();
                 return;
             }
             dist = qobject_cast<MvFiducial*>(p)->GetDistance();
         }
         else
         {
-            Debug(p->GetConfigPos())
 
             p->MoveTool( p->GetConfigPos() + dist);
             if( p->Exec(proc_id) == false )
@@ -114,18 +113,18 @@ void IBProcess::NewImage(const QImage &source)
         }
     }
 
-    qApp->processEvents();
+     qApp->processEvents();
 
      ///SAVE_IMAGE
      ///
 
-    if(SAVE_IMAGE)
-    {
-        QString fname = "./data/image/";
-        fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
-        fname += ".jpg";
-        imwrite( fname.toLatin1().data(), mat);
-    }
+//    if(SAVE_IMAGE)
+//    {
+//        QString fname = "./data/image/";
+//        fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
+//        fname += ".jpg";
+//        imwrite( fname.toLatin1().data(), mat);
+//    }
 
 }
 
@@ -154,12 +153,12 @@ void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
             SerialControl::instance()->ToggleBitON(number_output);
             QTimer::singleShot(IO_REJECT_TIME, this, SLOT(ClearIO()));
             emit(InspectionResult(true));
-            ImageQueue::instance()->RemoveLast();
+           // ImageQueue::instance()->RemoveLast();
         }
         else
         {
             emit(InspectionResult(false));
-            ImageLog();
+           // ImageLog();
         }
 
     }
@@ -321,6 +320,7 @@ void IBProcess::SendKeepAlive()
 bool IBProcess::SetTO(const ProductTO &_TO)
 {
 
+    CamName = _TO.CAM_NAME;
 //    qDebug() << _TO;
 
     Reset();
@@ -460,6 +460,7 @@ bool IBProcess::SetTO(const ProductTO &_TO)
 ///// ===========================================================================
 bool IBProcess::GetTO(ProductTO &_TO)
 {
+    _TO.CAM_NAME = CamName;
 
     for(int i = 0; i < tools.size(); i++  )
     {

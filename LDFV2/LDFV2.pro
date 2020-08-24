@@ -2,7 +2,7 @@
 #---------------------------------------------------------------------------------------------------------------------
 QT += core gui widgets opengl serialport sql webengine webenginewidgets printsupport
 
-#DEFINES += _TESTE_
+DEFINES += _TESTE_
 DEFINES += _DISPLAY_HORIZONTAL_
 #DEFINES += _USE_DISK_
 
@@ -283,8 +283,11 @@ LIBS += -L$$THIRDY_PARTY/"opencv4/lib"      -lopencv_core \
                                             -lopencv_highgui \
                                             -lopencv_imgproc \
                                             -lopencv_imgcodecs\
+                                            -lopencv_calib3d \
                                             -lopencv_ml \
                                             -lopencv_objdetect \
+                                            -lopencv_flann \
+                                            -lopencv_features2d
 
 
 LIBS += -L$$THIRDY_PARTY/"pylon/lib64"              -lGCBase_gcc_v3_0_Basler_pylon_v5_0 \

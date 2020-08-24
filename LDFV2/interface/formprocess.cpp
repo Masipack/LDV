@@ -39,8 +39,6 @@ FormProcess::~FormProcess()
 bool FormProcess::Init(const QString &file_name)
 {
 
-
-
     Name = file_name;
 
     QString err;
@@ -231,6 +229,23 @@ void FormProcess::WriteConfig(const QString &name)
 /// ===========================================================================
 void FormProcess::on_btn_printer_clicked()
 {
-     if( P11(tr("Aceeso a impressora"), true ) == false ) return;
+    for(int i = 0; i < forms.size(); i++)
+    {
+       ProductTO _TO;
+
+       if(forms[i])
+       {
+           forms[i]->GetTO(_TO);
+           if(forms[i]->ChangesTOOLS(_TO))
+           {
+               WriteConfig(Name);
+               break;
+           }
+       }
+    }
+
+    if(qApp->property("USE_PART11_PRINTER").toBool() == true ){
+         if( P11(tr("Aceeso a impressora"), true ) == false ) return;
+    }
      WindowManager::instance()->ShowScreen("Printer");
 }

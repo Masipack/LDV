@@ -326,6 +326,9 @@ void FormProcessContent::on_btn_Statistics_toggled(bool checked)
 
        if(ChangesTOOLS(ConfigTO))
        {
+         Debug(ProdutoTOChanges)
+         Debug(ConfigTO)
+         ProdutoTOChanges = ConfigTO;
          emit(WriteConfig(configFilename));
        }
     }
@@ -337,6 +340,16 @@ void FormProcessContent::on_btn_Statistics_toggled(bool checked)
 /// ===========================================================================
 void FormProcessContent::on_btn_ImageLog_clicked()
 {
+
+    ProductTO ConfigTO;
+    ib.GetTO(ConfigTO);
+
+    if(ChangesTOOLS(ConfigTO))
+    {
+      ProdutoTOChanges = ConfigTO;
+      emit(WriteConfig(configFilename));
+    }
+
     WindowManager::instance()->ShowScreen( "ImageLog" );
 }
 

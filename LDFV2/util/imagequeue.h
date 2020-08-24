@@ -9,7 +9,7 @@ class ImageQueue : public QObject
 {
     Q_OBJECT
 public:
-    inline ImageQueue(QObject *parent = 0) { Q_UNUSED(parent); max_count = 40; }
+    inline ImageQueue(QObject *parent = 0) { Q_UNUSED(parent); max_count = 10; }
     ~ImageQueue();
 
     static ImageQueue *instance();

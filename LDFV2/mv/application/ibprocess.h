@@ -68,6 +68,8 @@ private:
 
     bool                   SAVE_IMAGE;
 
+   QString                 CamName;
+
 
 };
 

@@ -42,7 +42,6 @@ static bool P11(const QString& desc, bool bDialog = false, QString comment = "")
         user = d.GetUser();
     }
 
-
     QSqlQuery query(QSqlDatabase::database("PART11"));
     query.prepare("INSERT INTO Audit (RecordID, TimeStamp, Lote, UserID, ObjectID, Description, Comment, Checksum) VALUES (:RecordID, :TimeStamp, :Lote, :UserID, :ObjectID, :Description, :Comment, :Checksum)");
     query.bindValue(":TimeStamp"        , QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") );

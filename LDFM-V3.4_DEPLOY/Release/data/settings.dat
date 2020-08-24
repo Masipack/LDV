@@ -9,7 +9,7 @@ CAMERA_LIST=CAMERA_1
 #BASE_PATH=/home/gemirson/Documents/Source/LDF_2020_01_20/LDFM/LDFM-V3/LDFM-V3.4_DEPLOY/Release/data/image
 BASE_PATH=/home/gemirson/Pictures/image/t
 DEST_FORMAT=GRAY
-FILE_EXT=jpg
+FILE_EXT=bmp
 
 [FABRIMA]
 CAMERA=BASLER aca2440_20gm
@@ -68,7 +68,7 @@ USE_PART11=false
 USE_PRINTER=true
 USE_DATAMATRIX=true
 USE_LANGUAGE=false
-USE_STATISTIC=false
+USE_STATISTIC=true
 USE_LASER=false
 
 [TOOLS]

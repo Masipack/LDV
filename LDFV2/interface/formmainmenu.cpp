@@ -98,7 +98,10 @@ void FormMainMenu::on_btn_alarms_clicked()
 /// ===========================================================================
 void FormMainMenu::on_btn_printer_clicked()
 {
-    if( P11(tr("Aceeso a impressora"), true ) == false ) return;
+    if(qApp->property("USE_PART11_PRINTER").toBool() == true ){
+         if( P11(tr("Aceeso a impressora"), true ) == false ) return;
+    }
+
     WindowManager::instance()->ShowScreen("Printer");
 }
 

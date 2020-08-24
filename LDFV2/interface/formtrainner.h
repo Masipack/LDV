@@ -53,6 +53,7 @@ private slots:
 
     void on_btn_Prev_caracter_clicked();
 
+
 private:
       Ui::FormTrainner *ui;
 
@@ -67,12 +68,14 @@ private:
       int                    current_pos;
       int                    current_position_c;
 
-#ifdef _USE_DISK_
-    QImage          test_image;
-    QStringList     file_list;
-    QString         base_path;
-    QString         file_ext;
-#endif
+
+      QImage          test_image;
+      QStringList     file_list;
+      QString         base_path;
+      QString         file_ext;
+
+
+
 
 };
 

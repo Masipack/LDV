@@ -137,6 +137,8 @@ bool InitDatabase()
     bool user_RESTART=false;
     bool user_Statistic =false;
 
+    bool user_part11_printer =false;
+
     QString drive;
 
     GetConfig(user_p11, "SYSTEM/USE_PART11", false);
@@ -145,7 +147,8 @@ bool InitDatabase()
     GetConfig(drive, "SYSTEM/DRIVE", QString("ODBC Driver 17 for SQL Server"));
     GetConfig(user_printer, "SYSTEM/USE_PRINTER", false);
     GetConfig(user_RESTART, "SYSTEM/USE_RESTART", false);
-    GetConfig(user_RESTART, "SYSTEM/USE_STATISTIC", false);
+    GetConfig(user_Statistic, "SYSTEM/USE_STATISTIC", false);
+    GetConfig(user_part11_printer, "SYSTEM/USE_PART11_PRINTER", false);
 
     qApp->setProperty("USE_DATABASE",  user_database);
     qApp->setProperty("USE_PART11",    user_p11);
@@ -153,6 +156,10 @@ bool InitDatabase()
     qApp->setProperty("USE_LANGUAGE",  user_LANGUAGE);
     qApp->setProperty("USE_RESTART",   user_RESTART);
     qApp->setProperty("USE_STATISTIC", user_Statistic);
+    qApp->setProperty("USE_PART11_PRINTER", user_part11_printer);
+
+
+
 
     if( user_p11 )
     {

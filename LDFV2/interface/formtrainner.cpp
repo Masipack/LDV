@@ -354,3 +354,4 @@ void FormTrainner::on_btn_Prev_caracter_clicked()
 
     }
 }
+

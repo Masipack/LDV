@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <util/dlginfo.h>
 
 namespace Ui {
 class FormUsbExport;
@@ -24,6 +25,7 @@ private:
     QTimer              timerUpdateName;
     QString             usbPath;
     QString             strPedido;
+    DlgInfo             dlg;
 
 protected:
     void showEvent(QShowEvent * event);

@@ -297,7 +297,10 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
                                          0, 0, 0, 0, 0,
                                          0, 0, 0, 0, 0);
 
-        filter2D(roi_local_th, roi_local_th, roi_local_th.depth(), kern);
+        if(use_LASER)
+        {
+             filter2D(roi_local_th, roi_local_th, roi_local_th.depth(), kern);
+        }
 
      //   adaptiveThreshold(roi_local, roi_local_th, 255, ADAPTIVE_THRESH_GAUSSIAN_C, b_black_And_white == 1 ? THRESH_BINARY:THRESH_BINARY_INV, 29, -3);
        //  GaussianBlur(roi_local, roi_local, Size(5,5),2,2);

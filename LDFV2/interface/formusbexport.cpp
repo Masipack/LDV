@@ -70,7 +70,7 @@ void FormUsbExport::showEvent(QShowEvent * event)
 {
     Q_UNUSED(event)
 
-    CheckButtonPermissions(this);
+   // CheckButtonPermissions(this);
 
     if(WindowManager::instance()->GetCurrentUserLevel() == -1 )
     {
@@ -94,6 +94,7 @@ void FormUsbExport::showEvent(QShowEvent * event)
     ui->btn_from_usb->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
     ui->btn_to_usb->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
     ui->btn_to_usb_all->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
+    ui->btn_return->setEnabled(WindowManager::instance()->GetCurrentUserLevel() == -1 ?false:true);
 
 }
 
@@ -135,6 +136,10 @@ void FormUsbExport::on_btn_from_usb_clicked()
         }
     }
 
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Aguarde transferindo arquivos !"), false,false);
+    dlg.SetVisible(false);
+    dlg.show();
+
     QString src = usbPath + "/" + ui->lst_usb->currentItem()->text() + ".fmt";
 
     if( P11(tr("Importação USB de receita:") + ui->lst_usb->currentItem()->text(), true) == false ) return;
@@ -148,6 +153,9 @@ void FormUsbExport::on_btn_from_usb_clicked()
 
     ui->lst_local->clear();
     ui->lst_local->addItems( GetFileList("./data/formats/", "fmt") );
+
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso"), false,false);
+    dlg.SetVisible(true);
 }
 
 /// ===========================================================================
@@ -176,6 +184,10 @@ void FormUsbExport::on_btn_to_usb_clicked()
 
     QString dest = usbPath + "/" + ui->lst_local->currentItem()->text() + ".fmt";
 
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Aguarde transferindo arquivos !"), false,false);
+    dlg.SetVisible(false);
+    dlg.show();
+
     if( QFile::exists(dest) )
     {
         DlgInfo dlg;
@@ -201,6 +213,10 @@ void FormUsbExport::on_btn_to_usb_clicked()
 
     ui->lst_usb->clear();
     ui->lst_usb->addItems( GetFileList(usbPath, "fmt") );
+    QString pedido;
+    GetConfig(pedido, "SYSTEM/VERSION_PEDIDO", QString("0000") );
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso !\n\nPasta USB:  ") + "SVF_" + pedido, false,false);
+    dlg.SetVisible(true);
 }
 
 /// ===========================================================================
@@ -216,6 +232,10 @@ void FormUsbExport::on_btn_config_from_usb_clicked()
     dest_files.removeOne("system.dat"); // database file can't be removed
 
     if( P11(tr("Importação USB de configurações"), true) == false ) return;
+
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Aguarde transferindo arquivos !"), false,false);
+    dlg.SetVisible(false);
+    dlg.show();
 
     for( auto item : dest_files )
     {
@@ -250,6 +270,9 @@ void FormUsbExport::on_btn_config_from_usb_clicked()
 
         LOG(LOG_INFO_TYPE, tr("Arquivo copiado USB->SISTEMA: ") + item);
     }
+
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso"), false,false);
+    dlg.SetVisible(true);
 }
 
 /// ===========================================================================
@@ -282,6 +305,10 @@ void FormUsbExport::on_btn_config_to_usb_clicked()
     Debug(dest_files)
 
     if( P11(tr("Exportação USB de configurações"), true) == false ) return;
+
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Aguarde transferindo arquivos !"), false,false);
+    dlg.SetVisible(false);
+    dlg.show();
 
     bool bOverwrite = false;
     for( auto item : dest_files )
@@ -323,11 +350,13 @@ void FormUsbExport::on_btn_config_to_usb_clicked()
         LOG(LOG_INFO_TYPE, tr("Arquivo copiado SISTEMA->USB: ") + item);
     }
 
-    DlgInfo dlg;
+
     QString pedido;
-    GetConfig(pedido, "FABRIMA/PEDIDO", QString("0000") );
+    GetConfig(pedido, "SYSTEM/VERSION_PEDIDO", QString("0000") );
     dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso !\n\nPasta USB:  ") + "SVF_" + pedido, false,false);
-    dlg.exec();
+    dlg.SetVisible(true);
+
+
 
 }
 
@@ -348,6 +377,10 @@ void FormUsbExport::on_btn_to_usb_all_clicked()
     }
 
     if( P11(tr("Exportação USB de todas as receitas"), true) == false ) return;
+
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Aguarde transferindo arquivos !"), false,false);
+    dlg.SetVisible(false);
+    dlg.show();
 
     for( int i = 0; i < ui->lst_local->count(); i++)
     {
@@ -379,4 +412,9 @@ void FormUsbExport::on_btn_to_usb_all_clicked()
 
     ui->lst_usb->clear();
     ui->lst_usb->addItems( GetFileList(usbPath, "fmt") );
+
+    QString pedido;
+    GetConfig(pedido, "SYSTEM/VERSION_PEDIDO", QString("0000") );
+    dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso !\n\nPasta USB:  ") + "SVF_" + pedido, false,false);
+    dlg.SetVisible(true);
 }
