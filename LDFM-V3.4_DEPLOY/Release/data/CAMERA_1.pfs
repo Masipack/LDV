@@ -1,9 +1,9 @@
 # {05D8C294-F295-4dfb-9D01-096BD04049F4}
 # GenApi persistence file (version 3.1.0)
-# Device = Basler::GigECamera -- Basler generic GigEVision camera interface -- Device version = 3.8.0 -- Product GUID = 1F3C6A72-7842-4edd-9130-E2E90A2058BA -- Product version GUID = 7BB9CD60-EAC7-4F82-8DA1-0EDA9600CECA
+# Device = Basler::GigECamera -- Basler generic GigEVision camera interface -- Device version = 3.8.0 -- Product GUID = 1F3C6A72-7842-4edd-9130-E2E90A2058BA -- Product version GUID = 89988872-73B1-414F-9D8C-BEA7B518170D
 GainAuto	Off
 GainSelector	All
-GainRaw	64
+GainRaw	130
 GainSelector	All
 BlackLevelSelector	All
 BlackLevelRaw	0
@@ -13,13 +13,14 @@ GammaSelector	User
 Gamma	1
 DigitalShift	0
 PixelFormat	Mono8
-ReverseX	1
-ReverseY	1
+ReverseX	0
+ReverseY	0
 TestImageSelector	Off
-Width	2456
-Height	1048
+PgiMode	Off
+Width	2448
+Height	2048
 OffsetX	8
-OffsetY	470
+OffsetY	4
 CenterX	0
 CenterY	0
 BinningModeHorizontal	Summing
@@ -49,7 +50,7 @@ TriggerDelayAbs	0
 TriggerSelector	FrameStart
 ExposureMode	Timed
 ExposureAuto	Off
-ExposureTimeRaw	450
+ExposureTimeRaw	500
 ShutterMode	Global
 AcquisitionFrameRateEnable	1
 AcquisitionFrameRateAbs	30.0003
@@ -111,6 +112,7 @@ CounterResetSource	Off
 CounterSelector	Counter2
 CounterResetSource	Off
 CounterSelector	Counter1
+BslLightControlMode	Off
 LUTSelector	Luminance
 LUTEnable	0
 LUTSelector	Luminance
@@ -127,17 +129,17 @@ GevStreamChannelSelector	StreamChannel0
 GevSCFTD	0
 GevStreamChannelSelector	StreamChannel0
 GevStreamChannelSelector	StreamChannel0
-GevSCBWR	10
+GevSCBWR	11
 GevStreamChannelSelector	StreamChannel0
 GevStreamChannelSelector	StreamChannel0
-GevSCBWRA	10
+GevSCBWRA	13
 GevStreamChannelSelector	StreamChannel0
 AutoTargetValue	128
 GrayValueAdjustmentDampingRaw	700
 AutoGainRawLowerLimit	0
 AutoGainRawUpperLimit	239
-AutoExposureTimeAbsLowerLimit	80
-AutoExposureTimeAbsUpperLimit	500000
+AutoExposureTimeLowerLimitRaw	80
+AutoExposureTimeUpperLimitRaw	500000
 AutoFunctionProfile	GainMinimum
 AutoFunctionAOISelector	AOI1
 AutoFunctionAOIWidth	2448

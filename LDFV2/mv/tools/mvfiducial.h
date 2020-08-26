@@ -2,8 +2,12 @@
 #define MVFIDUCIAL_H
 
 #include <QObject>
+
+
 #include "mvabstracttool.h"
 #include "interface/widgets/paramsfiducial.h"
+#include "mv/PO/mvfiducialpo.h"
+
 
 class MvFiducial : public MvAbstractTool
 {
@@ -28,9 +32,13 @@ public:
     bool GetImageTemplate(QByteArray& dest, QSize &sz_dest);
     bool SetImageTemplate(const QByteArray &src, QSize sz);
     void ResetMove();
+    QObject* GetPO() { return (QObject*)&PO; }
+
 signals:
     void TemplateImage(const QPixmap& img);
 
+public slots:
+    void ExecResult(const double& correlation_value,QPointF& currrent_position, quint32 prid);
 
 protected:
     virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
@@ -40,8 +48,9 @@ protected:
     double correlation(cv::Mat& image_1, cv::Mat& image_2);
 
     ParamsFiducial*     form;
+    MvFIDUCIALPO         PO;
 
-    bool                b_approved;
+
     QPointF             templatePos;
     QRectF              samplingRect;
 
@@ -53,6 +62,8 @@ protected:
     cv::Mat             img_template;
 
     bool                bMove;
+    bool                b_Busy;
+    bool                b_approved;
 };
 
 #endif // MVFIDUCIAL_H

@@ -17,6 +17,7 @@
 #include "opencv2/core.hpp"
 
 Q_DECLARE_METATYPE(cv::Mat)
+Q_DECLARE_METATYPE(QPointF)
 
 
 
@@ -256,6 +257,7 @@ int main(int argc, char *argv[])
     //---------------------------- Registers Types --------------------------//
 
     qRegisterMetaType<cv::Mat>("cv::Mat");
+    qRegisterMetaType<QPointF>("QPointF&");
 
 
 

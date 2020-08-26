@@ -9,8 +9,6 @@
 
 using namespace cv;
 
-
-
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -60,8 +58,14 @@ MvFiducial::MvFiducial(const QRectF& rect, MvTool *parent) : MvAbstractTool(rect
     mv_type             = MV_FIDUCIAL;
 
     bMove               = false;
+    b_Busy              = false;
 
     ocl::setUseOpenCL(!ocl::useOpenCL());
+
+    QObject::connect(&PO,SIGNAL(ExecResult(double,QPointF&,quint32)),
+                     this,SLOT(ExecResult(double,QPointF&,quint32)));
+
+
 
 }
 
@@ -104,6 +108,31 @@ void MvFiducial::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
     bMove = true;
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
+void MvFiducial::ExecResult(const double &correlation_value, QPointF& currrent_position, quint32 prid)
+{
+    templatePos = currrent_position;
+    correlation_val = correlation_value;
+
+    b_Busy = false;
+
+    QString s = tr("Leitura: ") +   QString("%1%").arg(correlation_val*100, 2, 'f', 2, QChar('0')) + tr(" em ") + QString::number(tm_exec.elapsed()) + tr(" ms");
+
+
+    if( correlation_val< min_correlation )
+     {
+         templatePos = QPointF();
+         b_approved = false;
+         emit( NewResult(false,s, prid) );
+         this->update();
+         return ;
+     }
+
+    this->update();
+    emit( NewResult(true, s, prid) );
+}
 
 /// ===========================================================================
 ///
@@ -113,54 +142,31 @@ bool MvFiducial::Exec(quint32 proc_id)
     this->Clear();
     tm_exec.start();
 
+    //--------------- Protection Rect ----------------------//
+    if( b_Busy )
+    {
+        emit( NewResult(false, tr("Busy") + QString::number(tm_exec.elapsed()) + " ms", proc_id ));
+        return false;
+    }
+
+    b_Busy = true;
 
     if( roi.channels() != 1 ) cvtColor(roi, roi, COLOR_RGB2GRAY );
-    if( ExtractRoiGray() == false )         return false;
-    if( img_template.data == nullptr)       return false;
-    if( roi.cols < img_template.cols)       return false;
-    if( roi.rows < img_template.rows)       return false;
-    if( roi.type() != img_template.type() ) return false;
 
+    if( (ExtractRoiGray() == false) ||
+        (img_template.data == nullptr) ||
+        (roi.cols < img_template.cols) ||
+        (roi.rows < img_template.rows) ||
+        (roi.type() != img_template.type()))
+    {
+        b_Busy = false;
+        return false;
+    }
 
-    Mat result;
-    /// Create the result matrix
-    int result_cols = roi.cols;
-    int result_rows = roi.rows;
-    result.create( result_rows, result_cols, CV_32FC1 );
+    PO.SetMask(img_template);
+    PO.SetStartPosition(this->boundingRect().topLeft());
 
-
-
-    /// Do the Matching and Normalize
-      matchTemplate( roi, img_template,result, TM_SQDIFF);
-
-//    double minVal; double maxVal; Point minLoc; Point maxLoc;
-
-//    minMaxLoc( result, &minVal, &maxVal, &minLoc, &maxLoc );
-//    normalize( result, result, 0, 1, NORM_MINMAX, -1, Mat() );
-//    minMaxLoc( result, &minVal, &maxVal, &minLoc, &maxLoc );
-
-//    Mat found_rect = roi( Rect(maxLoc.x, maxLoc.y, img_template.cols, img_template.rows) );
-
-    correlation_val = correlation( img_template, img_template );
-
-//    templatePos = QPointF(maxLoc.x, maxLoc.y) + QPointF((qreal)img_template.cols*0.5, (qreal)img_template.rows*0.5) + this->boundingRect().topLeft();
-
-    QString s = tr("Leitura: ") +   QString("%1%").arg(correlation_val, 2, 'f', 2, QChar('0')) + tr(" em ") + QString::number(tm_exec.elapsed()) + tr(" ms");
-
-
-    if( correlation_val < min_correlation )
-     {
-         templatePos = QPointF();
-         b_approved = false;
-         emit( NewResult(false,s, proc_id) );
-         return false;
-     }
-
-     this->update();
-     emit( NewResult(true, s, proc_id) );
-
-    roi.release();
-    result.release();
+    QMetaObject::invokeMethod(&PO,"Exec",Qt::QueuedConnection,Q_ARG(cv::Mat, roi),Q_ARG(quint32, proc_id));
     return true;
 }
 
@@ -252,6 +258,8 @@ void MvFiducial::ResetMove()
 {
     bMove = false;
 }
+
+
 
 /// ===========================================================================
 ///

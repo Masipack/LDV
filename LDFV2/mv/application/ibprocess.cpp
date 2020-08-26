@@ -82,9 +82,9 @@ void IBProcess::NewImage(const QImage &source)
 
     SerialControl::instance()->SetOutput(0);
 
-  //  this->update();
+    this->update();
 
-   // ImageQueue::instance()->NewImageTrainner(source);
+    ImageQueue::instance()->NewImageTrainner(source);
 
     QPointF dist(0,0);
     proc_id++;
@@ -96,8 +96,8 @@ void IBProcess::NewImage(const QImage &source)
             {
                 emit(InspectionResult(false));
 
-               // qApp->processEvents();
-               // ImageLog();
+                  qApp->processEvents();
+                  ImageLog();
                 return;
             }
             dist = qobject_cast<MvFiducial*>(p)->GetDistance();
@@ -118,13 +118,13 @@ void IBProcess::NewImage(const QImage &source)
      ///SAVE_IMAGE
      ///
 
-//    if(SAVE_IMAGE)
-//    {
-//        QString fname = "./data/image/";
-//        fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
-//        fname += ".jpg";
-//        imwrite( fname.toLatin1().data(), mat);
-//    }
+    if(SAVE_IMAGE)
+    {
+        QString fname = "./data/image/";
+        fname += QString::number(QDateTime::currentDateTime().toMSecsSinceEpoch());
+        fname += ".jpg";
+        imwrite( fname.toLatin1().data(), mat);
+    }
 
 }
 
@@ -153,12 +153,12 @@ void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
             SerialControl::instance()->ToggleBitON(number_output);
             QTimer::singleShot(IO_REJECT_TIME, this, SLOT(ClearIO()));
             emit(InspectionResult(true));
-           // ImageQueue::instance()->RemoveLast();
+            ImageQueue::instance()->RemoveLast();
         }
         else
         {
             emit(InspectionResult(false));
-           // ImageLog();
+            ImageLog();
         }
 
     }
@@ -347,6 +347,7 @@ bool IBProcess::SetTO(const ProductTO &_TO)
         if(_TO.CAM_NAME=="CAMERA_1" && RESIZE_ONE_DIRECTION ) pItemTool->SetResizeOneDirect(false);
 
         pItemTool->SetToolName( _TO.LIST_FIDUCIAL[i].BASE.NAME );
+        pItemTool->GetPO()->moveToThread( threads[ tools.size() % threads.size() ]  );
         this->addItem( pItemTool );
 
         tools.push_back( pItemTool );

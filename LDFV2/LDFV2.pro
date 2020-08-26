@@ -140,7 +140,8 @@ SOURCES += \
     util/manegerlibrary.cpp \
     mv/tools/mvocrconfig.cpp \
     mv/application/ibconfigocr.cpp \
-    interface/formtrainner.cpp
+    interface/formtrainner.cpp \
+    mv/PO/mvfiducialpo.cpp
 
 HEADERS += \
         maindialog.h \
@@ -223,7 +224,8 @@ HEADERS += \
     mv/tools/mvocrconfig.h \
     mv/application/ibconfigocr.h \
     TO/libraryto.h \
-    interface/formtrainner.h
+    interface/formtrainner.h \
+    mv/PO/mvfiducialpo.h
 
 FORMS += \
         maindialog.ui \
@@ -308,8 +310,6 @@ LIBS += -L$$THIRDY_PARTY/"cognex/lib"              -lBarcodeScanner
 
 
 LIBS += -L$$THIRDY_PARTY/"AVL/lib"                 -lAVL
-
-
 
 
 RESOURCES += \

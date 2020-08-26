@@ -67,8 +67,6 @@ bool MvOCR::Exec(quint32 proc_id)
     }
     b_Busy = true;
 
-
-
     if( ExtractRoi() == false )
     {
         b_Busy = false;
@@ -76,7 +74,6 @@ bool MvOCR::Exec(quint32 proc_id)
     }
 
     QMetaObject::invokeMethod(&PO, "Exec", Qt::QueuedConnection, Q_ARG(cv::Mat, roi), Q_ARG(quint32, proc_id) );
-
     return true;
 }
 
