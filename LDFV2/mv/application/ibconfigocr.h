@@ -27,6 +27,8 @@ public:
                                     ocr_cfg->Exec(0);
                                   }
 
+     void Init();
+     void Stop();
      void Exec(){ ocr_cfg->Exec(0);}
 
 signals:
@@ -34,11 +36,13 @@ signals:
 
 public slots:
     void NewImage(const QImage &source);
+    void SendKeepAlive();
 
 
 private:
 
-     MvOCRConfig*     ocr_cfg;
+     MvOCRConfig*            ocr_cfg;
+     QTimer                  timerKeepAlive;
 
 
 };

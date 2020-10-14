@@ -31,11 +31,14 @@ private slots:
     void on_btn_return_clicked();
     void on_btn_printer_clicked();
 
+    void on_btn_save_clicked();
+
 protected:
     void showEvent(QShowEvent * event);
 
 public slots:
     void WriteConfig(const QString& name);
+
 
 private:
     Ui::FormProcess *ui;
@@ -50,6 +53,7 @@ private:
     bool            use_PRINTER;
     bool            b_save_without_msg;
     MultiCamTO     to;
+
 
 
 };

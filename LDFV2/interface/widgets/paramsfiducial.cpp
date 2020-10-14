@@ -15,6 +15,7 @@ ParamsFiducial::ParamsFiducial(MvFiducial *p, QWidget *parent) : QWidget(parent)
     ui->setupUi(this);
     ui->le_name->installEventFilter( this );
 
+    ui->btn_edit->setVisible(false);
 
     if( pTool )
     {

@@ -43,12 +43,14 @@ public:
     bool GetLock()                          { return b_locked; }
     bool GetLockAngle()                     { return b_lock_angle; }
 
+
+
+
     static qreal GetAngle(const cv::RotatedRect& src);
 
 signals:
     void GeometryChanged(const QRectF& rect );
 
-public slots:
 
 
 protected:
@@ -88,6 +90,8 @@ protected:
     QGraphicsSimpleTextItem*    toolName;
 
     qreal               cfg_handle_size;
+
+    QPointF             configPos;
 
 private:
     enum DRAG_TYPE { DRAG_NONE, DRAG_MOVE, DRAG_RESIZE, DRAG_RIGHT_ANG, DRAG_BOTTOM_ANG, DRAG_CENTER_ANG ,DRAG_TOP_LEFT};

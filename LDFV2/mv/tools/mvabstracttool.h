@@ -44,6 +44,11 @@ public:
 signals:
     void NameChanged(const QString& name);
     void NewResult(bool approved, const QString& value, quint32 proc_id);
+    void FiducialResult(QPointF offset , quint32 proc_id);
+    void ChangeSaveRecipe(const bool value);
+
+public slots:
+    void ChangeFiducialPos(QPointF p, quint32 proc_id);
 
 protected:
     virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
@@ -53,8 +58,6 @@ protected:
     QLayout*        pLayout;
 
     MV_TYPE         mv_type;
-
-    QPointF         configPos;
 
     int             executionOrder;
 

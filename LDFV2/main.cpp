@@ -1,5 +1,7 @@
 #include "maindialog.h"
 #include <QApplication>
+#include <QGraphicsScene>
+#include <QImage>
 
 #include <pylon/PylonIncludes.h>
 
@@ -18,6 +20,10 @@
 
 Q_DECLARE_METATYPE(cv::Mat)
 Q_DECLARE_METATYPE(QPointF)
+Q_DECLARE_METATYPE(QImage)
+
+
+
 
 
 
@@ -258,8 +264,6 @@ int main(int argc, char *argv[])
 
     qRegisterMetaType<cv::Mat>("cv::Mat");
     qRegisterMetaType<QPointF>("QPointF&");
-
-
 
     int currentExitCode = 0;
     bool bInitError = false;

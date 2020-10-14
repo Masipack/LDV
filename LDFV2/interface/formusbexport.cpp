@@ -228,51 +228,72 @@ void FormUsbExport::on_btn_config_from_usb_clicked()
 
     QStringList dest_files;
     dest_files = GetFileList(usbPath + "/", "dat", false);
-    dest_files << "front.pfs"; // TODO: LISTA DE CAMERAS
+    dest_files << "front.pfs" << "back.pfs";
     dest_files.removeOne("system.dat"); // database file can't be removed
 
     if( P11(tr("Importação USB de configurações"), true) == false ) return;
+
+    bool success = true;
 
     dlg.SetMessage(DlgInfo::IT_INFO, tr("Aguarde transferindo arquivos !"), false,false);
     dlg.SetVisible(false);
     dlg.show();
 
+    for (int var = 0; var < 100; ++var) {
+        qApp->processEvents(QEventLoop::ProcessEventsFlag::AllEvents);
+        QThread::msleep(1);
+    }
+
     for( auto item : dest_files )
     {
         QString dest = "./data/" + item;
 
+        if(!QFile::exists(usbPath + "/" + item))
+        {
+            success = false;
+            break;
+        }
+
         if( QFile::exists(dest) )
         {
             DlgInfo dlg;
-            dlg.SetMessage(DlgInfo::IT_WARNING, tr("Já existe um arquivo com o mesmo\nnome ") + item + tr(" no SISTEMA.\n\n Deseja sobrescrever este arquivo?\n>> ESTA OPERACAO PODE CORROMPER O SISTEMA <<"), true, true );
+            dlg.SetMessage(DlgInfo::IT_WARNING,
+                           tr("Já existe um arquivo com o mesmo\nnome ") + item +
+                           tr(" no SISTEMA.\n\n Deseja sobrescrever este arquivo?"), true, true );
 
             if( dlg.exec() == QDialog::Rejected ) continue;
 
             if( QFile::remove(dest) == false )
             {
                 LOG(LOG_ERROR_TYPE, tr("Falha excluindo arquivo (BKP) SISTEMA"));
-                dlg.SetMessage(DlgInfo::IT_ERROR, tr("Falha copiando o arquivo ") + item, false, false );
+                dlg.SetMessage(DlgInfo::IT_ERROR, tr("Falha copiando o arquivo ") + item, false, true );
                 dlg.exec();
-                return;
-            }
+             }
         }
 
         QString src = usbPath + "/" + item;
-
         if( QFile::copy(src, dest) == false )
         {
             LOG(LOG_ERROR_TYPE, tr("Falha copiando arquivo ") + item + tr(" para SISTEMA"));
             DlgInfo dlg;
             dlg.SetMessage(DlgInfo::IT_ERROR, tr("Falha copiando o arquivo ") + item, false, false );
             dlg.exec();
-            return;
+
         }
 
-        LOG(LOG_INFO_TYPE, tr("Arquivo copiado USB->SISTEMA: ") + item);
-    }
+     }
 
-    dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso"), false,false);
     dlg.SetVisible(true);
+
+    if(success)
+    {
+        LOG(LOG_INFO_TYPE, tr("Arquivo copiado USB->SISTEMA"));
+        dlg.SetMessage(DlgInfo::IT_INFO, tr("Arquivos transferidos com sucesso"), false,true);
+    }else{
+
+        LOG(LOG_INFO_TYPE, tr("Falha: Alguns arquivos não foram encontrado  no diretório fonte"));
+        dlg.SetMessage(DlgInfo::IT_INFO, tr("Falha: Alguns arquivos não foram encontrado  no diretório fonte"), false,true);
+    }
 }
 
 /// ===========================================================================

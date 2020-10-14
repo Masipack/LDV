@@ -22,6 +22,8 @@ ParamsOCR::ParamsOCR(MvOCR *p, QWidget *parent) :  QWidget(parent),
 
     ui->lbl_database->setVisible(qApp->property("USE_DATABASE").toBool());
     ui->cb_database->setVisible(qApp->property("USE_DATABASE").toBool());
+    ui->btn_edit_position->setVisible(false);
+
 }
 
 /// ===========================================================================
@@ -261,10 +263,10 @@ void ParamsOCR::on_btn_edit_position_toggled(bool checked)
         if(checked==false) pTool->ResetMove();
         pTool->SetLock(checked ? false:true);
        // Debug(pTool->GetConfigPos())
-        pTool->ReconfigPosition();
+        if(!checked)  pTool->ReconfigPosition();
+
         pTool->Exec(0);
       //  Debug(pTool->GetConfigPos())
-
 
         LOG(LOG_INFO_TYPE, "Editando a posição da ferramenta" );
         AlarmManager::instance()->SetAlarm(ALM_EDIT_POSITION);

@@ -116,22 +116,29 @@ void MvFiducial::ExecResult(const double &correlation_value, QPointF& currrent_p
     templatePos = currrent_position;
     correlation_val = correlation_value;
 
+  //  Debug(currrent_position)
     b_Busy = false;
 
     QString s = tr("Leitura: ") +   QString("%1%").arg(correlation_val*100, 2, 'f', 2, QChar('0')) + tr(" em ") + QString::number(tm_exec.elapsed()) + tr(" ms");
-
 
     if( correlation_val< min_correlation )
      {
          templatePos = QPointF();
          b_approved = false;
          emit( NewResult(false,s, prid) );
+         emit(FiducialResult(templatePos,prid));
+
          this->update();
          return ;
      }
 
     this->update();
-    emit( NewResult(true, s, prid) );
+    emit(NewResult(true, s, prid) );
+
+    if( templatePos.isNull() )  emit(FiducialResult(QPointF(0,0),prid));
+     emit(FiducialResult((templatePos - mapFromScene(configPos)),prid));
+     roi.release();
+
 }
 
 /// ===========================================================================

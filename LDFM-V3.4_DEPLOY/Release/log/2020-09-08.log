@@ -1,0 +1,34 @@
+08:44:52.581|I|| --------- Sistema Inicializando --------- 
+08:44:52.582QIODevice::write (QSerialPort): device not open
+08:44:52.582|E||Porta serial ttyUSB0 indisponivel para uso
+08:44:52.582|W||WARNING: configuration SYSTEM/USE_RESTART not found
+08:44:52.582|W||WARNING: configuration SYSTEM/USE_PART11_PRINTER not found
+08:44:52.607libpng warning: iCCP: known incorrect sRGB profile
+08:44:52.699|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+08:44:52.700libpng warning: iCCP: known incorrect sRGB profile
+08:45:09.344|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+08:45:09.597QIODevice::write (QSerialPort): device not open
+08:45:10.122QIODevice::write (QSerialPort): device not open
+08:45:10.541QIODevice::write (QSerialPort): device not open
+08:45:10.647QIODevice::write (QSerialPort): device not open
+08:45:10.773QIODevice::write (QSerialPort): device not open
+08:45:11.173QIODevice::write (QSerialPort): device not open
+08:45:11.574QIODevice::write (QSerialPort): device not open
+08:45:11.697QIODevice::write (QSerialPort): device not open
+08:45:11.765QIODevice::write (QSerialPort): device not open
+08:45:11.917QIODevice::write (QSerialPort): device not open
+08:45:12.093QIODevice::write (QSerialPort): device not open
+08:45:12.223QIODevice::write (QSerialPort): device not open
+08:45:12.245QIODevice::write (QSerialPort): device not open
+08:45:12.405QIODevice::write (QSerialPort): device not open
+08:45:12.557QIODevice::write (QSerialPort): device not open
+08:45:12.701QIODevice::write (QSerialPort): device not open
+08:45:12.747QIODevice::write (QSerialPort): device not open
+08:45:12.853QIODevice::write (QSerialPort): device not open
+08:45:13.133QIODevice::write (QSerialPort): device not open
+08:45:13.248QIODevice::write (QSerialPort): device not open
+08:45:13.285QIODevice::write (QSerialPort): device not open
+08:45:13.749QIODevice::write (QSerialPort): device not open
+08:45:14.249QIODevice::write (QSerialPort): device not open
+08:45:14.749QIODevice::write (QSerialPort): device not open
+08:45:14.890|I|2| --------- Sistema Desligando --------- 

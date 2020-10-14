@@ -24,6 +24,7 @@ public:
     QImage GetThresholdedImage();
     void SetBlackAndWhite(const int n);
 
+
     struct DESCRIPTOR
     {
         QRectF          rect;
@@ -38,6 +39,7 @@ signals:
 
 public slots:
     void Exec(const cv::Mat& roi, quint32 proc_id);
+    void StopCurrentProcess();
 
 private:
     int white_filter;
@@ -46,6 +48,10 @@ private:
     int  b_black_And_white;
     bool use_DARK;
     bool use_LASER;
+
+
+    QTimer  timeOut;
+    quint32 ID_proc = 0;
 
 
 protected:

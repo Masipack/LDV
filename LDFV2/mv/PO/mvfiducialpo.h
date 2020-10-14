@@ -20,14 +20,19 @@ signals:
     void ExecResult(const double& correlation_value,QPointF& currrent_position, quint32 prid);
     void Result(const QString& text, quint32 prid);
 
+
 public slots:
     void Exec(const cv::Mat& roi, quint32 proc_id);
+    void StopCurrentProcess();
 
 
 private:
 
     cv::Mat mask;
     QPointF startPosition;
+
+    QTimer  timeOut;
+    quint32 ID_proc = 0;
 protected:
     double correlation(cv::Mat& image_1, cv::Mat& image_2);
 

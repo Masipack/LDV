@@ -475,6 +475,37 @@ color: rgb(255, 255, 255);</string>
           </widget>
          </item>
          <item>
+          <widget class="ButtonBeR" name="buttonBeR">
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/zoom_fit_all.png</normaloff>:/icons/zoom_fit_all.png</iconset>
+           </property>
+           <property name="bgIcon">
+            <iconset resource="../res/icons.qrc">
+             <normaloff>:/icons/bt-blank.png</normaloff>
+             <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+           </property>
+           <property name="bgIconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer_3">
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
@@ -597,6 +628,22 @@ color: rgb(255, 255, 255);</string>
     <hint type="destinationlabel">
      <x>346</x>
      <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBeR</sender>
+   <signal>clicked()</signal>
+   <receiver>imagedevice</receiver>
+   <slot>zoomFit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>398</x>
+     <y>101</y>
     </hint>
    </hints>
   </connection>

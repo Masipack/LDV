@@ -207,6 +207,8 @@ MvOCRPO::MvOCRPO(QObject *parent) : QObject(parent),use_DARK(false)
     GetConfig(use_DARK  , "SYSTEM/USE_DARK",false);
     GetConfig(use_LASER , "SYSTEM/USE_LASER",false);
 
+  //  connect(&timeOut, SIGNAL(timeout()), this, SLOT(StopCurrentProcess()));
+
 }
 
 /// ===========================================================================
@@ -285,6 +287,9 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     Mat roi_local = roi.clone();
     Mat roi_local_th = roi.clone();
 
+    ID_proc = proc_id;
+
+ //   timeOut.start(50);
 
     try
     {
@@ -319,10 +324,6 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
 
            LOG(LOG_ERROR_TYPE, QObject::tr("ERRO FATAL: FALHA NA EXTRAÇÃO DE CONTORNOS %1 ").arg(QString::fromStdString(ex.err)));
     }
-
-
-//    namedWindow("Thresold", WINDOW_NORMAL );
-//    imshow("Thresold", roi_local_th);
 
     int erode_sizeA  = 0; // white
     int dilate_sizeA = 0; // black
@@ -376,13 +377,14 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     th_roi = QImage( roi_local_th.cols, roi_local_th.rows, QImage::Format_Grayscale8 );
 
 
-    for( int i = 0; i < roi_local_th.rows; i++)
+   for( int i = 0; i < roi_local_th.rows; i++)
     {
         memcpy( &th_roi.bits()[ th_roi.bytesPerLine() * i ], roi_local_th.row(i).data, roi_local_th.cols * roi_local_th.channels() );
     }
 
     if( expectedText.size() == 0 )
     {
+        timeOut.stop();
         emit( ExecResult(th_roi, extractedText, proc_id) );
         return;
     }
@@ -397,11 +399,10 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
     std::vector< std::vector<cv::Point> >  contours;
     std::vector< Vec4i >                   hierarchy;
 
-
     findContours(roi_local_th, contours, hierarchy,RETR_EXTERNAL, CHAIN_APPROX_SIMPLE );
 
-    Mat blobs = roi.clone();
-    blobs.setTo( Scalar(0) );
+  //  Mat blobs = roi.clone();
+   // blobs.setTo( Scalar(0) );
 
     Rect CARACTER_SIZE = cv::boundingRect(contours[0]);
 
@@ -450,14 +451,14 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
         }
 
 
-       drawContours( blobs, contours, i, Scalar(255), -1);
+      // drawContours( blobs, contours, i, Scalar(255), -1);
 
-       int k = hierarchy[i][2];
-        while( k != -1  )
-        {
-         drawContours( blobs, contours, k, Scalar(0), -1);
-            k = hierarchy[k][0];
-        }
+      // int k = hierarchy[i][2];
+      //  while( k != -1  )
+      //  {
+       //  drawContours( blobs, contours, k, Scalar(0), -1);
+      //      k = hierarchy[k][0];
+      //  }
 
         Rect char_rect( Point(br.tl().x, br.tl().y), cv::Size(br.width, br.height));
 
@@ -558,8 +559,16 @@ void MvOCRPO::Exec(const cv::Mat &roi, quint32 proc_id)
         lastY = current.rect.y();
     }
 
+   // timeOut.stop();
     emit( ExecResult(th_roi, extractedText, proc_id) );
+    roi_local_th.release();
 
+}
+
+void MvOCRPO::StopCurrentProcess()
+{
+   // timeOut.stop();
+    emit( ExecResult(QImage(),QString(),ID_proc));
 }
 
 /// ===========================================================================

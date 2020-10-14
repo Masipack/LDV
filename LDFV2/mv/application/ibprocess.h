@@ -7,6 +7,7 @@
 #include "global_defines.h"
 #include "TO/productto.h"
 #include "util/imagequeue.h"
+#include "mv/PO/mvsaveimage.h"
 
 class IBProcess : public InspectionBuffer
 {
@@ -26,6 +27,7 @@ public:
     void SetAttributesDataBase(QMap<QString, QString> _table);
     void SetSincronizeAttributesDataBase(QMap<QString, QString> _table);
 
+
 signals:
     void InspectionResult(bool bVal);
 
@@ -35,6 +37,7 @@ public slots:
 
     void ClearIO();
     void SendKeepAlive();
+    void SaveRecipe(const bool value);
 
 private:
     MvAbstractTool* InsertTool(MV_TYPE type, const QString &name);
@@ -68,7 +71,9 @@ private:
 
     bool                   SAVE_IMAGE;
 
-   QString                 CamName;
+    QString                 CamName;
+
+    MvSaveImage            PO;
 
 
 };

@@ -85,7 +85,7 @@ bool WindowManager::init()
 #endif
 
     mainDialog = new MainDialog();
-    //mainDialog->setWindowFlags( Qt::FramelessWindowHint | Qt::Window /*| Qt::X11BypassWindowManagerHint*/ | Qt::WindowStaysOnTopHint  ); // TODO: recolocar (ver windows32)
+   // mainDialog->setWindowFlags( Qt::FramelessWindowHint | Qt::Window /*| Qt::X11BypassWindowManagerHint*/ | Qt::WindowStaysOnTopHint ); // TODO: recolocar (ver windows32)
 
 #ifndef _TESTE_
     mainDialog->move(screen->geometry().x(), screen->geometry().y());

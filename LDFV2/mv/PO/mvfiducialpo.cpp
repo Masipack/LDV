@@ -13,7 +13,7 @@ using namespace cv;
 /// ===========================================================================
 MvFIDUCIALPO::MvFIDUCIALPO(QObject *parent) : QObject(parent)
 {
-
+    connect(&timeOut, SIGNAL(timeout()), this, SLOT(StopCurrentProcess()));
 }
 
 MvFIDUCIALPO::~MvFIDUCIALPO()
@@ -29,12 +29,8 @@ void MvFIDUCIALPO::Exec(const cv::Mat &roi, quint32 proc_id)
     Mat result;
     QPointF  templatePos;
 
-
-        namedWindow("Template", WINDOW_NORMAL );
-        imshow("Template", mask);
-
-        namedWindow("Roi", WINDOW_NORMAL );
-        imshow("Roi", roi);
+    ID_proc = proc_id;
+ //   timeOut.start(40);
     /// Create the result matrix
     int result_cols = roi.cols;
     int result_rows = roi.rows;
@@ -56,10 +52,8 @@ void MvFIDUCIALPO::Exec(const cv::Mat &roi, quint32 proc_id)
 
     Mat template_mask = mask.clone();
 
-    namedWindow("Result", WINDOW_NORMAL );
-    imshow("Result", result);
-
     emit( ExecResult(correlation( found_rect, template_mask),templatePos, proc_id) );
+  //  timeOut.stop();
 
     result.release();
 
@@ -88,4 +82,13 @@ double MvFIDUCIALPO::correlation(cv::Mat &image_1, cv::Mat &image_2)
     double correl = covar / (im1_Std[0] * im2_Std[0]);
 
     return correl;
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void MvFIDUCIALPO::StopCurrentProcess(){
+   timeOut.stop();
+   QPointF  templatePos;
+   emit( ExecResult(0,templatePos, ID_proc));
 }

@@ -20,6 +20,9 @@
 #include "util/systemsettings.h"
 
 
+#include "util/dlginfo.h"
+
+
 
 using namespace cv;
 
@@ -49,6 +52,7 @@ IBProcess::IBProcess(QObject *parent) : InspectionBuffer(parent)
     GetConfig(SAVE_IMAGE, "SYSTEM/SAVE_IMAGE", false);
 
     proc_id = 0;
+
 }
 
 /// ===========================================================================
@@ -84,39 +88,32 @@ void IBProcess::NewImage(const QImage &source)
 
     this->update();
 
-    ImageQueue::instance()->NewImageTrainner(source);
+   // ImageQueue::instance()->NewImageTrainner(source);
 
     QPointF dist(0,0);
     proc_id++;
+
     for( MvAbstractTool* p : tools )
     {
+        if(p == nullptr) continue;
+
         if( p->GetType() == MV_FIDUCIAL )
         {
             if( p->Exec(proc_id) == false )
             {
                 emit(InspectionResult(false));
 
-                  qApp->processEvents();
-                  ImageLog();
+                qApp->processEvents();
+                ImageLog();
                 return;
             }
             dist = qobject_cast<MvFiducial*>(p)->GetDistance();
-        }
-        else
-        {
 
-            p->MoveTool( p->GetConfigPos() + dist);
-            if( p->Exec(proc_id) == false )
-            {
-                if( p->GetType() != MV_OCR ) return;
-            }
         }
+
     }
 
-     qApp->processEvents();
-
-     ///SAVE_IMAGE
-     ///
+    qApp->processEvents();
 
     if(SAVE_IMAGE)
     {
@@ -145,7 +142,6 @@ void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
         result_summary+= value +"\n\r";
     }
 
-
     if( response_count == tools.size() )
     {
         if( ok_response_count == tools.size() )
@@ -153,7 +149,7 @@ void IBProcess::NewResult(bool approved, const QString &value, quint32 proc_id)
             SerialControl::instance()->ToggleBitON(number_output);
             QTimer::singleShot(IO_REJECT_TIME, this, SLOT(ClearIO()));
             emit(InspectionResult(true));
-            ImageQueue::instance()->RemoveLast();
+           // ImageQueue::instance()->RemoveLast();
         }
         else
         {
@@ -175,7 +171,6 @@ void IBProcess::ClearIO()
     SerialControl::instance()->ToggleBitOFF(number_output);
 }
 
-
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -187,6 +182,9 @@ void IBProcess::Reset()
     for( MvAbstractTool* p : tools)
     {
         RemoveTool(p);
+        if( tools.contains(p) ) tools.removeOne(p);
+        delete p;
+
     }
 
     proc_id = 0;
@@ -251,8 +249,6 @@ MvAbstractTool *IBProcess::InsertTool(MV_TYPE type, const QString &name)
     this->addItem( pItemTool );
 
     tools.append( pItemTool );
-
-
     return pItemTool;
 
 }
@@ -281,16 +277,8 @@ void IBProcess::RemoveTool(MvAbstractTool *pItem)
 void IBProcess::ImageLog()
 {
 
-    img_inspection_result = QImage(currentImage.size(), QImage::Format_ARGB32);
-    img_inspection_result.convertToFormat( QImage::Format_ARGB32 );
-    img_inspection_result.fill(Qt::transparent);
-
-    QPainter painter(&img_inspection_result);
-
-    InspectionBuffer::render(&painter,currentImage.rect(), currentImage.rect(),
-                              Qt::KeepAspectRatio  );
-
-    ImageQueue::instance()->NewImage(img_inspection_result, result_summary);
+    PO.SetListErros(result_summary);
+    QMetaObject::invokeMethod(&PO, "Exec", Qt::QueuedConnection,Q_ARG(QGraphicsScene*,this),Q_ARG(QImage, currentImage) );
 
 }
 
@@ -311,7 +299,18 @@ void IBProcess::ClearSelection()
 /// ===========================================================================
 void IBProcess::SendKeepAlive()
 {
-  SerialControl::instance()->KeepAlive();
+    SerialControl::instance()->KeepAlive();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void IBProcess::SaveRecipe(const bool value)
+{
+    DlgInfo dlg;
+    dlg.SetMessage(DlgInfo::IT_QUESTION, tr("Por favor, salve as alterações  na  opção Salvar"), false, true );
+    dlg.exec();
+
 }
 
 /// ===========================================================================
@@ -319,11 +318,9 @@ void IBProcess::SendKeepAlive()
 /// ===========================================================================
 bool IBProcess::SetTO(const ProductTO &_TO)
 {
+    Reset();
 
     CamName = _TO.CAM_NAME;
-//    qDebug() << _TO;
-
-    Reset();
 
     SerialControl::instance()->SetOutput(0);
     GetConfig(IO_REJECT_TIME        , "SYSTEM/IO_REJECT_TIME"       , 50);
@@ -451,8 +448,52 @@ bool IBProcess::SetTO(const ProductTO &_TO)
 
     qSort(tools.begin(), tools.end(), ExecOrder);
 
-    timerKeepAlive.start(500);
+    PO.moveToThread(threads[0]);
 
+     MvAbstractTool* parentFiducial = 0;
+
+     for( int i=0; i < tools.size();i++ )
+     {
+         if( tools[i]->GetType() == MV_FIDUCIAL )
+         {
+             parentFiducial = tools[i];
+         }else{
+
+             if( parentFiducial )
+             {
+                 connect(parentFiducial,
+                         SIGNAL(FiducialResult(QPointF,quint32)),
+                         tools[i],
+                         SLOT(ChangeFiducialPos(QPointF,quint32)),
+                         Qt::UniqueConnection );
+
+             }
+
+         }
+
+     }
+
+
+     for( int i=0; i < tools.size();i++ )
+     {
+         if( tools[i]->GetType() != MV_FIDUCIAL )
+         {
+             parentFiducial = tools[i];
+
+             if( parentFiducial )
+             {
+                        connect(parentFiducial,
+                          SIGNAL(ChangeSaveRecipe(bool)),
+                         this,
+                         SLOT(SaveRecipe(bool)),
+                         Qt::QueuedConnection );
+             }
+
+         }
+
+     }
+
+    timerKeepAlive.start(500);
     return true;
 }
 
@@ -584,3 +625,4 @@ void IBProcess::SetSincronizeAttributesDataBase(QMap<QString, QString> _table)
 
     }
 }
+

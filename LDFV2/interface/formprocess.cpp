@@ -102,6 +102,7 @@ void FormProcess::DeInit()
     for(int i = 0; i < forms.size(); i++)
     {
         forms[i]->StopCamera();
+
         delete forms[i];
         forms[i] = nullptr;
     }
@@ -171,6 +172,7 @@ void FormProcess::on_btn_return_clicked()
 
     qApp->setProperty("BATCH", "");
 
+
     DeInit();
 
     WindowManager::instance()->ShowScreen("Products");
@@ -224,6 +226,7 @@ void FormProcess::WriteConfig(const QString &name)
 
 }
 
+
 /// ===========================================================================
 ///
 /// ===========================================================================
@@ -248,4 +251,28 @@ void FormProcess::on_btn_printer_clicked()
          if( P11(tr("Aceeso a impressora"), true ) == false ) return;
     }
      WindowManager::instance()->ShowScreen("Printer");
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormProcess::on_btn_save_clicked()
+{
+
+    for(int i = 0; i < forms.size(); i++)
+    {
+       ProductTO _TO;
+
+       if(forms[i])
+       {
+           forms[i]->GetTO(_TO);
+           if(forms[i]->ChangesTOOLS(_TO))
+           {
+               WriteConfig(Name);
+               break;
+           }
+       }
+    }
+
+
 }

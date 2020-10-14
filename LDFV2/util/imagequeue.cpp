@@ -1,6 +1,7 @@
 #include "imagequeue.h"
 
 #include <QDebug>
+#include "global_defines.h"
 
 Q_GLOBAL_STATIC(ImageQueue, umage_queue)
 
@@ -36,15 +37,16 @@ ImageQueue::~ImageQueue()
 /// ===========================================================================
 void ImageQueue::NewImage(const QImage& image, const QString& data)
 {
-//    QUEUE_DATA d;
-//    d.image = image;
-//    d.data  = data;
-//    queue.enqueue(d);
-//    if( queue.size() > max_count ){
+    QUEUE_DATA d;
+    d.image = image;
+    d.data  = data;
+    queue.enqueue(d);
 
-//        QUEUE_DATA c = queue.dequeue();
+    if( queue.size() > max_count ){
 
-//    }
+       queue.dequeue();
+
+    }
 
 }
 

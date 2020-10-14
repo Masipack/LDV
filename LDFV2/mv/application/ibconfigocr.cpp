@@ -1,4 +1,5 @@
 #include "ibconfigocr.h"
+#include  "util/serialcontrol.h"
 
 using namespace cv;
 
@@ -17,6 +18,8 @@ IBConfigOCR::IBConfigOCR(QObject *parent) : InspectionBuffer(parent)
     this->addItem( ocr_cfg );
 
     connect(ocr_cfg, SIGNAL(TemplateChanged()), this, SIGNAL(TemplateChanged()), Qt::QueuedConnection );
+
+    connect(&timerKeepAlive, SIGNAL(timeout()), this, SLOT(SendKeepAlive()) );
 }
 
 /// ===========================================================================
@@ -37,6 +40,21 @@ void IBConfigOCR::Reset()
     update();
 }
 
+/// ===========================================================================
+///
+/// ===========================================================================
+void IBConfigOCR::Init()
+{
+ timerKeepAlive.start();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void IBConfigOCR::Stop()
+{
+ timerKeepAlive.stop();
+}
 
 /// ===========================================================================
 ///
@@ -48,4 +66,12 @@ void IBConfigOCR::NewImage(const QImage &source)
     ocr_cfg->Exec(0);
 
     this->update();
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void IBConfigOCR::SendKeepAlive()
+{
+    SerialControl::instance()->KeepAlive();
 }

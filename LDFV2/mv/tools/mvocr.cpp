@@ -73,6 +73,24 @@ bool MvOCR::Exec(quint32 proc_id)
         return false;
     }
 
+
+
+  /*  if(GetToolName()=="L"){
+
+        namedWindow("L", WINDOW_NORMAL );
+        imshow("L", roi);
+    }
+
+    if(GetToolName()=="VAL"){
+        namedWindow("VAL", WINDOW_NORMAL );
+        imshow("VAL", roi);
+    }
+
+    if(GetToolName()=="FAB"){
+        namedWindow("FAB", WINDOW_NORMAL );
+        imshow("FAB", roi);
+    }*/
+
     QMetaObject::invokeMethod(&PO, "Exec", Qt::QueuedConnection, Q_ARG(cv::Mat, roi), Q_ARG(quint32, proc_id) );
     return true;
 }
@@ -224,6 +242,7 @@ void MvOCR::ResetMove()
 /// ===========================================================================
 void MvOCR::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+
 
     if((b_exec_on_move == true) &&(b_lock_angle == false) && b_locked == false)
     {

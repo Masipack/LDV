@@ -1,0 +1,24 @@
+08:27:20.412|I|| --------- Sistema Inicializando --------- 
+08:27:20.414|W||WARNING: configuration SYSTEM/USE_RESTART not found
+08:27:20.414|W||WARNING: configuration SYSTEM/USE_PART11_PRINTER not found
+08:27:20.423libpng warning: iCCP: known incorrect sRGB profile
+08:27:20.521|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+08:27:20.522libpng warning: iCCP: known incorrect sRGB profile
+08:27:35.852|E|2|Erro ao inicializar cameras: Lista de cameras vazia
+08:27:36.473TOOL  0 --------------------------- 1
+08:27:36.473TOOL  1 --------------------------- 2
+08:27:49.656|I|2| --------- Sistema Desligando --------- 
+10:15:10.679|I|| --------- Sistema Inicializando --------- 
+10:15:10.681|W||WARNING: configuration SYSTEM/USE_RESTART not found
+10:15:10.681|W||WARNING: configuration SYSTEM/USE_PART11_PRINTER not found
+10:15:10.687libpng warning: iCCP: known incorrect sRGB profile
+10:15:10.781|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+10:15:10.781libpng warning: iCCP: known incorrect sRGB profile
+10:15:13.296|I|SISTEMA| --------- Sistema Desligando --------- 
+10:23:54.204|I|| --------- Sistema Inicializando --------- 
+10:23:54.206|W||WARNING: configuration SYSTEM/USE_RESTART not found
+10:23:54.207|W||WARNING: configuration SYSTEM/USE_PART11_PRINTER not found
+10:23:54.215libpng warning: iCCP: known incorrect sRGB profile
+10:23:54.326|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+10:23:54.326libpng warning: iCCP: known incorrect sRGB profile
+10:23:56.689|I|SISTEMA| --------- Sistema Desligando --------- 

@@ -52,15 +52,16 @@ void FormTrainner::showEvent(QShowEvent *event)
 
     WindowManager::instance()->SetInfoTop( "Treinamento de OCR's" );
 
-    MvCamera* Camera = CameraManager::instance()->GetCamera("CAMERA_1");
+    config_ocr.Init();
 
-    if( nullptr == Camera ) return;
-
-    Camera->start("CAMERA_1");
+    MvCamera* pCamera = CameraManager::instance()->GetCamera("CAMERA_1");
+    if( pCamera )
+    {
+        pCamera->start("CAMERA_1");
+        connect(pCamera, SIGNAL(NewImage(QImage)), &config_ocr, SLOT(NewImage(QImage)), Qt::QueuedConnection );
+    }
 
     config_ocr.Reset();
-
-    connect(Camera, SIGNAL(NewImage(QImage)), &config_ocr,SLOT(NewImage(QImage)), Qt::UniqueConnection );
 
     int pos = 0;
     QImage img;
@@ -98,9 +99,7 @@ void FormTrainner::Snap()
 {
 
 #ifndef _USE_DISK_
-    SerialControl::instance()->SendCommand( SerialControl::COMMAND_1116_FRONT, 1 );
-    SerialControl::instance()->SendCommand( SerialControl::COMMAND_1116_SNAP,  1 );
-    qDebug() << Q_FUNC_INFO << __LINE__;
+     SerialControl::instance()->Snap();
 #else
 
     GetConfig(base_path, "DISK/BASE_PATH", QString("") );
@@ -215,6 +214,8 @@ void FormTrainner::on_btn_menu_clicked()
     Camera->stop();
 
     config_ocr.Reset();
+
+    config_ocr.Stop();
 
     WindowManager::instance()->ShowLastScreen();
 }

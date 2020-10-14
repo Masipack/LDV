@@ -34,8 +34,6 @@ MvTool::MvTool(const QRectF& rect, QGraphicsItem *parent) :
     toolName->setBrush( QColor(0,255,0,180) );
     toolName->setPos( QPointF(0 , -19) ) ;
 
-
-
     GetConfig(cfg_handle_size, "TOOLS/HANDLE_SIZE", 16.0);
 }
 

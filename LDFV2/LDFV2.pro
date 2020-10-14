@@ -4,7 +4,7 @@ QT += core gui widgets opengl serialport sql webengine webenginewidgets printsup
 
 DEFINES += _TESTE_
 DEFINES += _DISPLAY_HORIZONTAL_
-#DEFINES += _USE_DISK_
+DEFINES += _USE_DISK_
 
 TRANSLATIONS = res/translations/lang.ts
 
@@ -141,7 +141,8 @@ SOURCES += \
     mv/tools/mvocrconfig.cpp \
     mv/application/ibconfigocr.cpp \
     interface/formtrainner.cpp \
-    mv/PO/mvfiducialpo.cpp
+    mv/PO/mvfiducialpo.cpp \
+    mv/PO/mvsaveimage.cpp
 
 HEADERS += \
         maindialog.h \
@@ -225,7 +226,8 @@ HEADERS += \
     mv/application/ibconfigocr.h \
     TO/libraryto.h \
     interface/formtrainner.h \
-    mv/PO/mvfiducialpo.h
+    mv/PO/mvfiducialpo.h \
+    mv/PO/mvsaveimage.h
 
 FORMS += \
         maindialog.ui \

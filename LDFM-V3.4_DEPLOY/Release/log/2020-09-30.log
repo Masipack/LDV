@@ -1,0 +1,9 @@
+11:38:05.563|I|| --------- Sistema Inicializando --------- 
+11:38:05.563QIODevice::write (QSerialPort): device not open
+11:38:05.563|E||Porta serial ttyUSB0 indisponivel para uso
+11:38:05.564|W||WARNING: configuration SYSTEM/USE_RESTART not found
+11:38:05.564|W||WARNING: configuration SYSTEM/USE_PART11_PRINTER not found
+11:38:05.590libpng warning: iCCP: known incorrect sRGB profile
+11:38:05.708|W|SISTEMA|WARNING: configuration SYSTEM/LANGUAGE not found
+11:38:05.713libpng warning: iCCP: known incorrect sRGB profile
+11:38:13.407|I|SISTEMA| --------- Sistema Desligando --------- 

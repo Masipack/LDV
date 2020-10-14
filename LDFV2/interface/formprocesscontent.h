@@ -27,13 +27,16 @@ public:
     void SetOutput(const int& value){ ib.SetOutput(value);}
     bool ChangesTOOLS(ProductTO &other);
     void SetStatistic(const bool& v);
+    void ResetScene();
+
+
 
 
 signals:
     void WriteConfig(const QString&);
 public slots:
     void TimerColor();
-
+    void SimulationProcess();
     void on_lst_tools_currentRowChanged(int currentRow);
 
 private:
@@ -46,6 +49,9 @@ private:
     IBProcess   ib;
 
     FormStatistics*    frmStatistics ;
+
+    QTimer             timerKeepAlive;
+
 
 
     QString         camName;

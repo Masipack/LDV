@@ -160,6 +160,53 @@ Câmera</string>
       </widget>
      </item>
      <item>
+      <widget class="ButtonBeR" name="btn_save">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>105</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>105</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Salvar</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/MD-disc-3-5.png</normaloff>:/icons/MD-disc-3-5.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="bgIcon">
+        <iconset resource="../res/icons.qrc">
+         <normaloff>:/icons/bt-blank.png</normaloff>
+         <normalon>:/icons/bt-blank_pressed.png</normalon>:/icons/bt-blank.png</iconset>
+       </property>
+       <property name="bgIconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="verticalSpacer">
        <property name="orientation">
         <enum>Qt::Vertical</enum>

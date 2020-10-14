@@ -30,6 +30,8 @@ FormProcessContent::FormProcessContent(QWidget *parent) : QWidget(parent),
     connect(&tmColor, SIGNAL(timeout()), this, SLOT(TimerColor()));
     connect(&ib, SIGNAL(InspectionResult(bool)), frmStatistics, SLOT(NewInsp(bool)),Qt::UniqueConnection);
 
+    connect(&timerKeepAlive, SIGNAL(timeout()), this, SLOT(SimulationProcess()));
+
     QList<int> list;
     list << 529 << 124;
     ui->splitter->setSizes(list);
@@ -37,6 +39,9 @@ FormProcessContent::FormProcessContent(QWidget *parent) : QWidget(parent),
     ui->imagedevice->setScene(&ib);
 
     ui->btn_sincrinizeDataBase->setVisible(qApp->property("USE_DATABASE").toBool());
+
+
+
 }
 
 /// ===========================================================================
@@ -46,6 +51,7 @@ FormProcessContent::~FormProcessContent()
 {
     delete ui;
     delete frmStatistics;
+
 }
 
 /// ===========================================================================
@@ -92,6 +98,19 @@ void FormProcessContent::TimerColor()
 /// ===========================================================================
 ///
 /// ===========================================================================
+void FormProcessContent::SimulationProcess()
+{
+#ifndef _USE_DISK_
+
+#else
+     on_btn_camera_snap_clicked();
+#endif
+
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 bool FormProcessContent::SetTO(const ProductTO &src)
 {
     if( ib.SetTO( src ) == false ) return false;
@@ -113,6 +132,11 @@ bool FormProcessContent::SetTO(const ProductTO &src)
         ui->lst_tools->setItemWidget(p_item, mv);
     }
 
+#ifndef _USE_DISK_
+
+#else
+     timerKeepAlive.start(350);
+#endif
     return true;
 }
 
@@ -143,6 +167,8 @@ void FormProcessContent::StopCamera()
         pCamera->stop();
         pCamera->disconnect();
     }
+
+     timerKeepAlive.stop();
 }
 
 /// ===========================================================================
@@ -326,8 +352,8 @@ void FormProcessContent::on_btn_Statistics_toggled(bool checked)
 
        if(ChangesTOOLS(ConfigTO))
        {
-         Debug(ProdutoTOChanges)
-         Debug(ConfigTO)
+//         Debug(ProdutoTOChanges)
+//         Debug(ConfigTO)
          ProdutoTOChanges = ConfigTO;
          emit(WriteConfig(configFilename));
        }
@@ -387,6 +413,14 @@ bool FormProcessContent::ChangesTOOLS(ProductTO& other)
 void FormProcessContent::SetStatistic(const bool &v)
 {
     ui->btn_Statistics->setChecked(v);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
+void FormProcessContent::ResetScene()
+{
+    ib.Reset();
 }
 
 /// ===========================================================================

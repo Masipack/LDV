@@ -215,7 +215,7 @@ void MvCamera::run()
     }
     catch( const GenericException &e )
     {
-        LOG(LOG_ERROR_TYPE, tr("Erro na captura de imagens [%1]: %2").arg(camName).arg(e.GetDescription()) );
+        LOG(LOG_ERROR_TYPE, tr("Erro ao abrir camera  [%1]: %2").arg(camName).arg(e.GetDescription()) );
         AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
         return;
     }
@@ -249,7 +249,7 @@ void MvCamera::run()
         }
         catch( const GenericException &e )
         {
-            LOG(LOG_ERROR_TYPE, tr("Erro na captura de imagens [%1]: %2").arg(camName).arg(e.GetDescription()) );
+            LOG(LOG_ERROR_TYPE, tr("Erro timeout  na captura da imagem [%1]: %2").arg(camName).arg(e.GetDescription()) );
             AlarmManager::instance()->SetAlarm(ALM_CAMERA_ERROR);
             break;
         }
@@ -343,9 +343,7 @@ void MvCamera::run()
 
     camera.StopGrabbing();
     camera.Close();
-
     bBacklight = false;
-
     pCamera = 0;
 
 }

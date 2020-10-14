@@ -35,9 +35,8 @@ void MvAbstractTool::SetToolName(const QString &name)
 void MvAbstractTool::ReconfigPosition()
 {
     configPos = mapToScene(this->boundingRect().center());
+    emit(ChangeSaveRecipe(true));
 
-   // Debug(configPos)
-    //Debug(this->boundingRect().bottomLeft());
 }
 
 /// ===========================================================================
@@ -53,7 +52,7 @@ void MvAbstractTool::SetTableDataBase(QMap<QString, QString> _table)
 /// ===========================================================================
 void MvAbstractTool::SetAttributeDataBase(const QString &value)
 {
-     attribute=value;
+     attribute = value;
 }
 
 /// ===========================================================================
@@ -67,9 +66,20 @@ QString MvAbstractTool::GetAttributeDataBase() const
 /// ===========================================================================
 ///
 /// ===========================================================================
+void MvAbstractTool::ChangeFiducialPos(QPointF p, quint32 proc_id)
+{
+    this->setPos(configPos + p - boundingRect().center());
+    emit( GeometryChanged( this->mapRectToScene( this->boundingRect() )) );
+    Exec(proc_id);
+}
+
+/// ===========================================================================
+///
+/// ===========================================================================
 void MvAbstractTool::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     MvTool::mouseMoveEvent( event );
     configPos = mapToScene(this->boundingRect().center());
+
 }
 
